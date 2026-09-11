@@ -1,0 +1,13 @@
+{
+  "classification": {
+    "EXCLUDED_WITH_REASON": 0,
+    "SUSPECTED_LABEL_ERROR": 0,
+    "VALID": 240
+  },
+  "documents": 240,
+  "duplicate_content": 0,
+  "duplicate_ids": 0,
+  "empty_annotations": 0,
+  "experiment_id": "E0",
+  "impossible_monetary_values": 0
+}

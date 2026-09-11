@@ -1,0 +1,23 @@
+experiment_id,phase,objective,inputs,model,seed,device,metrics,artifact_paths,status,result_summary,failure_explanation
+E0,P06-P08,Integrity and leakage,240 development records,B0 audit,1729,CPU,"240 valid; zero overlaps",artifacts/results/e0.json|artifacts/results/e0_leakage.json,COMPLETE,Integrity and split checks passed,Near-duplicate image/text unavailable
+E1,P11,OCR comparison,none,Tesseract/PaddleOCR/PaddleOCR-VL,1729,CUDA,,BLOCKERS.md,BLOCKED,,No images/OCR and CUDA unavailable
+E2,P12,Document classification,synthetic labels,rule/TF-IDF,1729,CPU,,reports/05_MODELING_REPORT.md,SKIPPED_WITH_REASON,,Dependencies absent and task trivial
+E3,P13-P19,KIE comparison,synthetic text,B0 regex,1729,CPU,"final F1=1.0",artifacts/results/e20_final.json,COMPLETE,Regular synthetic text parsed perfectly,Other families blocked
+E4,P20,Line items,none,B0-B5,1729,mixed,,BLOCKERS.md,BLOCKED,,DocILE/table geometry unavailable
+E5,P19,Layout generalization,split IDs,B0,1729,CPU,"zero group overlap",artifacts/results/e0_leakage.json,COMPLETE,Split integrity only,No visual layouts
+E6,P22,Synthetic scaling,none,trainable models,1729,CUDA,,BLOCKERS.md,BLOCKED,,CUDA unavailable
+E7,P23,Visual robustness,none,B0/P0,1729,CPU,,reports/07_ROBUSTNESS_REPORT.md,SKIPPED_WITH_REASON,,No images
+E8,P24,Cross-dataset transfer,none,selected models,1729,mixed,,reports/07_ROBUSTNESS_REPORT.md,SKIPPED_WITH_REASON,,No public data
+E9,P26,Reconciliation,synthetic corruptions,rules,1729,CPU,"dev 34/34; final 17/17",artifacts/results/e20_final.json,COMPLETE,All injected conflicts detected,
+E10,P27,Calibration,synthetic,B0 raw,1729,CPU,"final ECE=.1233",artifacts/results/e20_final.json,COMPLETE,Raw metrics measured,Fitting unjustified
+E11,P25,OOD,split IDs,explicit novelty,1729,CPU,"AUROC=1.0",artifacts/results/e11.json,COMPLETE,Construction sanity check,Not real visual OOD
+E12,P28-P29,Routing,synthetic fields,G3,1729,CPU,"residual error=0",artifacts/results/e12.json,COMPLETE,Mechanics verified,No comparative frontier
+E13,P30,HITL policies,synthetic fields,review policies,1729,CPU,"error_count=0",artifacts/results/e13.json,COMPLETE,Non-informative negative result,No errors
+E14,P21,Financial relations,none,encoders,1729,CUDA,,BLOCKERS.md,BLOCKED,,REFinD/CUDA unavailable
+E15,P32,Cross-document,none,rules,1729,CPU,,src/rfdi/reconciliation/rules.py,SKIPPED_WITH_REASON,Rules implemented,Linked corpus absent
+E16,P33,Injection containment,21 attacks,P0 boundary,1729,CPU,"final success=0/7",artifacts/results/e20_final.json,COMPLETE,Boundary held for fixtures,No VLM images
+E17,P34,Performance,120 final texts,B0,1729,CPU,"P95=.082364ms",artifacts/results/e20_final.json,COMPLETE,In-memory only,Pipeline overhead excluded
+E18,P35,Fault/idempotency,SQLite fixture,P0 state,1729,CPU,"2 replays; 1 record",artifacts/results/e18.json,COMPLETE,Replay passed,External faults absent
+E19,P36,Ablation,synthetic,P0,1729,CPU,,reports/11_ABLATION_REPORT.md,SKIPPED_WITH_REASON,Validation effect structural,Degenerate task
+E20,P41,Locked final,120 final,P0 frozen,1729,CPU,"F1=1.0; schema=0",artifacts/results/e20_final.json,COMPLETE,Numeric gates passed; improvement failed,
+E21,P42-P44,Release lifecycle,locked result,P0 frozen,1729,CPU,NO_PROMOTION,artifacts/results/e21_release.json,COMPLETE,Promotion rejected,No live traffic

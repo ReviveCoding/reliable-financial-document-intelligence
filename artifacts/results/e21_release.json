@@ -1,0 +1,10 @@
+{
+  "experiment_id": "E21",
+  "candidate": "P0_rfdi_deterministic_v1",
+  "offline_validation": "COMPLETE",
+  "shadow_simulation": {"status":"COMPLETE","business_decisions_affected":0,"documents":120,"note":"Isolated lifecycle result; no external effects."},
+  "canary_simulation": {"status":"COMPLETE","traffic_fraction":0.05,"external_traffic":false,"rollback_test":"CONFIG_POINTER_ONLY","note":"Lifecycle simulation; not live traffic."},
+  "decision": "NO_PROMOTION",
+  "rollback_target": "B0_CLASSICAL",
+  "reason": "Meaningful comparative operational improvement was not established."
+}

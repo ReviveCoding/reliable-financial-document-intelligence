@@ -1,0 +1,22 @@
+{
+  "comparisons": {
+    "dev_final": {
+      "exact_overlap": 0,
+      "template_overlap": 0,
+      "vendor_overlap": 0
+    },
+    "train_dev": {
+      "exact_overlap": 0,
+      "template_overlap": 0,
+      "vendor_overlap": 0
+    },
+    "train_final": {
+      "exact_overlap": 0,
+      "template_overlap": 0,
+      "vendor_overlap": 0
+    }
+  },
+  "experiment_id": "E0-LEAKAGE",
+  "method": "SHA-256 plus explicit vendor/template groups",
+  "visual_text_near_duplicate": "NOT_MEASURED_NO_IMAGE_OR_OCR_EMBEDDING_DEPENDENCIES"
+}

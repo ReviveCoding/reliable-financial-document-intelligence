@@ -1,0 +1,7 @@
+{
+  "auprc": 1.0,
+  "auroc": 1.0,
+  "detector": "explicit split-disjoint template novelty",
+  "experiment_id": "E11",
+  "limitation": "Synthetic construction signal; not evidence for visual real-world OOD."
+}

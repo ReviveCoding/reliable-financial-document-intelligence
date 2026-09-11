@@ -1,0 +1,10 @@
+{
+  "deep_device_status": "BLOCKED_ACCELERATOR",
+  "experiment_id": "P01",
+  "measured_at_utc": "2026-09-11T20:20:22Z",
+  "nvidia_smi_returncode": 255,
+  "nvidia_smi_stderr": "",
+  "nvidia_smi_stdout": "Failed to initialize NVML: GPU access blocked by the operating system\nFailed to properly shut down NVML: GPU access blocked by the operating system",
+  "platform": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+  "python": "3.10.12"
+}

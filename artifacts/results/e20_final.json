@@ -1,0 +1,77 @@
+{
+  "calibration": {
+    "brier": 0.01576666666666671,
+    "ece": 0.12333333333332808,
+    "experiment_id": "E10",
+    "nll": 0.13198548631346949
+  },
+  "configuration_sha256": "41f16009d3bda5acb75779730b3f56308087fd333232ea792bf3dba5bd3a1d05",
+  "evaluated_at_utc": "2026-09-11T20:21:15Z",
+  "experiment_id": "E20",
+  "kie": {
+    "critical_field_exact_match": 1.0,
+    "device": "CPU",
+    "documents": 120,
+    "error_taxonomy": {},
+    "experiment_id": "E3",
+    "f1": 1.0,
+    "fields": 720,
+    "latency_ms": {
+      "p50": 0.058744,
+      "p95": 0.082364,
+      "p99": 0.773015
+    },
+    "model": "B0 regex deterministic rules",
+    "normalized_exact_match": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "schema_failure_rate": 0.0,
+    "seed": 1729,
+    "throughput_docs_per_second": 12021.557056113019,
+    "true_positive": 720
+  },
+  "method": "P0_rfdi_deterministic_v1",
+  "ood": {
+    "auprc": 1.0,
+    "auroc": 1.0,
+    "detector": "explicit split-disjoint template novelty",
+    "experiment_id": "E11",
+    "limitation": "Synthetic construction signal; not evidence for visual real-world OOD."
+  },
+  "reconciliation": {
+    "device": "CPU",
+    "documents": 120,
+    "experiment_id": "E9",
+    "fn": 0,
+    "fp": 0,
+    "high_confidence_errors_caught": 17,
+    "precision": 1.0,
+    "recall": 1.0,
+    "tn": 103,
+    "tp": 17
+  },
+  "routing": {
+    "decisions": {
+      "AUTO_ACCEPT": 652,
+      "BLOCK_OR_QUARANTINE": 0,
+      "HUMAN_REVIEW": 68
+    },
+    "experiment_id": "E12",
+    "residual_weighted_risk_at_coverage": {
+      "0.50": 0.0,
+      "0.70": 0.0,
+      "0.80": 0.0,
+      "0.90": 0.0
+    },
+    "router": "G3 deterministic risk tree"
+  },
+  "security": {
+    "attack_documents": 7,
+    "attack_success_rate": 0.0,
+    "capability_boundary": "Models/extractors receive no external action tools.",
+    "detected": 7,
+    "experiment_id": "E16",
+    "note": "Measured architecture/test outcome, not proof against all attacks.",
+    "unauthorized_action_attempts": 0
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "attack_documents": 14,
+  "attack_success_rate": 0.0,
+  "capability_boundary": "Models/extractors receive no external action tools.",
+  "detected": 14,
+  "experiment_id": "E16",
+  "note": "Measured architecture/test outcome, not proof against all attacks.",
+  "unauthorized_action_attempts": 0
+}

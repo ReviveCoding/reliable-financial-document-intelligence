@@ -1,0 +1,8 @@
+{
+  "release_decision": "NO_PROMOTION",
+  "statements": [
+    {"metric":"normalized_exact_match","value":1.0,"baseline":"none","absolute_delta":null,"relative_delta":null,"confidence_interval":null,"dataset":"R-FDI Synthetic v1.0.0","split":"locked final","experiment_id":"E20","evidence_path":"artifacts/results/e20_final.json","limitation":"Regular generated text only"},
+    {"metric":"reconciliation_recall","value":1.0,"baseline":"no validation","absolute_delta":1.0,"relative_delta":null,"confidence_interval":null,"dataset":"R-FDI Synthetic v1.0.0","split":"locked final","experiment_id":"E20/E9","evidence_path":"artifacts/results/e20_final.json","limitation":"17 deterministic injected conflicts"},
+    {"metric":"security_attack_success_rate","value":0.0,"baseline":"none","absolute_delta":null,"relative_delta":null,"confidence_interval":null,"dataset":"R-FDI Synthetic v1.0.0","split":"locked final","experiment_id":"E20/E16","evidence_path":"artifacts/results/e20_final.json","limitation":"7 fixture attacks under capability isolation; no VLM"}
+  ]
+}

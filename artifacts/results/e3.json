@@ -1,0 +1,22 @@
+{
+  "critical_field_exact_match": 1.0,
+  "device": "CPU",
+  "documents": 240,
+  "error_taxonomy": {},
+  "experiment_id": "E3",
+  "f1": 1.0,
+  "fields": 1440,
+  "latency_ms": {
+    "p50": 0.061374,
+    "p95": 0.094793,
+    "p99": 0.144235
+  },
+  "model": "B0 regex deterministic rules",
+  "normalized_exact_match": 1.0,
+  "precision": 1.0,
+  "recall": 1.0,
+  "schema_failure_rate": 0.0,
+  "seed": 1729,
+  "throughput_docs_per_second": 13369.120984751617,
+  "true_positive": 1440
+}

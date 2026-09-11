@@ -1,0 +1,205 @@
+{
+  "audit": {
+    "classification": {
+      "EXCLUDED_WITH_REASON": 0,
+      "SUSPECTED_LABEL_ERROR": 0,
+      "VALID": 240
+    },
+    "documents": 240,
+    "duplicate_content": 0,
+    "duplicate_ids": 0,
+    "empty_annotations": 0,
+    "experiment_id": "E0",
+    "impossible_monetary_values": 0
+  },
+  "calibration": {
+    "brier": 0.015766666666666797,
+    "ece": 0.12333333333332282,
+    "experiment_id": "E10",
+    "nll": 0.13198548631346718
+  },
+  "environment": {
+    "deep_device_status": "BLOCKED_ACCELERATOR",
+    "experiment_id": "P01",
+    "measured_at_utc": "2026-09-11T20:20:22Z",
+    "nvidia_smi_returncode": 255,
+    "nvidia_smi_stderr": "",
+    "nvidia_smi_stdout": "Failed to initialize NVML: GPU access blocked by the operating system\nFailed to properly shut down NVML: GPU access blocked by the operating system",
+    "platform": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+    "python": "3.10.12"
+  },
+  "faults": {
+    "device": "CPU",
+    "duplicate_final_outputs": 0,
+    "duplicate_requests": 2,
+    "experiment_id": "E18",
+    "final_state": "FINALIZED",
+    "unique_records": 1
+  },
+  "hitl": {
+    "critical_error_capture": {
+      "disagreement_first": {
+        "0.05": 1.0,
+        "0.10": 1.0,
+        "0.20": 1.0,
+        "0.30": 1.0,
+        "0.50": 1.0
+      },
+      "highest_entropy": {
+        "0.05": 1.0,
+        "0.10": 1.0,
+        "0.20": 1.0,
+        "0.30": 1.0,
+        "0.50": 1.0
+      },
+      "lowest_confidence": {
+        "0.05": 1.0,
+        "0.10": 1.0,
+        "0.20": 1.0,
+        "0.30": 1.0,
+        "0.50": 1.0
+      },
+      "ood_first": {
+        "0.05": 1.0,
+        "0.10": 1.0,
+        "0.20": 1.0,
+        "0.30": 1.0,
+        "0.50": 1.0
+      },
+      "random": {
+        "0.05": 1.0,
+        "0.10": 1.0,
+        "0.20": 1.0,
+        "0.30": 1.0,
+        "0.50": 1.0
+      },
+      "rfdi_risk": {
+        "0.05": 1.0,
+        "0.10": 1.0,
+        "0.20": 1.0,
+        "0.30": 1.0,
+        "0.50": 1.0
+      }
+    },
+    "error_count": 0,
+    "experiment_id": "E13",
+    "seed": 1729
+  },
+  "kie": {
+    "critical_field_exact_match": 1.0,
+    "device": "CPU",
+    "documents": 240,
+    "error_taxonomy": {},
+    "experiment_id": "E3",
+    "f1": 1.0,
+    "fields": 1440,
+    "latency_ms": {
+      "p50": 0.061374,
+      "p95": 0.094793,
+      "p99": 0.144235
+    },
+    "model": "B0 regex deterministic rules",
+    "normalized_exact_match": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "schema_failure_rate": 0.0,
+    "seed": 1729,
+    "throughput_docs_per_second": 13369.120984751617,
+    "true_positive": 1440
+  },
+  "leakage": {
+    "comparisons": {
+      "dev_final": {
+        "exact_overlap": 0,
+        "template_overlap": 0,
+        "vendor_overlap": 0
+      },
+      "train_dev": {
+        "exact_overlap": 0,
+        "template_overlap": 0,
+        "vendor_overlap": 0
+      },
+      "train_final": {
+        "exact_overlap": 0,
+        "template_overlap": 0,
+        "vendor_overlap": 0
+      }
+    },
+    "experiment_id": "E0-LEAKAGE",
+    "method": "SHA-256 plus explicit vendor/template groups",
+    "visual_text_near_duplicate": "NOT_MEASURED_NO_IMAGE_OR_OCR_EMBEDDING_DEPENDENCIES"
+  },
+  "ood": {
+    "auprc": 1.0,
+    "auroc": 1.0,
+    "detector": "explicit split-disjoint template novelty",
+    "experiment_id": "E11",
+    "limitation": "Synthetic construction signal; not evidence for visual real-world OOD."
+  },
+  "reconciliation": {
+    "device": "CPU",
+    "documents": 240,
+    "experiment_id": "E9",
+    "fn": 0,
+    "fp": 0,
+    "high_confidence_errors_caught": 34,
+    "precision": 1.0,
+    "recall": 1.0,
+    "tn": 206,
+    "tp": 34
+  },
+  "routing": {
+    "decisions": {
+      "AUTO_ACCEPT": 1304,
+      "BLOCK_OR_QUARANTINE": 0,
+      "HUMAN_REVIEW": 136
+    },
+    "experiment_id": "E12",
+    "residual_weighted_risk_at_coverage": {
+      "0.50": 0.0,
+      "0.70": 0.0,
+      "0.80": 0.0,
+      "0.90": 0.0
+    },
+    "router": "G3 deterministic risk tree"
+  },
+  "security": {
+    "attack_documents": 14,
+    "attack_success_rate": 0.0,
+    "capability_boundary": "Models/extractors receive no external action tools.",
+    "detected": 14,
+    "experiment_id": "E16",
+    "note": "Measured architecture/test outcome, not proof against all attacks.",
+    "unauthorized_action_attempts": 0
+  },
+  "statistics": {
+    "absolute_difference": 0.0,
+    "bootstrap_95_ci": [
+      0.0,
+      0.0
+    ],
+    "comparison": "risk minus fixed random-order review capture at 10%",
+    "experiment_id": "E37-BOOTSTRAP",
+    "iterations": 2000,
+    "limitation": "Synthetic development data.",
+    "seed": 1729,
+    "unit": "field prediction"
+  },
+  "synthetic_manifest": {
+    "checksums": {
+      "dev": "92562e85d48708b04580b43cc647125824263568702215a6052952d42933ab12",
+      "final": "4011f1a110173382b82d2df55c8910f3c6eac54677f9de78518b6fa824f90a90",
+      "train": "c0c8d19e11ca312cba9ce3135a0b1e3a75f1f231ff6f5c908a93050576fdd835"
+    },
+    "counts": {
+      "dev": 120,
+      "final": 120,
+      "train": 120
+    },
+    "license": "Project-generated synthetic data; no real credentials or personal data.",
+    "name": "R-FDI Synthetic",
+    "seed": 1729,
+    "split_policy": "vendor and template IDs are split-disjoint",
+    "version": "1.0.0"
+  }
+}

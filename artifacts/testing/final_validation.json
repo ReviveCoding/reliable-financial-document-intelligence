@@ -1,0 +1,1 @@
+{"measured_at_utc":"2026-09-11T20:35:00Z","unit_tests":{"passed":9,"failed":0},"python_compileall":"PASS","evidence_records_verified":16,"json_jsonl_validation":"PASS","experiment_registry_rows":22,"workflow_phase_rows":51,"locked_final_sha256":"4011f1a110173382b82d2df55c8910f3c6eac54677f9de78518b6fa824f90a90","git_inspected":true}

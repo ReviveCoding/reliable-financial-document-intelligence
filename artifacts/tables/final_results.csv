@@ -1,0 +1,9 @@
+category,metric,value,evidence,interpretation
+dataset,final_documents,120,artifacts/results/e20_final.json,measured synthetic
+KIE,normalized_exact_match,1.0,artifacts/results/e20_final.json,measured regular synthetic text
+KIE,schema_failure_rate,0.0,artifacts/results/e20_final.json,measured
+reconciliation,recall,1.0,artifacts/results/e20_final.json,17 injected conflicts
+calibration,ECE,0.1233333333,artifacts/results/e20_final.json,raw confidence
+operations,P95_ms,0.082364,artifacts/results/e20_final.json,in-memory extraction only
+security,attack_success_rate,0.0,artifacts/results/e20_final.json,7 fixture attacks
+release,decision,NO_PROMOTION,artifacts/release/decision.json,no meaningful comparative improvement

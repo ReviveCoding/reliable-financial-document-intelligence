@@ -1,0 +1,1 @@
+{"decision":"NO_PROMOTION","numeric_gates_passed":true,"meaningful_improvement_gate_passed":false,"reason":"No authorized real-data or deep-model comparison established a meaningful operational improvement.","candidate":"P0_rfdi_deterministic_v1","evidence":"artifacts/results/e20_final.json"}

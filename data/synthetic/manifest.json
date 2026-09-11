@@ -1,0 +1,17 @@
+{
+  "name": "R-FDI Synthetic",
+  "version": "1.0.0",
+  "seed": 1729,
+  "counts": {
+    "train": 120,
+    "dev": 120,
+    "final": 120
+  },
+  "checksums": {
+    "train": "c0c8d19e11ca312cba9ce3135a0b1e3a75f1f231ff6f5c908a93050576fdd835",
+    "dev": "92562e85d48708b04580b43cc647125824263568702215a6052952d42933ab12",
+    "final": "4011f1a110173382b82d2df55c8910f3c6eac54677f9de78518b6fa824f90a90"
+  },
+  "split_policy": "vendor and template IDs are split-disjoint",
+  "license": "Project-generated synthetic data; no real credentials or personal data."
+}

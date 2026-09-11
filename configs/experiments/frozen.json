@@ -1,0 +1,9 @@
+{
+  "method": "P0_rfdi_deterministic_v1",
+  "seed": 1729,
+  "risk_threshold": 0.36,
+  "quarantine_threshold": 0.78,
+  "ood_threshold": 0.62,
+  "frozen": true,
+  "release_gates_source": "configs/experiments/core.json"
+}

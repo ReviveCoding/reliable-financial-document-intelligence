@@ -1,0 +1,15 @@
+{
+  "decisions": {
+    "AUTO_ACCEPT": 1304,
+    "BLOCK_OR_QUARANTINE": 0,
+    "HUMAN_REVIEW": 136
+  },
+  "experiment_id": "E12",
+  "residual_weighted_risk_at_coverage": {
+    "0.50": 0.0,
+    "0.70": 0.0,
+    "0.80": 0.0,
+    "0.90": 0.0
+  },
+  "router": "G3 deterministic risk tree"
+}

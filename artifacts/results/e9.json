@@ -1,0 +1,12 @@
+{
+  "device": "CPU",
+  "documents": 240,
+  "experiment_id": "E9",
+  "fn": 0,
+  "fp": 0,
+  "high_confidence_errors_caught": 34,
+  "precision": 1.0,
+  "recall": 1.0,
+  "tn": 206,
+  "tp": 34
+}
