@@ -1,0 +1,219 @@
+{
+  "base_commit": "86a53a61d9a33f54f126e0ed81b859d5ffb70a50",
+  "evaluation_state": "V2_FINAL_EVAL_COMPLETE",
+  "freeze_prerequisites": {
+    "empirical_model_families_completed": 3,
+    "minimum_empirical_model_families": 3,
+    "minimum_public_image_datasets": 2,
+    "non_degenerate_development_errors": true,
+    "primary_predictions_stored": true,
+    "public_image_datasets_completed": 2,
+    "robustness_evidence": true
+  },
+  "lifecycle_history": [
+    {
+      "evidence": "Development artifacts under artifacts/v2/results",
+      "state": "V2_DEVELOPMENT"
+    },
+    {
+      "evidence": "reports/v2/03_CANDIDATE_AND_GATES.md",
+      "state": "V2_CANDIDATE_SELECTED"
+    },
+    {
+      "evidence": "configs/v2/frozen.json",
+      "state": "V2_METHOD_FROZEN"
+    },
+    {
+      "evidence": "All freeze prerequisites true; 12/12 tests passed before authorization",
+      "state": "V2_FINAL_EVAL_AUTHORIZED"
+    },
+    {
+      "evidence": "artifacts/v2/release/decision.json",
+      "state": "V2_FINAL_EVAL_COMPLETE"
+    }
+  ],
+  "lineage": "R-FDI V2: Real-Document + GPU Completion Study",
+  "optional_modules": {
+    "DocILE": {
+      "reason": "Official token unavailable.",
+      "status": "BLOCKED"
+    },
+    "QLoRA": {
+      "reason": "Inference pilot already strong on narrow fields and latency made adaptation unjustified.",
+      "status": "SKIPPED_WITH_REASON"
+    },
+    "REFinD": {
+      "reason": "Official access unavailable.",
+      "status": "BLOCKED"
+    },
+    "SROIE": {
+      "reason": "Official RRC route requires account registration.",
+      "status": "BLOCKED"
+    },
+    "Textract": {
+      "reason": "No positive cloud budget authorization.",
+      "status": "SKIPPED_WITH_REASON"
+    },
+    "active_learning": {
+      "reason": "Optional; bounded compute prioritized core/final evidence.",
+      "status": "SKIPPED_WITH_REASON"
+    }
+  },
+  "phases": {
+    "V2-P00": {
+      "evidence": [
+        "V2_WORKFLOW_STATE.json"
+      ],
+      "name": "Preserve V1 and initialize V2",
+      "status": "COMPLETE"
+    },
+    "V2-P01": {
+      "evidence": [
+        "reports/v2/01_ENVIRONMENT_REPORT.md"
+      ],
+      "name": "Sandbox and escalated GPU diagnosis",
+      "status": "COMPLETE"
+    },
+    "V2-P02": {
+      "evidence": [
+        "artifacts/v2/environment/gpu_preflight.json"
+      ],
+      "name": "CUDA framework smoke",
+      "status": "COMPLETE"
+    },
+    "V2-P03": {
+      "evidence": [
+        "reports/v2/02_DATA_ACQUISITION.md"
+      ],
+      "name": "Official-source verification",
+      "status": "COMPLETE"
+    },
+    "V2-P04": {
+      "evidence": [
+        "artifacts/v2/data/cord_audit.json"
+      ],
+      "name": "CORD v2 acquisition and canonical conversion",
+      "status": "COMPLETE"
+    },
+    "V2-P05": {
+      "evidence": [
+        "artifacts/v2/data/funsd_audit.json"
+      ],
+      "name": "FUNSD acquisition and canonical conversion",
+      "status": "COMPLETE"
+    },
+    "V2-P06": {
+      "evidence": [
+        "reports/v2/02_DATA_ACQUISITION.md"
+      ],
+      "name": "SROIE provenance decision/acquisition",
+      "reason": "The official RRC download page requires account registration; no third-party repackaging was substituted.",
+      "status": "BLOCKED"
+    },
+    "V2-P07": {
+      "evidence": [
+        "artifacts/v2/data/synthetic_audit.json"
+      ],
+      "name": "Rendered synthetic V2",
+      "status": "COMPLETE"
+    },
+    "V2-P08": {
+      "evidence": [
+        "artifacts/v2/results/paddleocr_development.json",
+        "artifacts/v2/results/synthetic_ocr_development.json"
+      ],
+      "name": "Real OCR experiments",
+      "status": "COMPLETE"
+    },
+    "V2-P09": {
+      "evidence": [
+        "artifacts/v2/results/paddleocr_development.json",
+        "artifacts/v2/results/synthetic_ocr_development.json"
+      ],
+      "name": "B0/B1 baselines",
+      "status": "COMPLETE"
+    },
+    "V2-P10": {
+      "evidence": [
+        "artifacts/v2/results/layoutlmv3_development.json"
+      ],
+      "name": "LayoutLMv3 GPU",
+      "status": "COMPLETE"
+    },
+    "V2-P11": {
+      "evidence": [
+        "artifacts/v2/results/donut_development.json"
+      ],
+      "name": "Donut GPU",
+      "status": "COMPLETE"
+    },
+    "V2-P12": {
+      "evidence": [
+        "artifacts/v2/results/paddleocr_vl_pilot.json",
+        "artifacts/v2/results/paddleocr_vl_development.json"
+      ],
+      "name": "PaddleOCR-VL-1.6 GPU",
+      "note": "Whole-image native mode completed; page-layout mode was pruned after a bounded pilot exceeded five minutes.",
+      "status": "COMPLETE"
+    },
+    "V2-P13": {
+      "evidence": [
+        "artifacts/v2/results/qwen3vl_pilot.json",
+        "artifacts/v2/results/qwen3vl_development.json"
+      ],
+      "name": "Qwen3-VL-4B-Instruct GPU",
+      "status": "COMPLETE"
+    },
+    "V2-P14": {
+      "evidence": [
+        "artifacts/v2/results/reliability_development.json",
+        "artifacts/v2/results/ood_development.json",
+        "artifacts/v2/results/reconciliation_development.json",
+        "artifacts/v2/results/scaling_transfer_development.json",
+        "artifacts/v2/results/performance_development.json",
+        "artifacts/v2/results/ablation_development.json",
+        "artifacts/v2/results/security_development.json",
+        "artifacts/v2/data/eda_leakage.json"
+      ],
+      "name": "Scientific comparison and reliability",
+      "status": "COMPLETE"
+    },
+    "V2-P15": {
+      "evidence": [
+        "reports/v2/03_CANDIDATE_AND_GATES.md"
+      ],
+      "name": "V2 candidate selection",
+      "status": "COMPLETE"
+    },
+    "V2-P16": {
+      "evidence": [
+        "configs/v2/frozen.json"
+      ],
+      "name": "V2 method freeze",
+      "status": "COMPLETE"
+    },
+    "V2-P17": {
+      "evidence": [
+        "artifacts/v2/release/decision.json",
+        "artifacts/v2/results/final_donut.json",
+        "artifacts/v2/results/final_paddleocr.json",
+        "artifacts/v2/results/final_layoutlmv3.json",
+        "artifacts/v2/results/final_synthetic_ocr.json",
+        "artifacts/v2/results/final_security.json"
+      ],
+      "name": "V2 locked final",
+      "status": "COMPLETE"
+    },
+    "V2-P18": {
+      "evidence": [
+        "reports/v2/FINAL_TECHNICAL_REPORT.md",
+        "V2_FINAL_STATUS.md"
+      ],
+      "name": "V2 report/release",
+      "status": "COMPLETE"
+    }
+  },
+  "release_decision": "PROMOTE",
+  "schema_version": 1,
+  "updated_at_utc": "2026-09-12T02:36:42.263296+00:00"
+}

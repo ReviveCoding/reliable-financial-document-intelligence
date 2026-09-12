@@ -1,0 +1,15 @@
+{
+  "absolute_delta": 0.5263157894736842,
+  "baseline": 0.4631578947368421,
+  "candidate": 0.9894736842105263,
+  "confidence_interval_95": [
+    0.43157894736842106,
+    0.6210526315789474
+  ],
+  "dataset": "CORD v2",
+  "evidence": "artifacts/v2/release/decision.json",
+  "experiment_id": "V2-E20",
+  "lineage": "R-FDI V2",
+  "metric": "total exact match",
+  "split": "official test"
+}

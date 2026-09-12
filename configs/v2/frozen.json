@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "lineage": "R-FDI V2",
+  "frozen_at_utc": "2026-09-12T01:50:00Z",
+  "selected_system": "V2_FIXED_FAMILY_GATED_WITH_RFDI_CONTROLS",
+  "selection": {
+    "receipt_extractor": {
+      "model": "naver-clova-ix/donut-base-finetuned-cord-v2",
+      "revision": "8003d433113256b4ce3a0f5bf604b29ff78a7451",
+      "precision": "FP16",
+      "batch_size": 1
+    },
+    "form_extractor": {
+      "model": "microsoft/layoutlmv3-base",
+      "revision": "cfbbbff0762e6aab37086fdd4739ad14fe7d5db4",
+      "checkpoint": "/home/bjw-0/.local/share/rfdi-runtime/checkpoints/layoutlmv3-v2",
+      "precision": "FP32 evaluation",
+      "batch_size": 2
+    },
+    "document_classifier": "TF-IDF logistic regression over pinned PP-OCRv5 text",
+    "controls": [
+      "strict schema validation",
+      "deterministic financial reconciliation",
+      "confidence-first human review",
+      "no action tools or credentials"
+    ],
+    "not_selected": {
+      "adaptive_cascade": "No accuracy gain and higher latency than fixed Donut on development.",
+      "visual_ood_routing": "OOD-first review underperformed confidence-first review on corrected development data.",
+      "Qwen3-VL_default_route": "Compatible-field accuracy was strong but mean generation latency was 25.43 seconds per call.",
+      "PaddleOCR-VL_default_route": "Whole-image recall was competitive but P95 latency was 29.95 seconds with a severe tail outlier."
+    }
+  },
+  "locked_inputs": {
+    "cord_test_jsonl_sha256": "25b3e94529c60cdcea23e49d1dfdfd45e62cdc95cd76352d9d77269f1b16fec6",
+    "funsd_test_jsonl_sha256": "0d3a5bfe4186ca112f085f3dc62ba7a1cf46f3695a0f792bd85e164b7c4326b7",
+    "synthetic_final_jsonl_sha256": "679b941d123e8c4583396ae336a98a791f2e465d4e6bb538e8765c41a0d36496"
+  },
+  "release_gates": {
+    "cord_donut_leaf_f1_min": 0.83,
+    "cord_donut_total_exact_min": 0.95,
+    "funsd_layoutlmv3_macro_f1_min": 0.57,
+    "synthetic_all_field_recall_min": 0.82,
+    "synthetic_total_exact_min": 0.75,
+    "donut_p95_latency_seconds_max": 8.0,
+    "schema_failure_rate_max": 0.01,
+    "security_vlm_output_deviation_rate_max": 0.10,
+    "security_unauthorized_actions_max": 0,
+    "operational_total_exact_gain_vs_paddle_min": 0.20
+  },
+  "decision_rule": "PROMOTE only if every gate passes; otherwise NO_PROMOTION.",
+  "promotion_scope": "Offline V2 research candidate only; not production deployment or regulatory approval."
+}

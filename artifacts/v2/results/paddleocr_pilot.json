@@ -1,0 +1,57 @@
+{
+  "batch_size": 1,
+  "cer": 0.21554770318021202,
+  "dataset": "CORD v2",
+  "device": "NVIDIA GeForce RTX 4090 Laptop GPU",
+  "documents": 3,
+  "downstream_total_exact_match": 0.6666666666666666,
+  "experiment_id": "V2-E04",
+  "latency_seconds": {
+    "mean": 0.958724925666805,
+    "values": [
+      2.0970248180001363,
+      0.5184322170007363,
+      0.26071774199954234
+    ]
+  },
+  "load_seconds": 6.544829372000095,
+  "ocr_model": "PP-OCRv5_server_det+PP-OCRv5_server_rec",
+  "paddle": "3.3.0",
+  "paddleocr": "3.3.2",
+  "peak_vram_bytes": 984493568,
+  "physical_gpu_count": 1,
+  "precision": "framework default FP32",
+  "predictions": [
+    {
+      "document_id": "cord-v2-validation-00000",
+      "latency_seconds": 2.0970248180001363,
+      "mean_confidence": 0.9091261762839097,
+      "reference": "1 REAL GANACHE 16,500 1 EGG TART 13,000 1 PIZZA TOAST 16,000 TOTAL 45,500 CASH 50,000 CHANGE 4,500",
+      "text": "1 REAL GANACHE 16,500 1 EGG TART 13,000 1 PIZZA TOAST 16,000 TOTAL 45,500 CASH 50,000 CHANGE 4,500",
+      "total_prediction": "45500",
+      "total_truth": "45,500"
+    },
+    {
+      "document_id": "cord-v2-validation-00001",
+      "latency_seconds": 0.5184322170007363,
+      "mean_confidence": 0.7447878973824638,
+      "reference": "Kopi Susu Kolonel 1 23.000 Total 23.000 Tunai 50.000 Kembali 27.000",
+      "text": "404 Kopi Susu Kolonel 23.000 Total 23.000 Tunai 50.000 Kembali 27.000 ** **",
+      "total_prediction": "23000",
+      "total_truth": "23.000"
+    },
+    {
+      "document_id": "cord-v2-validation-00002",
+      "latency_seconds": 0.26071774199954234,
+      "mean_confidence": 0.9600029868238112,
+      "reference": "1 S-Ovaltine 50% 20,000 20,000 PB1: 1,818 Subtotal: 18,181 Total: 20,000 Cash: 100,000 CHANGE: 80,000 10% Tax Included",
+      "text": "\u8c46 20,000 20,000 S-Ovaltine 50% 1,818 PB1: 18,181 Subtotal: 20,000 Total: 100,000 Cash: 80,000 CHANGE: 10% Tax Included CS",
+      "total_prediction": "100000",
+      "total_truth": "20,000"
+    }
+  ],
+  "runtime_seconds": 2.876174777000415,
+  "split": "validation",
+  "total_evaluated": 3,
+  "wer": 0.3191489361702128
+}

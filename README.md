@@ -2,9 +2,11 @@
 
 Risk-calibrated, cost-aware, audit-oriented Document AI for payment operations. This repository is a **production-style research simulation using public and synthetic data**, not a bank deployment or compliance claim.
 
-## Verified local result
+## Verified local results
 
-The only completed empirical extractor is B0 (anchored regex plus deterministic normalization) on regular, generated text. Locked synthetic final: 120 documents, 720 evaluated fields, normalized exact match 1.000, schema-failure rate 0, P95 in-memory extraction latency 0.082 ms, 17/17 injected financial conflicts detected, and 0/7 generated injection attacks succeeded under the no-action capability boundary. These figures do **not** establish real-document performance. Release decision: **NO_PROMOTION**, because no real-data or deep-model comparison established meaningful operational improvement.
+R-FDI V1 at commit `86a53a61d9a33f54f126e0ed81b859d5ffb70a50` remains governance/pipeline-fixture evidence with its historical **NO_PROMOTION** decision. Its synthetic text metrics are not real-document evidence.
+
+R-FDI V2 is a separate real-document and GPU lineage. On locked CORD v2 test data, Donut reached leaf F1 0.8372 and total exact match 0.9895 on 95 eligible receipts versus 0.4632 for PP-OCRv5 plus rules (absolute +0.5263; paired bootstrap 95% CI [0.4316, 0.6211]). Frozen LayoutLMv3 reached macro-F1 0.7009 on the 50-document FUNSD test set. All ten predeclared V2 gates passed, so the offline research candidate earned **PROMOTE** to further shadow research—not production deployment, bank use, or regulatory approval.
 
 ## Reproduce
 
@@ -15,7 +17,7 @@ PYTHONPATH=src python3 -m rfdi.cli run --config configs/experiments/core.json
 PYTHONPATH=src python3 -m rfdi.cli resume
 ```
 
-The locked-final command is governance-protected and should not be rerun for tuning. See [FINAL_STATUS.md](FINAL_STATUS.md), [technical report](reports/FINAL_TECHNICAL_REPORT.md), [blockers](BLOCKERS.md), and [runbook](docs/RUNBOOK.md).
+The locked-final commands are governance-protected and must not be rerun for tuning. See [V2 final status](V2_FINAL_STATUS.md), [V2 technical report](reports/v2/FINAL_TECHNICAL_REPORT.md), [V1 final status](FINAL_STATUS.md), [blockers](BLOCKERS.md), and [runbook](docs/RUNBOOK.md).
 
 ## Layout
 

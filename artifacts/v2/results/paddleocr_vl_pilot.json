@@ -1,0 +1,40 @@
+{
+  "actual_model_source": "PaddleOCR official model registry via PaddleOCRVL",
+  "backend": "native",
+  "batch_size": 1,
+  "dataset": "CORD v2",
+  "device": "NVIDIA GeForce RTX 4090 Laptop GPU",
+  "documents": 1,
+  "experiment_id": "V2-E08",
+  "latency_seconds": [
+    6.587556586999199
+  ],
+  "leaf_value_recall": 1.0,
+  "load_seconds": 3.4015376120005385,
+  "metric_limitation": "Content-presence recall over canonical leaf values; not official structured CORD F1.",
+  "model": "PaddleOCR-VL-1.6",
+  "paddle": "3.3.0",
+  "paddleocr": "3.7.0",
+  "peak_vram_bytes": 6247114496,
+  "physical_gpu_count": 1,
+  "precision": "native backend default",
+  "predictions": [
+    {
+      "document_id": "cord-v2-validation-00000",
+      "extracted_text": "/home/bjw-0/.local/share/rfdi-runtime/data/processed/cord_v2/7f0115a4b758a71d6473b8d085751692da2fef98/images/validation/00000.png number footnote header header_image footer footer_image aside_text ocr 1 real ganache 1 egg tart 1 pizza toast 16,500 13,000 16,000 total cash 45,500 50,000 change 4,500",
+      "latency_seconds": 6.587556586999199,
+      "leaf_value_recall": 1.0,
+      "result_count": 1,
+      "result_top_level_keys": [
+        [
+          "res"
+        ]
+      ],
+      "total_value_present": true
+    }
+  ],
+  "runtime_seconds": 6.587556586999199,
+  "split": "validation",
+  "total_value_presence": 1.0,
+  "verified_official_hf_revision": "c5630abae1d940eafe0697512a0325494b02ab42"
+}

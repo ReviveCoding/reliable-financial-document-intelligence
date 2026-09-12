@@ -1,0 +1,118 @@
+{
+  "eda": {
+    "cord": {
+      "development_documents": 900,
+      "field_frequency": {
+        "menu.cnt": 2111,
+        "menu.discountprice": 90,
+        "menu.etc": 6,
+        "menu.itemsubtotal": 1,
+        "menu.nm": 2318,
+        "menu.num": 97,
+        "menu.price": 2313,
+        "menu.sub": 202,
+        "menu.unitprice": 670,
+        "menu.vatyn": 3,
+        "sub_total.discount_price": 68,
+        "sub_total.etc": 69,
+        "sub_total.othersvc_price": 1,
+        "sub_total.service_price": 111,
+        "sub_total.subtotal_price": 598,
+        "sub_total.tax_price": 402,
+        "total.cashprice": 581,
+        "total.changeprice": 564,
+        "total.creditcardprice": 135,
+        "total.emoneyprice": 50,
+        "total.menuqty_cnt": 254,
+        "total.menutype_cnt": 45,
+        "total.total_etc": 30,
+        "total.total_price": 877,
+        "void_menu.nm": 1,
+        "void_menu.price": 1
+      },
+      "ocr_tokens_mean": 23.947777777777777,
+      "ocr_tokens_p95": 53.0
+    },
+    "funsd": {
+      "entity_frequency": {
+        "answer": 2802,
+        "header": 441,
+        "other": 902,
+        "question": 3266
+      },
+      "training_documents": 149,
+      "words_mean": 151.08724832214764,
+      "words_p95": 253.79999999999998
+    },
+    "synthetic": {
+      "corruptions": {
+        "blur": 51,
+        "clipping": 49,
+        "illumination": 51,
+        "jpeg": 51,
+        "low_resolution": 49,
+        "none": 51,
+        "perspective": 49,
+        "rotation": 49
+      },
+      "development_documents": 400,
+      "document_types": {
+        "invoice": 80,
+        "payment_instruction": 80,
+        "purchase_order": 80,
+        "receipt": 80,
+        "remittance": 80
+      },
+      "line_items_mean": 5.49,
+      "multi_page_documents": 38
+    }
+  },
+  "eda_scope": "Development content only; locked content is reduced inside this audit to aggregate leakage counts and is never emitted or used for selection.",
+  "experiment_id": "V2-E17",
+  "leakage": {
+    "cord_text_train_vs_test": {
+      "exact_normalized_text_overlaps": 7,
+      "jaccard_ge_0_95_right_documents": 11
+    },
+    "cord_text_train_vs_validation": {
+      "exact_normalized_text_overlaps": 11,
+      "jaccard_ge_0_95_right_documents": 15
+    },
+    "cord_train_vs_test": {
+      "dhash_hamming_le_2_right_images": 15,
+      "exact_sha256_overlaps": 0,
+      "left_images": 800,
+      "right_images": 100
+    },
+    "cord_train_vs_validation": {
+      "dhash_hamming_le_2_right_images": 13,
+      "exact_sha256_overlaps": 0,
+      "left_images": 800,
+      "right_images": 100
+    },
+    "funsd_text_train_vs_test": {
+      "exact_normalized_text_overlaps": 0,
+      "jaccard_ge_0_95_right_documents": 0
+    },
+    "funsd_train_vs_test": {
+      "dhash_hamming_le_2_right_images": 0,
+      "exact_sha256_overlaps": 0,
+      "left_images": 149,
+      "right_images": 50
+    },
+    "synthetic_layout_overlap_train_dev": 0,
+    "synthetic_train_vs_dev": {
+      "dhash_hamming_le_2_right_images": 6,
+      "exact_sha256_overlaps": 0,
+      "left_images": 328,
+      "right_images": 110
+    },
+    "synthetic_train_vs_final": {
+      "dhash_hamming_le_2_right_images": 3,
+      "exact_sha256_overlaps": 0,
+      "left_images": 328,
+      "right_images": 110
+    },
+    "synthetic_vendor_overlap_train_dev": 0
+  }
+}

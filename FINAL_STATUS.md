@@ -1,5 +1,7 @@
 # Final Status
 
+> This file is the preserved R-FDI V1 final status. V1 remains **NO_PROMOTION**. The separate R-FDI V2 real-document/GPU study completed with an offline-research **PROMOTE** decision; see [V2_FINAL_STATUS.md](V2_FINAL_STATUS.md) and [reports/v2/FINAL_TECHNICAL_REPORT.md](reports/v2/FINAL_TECHNICAL_REPORT.md). V2 does not rewrite the evidence below.
+
 ## Outcome
 
 Evaluation lifecycle: `FINAL_EVAL_COMPLETE`  

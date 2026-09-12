@@ -1,0 +1,6086 @@
+{
+  "batch_size": 1,
+  "dataset": "CORD v2",
+  "device": "NVIDIA GeForce RTX 4090 Laptop GPU",
+  "documents": 100,
+  "experiment_id": "V2-E07",
+  "gold_leaves": 1219,
+  "latency_seconds": {
+    "mean": 2.568028480039975,
+    "values": [
+      3.3368412840009114,
+      0.49131335399943055,
+      0.7661978039996029,
+      1.04411285200149,
+      1.0935863529994094,
+      0.6884710199992696,
+      1.4524602870005765,
+      1.1410244809994765,
+      1.1561730319990602,
+      0.5642686369992589,
+      1.4975801090004097,
+      3.6267539279997436,
+      1.3719352219995926,
+      4.517418737999833,
+      2.669294315001025,
+      2.3261856169992825,
+      2.2149394899988692,
+      2.8541480629992293,
+      2.684877952999159,
+      4.645551284000248,
+      2.4711501929996302,
+      4.142619218000618,
+      3.3663727450002625,
+      1.767274894998991,
+      5.497175368000171,
+      4.42462445000092,
+      6.501323759001025,
+      2.660877038999388,
+      1.043966041999738,
+      1.649712501999602,
+      1.8646260910009005,
+      0.9124108010000782,
+      1.255703791999622,
+      2.73037523900166,
+      2.8579290850011603,
+      4.606218052998884,
+      3.233216282000285,
+      2.1526525049994234,
+      1.664150321001216,
+      3.6875298129998555,
+      2.4410307019988977,
+      7.669304012999419,
+      2.584130680999806,
+      0.9103965379999863,
+      0.9457019620003848,
+      1.9411574110017682,
+      1.4486051499989117,
+      1.561635361998924,
+      3.3387901179994515,
+      2.6124725150002632,
+      2.018207943998277,
+      1.9524756370010437,
+      1.9533098850006354,
+      2.4541692539987707,
+      1.3657131630006916,
+      1.788735321999411,
+      1.1418951590003417,
+      3.7598901750006917,
+      2.5451345439996658,
+      6.3733855209993635,
+      1.3365207759998157,
+      2.6453357139998843,
+      2.5960292989984737,
+      3.0584458819994325,
+      2.2403796700000385,
+      4.722639646000971,
+      0.7605730299983406,
+      7.4159141599993745,
+      3.1524453250003717,
+      2.8814228829996864,
+      3.608209149000686,
+      1.9127910879997216,
+      1.9202044170015142,
+      1.2524525339995307,
+      1.9219256489996042,
+      3.9345563750011934,
+      2.7282863529999304,
+      1.6840265989994805,
+      4.338587305999681,
+      3.021991485000399,
+      1.5195612750012515,
+      3.4563232860000426,
+      3.062445726000078,
+      2.120277170000918,
+      3.111376487000598,
+      0.7953145100000256,
+      1.6740752929999871,
+      2.5786287440005253,
+      5.155933003999962,
+      2.067283823998878,
+      1.8089134159999958,
+      2.3708710110004176,
+      1.9548838610007806,
+      6.565689537999788,
+      2.970894922000298,
+      3.724049742999341,
+      2.063421587999983,
+      0.4863625680009136,
+      0.531599322999682,
+      2.213022302999889
+    ]
+  },
+  "leaf_f1": 0.8799999999999999,
+  "leaf_precision": 0.884742951907131,
+  "leaf_recall": 0.8753076292042657,
+  "load_seconds": 6.601017271001183,
+  "metric_definition": "Exact normalized (field-path, leaf-value) multiset; list row indices ignored.",
+  "model": "naver-clova-ix/donut-base-finetuned-cord-v2",
+  "peak_vram_bytes": 851034624,
+  "physical_gpu_count": 1,
+  "precision": "FP16",
+  "predicted_leaves": 1206,
+  "predictions": [
+    {
+      "document_id": "cord-v2-validation-00000",
+      "latency_seconds": 3.3368412840009114,
+      "leaf_f1": 1.0,
+      "leaf_gold": 12,
+      "leaf_predicted": 12,
+      "leaf_true_positive": 12,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "REAL GANACHE",
+            "price": "16,500"
+          },
+          {
+            "cnt": "1",
+            "nm": "EGG TART",
+            "price": "13,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "PIZZA TOAST",
+            "price": "16,000"
+          }
+        ],
+        "total": {
+          "cashprice": "50,000",
+          "changeprice": "4,500",
+          "total_price": "45,500"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> REAL GANACHE</s_nm><s_cnt> 1</s_cnt><s_price> 16,500</s_price><sep/><s_nm> EGG TART</s_nm><s_cnt> 1</s_cnt><s_price> 13,000</s_price><sep/><s_nm> PIZZA TOAST</s_nm><s_cnt> 1</s_cnt><s_price> 16,000</s_price></s_menu><s_total><s_total_price> 45,500</s_total_price><s_cashprice> 50,000</s_cashprice><s_changeprice> 4,500</s_changeprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9999556541442871,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "REAL GANACHE",
+            "price": "16,500"
+          },
+          {
+            "cnt": "1",
+            "nm": "EGG TART",
+            "price": "13,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "PIZZA TOAST",
+            "price": "16,000"
+          }
+        ],
+        "total": {
+          "cashprice": "50,000",
+          "changeprice": "4,500",
+          "total_price": "45,500"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00001",
+      "latency_seconds": 0.49131335399943055,
+      "leaf_f1": 1.0,
+      "leaf_gold": 6,
+      "leaf_predicted": 6,
+      "leaf_true_positive": 6,
+      "prediction": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Kopi Susu Kolonel",
+          "price": "23.000"
+        },
+        "total": {
+          "cashprice": "50.000",
+          "changeprice": "27.000",
+          "total_price": "23.000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> Kopi Susu Kolonel</s_nm><s_cnt> 1</s_cnt><s_price> 23.000</s_price></s_menu><s_total><s_total_price> 23.000</s_total_price><s_cashprice> 50.000</s_cashprice><s_changeprice> 27.000</s_changeprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9999263286590576,
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Kopi Susu Kolonel",
+          "price": "23.000"
+        },
+        "total": {
+          "cashprice": "50.000",
+          "changeprice": "27.000",
+          "total_price": "23.000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00002",
+      "latency_seconds": 0.7661978039996029,
+      "leaf_f1": 0.8000000000000002,
+      "leaf_gold": 10,
+      "leaf_predicted": 10,
+      "leaf_true_positive": 8,
+      "prediction": {
+        "menu": {
+          "cnt": "1",
+          "nm": "S-Ovaltine",
+          "price": "20,000",
+          "sub": {
+            "nm": "50%"
+          },
+          "unitprice": "20,000"
+        },
+        "sub_total": {
+          "subtotal_price": "18,181",
+          "tax_price": "1,818"
+        },
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "80,000",
+          "total_price": "20,000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> S-Ovaltine</s_nm><s_unitprice> 20,000</s_unitprice><s_cnt> 1</s_cnt><s_price> 20,000</s_price><s_sub><s_nm> 50%</s_nm></s_sub></s_menu><s_sub_total><s_subtotal_price> 18,181</s_subtotal_price><s_tax_price> 1,818</s_tax_price></s_sub_total><s_total><s_total_price> 20,000</s_total_price><s_cashprice> 100,000</s_cashprice><s_changeprice> 80,000</s_changeprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.990087628364563,
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "S-Ovaltine 50%",
+          "price": "20,000",
+          "unitprice": "20,000",
+          "vatyn": "10% Tax Included"
+        },
+        "sub_total": {
+          "subtotal_price": "18,181",
+          "tax_price": "1,818"
+        },
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "80,000",
+          "total_price": "20,000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00003",
+      "latency_seconds": 1.04411285200149,
+      "leaf_f1": 0.9090909090909091,
+      "leaf_gold": 11,
+      "leaf_predicted": 11,
+      "leaf_true_positive": 10,
+      "prediction": {
+        "menu": {
+          "cnt": "1X",
+          "nm": "M-Carame 1 Black Tea",
+          "price": "28,000",
+          "sub": [
+            {
+              "nm": "70%"
+            },
+            {
+              "nm": "Less Ice"
+            }
+          ],
+          "unitprice": "@28,000"
+        },
+        "sub_total": {
+          "subtotal_price": "28,000",
+          "tax_price": "0"
+        },
+        "total": {
+          "cashprice": "28,000",
+          "changeprice": "0",
+          "total_price": "28,000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> M-Carame 1 Black Tea</s_nm><s_unitprice> @28,000</s_unitprice><s_cnt> 1X</s_cnt><s_price> 28,000</s_price><s_sub><s_nm> 70%</s_nm><sep/><s_nm> Less Ice</s_nm></s_sub></s_menu><s_sub_total><s_subtotal_price> 28,000</s_subtotal_price><s_tax_price> 0</s_tax_price></s_sub_total><s_total><s_total_price> 28,000</s_total_price><s_cashprice> 28,000</s_cashprice><s_changeprice> 0</s_changeprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9871588349342346,
+      "truth": {
+        "menu": {
+          "cnt": "1X",
+          "nm": "M-Caramel Black Tea",
+          "price": "28,000",
+          "sub": [
+            {
+              "nm": "70%"
+            },
+            {
+              "nm": "Less Ice"
+            }
+          ],
+          "unitprice": "@28,000"
+        },
+        "sub_total": {
+          "subtotal_price": "28,000",
+          "tax_price": "0"
+        },
+        "total": {
+          "cashprice": "28,000",
+          "changeprice": "0",
+          "total_price": "28,000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00004",
+      "latency_seconds": 1.0935863529994094,
+      "leaf_f1": 0.8181818181818182,
+      "leaf_gold": 11,
+      "leaf_predicted": 11,
+      "leaf_true_positive": 9,
+      "prediction": {
+        "menu": {
+          "cnt": "1",
+          "nm": "BBQ Chicken",
+          "price": "41,000",
+          "sub": {
+            "cnt": "1",
+            "nm": "- Sedang",
+            "price": "0"
+          }
+        },
+        "sub_total": {
+          "subtotal_price": "41,000"
+        },
+        "total": {
+          "cashprice": "50.000",
+          "changeprice": "9,000",
+          "menuqty_cnt": "1",
+          "total_price": "41,000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> BBQ Chicken</s_nm><s_cnt> 1</s_cnt><s_price> 41,000</s_price><s_sub><s_nm> - Sedang</s_nm><s_cnt> 1</s_cnt><s_price> 0</s_price></s_sub></s_menu><s_sub_total><s_subtotal_price> 41,000</s_subtotal_price></s_sub_total><s_total><s_total_price> 41,000</s_total_price><s_cashprice> 50.000</s_cashprice><s_changeprice> 9,000</s_changeprice><s_menuqty_cnt> 1</s_menuqty_cnt></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9957450032234192,
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "BBQ Chicken",
+          "price": "41,000",
+          "sub": {
+            "cnt": "1",
+            "nm": "Sedang",
+            "price": "0"
+          }
+        },
+        "sub_total": {
+          "subtotal_price": "41,000"
+        },
+        "total": {
+          "cashprice": "50.000",
+          "changeprice": ":9,000",
+          "menuqty_cnt": "1",
+          "total_price": "41,000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00005",
+      "latency_seconds": 0.6884710199992696,
+      "leaf_f1": 0.923076923076923,
+      "leaf_gold": 7,
+      "leaf_predicted": 6,
+      "leaf_true_positive": 6,
+      "prediction": {
+        "menu": {
+          "nm": "LE MINERAL",
+          "price": "8,000"
+        },
+        "sub_total": {
+          "subtotal_price": "7,273",
+          "tax_price": "727"
+        },
+        "total": {
+          "cashprice": "8,000",
+          "total_price": "8,000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> LE MINERAL</s_nm><s_price> 8,000</s_price></s_menu><s_sub_total><s_subtotal_price> 7,273</s_subtotal_price><s_tax_price> 727</s_tax_price></s_sub_total><s_total><s_total_price> 8,000</s_total_price><s_cashprice> 8,000</s_cashprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9757527709007263,
+      "truth": {
+        "menu": {
+          "cnt": "1.00",
+          "nm": "LE MINERAL",
+          "price": "8,000"
+        },
+        "sub_total": {
+          "subtotal_price": "7,273",
+          "tax_price": "727"
+        },
+        "total": {
+          "cashprice": "8,000",
+          "total_price": "8,000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00006",
+      "latency_seconds": 1.4524602870005765,
+      "leaf_f1": 1.0,
+      "leaf_gold": 11,
+      "leaf_predicted": 11,
+      "leaf_true_positive": 11,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "POTATO SAUSAGE BREAD",
+            "price": "19,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "OREO GREEN TEA SPREAD",
+            "price": "52,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "WHITE CHOCO BANANA SPREAD",
+            "price": "52,000"
+          }
+        ],
+        "total": {
+          "creditcardprice": "123,000",
+          "total_price": "123,000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> POTATO SAUSAGE BREAD</s_nm><s_cnt> 1</s_cnt><s_price> 19,000</s_price><sep/><s_nm> OREO GREEN TEA SPREAD</s_nm><s_cnt> 1</s_cnt><s_price> 52,000</s_price><sep/><s_nm> WHITE CHOCO BANANA SPREAD</s_nm><s_cnt> 1</s_cnt><s_price> 52,000</s_price></s_menu><s_total><s_total_price> 123,000</s_total_price><s_creditcardprice> 123,000</s_creditcardprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9999881982803345,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "POTATO SAUSAGE BREAD",
+            "price": "19,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "OREO GREEN TEA SPREAD",
+            "price": "52,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "WHITE CHOCO BANANA SPREAD",
+            "price": "52,000"
+          }
+        ],
+        "total": {
+          "creditcardprice": "123,000",
+          "total_price": "123,000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00007",
+      "latency_seconds": 1.1410244809994765,
+      "leaf_f1": 0.8571428571428572,
+      "leaf_gold": 10,
+      "leaf_predicted": 11,
+      "leaf_true_positive": 9,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "4",
+            "nm": "Choco Devil",
+            "price": "63,636"
+          },
+          {
+            "nm": "CP 360 Club Card",
+            "price": "-9,545"
+          }
+        ],
+        "sub_total": {
+          "discount_price": "-9,545",
+          "subtotal_price": "63,636",
+          "tax_price": "5,409"
+        },
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "40,500",
+          "total_price": "59,500"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> Choco Devil</s_nm><s_cnt> 4</s_cnt><s_price> 63,636</s_price><sep/><s_nm> CP 360 Club Card</s_nm><s_price> -9,545</s_price></s_menu><s_sub_total><s_subtotal_price> 63,636</s_subtotal_price><s_discount_price> -9,545</s_discount_price><s_tax_price> 5,409</s_tax_price></s_sub_total><s_total><s_total_price> 59,500</s_total_price><s_cashprice> 100,000</s_cashprice><s_changeprice> 40,500</s_changeprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9799718856811523,
+      "truth": {
+        "menu": {
+          "cnt": "4",
+          "discountprice": "-9,545",
+          "nm": "Choco Devil",
+          "price": "63,636"
+        },
+        "sub_total": {
+          "discount_price": "-9,545",
+          "subtotal_price": "63,636",
+          "tax_price": "5,409"
+        },
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "40,500",
+          "total_price": "59,500"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00008",
+      "latency_seconds": 1.1561730319990602,
+      "leaf_f1": 1.0,
+      "leaf_gold": 14,
+      "leaf_predicted": 14,
+      "leaf_true_positive": 14,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "3X",
+            "discountprice": "-7,800",
+            "nm": "TALAM UNGU",
+            "price": "19,500",
+            "unitprice": "@6500"
+          },
+          {
+            "cnt": "1X",
+            "nm": "MIKA KECIL",
+            "price": "0",
+            "unitprice": "@0"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "11,700"
+        },
+        "total": {
+          "cashprice": "20,000",
+          "changeprice": "8,300",
+          "menuqty_cnt": "4.00xITEMs",
+          "total_price": "11,700"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> TALAM UNGU</s_nm><s_unitprice> @6500</s_unitprice><s_cnt> 3X</s_cnt><s_discountprice> -7,800</s_discountprice><s_price> 19,500</s_price><sep/><s_nm> MIKA KECIL</s_nm><s_unitprice> @0</s_unitprice><s_cnt> 1X</s_cnt><s_price> 0</s_price></s_menu><s_sub_total><s_subtotal_price> 11,700</s_subtotal_price></s_sub_total><s_total><s_total_price> 11,700</s_total_price><s_cashprice> 20,000</s_cashprice><s_changeprice> 8,300</s_changeprice><s_menuqty_cnt> 4.00xITEMs</s_menuqty_cnt></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9994972944259644,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "3X",
+            "discountprice": "-7,800",
+            "nm": "TALAM UNGU",
+            "price": "19,500",
+            "unitprice": "@6500"
+          },
+          {
+            "cnt": "1X",
+            "nm": "MIKA KECIL",
+            "price": "0",
+            "unitprice": "@0"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "11,700"
+        },
+        "total": {
+          "cashprice": "20,000",
+          "changeprice": "8,300",
+          "menuqty_cnt": "4.00xITEMs",
+          "total_price": "11,700"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00009",
+      "latency_seconds": 0.5642686369992589,
+      "leaf_f1": 0.5,
+      "leaf_gold": 6,
+      "leaf_predicted": 6,
+      "leaf_true_positive": 3,
+      "prediction": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Tahu Ikan Oma Giok",
+          "price": "20.000"
+        },
+        "total": {
+          "cashprice": "20.000",
+          "changeprice": "0",
+          "total_price": "20.000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> Tahu Ikan Oma Giok</s_nm><s_cnt> 1</s_cnt><s_price> 20.000</s_price></s_menu><s_total><s_total_price> 20.000</s_total_price><s_cashprice> 20.000</s_cashprice><s_changeprice> 0</s_changeprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9999040961265564,
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Tahu Ikan Oma Giok",
+          "price": "20,000"
+        },
+        "total": {
+          "cashprice": "20,000",
+          "changeprice": "0",
+          "total_price": "20,000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00010",
+      "latency_seconds": 1.4975801090004097,
+      "leaf_f1": 0.8888888888888888,
+      "leaf_gold": 9,
+      "leaf_predicted": 9,
+      "leaf_true_positive": 8,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "2",
+            "nm": "Serbu",
+            "price": "40.000"
+          },
+          {
+            "cnt": "2",
+            "nm": "Choco Peanut Bread",
+            "price": "20.000"
+          }
+        ],
+        "total": {
+          "cashprice": "60.000",
+          "changeprice": "0",
+          "total_price": "60.000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> Serbu</s_nm><s_cnt> 2</s_cnt><s_price> 40.000</s_price><sep/><s_nm> Choco Peanut Bread</s_nm><s_cnt> 2</s_cnt><s_price> 20.000</s_price></s_menu><s_total><s_total_price> 60.000</s_total_price><s_cashprice> 60.000</s_cashprice><s_changeprice> 0</s_changeprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9983924627304077,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "2",
+            "nm": "Serbu 1",
+            "price": "40.000"
+          },
+          {
+            "cnt": "2",
+            "nm": "Choco Peanut Bread",
+            "price": "20.000"
+          }
+        ],
+        "total": {
+          "cashprice": "60.000",
+          "changeprice": "0",
+          "total_price": "60.000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00011",
+      "latency_seconds": 3.6267539279997436,
+      "leaf_f1": 0.9411764705882353,
+      "leaf_gold": 17,
+      "leaf_predicted": 17,
+      "leaf_true_positive": 16,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "Se'I Sapi Sambal Matah ( R )",
+            "price": "20.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Se'I S-pi Lada Hitam (J)",
+            "price": "35.000"
+          },
+          {
+            "cnt": "2",
+            "nm": "Nasi Putih",
+            "price": "10.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Milk Shake Coklat",
+            "price": "16.000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "81.000",
+          "tax_price": "8.100"
+        },
+        "total": {
+          "changeprice": "0",
+          "creditcardprice": "89.100",
+          "total_price": "89.100"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> Se'I Sapi Sambal Matah ( R )</s_nm><s_cnt> 1</s_cnt><s_price> 20.000</s_price><sep/><s_nm> Se'I S-pi Lada Hitam (J)</s_nm><s_cnt> 1</s_cnt><s_price> 35.000</s_price><sep/><s_nm> Nasi Putih</s_nm><s_cnt> 2</s_cnt><s_price> 10.000</s_price><sep/><s_nm> Milk Shake Coklat</s_nm><s_cnt> 1</s_cnt><s_price> 16.000</s_price></s_menu><s_sub_total><s_subtotal_price> 81.000</s_subtotal_price><s_tax_price> 8.100</s_tax_price></s_sub_total><s_total><s_total_price> 89.100</s_total_price><s_changeprice> 0</s_changeprice><s_creditcardprice> 89.100</s_creditcardprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9980692863464355,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "Se'I Sapi Sambal Matah ( R )",
+            "price": "20.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Se'I Sapi Lada Hitam (J)",
+            "price": "35.000"
+          },
+          {
+            "cnt": "2",
+            "nm": "Nasi Putih",
+            "price": "10.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Milk Shake Coklat",
+            "price": "16.000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "81.000",
+          "tax_price": "8.100"
+        },
+        "total": {
+          "changeprice": "0",
+          "creditcardprice": "89.100",
+          "total_price": "89.100"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00012",
+      "latency_seconds": 1.3719352219995926,
+      "leaf_f1": 1.0,
+      "leaf_gold": 6,
+      "leaf_predicted": 6,
+      "leaf_true_positive": 6,
+      "prediction": {
+        "menu": {
+          "cnt": "4",
+          "nm": "ES KOPI SUSU",
+          "price": "72.000"
+        },
+        "total": {
+          "changeprice": "0",
+          "emoneyprice": "72.000",
+          "total_price": "72.000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> ES KOPI SUSU</s_nm><s_cnt> 4</s_cnt><s_price> 72.000</s_price></s_menu><s_total><s_total_price> 72.000</s_total_price><s_changeprice> 0</s_changeprice><s_emoneyprice> 72.000</s_emoneyprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9990233182907104,
+      "truth": {
+        "menu": {
+          "cnt": "4",
+          "nm": "ES KOPI SUSU",
+          "price": "72.000"
+        },
+        "total": {
+          "changeprice": "0",
+          "emoneyprice": "72.000",
+          "total_price": "72.000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00013",
+      "latency_seconds": 4.517418737999833,
+      "leaf_f1": 1.0,
+      "leaf_gold": 11,
+      "leaf_predicted": 11,
+      "leaf_true_positive": 11,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "MINERAL 600 ML",
+            "price": "7,727"
+          },
+          {
+            "cnt": "1",
+            "nm": "BULGOGI RICE R",
+            "price": "33,636"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "41,364",
+          "tax_price": "4,136"
+        },
+        "total": {
+          "cashprice": "50,000",
+          "changeprice": "-4,500",
+          "total_price": "45,500"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> MINERAL 600 ML</s_nm><s_cnt> 1</s_cnt><s_price> 7,727</s_price><sep/><s_nm> BULGOGI RICE R</s_nm><s_cnt> 1</s_cnt><s_price> 33,636</s_price></s_menu><s_sub_total><s_subtotal_price> 41,364</s_subtotal_price><s_tax_price> 4,136</s_tax_price></s_sub_total><s_total><s_total_price> 45,500</s_total_price><s_cashprice> 50,000</s_cashprice><s_changeprice> -4,500</s_changeprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9999719262123108,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "MINERAL 600 ML",
+            "price": "7,727"
+          },
+          {
+            "cnt": "1",
+            "nm": "BULGOGI RICE R",
+            "price": "33,636"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "41,364",
+          "tax_price": "4,136"
+        },
+        "total": {
+          "cashprice": "50,000",
+          "changeprice": "-4,500",
+          "total_price": "45,500"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00014",
+      "latency_seconds": 2.669294315001025,
+      "leaf_f1": 0.6666666666666666,
+      "leaf_gold": 12,
+      "leaf_predicted": 12,
+      "leaf_true_positive": 8,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "2x",
+            "nm": "Arem Arem",
+            "price": "24.000",
+            "unitprice": "@12.000"
+          },
+          {
+            "cnt": "1x",
+            "nm": "Kroket",
+            "price": "12.000",
+            "unitprice": "@12.000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "Rp 36.000",
+          "tax_price": "Rp 3.600"
+        },
+        "total": {
+          "emoneyprice": "Rp 39.600",
+          "total_price": "Rp 39.600"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> Arem Arem</s_nm><s_unitprice> @12.000</s_unitprice><s_cnt> 2x</s_cnt><s_price> 24.000</s_price><sep/><s_nm> Kroket</s_nm><s_unitprice> @12.000</s_unitprice><s_cnt> 1x</s_cnt><s_price> 12.000</s_price></s_menu><s_sub_total><s_subtotal_price> Rp 36.000</s_subtotal_price><s_tax_price> Rp 3.600</s_tax_price></s_sub_total><s_total><s_total_price> Rp 39.600</s_total_price><s_emoneyprice> Rp 39.600</s_emoneyprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9991000890731812,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "2 x",
+            "nm": "Arem Arem",
+            "price": "24.000",
+            "unitprice": "@ 12.000"
+          },
+          {
+            "cnt": "1 x",
+            "nm": "Kroket",
+            "price": "12.000",
+            "unitprice": "@ 12.000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "Rp 36.000",
+          "tax_price": "Rp 3.600"
+        },
+        "total": {
+          "emoneyprice": "Rp 39.600",
+          "total_price": "Rp 39.600"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00015",
+      "latency_seconds": 2.3261856169992825,
+      "leaf_f1": 1.0,
+      "leaf_gold": 13,
+      "leaf_predicted": 13,
+      "leaf_true_positive": 13,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "2",
+            "nm": "Arem Arem",
+            "price": "24.000",
+            "unitprice": "12.000"
+          },
+          {
+            "cnt": "2",
+            "nm": "Pepenero Pastel",
+            "price": "30.000",
+            "unitprice": "15.000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "Rp 54.000",
+          "tax_price": "Rp 5.400"
+        },
+        "total": {
+          "cashprice": "Rp 100.000",
+          "changeprice": "Rp 40.600",
+          "total_price": "Rp 59.400"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> Arem Arem</s_nm><s_unitprice> 12.000</s_unitprice><s_cnt> 2</s_cnt><s_price> 24.000</s_price><sep/><s_nm> Pepenero Pastel</s_nm><s_unitprice> 15.000</s_unitprice><s_cnt> 2</s_cnt><s_price> 30.000</s_price></s_menu><s_sub_total><s_subtotal_price> Rp 54.000</s_subtotal_price><s_tax_price> Rp 5.400</s_tax_price></s_sub_total><s_total><s_total_price> Rp 59.400</s_total_price><s_cashprice> Rp 100.000</s_cashprice><s_changeprice> Rp 40.600</s_changeprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9988956451416016,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "2",
+            "nm": "Arem Arem",
+            "price": "24.000",
+            "unitprice": "12.000"
+          },
+          {
+            "cnt": "2",
+            "nm": "Pepenero Pastel",
+            "price": "30.000",
+            "unitprice": "15.000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "Rp 54.000",
+          "tax_price": "Rp 5.400"
+        },
+        "total": {
+          "cashprice": "Rp 100.000",
+          "changeprice": "Rp 40.600",
+          "total_price": "Rp 59.400"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00016",
+      "latency_seconds": 2.2149394899988692,
+      "leaf_f1": 1.0,
+      "leaf_gold": 7,
+      "leaf_predicted": 7,
+      "leaf_true_positive": 7,
+      "prediction": {
+        "menu": {
+          "cnt": "1",
+          "nm": "TT",
+          "price": "20,000",
+          "unitprice": "20,000"
+        },
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "80,000",
+          "total_price": "20,000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> TT</s_nm><s_unitprice> 20,000</s_unitprice><s_cnt> 1</s_cnt><s_price> 20,000</s_price></s_menu><s_total><s_total_price> 20,000</s_total_price><s_cashprice> 100,000</s_cashprice><s_changeprice> 80,000</s_changeprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9933670163154602,
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "TT",
+          "price": "20,000",
+          "unitprice": "20,000"
+        },
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "80,000",
+          "total_price": "20,000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00017",
+      "latency_seconds": 2.8541480629992293,
+      "leaf_f1": 0.75,
+      "leaf_gold": 8,
+      "leaf_predicted": 8,
+      "leaf_true_positive": 6,
+      "prediction": {
+        "menu": {
+          "cnt": "1 x",
+          "nm": "LEMONADE 16OZ",
+          "price": "20,000",
+          "unitprice": "20,000"
+        },
+        "sub_total": {
+          "subtotal_price": "20,000"
+        },
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "80,000",
+          "total_price": "20,000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> LEMONADE 16OZ</s_nm><s_unitprice> 20,000</s_unitprice><s_cnt> 1 x</s_cnt><s_price> 20,000</s_price></s_menu><s_sub_total><s_subtotal_price> 20,000</s_subtotal_price></s_sub_total><s_total><s_total_price> 20,000</s_total_price><s_cashprice> 100,000</s_cashprice><s_changeprice> 80,000</s_changeprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.979280412197113,
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "LEMONADE 16OZ",
+          "price": "20,000",
+          "unitprice": "20,000"
+        },
+        "sub_total": {
+          "subtotal_price": "20,000"
+        },
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "80.000",
+          "total_price": "20,000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00018",
+      "latency_seconds": 2.684877952999159,
+      "leaf_f1": 1.0,
+      "leaf_gold": 12,
+      "leaf_predicted": 12,
+      "leaf_true_positive": 12,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "beef c roll 3pcs",
+            "price": "10,000",
+            "unitprice": "10,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "kaya bred",
+            "price": "15,000",
+            "unitprice": "15,000"
+          }
+        ],
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "75,000",
+          "menuqty_cnt": "2",
+          "total_price": "25,000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> beef c roll 3pcs</s_nm><s_unitprice> 10,000</s_unitprice><s_cnt> 1</s_cnt><s_price> 10,000</s_price><sep/><s_nm> kaya bred</s_nm><s_unitprice> 15,000</s_unitprice><s_cnt> 1</s_cnt><s_price> 15,000</s_price></s_menu><s_total><s_total_price> 25,000</s_total_price><s_cashprice> 100,000</s_cashprice><s_changeprice> 75,000</s_changeprice><s_menuqty_cnt> 2</s_menuqty_cnt></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9944673180580139,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "beef C roll 3pcs",
+            "price": "10,000",
+            "unitprice": "10,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "kaya bred",
+            "price": "15,000",
+            "unitprice": "15,000"
+          }
+        ],
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "75,000",
+          "menuqty_cnt": "2",
+          "total_price": "25,000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00019",
+      "latency_seconds": 4.645551284000248,
+      "leaf_f1": 1.0,
+      "leaf_gold": 12,
+      "leaf_predicted": 12,
+      "leaf_true_positive": 12,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "FUTAMI 17 GREEN TEA (CLAS",
+            "price": "12,500"
+          },
+          {
+            "cnt": "1",
+            "nm": "EGG TART",
+            "price": "13,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "GRAIN CROQUE MONSIEUR",
+            "price": "17,000"
+          }
+        ],
+        "total": {
+          "cashprice": "50,000",
+          "changeprice": "7,500",
+          "total_price": "42,500"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> FUTAMI 17 GREEN TEA (CLAS</s_nm><s_cnt> 1</s_cnt><s_price> 12,500</s_price><sep/><s_nm> EGG TART</s_nm><s_cnt> 1</s_cnt><s_price> 13,000</s_price><sep/><s_nm> GRAIN CROQUE MONSIEUR</s_nm><s_cnt> 1</s_cnt><s_price> 17,000</s_price></s_menu><s_total><s_total_price> 42,500</s_total_price><s_cashprice> 50,000</s_cashprice><s_changeprice> 7,500</s_changeprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9947635531425476,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "FUTAMI 17 GREEN TEA (CLAS",
+            "price": "12,500"
+          },
+          {
+            "cnt": "1",
+            "nm": "EGG TART",
+            "price": "13,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "GRAIN CROQUE MONSIEUR",
+            "price": "17,000"
+          }
+        ],
+        "total": {
+          "cashprice": "50,000",
+          "changeprice": "7,500",
+          "total_price": "42,500"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00020",
+      "latency_seconds": 2.4711501929996302,
+      "leaf_f1": 1.0,
+      "leaf_gold": 11,
+      "leaf_predicted": 11,
+      "leaf_true_positive": 11,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "2",
+            "nm": "JAMUR",
+            "price": "10,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "TAHU",
+            "price": "5,000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "15,000",
+          "tax_price": "1,500"
+        },
+        "total": {
+          "cashprice": "20,000",
+          "changeprice": "3,500",
+          "total_price": "16,500"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> JAMUR</s_nm><s_cnt> 2</s_cnt><s_price> 10,000</s_price><sep/><s_nm> TAHU</s_nm><s_cnt> 1</s_cnt><s_price> 5,000</s_price></s_menu><s_sub_total><s_subtotal_price> 15,000</s_subtotal_price><s_tax_price> 1,500</s_tax_price></s_sub_total><s_total><s_total_price> 16,500</s_total_price><s_cashprice> 20,000</s_cashprice><s_changeprice> 3,500</s_changeprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.997653603553772,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "2",
+            "nm": "JAMUR",
+            "price": "10,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "TAHU",
+            "price": "5,000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "15,000",
+          "tax_price": "1,500"
+        },
+        "total": {
+          "cashprice": "20,000",
+          "changeprice": "3,500",
+          "total_price": "16,500"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00021",
+      "latency_seconds": 4.142619218000618,
+      "leaf_f1": 0.9411764705882353,
+      "leaf_gold": 17,
+      "leaf_predicted": 17,
+      "leaf_true_positive": 16,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "Mango Lemon Tea",
+            "price": "Rp 29,090"
+          },
+          {
+            "cnt": "1",
+            "nm": "Sliders Set",
+            "price": "Rp 113,636"
+          },
+          {
+            "cnt": "1",
+            "nm": "Chicken Vege Rice Bowl",
+            "price": "Rp 86,363"
+          },
+          {
+            "cnt": "1",
+            "nm": "Discount BCA 15%",
+            "price": "- Rp 34,363"
+          }
+        ],
+        "sub_total": {
+          "service_price": "Rp 9,736",
+          "subtotal_price": "Rp 194,726",
+          "tax_price": "Rp 20,446"
+        },
+        "total": {
+          "creditcardprice": "Rp 224,908",
+          "total_price": "Rp 224,908"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> Mango Lemon Tea</s_nm><s_cnt> 1</s_cnt><s_price> Rp 29,090</s_price><sep/><s_nm> Sliders Set</s_nm><s_cnt> 1</s_cnt><s_price> Rp 113,636</s_price><sep/><s_nm> Chicken Vege Rice Bowl</s_nm><s_cnt> 1</s_cnt><s_price> Rp 86,363</s_price><sep/><s_nm> Discount BCA 15%</s_nm><s_cnt> 1</s_cnt><s_price> - Rp 34,363</s_price></s_menu><s_sub_total><s_subtotal_price> Rp 194,726</s_subtotal_price><s_service_price> Rp 9,736</s_service_price><s_tax_price> Rp 20,446</s_tax_price></s_sub_total><s_total><s_total_price> Rp 224,908</s_total_price><s_creditcardprice> Rp 224,908</s_creditcardprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.986899733543396,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "Mango Lemon Tea",
+            "price": "Rp 29,090"
+          },
+          {
+            "cnt": "1",
+            "nm": "Sliders Set",
+            "price": "Rp 113,636"
+          },
+          {
+            "cnt": "1",
+            "nm": "Chicken Vege Rice Bowl",
+            "price": "Rp 86,363"
+          },
+          {
+            "cnt": "1",
+            "nm": "Discount BCA 15%",
+            "price": "-Rp 34,363"
+          }
+        ],
+        "sub_total": {
+          "service_price": "Rp 9,736",
+          "subtotal_price": "Rp 194,726",
+          "tax_price": "Rp 20,446"
+        },
+        "total": {
+          "creditcardprice": "Rp 224,908",
+          "total_price": "Rp 224,908"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00022",
+      "latency_seconds": 3.3663727450002625,
+      "leaf_f1": 0.9090909090909091,
+      "leaf_gold": 11,
+      "leaf_predicted": 11,
+      "leaf_true_positive": 10,
+      "prediction": {
+        "menu": {
+          "cnt": "1",
+          "nm": "RedVelvet Nutella",
+          "price": "280,000",
+          "sub": [
+            {
+              "cnt": "5",
+              "nm": "Free Mini Candle"
+            },
+            {
+              "cnt": "1",
+              "nm": "Large Box"
+            }
+          ]
+        },
+        "sub_total": {
+          "subtotal_price": "280,000",
+          "tax_price": "28,000"
+        },
+        "total": {
+          "creditcardprice": "308,000",
+          "total_price": "308,000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> RedVelvet Nutella</s_nm><s_cnt> 1</s_cnt><s_price> 280,000</s_price><s_sub><s_nm> Free Mini Candle</s_nm><s_cnt> 5</s_cnt><sep/><s_nm> Large Box</s_nm><s_cnt> 1</s_cnt></s_sub></s_menu><s_sub_total><s_subtotal_price> 280,000</s_subtotal_price><s_tax_price> 28,000</s_tax_price></s_sub_total><s_total><s_total_price> 308,000</s_total_price><s_creditcardprice> 308,000</s_creditcardprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.97962486743927,
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "RedVelvet Nutella",
+          "price": "280,000",
+          "sub": [
+            {
+              "cnt": ".5",
+              "nm": "Free Mini Candle"
+            },
+            {
+              "cnt": "1",
+              "nm": "Large Box"
+            }
+          ]
+        },
+        "sub_total": {
+          "subtotal_price": "280,000",
+          "tax_price": "28,000"
+        },
+        "total": {
+          "creditcardprice": "308,000",
+          "total_price": "308,000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00023",
+      "latency_seconds": 1.767274894998991,
+      "leaf_f1": 1.0,
+      "leaf_gold": 8,
+      "leaf_predicted": 8,
+      "leaf_true_positive": 8,
+      "prediction": {
+        "menu": {
+          "cnt": "1",
+          "nm": "BUBBLE GUM",
+          "price": "18,182"
+        },
+        "sub_total": {
+          "subtotal_price": "18,182",
+          "tax_price": "1,818"
+        },
+        "total": {
+          "cashprice": "20.000",
+          "menuqty_cnt": "1",
+          "total_price": "20.000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> BUBBLE GUM</s_nm><s_cnt> 1</s_cnt><s_price> 18,182</s_price></s_menu><s_sub_total><s_subtotal_price> 18,182</s_subtotal_price><s_tax_price> 1,818</s_tax_price></s_sub_total><s_total><s_total_price> 20.000</s_total_price><s_cashprice> 20.000</s_cashprice><s_menuqty_cnt> 1</s_menuqty_cnt></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9889121651649475,
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "BUBBLE GUM",
+          "price": "18,182"
+        },
+        "sub_total": {
+          "subtotal_price": "18,182",
+          "tax_price": "1,818"
+        },
+        "total": {
+          "cashprice": "20.000",
+          "menuqty_cnt": "1",
+          "total_price": "20.000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00024",
+      "latency_seconds": 5.497175368000171,
+      "leaf_f1": 1.0,
+      "leaf_gold": 21,
+      "leaf_predicted": 21,
+      "leaf_true_positive": 21,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "PAIN AU CHOCOLATE",
+            "price": "11,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "CHOCO CUSTARD PASTRY",
+            "price": "12,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "MILK PASTRY ROLL",
+            "price": "9,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "REAL CHEESE INSIDE BREAD",
+            "price": "13,500"
+          },
+          {
+            "cnt": "1",
+            "nm": "SAUSAGE BREAD",
+            "price": "15,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "HAM CHEESE FLAT BREAD",
+            "price": "20,000"
+          }
+        ],
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "19,500",
+          "total_price": "80,500"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> PAIN AU CHOCOLATE</s_nm><s_cnt> 1</s_cnt><s_price> 11,000</s_price><sep/><s_nm> CHOCO CUSTARD PASTRY</s_nm><s_cnt> 1</s_cnt><s_price> 12,000</s_price><sep/><s_nm> MILK PASTRY ROLL</s_nm><s_cnt> 1</s_cnt><s_price> 9,000</s_price><sep/><s_nm> REAL CHEESE INSIDE BREAD</s_nm><s_cnt> 1</s_cnt><s_price> 13,500</s_price><sep/><s_nm> SAUSAGE BREAD</s_nm><s_cnt> 1</s_cnt><s_price> 15,000</s_price><sep/><s_nm> HAM CHEESE FLAT BREAD</s_nm><s_cnt> 1</s_cnt><s_price> 20,000</s_price></s_menu><s_total><s_total_price> 80,500</s_total_price><s_cashprice> 100,000</s_cashprice><s_changeprice> 19,500</s_changeprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9999699592590332,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "PAIN AU CHOCOLATE",
+            "price": "11,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "CHOCO CUSTARD PASTRY",
+            "price": "12,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "MILK PASTRY ROLL",
+            "price": "9,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "REAL CHEESE INSIDE BREAD",
+            "price": "13,500"
+          },
+          {
+            "cnt": "1",
+            "nm": "SAUSAGE BREAD",
+            "price": "15,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "HAM CHEESE FLAT BREAD",
+            "price": "20,000"
+          }
+        ],
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "19,500",
+          "total_price": "80,500"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00025",
+      "latency_seconds": 4.42462445000092,
+      "leaf_f1": 0.7037037037037037,
+      "leaf_gold": 27,
+      "leaf_predicted": 27,
+      "leaf_true_positive": 19,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "Sop Sui Jiao",
+            "price": "33,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Ha Kaou Udng",
+            "price": "28,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Sio May Kpting",
+            "price": "23,500"
+          },
+          {
+            "cnt": "1",
+            "nm": "Siomay Kmbinasi",
+            "price": "23,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Leng Hong Kien",
+            "price": "30,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Mie Kgkung Trsi",
+            "price": "35,500"
+          },
+          {
+            "cnt": "1",
+            "nm": "Es Teh Tawar",
+            "price": "7,000"
+          }
+        ],
+        "sub_total": {
+          "service_price": "9,000",
+          "subtotal_price": "180,000",
+          "tax_price": "18,900"
+        },
+        "total": {
+          "menuqty_cnt": "7",
+          "menutype_cnt": "7",
+          "total_price": "207,900"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> Sop Sui Jiao</s_nm><s_cnt> 1</s_cnt><s_price> 33,000</s_price><sep/><s_nm> Ha Kaou Udng</s_nm><s_cnt> 1</s_cnt><s_price> 28,000</s_price><sep/><s_nm> Sio May Kpting</s_nm><s_cnt> 1</s_cnt><s_price> 23,500</s_price><sep/><s_nm> Siomay Kmbinasi</s_nm><s_cnt> 1</s_cnt><s_price> 23,000</s_price><sep/><s_nm> Leng Hong Kien</s_nm><s_cnt> 1</s_cnt><s_price> 30,000</s_price><sep/><s_nm> Mie Kgkung Trsi</s_nm><s_cnt> 1</s_cnt><s_price> 35,500</s_price><sep/><s_nm> Es Teh Tawar</s_nm><s_cnt> 1</s_cnt><s_price> 7,000</s_price></s_menu><s_sub_total><s_subtotal_price> 180,000</s_subtotal_price><s_service_price> 9,000</s_service_price><s_tax_price> 18,900</s_tax_price></s_sub_total><s_total><s_total_price> 207,900</s_total_price><s_menutype_cnt> 7</s_menutype_cnt><s_menuqty_cnt> 7</s_menuqty_cnt></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.985174298286438,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1Prs",
+            "nm": "Sop Sui Jiao",
+            "price": "33,000"
+          },
+          {
+            "cnt": "1Prs",
+            "nm": "Ha Kaou Udng",
+            "price": "28,000"
+          },
+          {
+            "cnt": "1Prs",
+            "nm": "Sio May Kpting",
+            "price": "23,500"
+          },
+          {
+            "cnt": "1Prs",
+            "nm": "Siomay Kmbinasi",
+            "price": "23,000"
+          },
+          {
+            "cnt": "1Prs",
+            "nm": "Leng Hong Kien",
+            "price": "30,000"
+          },
+          {
+            "cnt": "1Prs",
+            "nm": "Mie Trsi Kgkung",
+            "price": "35,500"
+          },
+          {
+            "cnt": "1Gls",
+            "nm": "Es Teh Tawar",
+            "price": "7,000"
+          }
+        ],
+        "sub_total": {
+          "service_price": "9,000",
+          "subtotal_price": "180,000",
+          "tax_price": "18,900"
+        },
+        "total": {
+          "menuqty_cnt": "7",
+          "menutype_cnt": "7",
+          "total_price": "207,900"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00026",
+      "latency_seconds": 6.501323759001025,
+      "leaf_f1": 1.0,
+      "leaf_gold": 21,
+      "leaf_predicted": 21,
+      "leaf_true_positive": 21,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "1x",
+            "nm": "NASI MERAH/PUTIH",
+            "price": "5.000",
+            "unitprice": "5.000"
+          },
+          {
+            "cnt": "2x",
+            "nm": "SAYUR",
+            "price": "8.000",
+            "unitprice": "4.000"
+          },
+          {
+            "cnt": "1x",
+            "nm": "KERUPUK/SAMBEL",
+            "price": "2.000",
+            "unitprice": "2.000"
+          },
+          {
+            "cnt": "1x",
+            "nm": "AYAM",
+            "price": "14.000",
+            "unitprice": "14.000"
+          },
+          {
+            "cnt": "1x",
+            "nm": "MINUMAN KEMASAN/REFILL",
+            "price": "6.000",
+            "unitprice": "6.000"
+          }
+        ],
+        "total": {
+          "total_price": "Rp. 35.000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> NASI MERAH/PUTIH</s_nm><s_unitprice> 5.000</s_unitprice><s_cnt> 1x</s_cnt><s_price> 5.000</s_price><sep/><s_nm> SAYUR</s_nm><s_unitprice> 4.000</s_unitprice><s_cnt> 2x</s_cnt><s_price> 8.000</s_price><sep/><s_nm> KERUPUK/SAMBEL</s_nm><s_unitprice> 2.000</s_unitprice><s_cnt> 1x</s_cnt><s_price> 2.000</s_price><sep/><s_nm> AYAM</s_nm><s_unitprice> 14.000</s_unitprice><s_cnt> 1x</s_cnt><s_price> 14.000</s_price><sep/><s_nm> MINUMAN KEMASAN/REFILL</s_nm><s_unitprice> 6.000</s_unitprice><s_cnt> 1x</s_cnt><s_price> 6.000</s_price></s_menu><s_total><s_total_price> Rp. 35.000</s_total_price></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.995692253112793,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1x",
+            "nm": "NASI MERAH/PUTIH",
+            "price": "5.000",
+            "unitprice": "5.000"
+          },
+          {
+            "cnt": "2x",
+            "nm": "SAYUR",
+            "price": "8.000",
+            "unitprice": "4.000"
+          },
+          {
+            "cnt": "1x",
+            "nm": "KERUPUK/SAMBEL",
+            "price": "2.000",
+            "unitprice": "2.000"
+          },
+          {
+            "cnt": "1x",
+            "nm": "AYAM",
+            "price": "14.000",
+            "unitprice": "14.000"
+          },
+          {
+            "cnt": "1x",
+            "nm": "MINUMAN KEMASAN/REFILL",
+            "price": "6.000",
+            "unitprice": "6.000"
+          }
+        ],
+        "total": {
+          "total_price": "Rp. 35.000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00027",
+      "latency_seconds": 2.660877038999388,
+      "leaf_f1": 0.875,
+      "leaf_gold": 8,
+      "leaf_predicted": 8,
+      "leaf_true_positive": 7,
+      "prediction": {
+        "menu": {
+          "cnt": "1",
+          "nm": "THAI ICED TEA (L)",
+          "price": "16,363",
+          "unitprice": "16,363"
+        },
+        "sub_total": {
+          "subtotal_price": "16,363",
+          "tax_price": "1,636"
+        },
+        "total": {
+          "menuqty_cnt": "1",
+          "total_price": "17,999"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> THAI ICED TEA (L)</s_nm><s_unitprice> 16,363</s_unitprice><s_cnt> 1</s_cnt><s_price> 16,363</s_price></s_menu><s_sub_total><s_subtotal_price> 16,363</s_subtotal_price><s_tax_price> 1,636</s_tax_price></s_sub_total><s_total><s_total_price> 17,999</s_total_price><s_menuqty_cnt> 1</s_menuqty_cnt></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9999375939369202,
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "THAI ICED TEA (L)",
+          "price": "16.363",
+          "unitprice": "16,363"
+        },
+        "sub_total": {
+          "subtotal_price": "16,363",
+          "tax_price": "1,636"
+        },
+        "total": {
+          "menuqty_cnt": "1",
+          "total_price": "17,999"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00028",
+      "latency_seconds": 1.043966041999738,
+      "leaf_f1": 1.0,
+      "leaf_gold": 12,
+      "leaf_predicted": 12,
+      "leaf_true_positive": 12,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "ELEPHANT READ BEAN",
+            "price": "12,000",
+            "unitprice": "12,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "chapsal twister donnut",
+            "price": "10,000",
+            "unitprice": "10,000"
+          }
+        ],
+        "total": {
+          "cashprice": "22,000",
+          "changeprice": "0",
+          "menuqty_cnt": "2",
+          "total_price": "22,000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> ELEPHANT READ BEAN</s_nm><s_unitprice> 12,000</s_unitprice><s_cnt> 1</s_cnt><s_price> 12,000</s_price><sep/><s_nm> chapsal twister donnut</s_nm><s_unitprice> 10,000</s_unitprice><s_cnt> 1</s_cnt><s_price> 10,000</s_price></s_menu><s_total><s_total_price> 22,000</s_total_price><s_cashprice> 22,000</s_cashprice><s_changeprice> 0</s_changeprice><s_menuqty_cnt> 2</s_menuqty_cnt></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9998668432235718,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "ELEPHANT READ BEAN",
+            "price": "12,000",
+            "unitprice": "12,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "chapsal twister donnut",
+            "price": "10,000",
+            "unitprice": "10,000"
+          }
+        ],
+        "total": {
+          "cashprice": "22,000",
+          "changeprice": "0",
+          "menuqty_cnt": "2",
+          "total_price": "22,000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00029",
+      "latency_seconds": 1.649712501999602,
+      "leaf_f1": 0.9333333333333333,
+      "leaf_gold": 8,
+      "leaf_predicted": 7,
+      "leaf_true_positive": 7,
+      "prediction": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Sabun Beras",
+          "price": "30000",
+          "unitprice": "30000"
+        },
+        "sub_total": {
+          "subtotal_price": "30000"
+        },
+        "total": {
+          "cashprice": "50000",
+          "changeprice": "20000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> Sabun Beras</s_nm><s_unitprice> 30000</s_unitprice><s_cnt> 1</s_cnt><s_price> 30000</s_price></s_menu><s_sub_total><s_subtotal_price> 30000</s_subtotal_price></s_sub_total><s_total><s_cashprice> 50000</s_cashprice><s_changeprice> 20000</s_changeprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.991858959197998,
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Sabun Beras",
+          "price": "30000",
+          "unitprice": "30000"
+        },
+        "sub_total": {
+          "discount_price": "Discount(0%)",
+          "subtotal_price": "30000"
+        },
+        "total": {
+          "cashprice": "50000",
+          "changeprice": "20000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00030",
+      "latency_seconds": 1.8646260910009005,
+      "leaf_f1": 0.7777777777777778,
+      "leaf_gold": 9,
+      "leaf_predicted": 9,
+      "leaf_true_positive": 7,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "REDBEAN BREAD",
+            "price": "9,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "FRANKFRUT SAUSAGE ROLL",
+            "price": "12,000"
+          }
+        ],
+        "total": {
+          "cashprice": "50,000",
+          "changeprice": "29,000",
+          "total_price": "21,000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> REDBEAN BREAD</s_nm><s_cnt> 1</s_cnt><s_price> 9,000</s_price><sep/><s_nm> FRANKFRUT SAUSAGE ROLL</s_nm><s_cnt> 1</s_cnt><s_price> 12,000</s_price></s_menu><s_total><s_total_price> 21,000</s_total_price><s_cashprice> 50,000</s_cashprice><s_changeprice> 29,000</s_changeprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.999949038028717,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "REDBEAN BRE/D",
+            "price": "9,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "FRANKFRUT S/USAGE ROLL",
+            "price": "12,000"
+          }
+        ],
+        "total": {
+          "cashprice": "50,000",
+          "changeprice": "29,000",
+          "total_price": "21,000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00031",
+      "latency_seconds": 0.9124108010000782,
+      "leaf_f1": 1.0,
+      "leaf_gold": 6,
+      "leaf_predicted": 6,
+      "leaf_true_positive": 6,
+      "prediction": {
+        "menu": {
+          "cnt": "1",
+          "nm": "PREMIUM TOAST PAN BREAD",
+          "price": "24,000"
+        },
+        "total": {
+          "cashprice": "24,000",
+          "changeprice": "0",
+          "total_price": "24,000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> PREMIUM TOAST PAN BREAD</s_nm><s_cnt> 1</s_cnt><s_price> 24,000</s_price></s_menu><s_total><s_total_price> 24,000</s_total_price><s_cashprice> 24,000</s_cashprice><s_changeprice> 0</s_changeprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9999534487724304,
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "PREMIUM TOAST PAN BREAD",
+          "price": "24,000"
+        },
+        "total": {
+          "cashprice": "24,000",
+          "changeprice": "0",
+          "total_price": "24,000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00032",
+      "latency_seconds": 1.255703791999622,
+      "leaf_f1": 1.0,
+      "leaf_gold": 6,
+      "leaf_predicted": 6,
+      "leaf_true_positive": 6,
+      "prediction": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Nasi (MLY)",
+          "price": "6.000"
+        },
+        "sub_total": {
+          "subtotal_price": "6.000"
+        },
+        "total": {
+          "emoneyprice": "6.000",
+          "total_price": "6.000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> Nasi (MLY)</s_nm><s_cnt> 1</s_cnt><s_price> 6.000</s_price></s_menu><s_sub_total><s_subtotal_price> 6.000</s_subtotal_price></s_sub_total><s_total><s_total_price> 6.000</s_total_price><s_emoneyprice> 6.000</s_emoneyprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9999613761901855,
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Nasi (MLY)",
+          "price": "6.000"
+        },
+        "sub_total": {
+          "subtotal_price": "6.000"
+        },
+        "total": {
+          "emoneyprice": "6.000",
+          "total_price": "6.000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00033",
+      "latency_seconds": 2.73037523900166,
+      "leaf_f1": 0.8000000000000002,
+      "leaf_gold": 10,
+      "leaf_predicted": 10,
+      "leaf_true_positive": 8,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "GRAINS PAN BREAD",
+            "price": "20,500"
+          },
+          {
+            "cnt": "1",
+            "nm": "ICED HIBISCUS LYCHEE TEA",
+            "price": "37,000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "57,500"
+        },
+        "total": {
+          "cashprice": "50,000",
+          "changeprice": "0",
+          "total_price": "57,500"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> GRAINS PAN BREAD</s_nm><s_cnt> 1</s_cnt><s_price> 20,500</s_price><sep/><s_nm> ICED HIBISCUS LYCHEE TEA</s_nm><s_cnt> 1</s_cnt><s_price> 37,000</s_price></s_menu><s_sub_total><s_subtotal_price> 57,500</s_subtotal_price></s_sub_total><s_total><s_total_price> 57,500</s_total_price><s_cashprice> 50,000</s_cashprice><s_changeprice> 0</s_changeprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9847225546836853,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "GRAINS PAN BREAD",
+            "price": "20,500"
+          },
+          {
+            "cnt": "1",
+            "nm": "ICED HIBISCUS LYCHEE TEA",
+            "price": "37,000"
+          }
+        ],
+        "total": {
+          "cashprice": "7,500",
+          "changeprice": "0",
+          "total_etc": "50,000",
+          "total_price": "57,500"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00034",
+      "latency_seconds": 2.8579290850011603,
+      "leaf_f1": 0.9142857142857143,
+      "leaf_gold": 18,
+      "leaf_predicted": 17,
+      "leaf_true_positive": 16,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "GRILLED BABY POTATO ( R",
+            "price": "50,500"
+          },
+          {
+            "cnt": "1",
+            "nm": "TRUFFLE CREAM",
+            "price": "76,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "CARBONARA",
+            "price": "70,500"
+          },
+          {
+            "cnt": "2",
+            "nm": "ORIGINAL BREWED TEA",
+            "price": "46,000"
+          }
+        ],
+        "sub_total": {
+          "service_price": "14,580",
+          "subtotal_price": "243,000",
+          "tax_price": "25,758"
+        },
+        "total": {
+          "creditcardprice": "283,338",
+          "total_price": "283,338"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> GRILLED BABY POTATO ( R</s_nm><s_cnt> 1</s_cnt><s_price> 50,500</s_price><sep/><s_nm> TRUFFLE CREAM</s_nm><s_cnt> 1</s_cnt><s_price> 76,000</s_price><sep/><s_nm> CARBONARA</s_nm><s_cnt> 1</s_cnt><s_price> 70,500</s_price><sep/><s_nm> ORIGINAL BREWED TEA</s_nm><s_cnt> 2</s_cnt><s_price> 46,000</s_price></s_menu><s_sub_total><s_subtotal_price> 243,000</s_subtotal_price><s_service_price> 14,580</s_service_price><s_tax_price> 25,758</s_tax_price></s_sub_total><s_total><s_total_price> 283,338</s_total_price><s_creditcardprice> 283,338</s_creditcardprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9975836277008057,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "GRILLED BABY POTATO (R",
+            "price": "50,500"
+          },
+          {
+            "cnt": "1",
+            "nm": "TRUFFLE CREAM",
+            "price": "76,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "CARBONARA",
+            "price": "70,500"
+          },
+          {
+            "cnt": "2",
+            "nm": "ORIGINAL BREWED TEA",
+            "price": "46,000"
+          }
+        ],
+        "sub_total": {
+          "service_price": "14,580",
+          "subtotal_price": "243,000",
+          "tax_price": "25,758"
+        },
+        "total": {
+          "creditcardprice": [
+            "283,338",
+            "5962"
+          ],
+          "total_price": "283,338"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00035",
+      "latency_seconds": 4.606218052998884,
+      "leaf_f1": 1.0,
+      "leaf_gold": 16,
+      "leaf_predicted": 16,
+      "leaf_true_positive": 16,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "BLACK PEPPER MEATBALL",
+            "price": "76,500"
+          },
+          {
+            "cnt": "1",
+            "nm": "QUARTO FORMANGGI PASTA",
+            "price": "82,500"
+          },
+          {
+            "cnt": "1",
+            "nm": "GREEN TEA WITH CRUMBLE",
+            "price": "56,000"
+          },
+          {
+            "cnt": "2",
+            "nm": "ORIGINAL BREWED TEA",
+            "price": "46,000"
+          }
+        ],
+        "sub_total": {
+          "service_price": "15,660",
+          "subtotal_price": "261,000",
+          "tax_price": "27,666"
+        },
+        "total": {
+          "total_price": "304,326"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> BLACK PEPPER MEATBALL</s_nm><s_cnt> 1</s_cnt><s_price> 76,500</s_price><sep/><s_nm> QUARTO FORMANGGI PASTA</s_nm><s_cnt> 1</s_cnt><s_price> 82,500</s_price><sep/><s_nm> GREEN TEA WITH CRUMBLE</s_nm><s_cnt> 1</s_cnt><s_price> 56,000</s_price><sep/><s_nm> ORIGINAL BREWED TEA</s_nm><s_cnt> 2</s_cnt><s_price> 46,000</s_price></s_menu><s_sub_total><s_subtotal_price> 261,000</s_subtotal_price><s_service_price> 15,660</s_service_price><s_tax_price> 27,666</s_tax_price></s_sub_total><s_total><s_total_price> 304,326</s_total_price></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9999626874923706,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "BLACK PEPPER MEATBALL",
+            "price": "76,500"
+          },
+          {
+            "cnt": "1",
+            "nm": "QUARTO FORMANGGI PASTA",
+            "price": "82,500"
+          },
+          {
+            "cnt": "1",
+            "nm": "GREEN TEA WITH CRUMBLE",
+            "price": "56,000"
+          },
+          {
+            "cnt": "2",
+            "nm": "ORIGINAL BREWED TEA",
+            "price": "46,000"
+          }
+        ],
+        "sub_total": {
+          "service_price": "15,660",
+          "subtotal_price": "261,000",
+          "tax_price": "27,666"
+        },
+        "total": {
+          "total_price": "304,326"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00036",
+      "latency_seconds": 3.233216282000285,
+      "leaf_f1": 1.0,
+      "leaf_gold": 13,
+      "leaf_predicted": 13,
+      "leaf_true_positive": 13,
+      "prediction": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Soft Ori 3 Top",
+          "price": "17,272",
+          "sub": [
+            {
+              "nm": "Top Oreo",
+              "price": "0"
+            },
+            {
+              "nm": "Top Oreo",
+              "price": "0"
+            },
+            {
+              "nm": "Top Banana",
+              "price": "0"
+            }
+          ]
+        },
+        "sub_total": {
+          "subtotal_price": "17,272",
+          "tax_price": "1,727"
+        },
+        "total": {
+          "cashprice": "18,999",
+          "total_price": "18,999"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> Soft Ori 3 Top</s_nm><s_cnt> 1</s_cnt><s_price> 17,272</s_price><s_sub><s_nm> Top Oreo</s_nm><s_price> 0</s_price><sep/><s_nm> Top Oreo</s_nm><s_price> 0</s_price><sep/><s_nm> Top Banana</s_nm><s_price> 0</s_price></s_sub></s_menu><s_sub_total><s_subtotal_price> 17,272</s_subtotal_price><s_tax_price> 1,727</s_tax_price></s_sub_total><s_total><s_total_price> 18,999</s_total_price><s_cashprice> 18,999</s_cashprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9900612831115723,
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Soft Ori 3 Top",
+          "price": "17,272",
+          "sub": [
+            {
+              "nm": "Top Oreo",
+              "price": "0"
+            },
+            {
+              "nm": "Top Oreo",
+              "price": "0"
+            },
+            {
+              "nm": "Top Banana",
+              "price": "0"
+            }
+          ]
+        },
+        "sub_total": {
+          "subtotal_price": "17,272",
+          "tax_price": "1,727"
+        },
+        "total": {
+          "cashprice": "18,999",
+          "total_price": "18,999"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00037",
+      "latency_seconds": 2.1526525049994234,
+      "leaf_f1": 0.823529411764706,
+      "leaf_gold": 9,
+      "leaf_predicted": 8,
+      "leaf_true_positive": 7,
+      "prediction": {
+        "menu": [
+          {
+            "nm": "Ice Lemon Tea",
+            "price": "13,636"
+          },
+          {
+            "nm": "Gyro Platter - Regular",
+            "price": "50,000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "63,636",
+          "tax_price": "6,364"
+        },
+        "total": {
+          "cashprice": "70,000",
+          "total_price": "70,000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> Ice Lemon Tea</s_nm><s_price> 13,636</s_price><sep/><s_nm> Gyro Platter - Regular</s_nm><s_price> 50,000</s_price></s_menu><s_sub_total><s_subtotal_price> 63,636</s_subtotal_price><s_tax_price> 6,364</s_tax_price></s_sub_total><s_total><s_total_price> 70,000</s_total_price><s_cashprice> 70,000</s_cashprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9891142845153809,
+      "truth": {
+        "menu": [
+          {
+            "nm": "Ice Lemon Tea",
+            "price": "13,636"
+          },
+          {
+            "nm": [
+              "-",
+              "Gyro Platter Regular"
+            ],
+            "price": "50,000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "63,636",
+          "tax_price": "6,364"
+        },
+        "total": {
+          "cashprice": "70,000",
+          "total_price": "70,000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00038",
+      "latency_seconds": 1.664150321001216,
+      "leaf_f1": 1.0,
+      "leaf_gold": 7,
+      "leaf_predicted": 7,
+      "leaf_true_positive": 7,
+      "prediction": {
+        "menu": {
+          "cnt": "1",
+          "nm": "TT",
+          "price": "20,000",
+          "unitprice": "20,000"
+        },
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "80,000",
+          "total_price": "20,000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> TT</s_nm><s_unitprice> 20,000</s_unitprice><s_cnt> 1</s_cnt><s_price> 20,000</s_price></s_menu><s_total><s_total_price> 20,000</s_total_price><s_cashprice> 100,000</s_cashprice><s_changeprice> 80,000</s_changeprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9665272235870361,
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "TT",
+          "price": "20,000",
+          "unitprice": "20,000"
+        },
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "80,000",
+          "total_price": "20,000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00039",
+      "latency_seconds": 3.6875298129998555,
+      "leaf_f1": 0.875,
+      "leaf_gold": 16,
+      "leaf_predicted": 16,
+      "leaf_true_positive": 14,
+      "prediction": {
+        "menu": [
+          {
+            "nm": "PKT TEL GRAPERKEDEL",
+            "price": "26,000"
+          },
+          {
+            "nm": "TERONG",
+            "price": "12,000"
+          },
+          {
+            "nm": "PARU",
+            "price": "23,000"
+          },
+          {
+            "nm": "SBL GR ATI/AMPLA",
+            "price": "20,000"
+          },
+          {
+            "nm": "NESTLE 330 ML",
+            "price": "8,000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "89,000",
+          "tax_price": "8,900"
+        },
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "2,100",
+          "menuqty_cnt": "5.00xITEMS",
+          "total_price": "97,900"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> PKT TEL GRAPERKEDEL</s_nm><s_price> 26,000</s_price><sep/><s_nm> TERONG</s_nm><s_price> 12,000</s_price><sep/><s_nm> PARU</s_nm><s_price> 23,000</s_price><sep/><s_nm> SBL GR ATI/AMPLA</s_nm><s_price> 20,000</s_price><sep/><s_nm> NESTLE 330 ML</s_nm><s_price> 8,000</s_price></s_menu><s_sub_total><s_subtotal_price> 89,000</s_subtotal_price><s_tax_price> 8,900</s_tax_price></s_sub_total><s_total><s_total_price> 97,900</s_total_price><s_cashprice> 100,000</s_cashprice><s_changeprice> 2,100</s_changeprice><s_menuqty_cnt> 5.00xITEMS</s_menuqty_cnt></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9846165180206299,
+      "truth": {
+        "menu": [
+          {
+            "nm": "PKT TELOR/PERKEDEL",
+            "price": "26,000"
+          },
+          {
+            "nm": "TERONG",
+            "price": "12,000"
+          },
+          {
+            "nm": "PARU",
+            "price": "23,000"
+          },
+          {
+            "nm": "SBL GR ATI/AMPLA",
+            "price": "20,000"
+          },
+          {
+            "nm": "NESTLE 330 ML",
+            "price": "8,000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "89,000",
+          "tax_price": "8,900"
+        },
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "2,100",
+          "menuqty_cnt": "5.00",
+          "total_price": "97,900"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00040",
+      "latency_seconds": 2.4410307019988977,
+      "leaf_f1": 0.4799999999999999,
+      "leaf_gold": 14,
+      "leaf_predicted": 11,
+      "leaf_true_positive": 6,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "Gojek Chicken",
+            "price": "95,000"
+          },
+          {
+            "nm": "Chilli Sauce H",
+            "price": {
+              "cnt": "1"
+            }
+          },
+          {
+            "nm": "Soy Sauce F",
+            "price": {
+              "cnt": "1"
+            }
+          }
+        ],
+        "sub_total": {
+          "discount_price": "0",
+          "subtotal_price": "345,000",
+          "tax_price": "34,500"
+        },
+        "total": {
+          "total_price": "379,500"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> Gojek Chicken</s_nm><s_cnt> 1</s_cnt><s_price> 95,000</s_price><sep/><s_nm> Chilli Sauce H</s_nm><s_price> Gojek Chicken</s_nm><s_cnt> 1</s_cnt><s_price> 180.000</s_price><sep/><s_nm> Soy Sauce F</s_nm><s_price> Gojek French</s_nm><s_cnt> 1</s_cnt><s_price> 70,000</s_price></s_menu><s_sub_total><s_subtotal_price> 345,000</s_subtotal_price><s_discount_price> 0</s_discount_price><s_tax_price> 34,500</s_tax_price></s_sub_total><s_total><s_total_price> 379,500</s_total_price></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.975471019744873,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "Gojek Chicken Chilli Sauce H",
+            "price": "95,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Gojek Chicken Soy Sauce F",
+            "price": "180,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Gojek French Fries",
+            "price": "70,000"
+          }
+        ],
+        "sub_total": {
+          "discount_price": "0",
+          "service_price": "0",
+          "subtotal_price": "345,000",
+          "tax_price": "34,500"
+        },
+        "total": {
+          "total_price": "379,500"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00041",
+      "latency_seconds": 7.669304012999419,
+      "leaf_f1": 0.7654320987654322,
+      "leaf_gold": 40,
+      "leaf_predicted": 41,
+      "leaf_true_positive": 31,
+      "prediction": {
+        "menu": [
+          {
+            "nm": "sir",
+            "price": "150,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "SOGOGI JAPCHAE",
+            "price": "105,000"
+          },
+          {
+            "cnt": "7",
+            "nm": "GONG GIBBB",
+            "price": "105,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "CHULPAN CHEESE DAK GALBI",
+            "price": "230,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "CREAM TEOK PO KI",
+            "price": "95,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "EL KEUN HWANGTAE",
+            "price": "120,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "SUNDUBU(TUKBEGI)",
+            "price": "620,000"
+          },
+          {
+            "cnt": "2",
+            "nm": "CHAM KKOT SAL",
+            "price": "290,000"
+          },
+          {
+            "cnt": "2",
+            "nm": "U SAM GYEOP",
+            "price": "390,000"
+          },
+          {
+            "nm": "U SEOL U SAM GYEDEN",
+            "price": "0"
+          },
+          {
+            "cnt": "3",
+            "nm": "ICE COFFE MIX",
+            "price": "0"
+          },
+          {
+            "cnt": "3",
+            "nm": "ICE BLACK COFFE",
+            "price": "0"
+          }
+        ],
+        "sub_total": {
+          "discount_price": "140,000",
+          "service_price": "212,460",
+          "subtotal_price": "2,000,000",
+          "tax_price": "2,352,460"
+        },
+        "total": {
+          "changeprice": "0",
+          "creditcardprice": "2,352,460",
+          "total_price": "2,352,460"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> sir</s_nm><s_price> 150,000</s_price><sep/><s_nm> SOGOGI JAPCHAE</s_nm><s_cnt> 1</s_cnt><s_price> 105,000</s_price><sep/><s_nm> GONG GIBBB</s_nm><s_cnt> 7</s_cnt><s_price> 105,000</s_price><sep/><s_nm> CHULPAN CHEESE DAK GALBI</s_nm><s_cnt> 1</s_cnt><s_price> 230,000</s_price><sep/><s_nm> CREAM TEOK PO KI</s_nm><s_cnt> 1</s_cnt><s_price> 95,000</s_price><sep/><s_nm> EL KEUN HWANGTAE</s_nm><s_cnt> 1</s_cnt><s_price> 120,000</s_price><sep/><s_nm> SUNDUBU(TUKBEGI)</s_nm><s_cnt> 1</s_cnt><s_price> 620,000</s_price><sep/><s_nm> CHAM KKOT SAL</s_nm><s_cnt> 2</s_cnt><s_price> 290,000</s_price><sep/><s_nm> U SAM GYEOP</s_nm><s_cnt> 2</s_cnt><s_price> 390,000</s_price><sep/><s_nm> U SEOL U SAM GYEDEN</s_nm><s_price> 0</s_price><sep/><s_nm> ICE COFFE MIX</s_nm><s_cnt> 3</s_cnt><s_price> 0</s_price><sep/><s_nm> ICE BLACK COFFE</s_nm><s_cnt> 3</s_cnt><s_price> 0</s_price></s_menu><s_sub_total><s_subtotal_price> 2,000,000</s_subtotal_price><s_discount_price> 140,000</s_discount_price><s_service_price> 212,460</s_service_price><s_tax_price> 2,352,460</s_tax_price></s_sub_total><s_total><s_total_price> 2,352,460</s_total_price><s_changeprice> 0</s_changeprice><s_creditcardprice> 2,352,460</s_creditcardprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9797265529632568,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "SOGOGI JAPCHAE",
+            "price": "150,000"
+          },
+          {
+            "cnt": "7",
+            "nm": "GONG GIBAB",
+            "price": "105,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "CHULPAN CHEESE DAK GALBI",
+            "price": "230,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "CREAM TEOK PO KI",
+            "price": "95,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "EL KEUN HWANGTAE",
+            "price": "120,000"
+          },
+          {
+            "cnt": "2",
+            "nm": "SUNDUBU(TUKBEGI) CHAM KKOT SAL",
+            "price": "620,000"
+          },
+          {
+            "cnt": "2",
+            "nm": "U SAM GYEOP",
+            "price": "290,000"
+          },
+          {
+            "cnt": "2",
+            "nm": "U SEOL",
+            "price": "390,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "U SAM GYEOP",
+            "price": "0"
+          },
+          {
+            "cnt": "3",
+            "nm": "ICE COFFE MIX",
+            "price": "0"
+          },
+          {
+            "cnt": "1",
+            "nm": "ICE BLACK COFFE",
+            "price": "0"
+          }
+        ],
+        "sub_total": {
+          "discount_price": "0",
+          "service_price": "140,000",
+          "subtotal_price": "2,000,000",
+          "tax_price": "212,460"
+        },
+        "total": {
+          "changeprice": "0",
+          "creditcardprice": "2,352,460",
+          "total_price": "2,352,460"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00042",
+      "latency_seconds": 2.584130680999806,
+      "leaf_f1": 1.0,
+      "leaf_gold": 16,
+      "leaf_predicted": 16,
+      "leaf_true_positive": 16,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "STIX CINNAMON",
+            "price": "19,000",
+            "unitprice": "19,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "CINNAMON SUGAR",
+            "price": "17,000",
+            "unitprice": "17,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "TRIPPLE CHEESE",
+            "price": "17,000",
+            "unitprice": "17,000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "53,000"
+        },
+        "total": {
+          "changeprice": "0",
+          "creditcardprice": "53,000",
+          "total_price": "53,000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> STIX CINNAMON</s_nm><s_unitprice> 19,000</s_unitprice><s_cnt> 1</s_cnt><s_price> 19,000</s_price><sep/><s_nm> CINNAMON SUGAR</s_nm><s_unitprice> 17,000</s_unitprice><s_cnt> 1</s_cnt><s_price> 17,000</s_price><sep/><s_nm> TRIPPLE CHEESE</s_nm><s_unitprice> 17,000</s_unitprice><s_cnt> 1</s_cnt><s_price> 17,000</s_price></s_menu><s_sub_total><s_subtotal_price> 53,000</s_subtotal_price></s_sub_total><s_total><s_total_price> 53,000</s_total_price><s_changeprice> 0</s_changeprice><s_creditcardprice> 53,000</s_creditcardprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9950257539749146,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "STIX CINNAMON",
+            "price": "19,000",
+            "unitprice": "19,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "CINNAMON SUGAR",
+            "price": "17,000",
+            "unitprice": "17,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "TRIPPLE CHEESE",
+            "price": "17,000",
+            "unitprice": "17,000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "53,000"
+        },
+        "total": {
+          "changeprice": "0",
+          "creditcardprice": "53,000",
+          "total_price": "53,000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00043",
+      "latency_seconds": 0.9103965379999863,
+      "leaf_f1": 0.9,
+      "leaf_gold": 10,
+      "leaf_predicted": 10,
+      "leaf_true_positive": 9,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "170",
+            "nm": "ROTI UNYIL",
+            "price": "272.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "PAPER BAG BESAR",
+            "price": "6.000"
+          }
+        ],
+        "total": {
+          "cashprice": "300.000",
+          "changeprice": "22.000",
+          "menuqty_cnt": "1",
+          "total_price": "278.000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> ROTI UNYIL</s_nm><s_cnt> 170</s_cnt><s_price> 272.000</s_price><sep/><s_nm> PAPER BAG BESAR</s_nm><s_cnt> 1</s_cnt><s_price> 6.000</s_price></s_menu><s_total><s_total_price> 278.000</s_total_price><s_cashprice> 300.000</s_cashprice><s_changeprice> 22.000</s_changeprice><s_menuqty_cnt> 1</s_menuqty_cnt></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.962956964969635,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "170",
+            "nm": "ROTI UNYIL",
+            "price": "272.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "PAPER BAG BESAR",
+            "price": "6.000"
+          }
+        ],
+        "total": {
+          "cashprice": "300.000",
+          "changeprice": "22.000",
+          "menuqty_cnt": "171",
+          "total_price": "278.000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00044",
+      "latency_seconds": 0.9457019620003848,
+      "leaf_f1": 0.75,
+      "leaf_gold": 8,
+      "leaf_predicted": 8,
+      "leaf_true_positive": 6,
+      "prediction": {
+        "menu": {
+          "cnt": "1",
+          "nm": "THAI ICED TEA (L)",
+          "price": "16,363",
+          "unitprice": "16,363"
+        },
+        "sub_total": {
+          "subtotal_price": "16,363",
+          "tax_price": "1,636"
+        },
+        "total": {
+          "menuqty_cnt": "1",
+          "total_price": "17,999"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> THAI ICED TEA (L)</s_nm><s_unitprice> 16,363</s_unitprice><s_cnt> 1</s_cnt><s_price> 16,363</s_price></s_menu><s_sub_total><s_subtotal_price> 16,363</s_subtotal_price><s_tax_price> 1,636</s_tax_price></s_sub_total><s_total><s_total_price> 17,999</s_total_price><s_menuqty_cnt> 1</s_menuqty_cnt></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9999376535415649,
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "THAI ICED TEA (L)",
+          "price": "16.363",
+          "unitprice": "16,363"
+        },
+        "sub_total": {
+          "subtotal_price": "16.363",
+          "tax_price": "1,636"
+        },
+        "total": {
+          "menuqty_cnt": "1",
+          "total_price": "17,999"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00045",
+      "latency_seconds": 1.9411574110017682,
+      "leaf_f1": 1.0,
+      "leaf_gold": 16,
+      "leaf_predicted": 16,
+      "leaf_true_positive": 16,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "AOP Seafood",
+            "price": "85,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Omurice Katsu Curry",
+            "price": "95,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Earl Gray Tea",
+            "price": "35,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Hot Tea",
+            "price": "25,000"
+          }
+        ],
+        "sub_total": {
+          "service_price": "21,600",
+          "subtotal_price": "240,000",
+          "tax_price": "26,160"
+        },
+        "total": {
+          "total_price": "287,760"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> AOP Seafood</s_nm><s_cnt> 1</s_cnt><s_price> 85,000</s_price><sep/><s_nm> Omurice Katsu Curry</s_nm><s_cnt> 1</s_cnt><s_price> 95,000</s_price><sep/><s_nm> Earl Gray Tea</s_nm><s_cnt> 1</s_cnt><s_price> 35,000</s_price><sep/><s_nm> Hot Tea</s_nm><s_cnt> 1</s_cnt><s_price> 25,000</s_price></s_menu><s_sub_total><s_subtotal_price> 240,000</s_subtotal_price><s_service_price> 21,600</s_service_price><s_tax_price> 26,160</s_tax_price></s_sub_total><s_total><s_total_price> 287,760</s_total_price></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.999921977519989,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "AOP Seafood",
+            "price": "85,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Omurice Katsu Curry",
+            "price": "95,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Earl Gray Tea",
+            "price": "35,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Hot Tea",
+            "price": "25,000"
+          }
+        ],
+        "sub_total": {
+          "service_price": "21,600",
+          "subtotal_price": "240,000",
+          "tax_price": "26,160"
+        },
+        "total": {
+          "total_price": "287,760"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00046",
+      "latency_seconds": 1.4486051499989117,
+      "leaf_f1": 1.0,
+      "leaf_gold": 8,
+      "leaf_predicted": 8,
+      "leaf_true_positive": 8,
+      "prediction": {
+        "menu": {
+          "cnt": "1",
+          "nm": "MARBLE CASTELA",
+          "price": "22,000",
+          "unitprice": "22,000"
+        },
+        "total": {
+          "cashprice": "22,000",
+          "changeprice": "0",
+          "menuqty_cnt": "1",
+          "total_price": "22,000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> MARBLE CASTELA</s_nm><s_unitprice> 22,000</s_unitprice><s_cnt> 1</s_cnt><s_price> 22,000</s_price></s_menu><s_total><s_total_price> 22,000</s_total_price><s_cashprice> 22,000</s_cashprice><s_changeprice> 0</s_changeprice><s_menuqty_cnt> 1</s_menuqty_cnt></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9983752965927124,
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "MARBLE CASTELA",
+          "price": "22,000",
+          "unitprice": "22,000"
+        },
+        "total": {
+          "cashprice": "22,000",
+          "changeprice": "0",
+          "menuqty_cnt": "1",
+          "total_price": "22,000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00047",
+      "latency_seconds": 1.561635361998924,
+      "leaf_f1": 0.9090909090909091,
+      "leaf_gold": 11,
+      "leaf_predicted": 11,
+      "leaf_true_positive": 10,
+      "prediction": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Seaweed Chicken",
+          "price": "42,000",
+          "sub": {
+            "cnt": "1",
+            "nm": "Sedang",
+            "price": "0"
+          }
+        },
+        "sub_total": {
+          "subtotal_price": "42,000"
+        },
+        "total": {
+          "cashprice": "50,000",
+          "changeprice": "8,000",
+          "menuqty_cnt": "1",
+          "total_price": "42,000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> Seaweed Chicken</s_nm><s_cnt> 1</s_cnt><s_price> 42,000</s_price><s_sub><s_nm> Sedang</s_nm><s_cnt> 1</s_cnt><s_price> 0</s_price></s_sub></s_menu><s_sub_total><s_subtotal_price> 42,000</s_subtotal_price></s_sub_total><s_total><s_total_price> 42,000</s_total_price><s_cashprice> 50,000</s_cashprice><s_changeprice> 8,000</s_changeprice><s_menuqty_cnt> 1</s_menuqty_cnt></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9980826377868652,
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Seaweed Chicken",
+          "price": "42,000",
+          "sub": {
+            "cnt": "1",
+            "nm": "- Sedang",
+            "price": "0"
+          }
+        },
+        "sub_total": {
+          "subtotal_price": "42,000"
+        },
+        "total": {
+          "cashprice": "50,000",
+          "changeprice": "8,000",
+          "menuqty_cnt": "1",
+          "total_price": "42,000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00048",
+      "latency_seconds": 3.3387901179994515,
+      "leaf_f1": 1.0,
+      "leaf_gold": 15,
+      "leaf_predicted": 15,
+      "leaf_true_positive": 15,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "SB 1 OR",
+            "price": "28,636"
+          },
+          {
+            "cnt": "1",
+            "nm": "Chokocha Flt",
+            "price": "13,636"
+          },
+          {
+            "cnt": "1",
+            "nm": "Bbq Bento",
+            "price": "13,636"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "55,908",
+          "tax_price": "5,592"
+        },
+        "total": {
+          "cashprice": "70,000",
+          "changeprice": "8,500",
+          "menuqty_cnt": "3",
+          "total_price": "61,500"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> SB 1 OR</s_nm><s_cnt> 1</s_cnt><s_price> 28,636</s_price><sep/><s_nm> Chokocha Flt</s_nm><s_cnt> 1</s_cnt><s_price> 13,636</s_price><sep/><s_nm> Bbq Bento</s_nm><s_cnt> 1</s_cnt><s_price> 13,636</s_price></s_menu><s_sub_total><s_subtotal_price> 55,908</s_subtotal_price><s_tax_price> 5,592</s_tax_price></s_sub_total><s_total><s_total_price> 61,500</s_total_price><s_cashprice> 70,000</s_cashprice><s_changeprice> 8,500</s_changeprice><s_menuqty_cnt> 3</s_menuqty_cnt></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9991936683654785,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "SB 1 OR",
+            "price": "28,636"
+          },
+          {
+            "cnt": "1",
+            "nm": "Chokocha Flt",
+            "price": "13,636"
+          },
+          {
+            "cnt": "1",
+            "nm": "Bbq Bento",
+            "price": "13,636"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "55,908",
+          "tax_price": "5,592"
+        },
+        "total": {
+          "cashprice": "70,000",
+          "changeprice": "8,500",
+          "menuqty_cnt": "3",
+          "total_price": "61,500"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00049",
+      "latency_seconds": 2.6124725150002632,
+      "leaf_f1": 1.0,
+      "leaf_gold": 11,
+      "leaf_predicted": 11,
+      "leaf_true_positive": 11,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "1x",
+            "nm": "Nasi CampurBali",
+            "price": "52.000",
+            "unitprice": "52.000"
+          },
+          {
+            "cnt": "1x",
+            "nm": "Lemon",
+            "price": "22.000",
+            "unitprice": "22.000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "74.000",
+          "tax_price": "7.400"
+        },
+        "total": {
+          "cashprice": "81.400"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> Nasi CampurBali</s_nm><s_unitprice> 52.000</s_unitprice><s_cnt> 1x</s_cnt><s_price> 52.000</s_price><sep/><s_nm> Lemon</s_nm><s_unitprice> 22.000</s_unitprice><s_cnt> 1x</s_cnt><s_price> 22.000</s_price></s_menu><s_sub_total><s_subtotal_price> 74.000</s_subtotal_price><s_tax_price> 7.400</s_tax_price></s_sub_total><s_total><s_cashprice> 81.400</s_cashprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.997198760509491,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1x",
+            "nm": "Nasi CampurBali",
+            "price": "52.000",
+            "unitprice": "52.000"
+          },
+          {
+            "cnt": "1x",
+            "nm": "Lemon",
+            "price": "22.000",
+            "unitprice": "22.000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "74.000",
+          "tax_price": "7.400"
+        },
+        "total": {
+          "cashprice": "81.400"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00050",
+      "latency_seconds": 2.018207943998277,
+      "leaf_f1": 1.0,
+      "leaf_gold": 6,
+      "leaf_predicted": 6,
+      "leaf_true_positive": 6,
+      "prediction": {
+        "menu": {
+          "cnt": "2",
+          "nm": "CHOCOLATE ECLAIR",
+          "price": "26,000"
+        },
+        "total": {
+          "cashprice": "26,000",
+          "changeprice": "0",
+          "total_price": "26,000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> CHOCOLATE ECLAIR</s_nm><s_cnt> 2</s_cnt><s_price> 26,000</s_price></s_menu><s_total><s_total_price> 26,000</s_total_price><s_cashprice> 26,000</s_cashprice><s_changeprice> 0</s_changeprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9999349117279053,
+      "truth": {
+        "menu": {
+          "cnt": "2",
+          "nm": "CHOCOLATE ECLAIR",
+          "price": "26,000"
+        },
+        "total": {
+          "cashprice": "26,000",
+          "changeprice": "0",
+          "total_price": "26,000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00051",
+      "latency_seconds": 1.9524756370010437,
+      "leaf_f1": 0.8888888888888888,
+      "leaf_gold": 9,
+      "leaf_predicted": 9,
+      "leaf_true_positive": 8,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "118",
+            "nm": "Round Wagyu (1gr)",
+            "price": "47.200"
+          },
+          {
+            "cnt": "1",
+            "nm": "Wagyu Rice Box",
+            "price": "10,000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "57.200"
+        },
+        "total": {
+          "creditcardprice": "57.200",
+          "total_price": "57.200"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> Round Wagyu (1gr)</s_nm><s_cnt> 118</s_cnt><s_price> 47.200</s_price><sep/><s_nm> Wagyu Rice Box</s_nm><s_cnt> 1</s_cnt><s_price> 10,000</s_price></s_menu><s_sub_total><s_subtotal_price> 57.200</s_subtotal_price></s_sub_total><s_total><s_total_price> 57.200</s_total_price><s_creditcardprice> 57.200</s_creditcardprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9839662909507751,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "118",
+            "nm": "Round Wagyu (1gr)",
+            "price": "47.200"
+          },
+          {
+            "cnt": "1",
+            "nm": "Wagyu Rice Box",
+            "price": "10.000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "57.200"
+        },
+        "total": {
+          "creditcardprice": "57.200",
+          "total_price": "57.200"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00052",
+      "latency_seconds": 1.9533098850006354,
+      "leaf_f1": 0.9230769230769231,
+      "leaf_gold": 13,
+      "leaf_predicted": 13,
+      "leaf_true_positive": 12,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "2",
+            "nm": "KENTHIR",
+            "price": "42.000"
+          },
+          {
+            "cnt": "2",
+            "nm": "KOL GORENG",
+            "price": "6.000"
+          },
+          {
+            "cnt": "2",
+            "nm": "TEH MANIS",
+            "price": "8.000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "56.000"
+        },
+        "total": {
+          "cashprice": "56.000",
+          "changeprice": "0",
+          "total_price": "56.000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> KENTHIR</s_nm><s_cnt> 2</s_cnt><s_price> 42.000</s_price><sep/><s_nm> KOL GORENG</s_nm><s_cnt> 2</s_cnt><s_price> 6.000</s_price><sep/><s_nm> TEH MANIS</s_nm><s_cnt> 2</s_cnt><s_price> 8.000</s_price></s_menu><s_sub_total><s_subtotal_price> 56.000</s_subtotal_price></s_sub_total><s_total><s_total_price> 56.000</s_total_price><s_cashprice> 56.000</s_cashprice><s_changeprice> 0</s_changeprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9960749745368958,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "2",
+            "nm": "KENTHIR 2",
+            "price": "42.000"
+          },
+          {
+            "cnt": "2",
+            "nm": "KOL GORENG",
+            "price": "6.000"
+          },
+          {
+            "cnt": "2",
+            "nm": "TEH MANIS",
+            "price": "8.000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "56.000"
+        },
+        "total": {
+          "cashprice": "56.000",
+          "changeprice": "0",
+          "total_price": "56.000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00053",
+      "latency_seconds": 2.4541692539987707,
+      "leaf_f1": 1.0,
+      "leaf_gold": 16,
+      "leaf_predicted": 16,
+      "leaf_true_positive": 16,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "Large 1",
+            "price": "11.000",
+            "sub": {
+              "cnt": "1",
+              "nm": "*Rhum",
+              "price": "0"
+            }
+          },
+          {
+            "cnt": "1",
+            "nm": "Pastry Keju",
+            "price": "20.000",
+            "sub": {
+              "cnt": "1",
+              "nm": "*Plastik kcl",
+              "price": "0"
+            }
+          }
+        ],
+        "total": {
+          "cashprice": "40.000",
+          "changeprice": "9.000",
+          "menuqty_cnt": "4",
+          "total_price": "31.000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> Large 1</s_nm><s_cnt> 1</s_cnt><s_price> 11.000</s_price><s_sub><s_nm> *Rhum</s_nm><s_cnt> 1</s_cnt><s_price> 0</s_price></s_sub><sep/><s_nm> Pastry Keju</s_nm><s_cnt> 1</s_cnt><s_price> 20.000</s_price><s_sub><s_nm> *Plastik kcl</s_nm><s_cnt> 1</s_cnt><s_price> 0</s_price></s_sub></s_menu><s_total><s_total_price> 31.000</s_total_price><s_cashprice> 40.000</s_cashprice><s_changeprice> 9.000</s_changeprice><s_menuqty_cnt> 4</s_menuqty_cnt></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9996381998062134,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "Large 1",
+            "price": "11.000",
+            "sub": {
+              "cnt": "1",
+              "nm": "*Rhum",
+              "price": "0"
+            }
+          },
+          {
+            "cnt": "1",
+            "nm": "Pastry Keju",
+            "price": "20.000",
+            "sub": {
+              "cnt": "1",
+              "nm": "*Plastik kcl",
+              "price": "0"
+            }
+          }
+        ],
+        "total": {
+          "cashprice": "40.000",
+          "changeprice": "9.000",
+          "menuqty_cnt": "4",
+          "total_price": "31.000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00054",
+      "latency_seconds": 1.3657131630006916,
+      "leaf_f1": 0.75,
+      "leaf_gold": 12,
+      "leaf_predicted": 12,
+      "leaf_true_positive": 9,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "x 1",
+            "nm": "4003-Blueberry Fuji",
+            "price": "40.000",
+            "unitprice": "40.000"
+          },
+          {
+            "cnt": "x 1",
+            "nm": "6001-Plastic Bag Small",
+            "price": "0",
+            "unitprice": "0"
+          }
+        ],
+        "total": {
+          "cashprice": "50.000",
+          "changeprice": "10,000",
+          "menuqty_cnt": "2",
+          "total_price": "40.000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> 4003-Blueberry Fuji</s_nm><s_unitprice> 40.000</s_unitprice><s_cnt> x 1</s_cnt><s_price> 40.000</s_price><sep/><s_nm> 6001-Plastic Bag Small</s_nm><s_unitprice> 0</s_unitprice><s_cnt> x 1</s_cnt><s_price> 0</s_price></s_menu><s_total><s_total_price> 40.000</s_total_price><s_cashprice> 50.000</s_cashprice><s_changeprice> 10,000</s_changeprice><s_menuqty_cnt> 2</s_menuqty_cnt></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9926354885101318,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "x1",
+            "nm": "4003-Blueberry Fuji",
+            "price": "40.000",
+            "unitprice": "40.000"
+          },
+          {
+            "cnt": "x1",
+            "nm": "6001-Plastic Bag Small",
+            "price": "0",
+            "unitprice": "0"
+          }
+        ],
+        "total": {
+          "cashprice": "50.000",
+          "changeprice": "10.000",
+          "menuqty_cnt": "2",
+          "total_price": "40.000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00055",
+      "latency_seconds": 1.788735321999411,
+      "leaf_f1": 0.8421052631578948,
+      "leaf_gold": 9,
+      "leaf_predicted": 10,
+      "leaf_true_positive": 8,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "x2",
+            "nm": "Cha Keaw L...",
+            "price": "60.000"
+          },
+          {
+            "cnt": "x2",
+            "nm": "Cha Keaw L...",
+            "price": "60.000"
+          },
+          {
+            "nm": "BCA PAY... (100%)",
+            "price": "60.000)"
+          }
+        ],
+        "total": {
+          "creditcardprice": "60.000",
+          "total_price": "60.000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> Cha Keaw L...</s_nm><s_cnt> x2</s_cnt><s_price> 60.000</s_price><sep/><s_nm> Cha Keaw L...</s_nm><s_cnt> x2</s_cnt><s_price> 60.000</s_price><sep/><s_nm> BCA PAY... (100%)</s_nm><s_price> 60.000)</s_price></s_menu><s_total><s_total_price> 60.000</s_total_price><s_creditcardprice> 60.000</s_creditcardprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9858747124671936,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "x2",
+            "nm": "Cha Keaw L...",
+            "price": "60.000"
+          },
+          {
+            "cnt": "x2",
+            "discountprice": "60.000)",
+            "nm": "Cha Keaw L...",
+            "price": "60.000"
+          }
+        ],
+        "total": {
+          "creditcardprice": "60.000",
+          "total_price": "60.000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00056",
+      "latency_seconds": 1.1418951590003417,
+      "leaf_f1": 0.7692307692307692,
+      "leaf_gold": 6,
+      "leaf_predicted": 7,
+      "leaf_true_positive": 5,
+      "prediction": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Thai Iced T..x]",
+          "price": "20.000"
+        },
+        "sub_total": {
+          "subtotal_price": "20.000"
+        },
+        "total": {
+          "cashprice": "20.000",
+          "changeprice": "0",
+          "total_price": "20.000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> Thai Iced T..x]</s_nm><s_cnt> 1</s_cnt><s_price> 20.000</s_price></s_menu><s_sub_total><s_subtotal_price> 20.000</s_subtotal_price></s_sub_total><s_total><s_total_price> 20.000</s_total_price><s_cashprice> 20.000</s_cashprice><s_changeprice> 0</s_changeprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9773251414299011,
+      "truth": {
+        "menu": {
+          "nm": "Thai Iced T. .x1",
+          "price": "20.000"
+        },
+        "sub_total": {
+          "subtotal_price": "20.000"
+        },
+        "total": {
+          "cashprice": "20.000",
+          "changeprice": "0",
+          "total_price": "20.000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00057",
+      "latency_seconds": 3.7598901750006917,
+      "leaf_f1": 1.0,
+      "leaf_gold": 13,
+      "leaf_predicted": 13,
+      "leaf_true_positive": 13,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "SEAFOOD MARINARA",
+            "price": "85,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "CREAMY MARINARA SALMON",
+            "price": "85.500"
+          },
+          {
+            "cnt": "2",
+            "nm": "LYCHEE ICE TEA",
+            "price": "77,000"
+          }
+        ],
+        "sub_total": {
+          "service_price": "14,850",
+          "subtotal_price": "247,500",
+          "tax_price": "26,235"
+        },
+        "total": {
+          "total_price": "288,585"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> SEAFOOD MARINARA</s_nm><s_cnt> 1</s_cnt><s_price> 85,000</s_price><sep/><s_nm> CREAMY MARINARA SALMON</s_nm><s_cnt> 1</s_cnt><s_price> 85.500</s_price><sep/><s_nm> LYCHEE ICE TEA</s_nm><s_cnt> 2</s_cnt><s_price> 77,000</s_price></s_menu><s_sub_total><s_subtotal_price> 247,500</s_subtotal_price><s_service_price> 14,850</s_service_price><s_tax_price> 26,235</s_tax_price></s_sub_total><s_total><s_total_price> 288,585</s_total_price></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9975071549415588,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "SEAFOOD MARINARA",
+            "price": "85,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "CREAMY MARINARA SALMON",
+            "price": "85.500"
+          },
+          {
+            "cnt": "2",
+            "nm": "LYCHEE ICE TEA",
+            "price": "77,000"
+          }
+        ],
+        "sub_total": {
+          "service_price": "14,850",
+          "subtotal_price": "247,500",
+          "tax_price": "26,235"
+        },
+        "total": {
+          "total_price": "288,585"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00058",
+      "latency_seconds": 2.5451345439996658,
+      "leaf_f1": 0.8888888888888888,
+      "leaf_gold": 9,
+      "leaf_predicted": 9,
+      "leaf_true_positive": 8,
+      "prediction": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Viet Milk Coffee",
+          "price": "25.000",
+          "sub": [
+            {
+              "nm": "+Hot"
+            },
+            {
+              "nm": "+M"
+            }
+          ]
+        },
+        "sub_total": {
+          "subtotal_price": "25.000"
+        },
+        "total": {
+          "cashprice": "25.000",
+          "changeprice": "Rp 0",
+          "total_price": "25.000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> Viet Milk Coffee</s_nm><s_cnt> 1</s_cnt><s_price> 25.000</s_price><s_sub><s_nm> +Hot</s_nm><sep/><s_nm> +M</s_nm></s_sub></s_menu><s_sub_total><s_subtotal_price> 25.000</s_subtotal_price></s_sub_total><s_total><s_total_price> 25.000</s_total_price><s_cashprice> 25.000</s_cashprice><s_changeprice> Rp 0</s_changeprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9998849630355835,
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Viet Milk Coffee",
+          "price": "25.000",
+          "sub": [
+            {
+              "nm": "+Hot"
+            },
+            {
+              "nm": "+M"
+            }
+          ]
+        },
+        "sub_total": {
+          "subtotal_price": "25.000"
+        },
+        "total": {
+          "cashprice": "25.000",
+          "changeprice": "0",
+          "total_price": "25.000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00059",
+      "latency_seconds": 6.3733855209993635,
+      "leaf_f1": 0.9206349206349206,
+      "leaf_gold": 32,
+      "leaf_predicted": 31,
+      "leaf_true_positive": 29,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "XLB Org Pork 10x",
+            "price": "78,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Sicito Babi",
+            "price": "65,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Hotplate Tahu",
+            "price": "58,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "DF Fish Filiet Garic",
+            "price": "108,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "LM Pork Belly",
+            "price": "88,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Siew Mai",
+            "price": "38,800"
+          },
+          {
+            "cnt": "5",
+            "nm": "Kwan Yin Cup",
+            "price": "50,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Herbal Jelly",
+            "price": "38,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Onde- Onde",
+            "price": "38,000"
+          }
+        ],
+        "sub_total": {
+          "service_price": "42,135",
+          "subtotal_price": "561,800",
+          "tax_price": "60,394"
+        },
+        "total": {
+          "total_price": "664,329"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> XLB Org Pork 10x</s_nm><s_cnt> 1</s_cnt><s_price> 78,000</s_price><sep/><s_nm> Sicito Babi</s_nm><s_cnt> 1</s_cnt><s_price> 65,000</s_price><sep/><s_nm> Hotplate Tahu</s_nm><s_cnt> 1</s_cnt><s_price> 58,000</s_price><sep/><s_nm> DF Fish Filiet Garic</s_nm><s_cnt> 1</s_cnt><s_price> 108,000</s_price><sep/><s_nm> LM Pork Belly</s_nm><s_cnt> 1</s_cnt><s_price> 88,000</s_price><sep/><s_nm> Siew Mai</s_nm><s_cnt> 1</s_cnt><s_price> 38,800</s_price><sep/><s_nm> Kwan Yin Cup</s_nm><s_cnt> 5</s_cnt><s_price> 50,000</s_price><sep/><s_nm> Herbal Jelly</s_nm><s_cnt> 1</s_cnt><s_price> 38,000</s_price><sep/><s_nm> Onde- Onde</s_nm><s_cnt> 1</s_cnt><s_price> 38,000</s_price></s_menu><s_sub_total><s_subtotal_price> 561,800</s_subtotal_price><s_service_price> 42,135</s_service_price><s_tax_price> 60,394</s_tax_price></s_sub_total><s_total><s_total_price> 664,329</s_total_price></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9877687692642212,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "XLB Org Pork 10x",
+            "price": "78,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Sicito Babi",
+            "price": "65,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Hotplate Tahu",
+            "price": "58,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "DF Fish Fillet Garlc",
+            "price": "108,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "LM Pork Belly",
+            "price": "88,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Siew Mai",
+            "price": "38,800"
+          },
+          {
+            "cnt": "5",
+            "nm": "Kwan Yin Cup",
+            "price": "50,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Herbal Jelly",
+            "price": "38,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Onde-Onde",
+            "price": "38,000"
+          }
+        ],
+        "sub_total": {
+          "service_price": "42,135",
+          "subtotal_price": "561,800",
+          "tax_price": "60,394"
+        },
+        "total": {
+          "menuqty_cnt": "13",
+          "total_price": "664,329"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00060",
+      "latency_seconds": 1.3365207759998157,
+      "leaf_f1": 0.4000000000000001,
+      "leaf_gold": 5,
+      "leaf_predicted": 5,
+      "leaf_true_positive": 2,
+      "prediction": {
+        "menu": {
+          "cnt": "1",
+          "nm": "VANILLA CHOCO HEART CAKE",
+          "price": "180.000"
+        },
+        "total": {
+          "creditcardprice": "180.000",
+          "total_price": "180.000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> VANILLA CHOCO HEART CAKE</s_nm><s_cnt> 1</s_cnt><s_price> 180.000</s_price></s_menu><s_total><s_total_price> 180.000</s_total_price><s_creditcardprice> 180.000</s_creditcardprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9332904815673828,
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "VANILLA CHOCO HEART CAKE",
+          "price": "180,000"
+        },
+        "total": {
+          "creditcardprice": "180,000",
+          "total_price": "180,000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00061",
+      "latency_seconds": 2.6453357139998843,
+      "leaf_f1": 0.8148148148148148,
+      "leaf_gold": 14,
+      "leaf_predicted": 13,
+      "leaf_true_positive": 11,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "Populaire Cho clate",
+            "price": "4,500",
+            "unitprice": "4,500"
+          },
+          {
+            "cnt": "1",
+            "nm": "Paddle Pop Ch : 0 Magma",
+            "price": "3,000",
+            "unitprice": "3,000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "7,500",
+          "tax_price": "750"
+        },
+        "total": {
+          "cashprice": "10,000",
+          "changeprice": "1,800",
+          "total_price": "8,250"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> Populaire Cho clate</s_nm><s_unitprice> 4,500</s_unitprice><s_cnt> 1</s_cnt><s_price> 4,500</s_price><sep/><s_nm> Paddle Pop Ch : 0 Magma</s_nm><s_unitprice> 3,000</s_unitprice><s_cnt> 1</s_cnt><s_price> 3,000</s_price></s_menu><s_sub_total><s_subtotal_price> 7,500</s_subtotal_price><s_tax_price> 750</s_tax_price></s_sub_total><s_total><s_total_price> 8,250</s_total_price><s_cashprice> 10,000</s_cashprice><s_changeprice> 1,800</s_changeprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9647172093391418,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "Populaire Chocolate",
+            "price": "4,500",
+            "unitprice": "4,500"
+          },
+          {
+            "cnt": "1",
+            "nm": "Paddle Pop Choco Magma",
+            "price": "3,000",
+            "unitprice": "3,000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "7,500",
+          "tax_price": "750"
+        },
+        "total": {
+          "cashprice": "10,000",
+          "changeprice": "1,800",
+          "total_etc": "50",
+          "total_price": "8,250"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00062",
+      "latency_seconds": 2.5960292989984737,
+      "leaf_f1": 0.9285714285714286,
+      "leaf_gold": 14,
+      "leaf_predicted": 14,
+      "leaf_true_positive": 13,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "French Fries",
+            "price": "10,909"
+          },
+          {
+            "cnt": "2",
+            "nm": "Cheese Burger",
+            "price": "36,364"
+          },
+          {
+            "cnt": "1",
+            "nm": "Milo",
+            "price": "9,091"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "56,364",
+          "tax_price": "5,636"
+        },
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "38,000",
+          "total_price": "62,000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> French Fries</s_nm><s_cnt> 1</s_cnt><s_price> 10,909</s_price><sep/><s_nm> Cheese Burger</s_nm><s_cnt> 2</s_cnt><s_price> 36,364</s_price><sep/><s_nm> Milo</s_nm><s_cnt> 1</s_cnt><s_price> 9,091</s_price></s_menu><s_sub_total><s_subtotal_price> 56,364</s_subtotal_price><s_tax_price> 5,636</s_tax_price></s_sub_total><s_total><s_total_price> 62,000</s_total_price><s_cashprice> 100,000</s_cashprice><s_changeprice> 38,000</s_changeprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.999928891658783,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "French Fries",
+            "price": "10,909"
+          },
+          {
+            "cnt": "2",
+            "nm": "Cheese Burger",
+            "price": "36,364"
+          },
+          {
+            "cnt": "1",
+            "nm": "Milo",
+            "price": "9.091"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "56,364",
+          "tax_price": "5,636"
+        },
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "38,000",
+          "total_price": "62,000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00063",
+      "latency_seconds": 3.0584458819994325,
+      "leaf_f1": 0.7692307692307693,
+      "leaf_gold": 13,
+      "leaf_predicted": 13,
+      "leaf_true_positive": 10,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "ISI CAMPUR",
+            "price": "43.636",
+            "unitprice": "43.636"
+          },
+          {
+            "cnt": "1",
+            "nm": "A.MINERAL BOTOL",
+            "price": "8.000",
+            "unitprice": "8.000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "51,636",
+          "tax_price": "5,164"
+        },
+        "total": {
+          "cashprice": "110.000",
+          "changeprice": "53,200",
+          "total_price": "56,800"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> ISI CAMPUR</s_nm><s_unitprice> 43.636</s_unitprice><s_cnt> 1</s_cnt><s_price> 43.636</s_price><sep/><s_nm> A.MINERAL BOTOL</s_nm><s_unitprice> 8.000</s_unitprice><s_cnt> 1</s_cnt><s_price> 8.000</s_price></s_menu><s_sub_total><s_subtotal_price> 51,636</s_subtotal_price><s_tax_price> 5,164</s_tax_price></s_sub_total><s_total><s_total_price> 56,800</s_total_price><s_cashprice> 110.000</s_cashprice><s_changeprice> 53,200</s_changeprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9992226362228394,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "ISI CAMPUR",
+            "price": "43.636",
+            "unitprice": "43,636"
+          },
+          {
+            "cnt": "1",
+            "nm": "A.MINERAL BOTOL",
+            "price": "8.000",
+            "unitprice": "8.000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "51,636",
+          "tax_price": "5,164"
+        },
+        "total": {
+          "cashprice": "110,000",
+          "changeprice": "53.200",
+          "total_price": "56,800"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00064",
+      "latency_seconds": 2.2403796700000385,
+      "leaf_f1": 1.0,
+      "leaf_gold": 6,
+      "leaf_predicted": 6,
+      "leaf_true_positive": 6,
+      "prediction": {
+        "menu": {
+          "cnt": "1",
+          "nm": "WHOLE WHEAT PAN BREAD",
+          "price": "20,000"
+        },
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "80,000",
+          "total_price": "20,000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> WHOLE WHEAT PAN BREAD</s_nm><s_cnt> 1</s_cnt><s_price> 20,000</s_price></s_menu><s_total><s_total_price> 20,000</s_total_price><s_cashprice> 100,000</s_cashprice><s_changeprice> 80,000</s_changeprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9999853372573853,
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "WHOLE WHEAT PAN BREAD",
+          "price": "20,000"
+        },
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "80,000",
+          "total_price": "20,000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00065",
+      "latency_seconds": 4.722639646000971,
+      "leaf_f1": 1.0,
+      "leaf_gold": 13,
+      "leaf_predicted": 13,
+      "leaf_true_positive": 13,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "BASO TAHU",
+            "price": "43.636",
+            "unitprice": "43.636"
+          },
+          {
+            "cnt": "1",
+            "nm": "NASI PUTIH",
+            "price": "6.000",
+            "unitprice": "6.000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "49.636",
+          "tax_price": "4.964"
+        },
+        "total": {
+          "cashprice": "60.100",
+          "changeprice": "5.500",
+          "total_price": "54.600"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> BASO TAHU</s_nm><s_unitprice> 43.636</s_unitprice><s_cnt> 1</s_cnt><s_price> 43.636</s_price><sep/><s_nm> NASI PUTIH</s_nm><s_unitprice> 6.000</s_unitprice><s_cnt> 1</s_cnt><s_price> 6.000</s_price></s_menu><s_sub_total><s_subtotal_price> 49.636</s_subtotal_price><s_tax_price> 4.964</s_tax_price></s_sub_total><s_total><s_total_price> 54.600</s_total_price><s_cashprice> 60.100</s_cashprice><s_changeprice> 5.500</s_changeprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9987059235572815,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "BASO TAHU",
+            "price": "43.636",
+            "unitprice": "43.636"
+          },
+          {
+            "cnt": "1",
+            "nm": "NASI PUTIH",
+            "price": "6.000",
+            "unitprice": "6.000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "49.636",
+          "tax_price": "4.964"
+        },
+        "total": {
+          "cashprice": "60.100",
+          "changeprice": "5.500",
+          "total_price": "54.600"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00066",
+      "latency_seconds": 0.7605730299983406,
+      "leaf_f1": 1.0,
+      "leaf_gold": 4,
+      "leaf_predicted": 4,
+      "leaf_true_positive": 4,
+      "prediction": {
+        "menu": {
+          "nm": "AIR MINERAL",
+          "price": "7,000"
+        },
+        "total": {
+          "cashprice": "7,000",
+          "total_price": "7,000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> AIR MINERAL</s_nm><s_price> 7,000</s_price></s_menu><s_total><s_total_price> 7,000</s_total_price><s_cashprice> 7,000</s_cashprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9999300241470337,
+      "truth": {
+        "menu": {
+          "nm": "AIR MINERAL",
+          "price": "7,000"
+        },
+        "total": {
+          "cashprice": "7,000",
+          "total_price": "7,000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00067",
+      "latency_seconds": 7.4159141599993745,
+      "leaf_f1": 1.0,
+      "leaf_gold": 16,
+      "leaf_predicted": 16,
+      "leaf_true_positive": 16,
+      "prediction": {
+        "menu": {
+          "cnt": "1",
+          "nm": "PAKET BER2",
+          "price": "69,091",
+          "sub": [
+            {
+              "cnt": "1",
+              "nm": "BREAD N CHEESE DEL"
+            },
+            {
+              "cnt": "1",
+              "nm": "MAC N CHEESE DEL"
+            },
+            {
+              "cnt": "1",
+              "nm": "PEPSI DEL"
+            },
+            {
+              "cnt": "1",
+              "nm": "P/P THUOSAND ISL DEL"
+            },
+            {
+              "cnt": "1",
+              "nm": "LIPTON ICE TEA DEL"
+            }
+          ]
+        },
+        "sub_total": {
+          "subtotal_price": "69,091",
+          "tax_price": "6,909"
+        },
+        "total": {
+          "total_price": "76,000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> PAKET BER2</s_nm><s_cnt> 1</s_cnt><s_price> 69,091</s_price><s_sub><s_nm> BREAD N CHEESE DEL</s_nm><s_cnt> 1</s_cnt><sep/><s_nm> MAC N CHEESE DEL</s_nm><s_cnt> 1</s_cnt><sep/><s_nm> PEPSI DEL</s_nm><s_cnt> 1</s_cnt><sep/><s_nm> P/P THUOSAND ISL DEL</s_nm><s_cnt> 1</s_cnt><sep/><s_nm> LIPTON ICE TEA DEL</s_nm><s_cnt> 1</s_cnt></s_sub></s_menu><s_sub_total><s_subtotal_price> 69,091</s_subtotal_price><s_tax_price> 6,909</s_tax_price></s_sub_total><s_total><s_total_price> 76,000</s_total_price></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9999478459358215,
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "PAKET BER2",
+          "price": "69,091",
+          "sub": [
+            {
+              "cnt": "1",
+              "nm": "BREAD N CHEESE DEL"
+            },
+            {
+              "cnt": "1",
+              "nm": "MAC N CHEESE DEL"
+            },
+            {
+              "cnt": "1",
+              "nm": "PEPSI DEL"
+            },
+            {
+              "cnt": "1",
+              "nm": "P/P THUOSAND ISL DEL"
+            },
+            {
+              "cnt": "1",
+              "nm": "LIPTON ICE TEA DEL"
+            }
+          ]
+        },
+        "sub_total": {
+          "subtotal_price": "69,091",
+          "tax_price": "6,909"
+        },
+        "total": {
+          "total_price": "76,000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00068",
+      "latency_seconds": 3.1524453250003717,
+      "leaf_f1": 0.8571428571428571,
+      "leaf_gold": 7,
+      "leaf_predicted": 7,
+      "leaf_true_positive": 6,
+      "prediction": {
+        "menu": {
+          "cnt": "2X",
+          "nm": "Honey Mandarin",
+          "price": "26,000",
+          "unitprice": "13,000"
+        },
+        "total": {
+          "cashprice": "30,000",
+          "changeprice": "4,000",
+          "total_price": "26,000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> Honey Mandarin</s_nm><s_unitprice> 13,000</s_unitprice><s_cnt> 2X</s_cnt><s_price> 26,000</s_price></s_menu><s_total><s_total_price> 26,000</s_total_price><s_cashprice> 30,000</s_cashprice><s_changeprice> 4,000</s_changeprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9879090785980225,
+      "truth": {
+        "menu": {
+          "cnt": "2 X",
+          "nm": "Honey Mandarin",
+          "price": "26,000",
+          "unitprice": "13,000"
+        },
+        "total": {
+          "cashprice": "30,000",
+          "changeprice": "4,000",
+          "total_price": "26,000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00069",
+      "latency_seconds": 2.8814228829996864,
+      "leaf_f1": 0.962962962962963,
+      "leaf_gold": 13,
+      "leaf_predicted": 14,
+      "leaf_true_positive": 13,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "SOTO MEDAN+NASI",
+            "price": "59.500"
+          },
+          {
+            "cnt": "1",
+            "nm": "GADO-GADO",
+            "price": "34.500"
+          },
+          {
+            "cnt": "1",
+            "nm": "SOTO BETAWI + NASI",
+            "price": "57.500"
+          }
+        ],
+        "sub_total": {
+          "service_price": "7.575",
+          "subtotal_price": "151.500",
+          "tax_price": "15.908"
+        },
+        "total": {
+          "menuqty_cnt": "3",
+          "total_price": "174.983"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> SOTO MEDAN+NASI</s_nm><s_cnt> 1</s_cnt><s_price> 59.500</s_price><sep/><s_nm> GADO-GADO</s_nm><s_cnt> 1</s_cnt><s_price> 34.500</s_price><sep/><s_nm> SOTO BETAWI + NASI</s_nm><s_cnt> 1</s_cnt><s_price> 57.500</s_price></s_menu><s_sub_total><s_subtotal_price> 151.500</s_subtotal_price><s_service_price> 7.575</s_service_price><s_tax_price> 15.908</s_tax_price></s_sub_total><s_total><s_total_price> 174.983</s_total_price><s_menuqty_cnt> 3</s_menuqty_cnt></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9812549948692322,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "SOTO MEDAN+NASI",
+            "price": "59.500"
+          },
+          {
+            "cnt": "1",
+            "nm": "GADO-GADO",
+            "price": "34.500"
+          },
+          {
+            "cnt": "1",
+            "nm": "SOTO BETAWI + NASI",
+            "price": "57.500"
+          }
+        ],
+        "sub_total": {
+          "service_price": "7.575",
+          "subtotal_price": "151.500",
+          "tax_price": "15.908"
+        },
+        "total": {
+          "total_price": "174.983"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00070",
+      "latency_seconds": 3.608209149000686,
+      "leaf_f1": 1.0,
+      "leaf_gold": 15,
+      "leaf_predicted": 15,
+      "leaf_true_positive": 15,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "KaraageCurryTeishoku",
+            "price": "69,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Lemon Plate",
+            "price": "19,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Ocha Hot",
+            "price": "15,000"
+          }
+        ],
+        "sub_total": {
+          "service_price": "7,725",
+          "subtotal_price": "103,000",
+          "tax_price": "11,073"
+        },
+        "total": {
+          "menuqty_cnt": "3",
+          "menutype_cnt": "3",
+          "total_price": "121,798"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> KaraageCurryTeishoku</s_nm><s_cnt> 1</s_cnt><s_price> 69,000</s_price><sep/><s_nm> Lemon Plate</s_nm><s_cnt> 1</s_cnt><s_price> 19,000</s_price><sep/><s_nm> Ocha Hot</s_nm><s_cnt> 1</s_cnt><s_price> 15,000</s_price></s_menu><s_sub_total><s_subtotal_price> 103,000</s_subtotal_price><s_service_price> 7,725</s_service_price><s_tax_price> 11,073</s_tax_price></s_sub_total><s_total><s_total_price> 121,798</s_total_price><s_menutype_cnt> 3</s_menutype_cnt><s_menuqty_cnt> 3</s_menuqty_cnt></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9934300184249878,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "KaraageCurryTeishoku",
+            "price": "69,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Lemon Plate",
+            "price": "19,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Ocha Hot",
+            "price": "15,000"
+          }
+        ],
+        "sub_total": {
+          "service_price": "7,725",
+          "subtotal_price": "103,000",
+          "tax_price": "11,073"
+        },
+        "total": {
+          "menuqty_cnt": "3",
+          "menutype_cnt": "3",
+          "total_price": "121,798"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00071",
+      "latency_seconds": 1.9127910879997216,
+      "leaf_f1": 0.7,
+      "leaf_gold": 10,
+      "leaf_predicted": 10,
+      "leaf_true_positive": 7,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "Dum Dum Thai Coffee",
+            "price": "19.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Ice",
+            "price": "1.000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "20.000"
+        },
+        "total": {
+          "cashprice": "50.000",
+          "changeprice": "30.000",
+          "total_price": "20.000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> Dum Dum Thai Coffee</s_nm><s_cnt> 1</s_cnt><s_price> 19.000</s_price><sep/><s_nm> Ice</s_nm><s_cnt> 1</s_cnt><s_price> 1.000</s_price></s_menu><s_sub_total><s_subtotal_price> 20.000</s_subtotal_price></s_sub_total><s_total><s_total_price> 20.000</s_total_price><s_cashprice> 50.000</s_cashprice><s_changeprice> 30.000</s_changeprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9839562773704529,
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Dum Dum Thai Coffee",
+          "price": "19.000",
+          "sub": {
+            "cnt": "1",
+            "nm": "Ice",
+            "price": "1.000"
+          }
+        },
+        "sub_total": {
+          "subtotal_price": "20.000"
+        },
+        "total": {
+          "cashprice": "50.000",
+          "changeprice": "30.000",
+          "total_price": "20.000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00072",
+      "latency_seconds": 1.9202044170015142,
+      "leaf_f1": 1.0,
+      "leaf_gold": 12,
+      "leaf_predicted": 12,
+      "leaf_true_positive": 12,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "1 x",
+            "nm": "STIX CINNAMON",
+            "price": "19,000",
+            "unitprice": "19,000"
+          },
+          {
+            "cnt": "1 x",
+            "nm": "TRIPPLE CHEESE",
+            "price": "17,000",
+            "unitprice": "17,000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "36,000"
+        },
+        "total": {
+          "changeprice": "0",
+          "creditcardprice": "36,000",
+          "total_price": "36,000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> STIX CINNAMON</s_nm><s_unitprice> 19,000</s_unitprice><s_cnt> 1 x</s_cnt><s_price> 19,000</s_price><sep/><s_nm> TRIPPLE CHEESE</s_nm><s_unitprice> 17,000</s_unitprice><s_cnt> 1 x</s_cnt><s_price> 17,000</s_price></s_menu><s_sub_total><s_subtotal_price> 36,000</s_subtotal_price></s_sub_total><s_total><s_total_price> 36,000</s_total_price><s_changeprice> 0</s_changeprice><s_creditcardprice> 36,000</s_creditcardprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9998193383216858,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1 x",
+            "nm": "STIX CINNAMON",
+            "price": "19,000",
+            "unitprice": "19,000"
+          },
+          {
+            "cnt": "1 x",
+            "nm": "TRIPPLE CHEESE",
+            "price": "17,000",
+            "unitprice": "17,000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "36,000"
+        },
+        "total": {
+          "changeprice": "0",
+          "creditcardprice": "36,000",
+          "total_price": "36,000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00073",
+      "latency_seconds": 1.2524525339995307,
+      "leaf_f1": 1.0,
+      "leaf_gold": 5,
+      "leaf_predicted": 5,
+      "leaf_true_positive": 5,
+      "prediction": {
+        "menu": {
+          "nm": "ICED TT",
+          "price": "20,000"
+        },
+        "total": {
+          "cashprice": "50,000",
+          "changeprice": "30,000",
+          "total_price": "20,000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> ICED TT</s_nm><s_price> 20,000</s_price></s_menu><s_total><s_total_price> 20,000</s_total_price><s_cashprice> 50,000</s_cashprice><s_changeprice> 30,000</s_changeprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9998660087585449,
+      "truth": {
+        "menu": {
+          "nm": "ICED TT",
+          "price": "20,000"
+        },
+        "total": {
+          "cashprice": "50,000",
+          "changeprice": "30,000",
+          "total_price": "20,000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00074",
+      "latency_seconds": 1.9219256489996042,
+      "leaf_f1": 1.0,
+      "leaf_gold": 8,
+      "leaf_predicted": 8,
+      "leaf_true_positive": 8,
+      "prediction": {
+        "menu": {
+          "cnt": "1",
+          "nm": "THAI ICED TEA",
+          "price": "20.000",
+          "unitprice": "@20.000"
+        },
+        "sub_total": {
+          "subtotal_price": "20.000"
+        },
+        "total": {
+          "cashprice": "20.000",
+          "changeprice": "0",
+          "total_price": "20.000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> THAI ICED TEA</s_nm><s_unitprice> @20.000</s_unitprice><s_cnt> 1</s_cnt><s_price> 20.000</s_price></s_menu><s_sub_total><s_subtotal_price> 20.000</s_subtotal_price></s_sub_total><s_total><s_total_price> 20.000</s_total_price><s_cashprice> 20.000</s_cashprice><s_changeprice> 0</s_changeprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9924466609954834,
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "THAI ICED TEA",
+          "price": "20.000",
+          "unitprice": "@20.000"
+        },
+        "sub_total": {
+          "subtotal_price": "20.000"
+        },
+        "total": {
+          "cashprice": "20.000",
+          "changeprice": "0",
+          "total_price": "20.000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00075",
+      "latency_seconds": 3.9345563750011934,
+      "leaf_f1": 0.923076923076923,
+      "leaf_gold": 21,
+      "leaf_predicted": 18,
+      "leaf_true_positive": 18,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "2",
+            "nm": "KFC Winger HC",
+            "price": "40,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Ori Bento",
+            "price": "13,636"
+          },
+          {
+            "cnt": "1",
+            "nm": "F.Wngr GES-HC",
+            "price": "0"
+          },
+          {
+            "cnt": "1",
+            "nm": "CHARGE TA",
+            "price": "909"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "60,454",
+          "tax_price": "6,046"
+        },
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "33,500",
+          "menuqty_cnt": "6",
+          "total_price": "66,500"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> KFC Winger HC</s_nm><s_cnt> 2</s_cnt><s_price> 40,000</s_price><sep/><s_nm> Ori Bento</s_nm><s_cnt> 1</s_cnt><s_price> 13,636</s_price><sep/><s_nm> Mango Float</s_nm><s_cnt> 1</s_cnt><s_price> 5,909</s_price><s_sub><s_nm> F.Wngr GES-HC</s_nm><s_cnt> 1</s_cnt><s_price> 0</s_price><sep/><s_nm> CHARGE TA</s_nm><s_cnt> 1</s_cnt><s_price> 909</s_price></s_menu><s_sub_total><s_subtotal_price> 60,454</s_subtotal_price><s_tax_price> 6,046</s_tax_price></s_sub_total><s_total><s_total_price> 66,500</s_total_price><s_cashprice> 100,000</s_cashprice><s_changeprice> 33,500</s_changeprice><s_menuqty_cnt> 6</s_menuqty_cnt></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9936828017234802,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "2",
+            "nm": "KFC Winger HC",
+            "price": "40,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Ori Bento",
+            "price": "13,636"
+          },
+          {
+            "cnt": "1",
+            "nm": "Mango Float",
+            "price": "5,909"
+          },
+          {
+            "cnt": "1",
+            "nm": "F.Wngr GES-HC",
+            "price": "0"
+          },
+          {
+            "cnt": "1",
+            "nm": "CHARGE TA",
+            "price": "909"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "60,454",
+          "tax_price": "6,046"
+        },
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "33,500",
+          "menuqty_cnt": "6",
+          "total_price": "66,500"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00076",
+      "latency_seconds": 2.7282863529999304,
+      "leaf_f1": 0.8,
+      "leaf_gold": 14,
+      "leaf_predicted": 11,
+      "leaf_true_positive": 10,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "Enting2 Dua Bandeng Ori",
+            "num": "01069",
+            "price": "31.000",
+            "unitprice": "31.000"
+          },
+          {
+            "nm": "TAHU BAKSO Grg Ayam VC [biji",
+            "num": "07165",
+            "price": "68.000"
+          }
+        ],
+        "total": {
+          "creditcardprice": "99.000",
+          "menuqty_cnt": "2",
+          "total_price": "99.000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> Enting2 Dua Bandeng Ori</s_nm><s_num> 01069</s_num><s_unitprice> 31.000</s_unitprice><s_cnt> 1</s_cnt><s_price> 31.000</s_price><sep/><s_nm> TAHU BAKSO Grg Ayam VC [biji</s_nm><s_num> 07165</s_num><s_price> 68.000</s_price></s_menu><s_total><s_total_price> 99.000</s_total_price><s_creditcardprice> 99.000</s_creditcardprice><s_menuqty_cnt> 2</s_menuqty_cnt></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9773761630058289,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "Enting2 Dua Bandeng Ori",
+            "num": "01069",
+            "price": "31.000",
+            "unitprice": "31.000"
+          },
+          {
+            "cnt": "10",
+            "nm": "TAHU BAKSO Grg Ayam VC [biji",
+            "num": "07165",
+            "price": "68.000",
+            "unitprice": "6.800"
+          }
+        ],
+        "total": {
+          "creditcardprice": "99.000",
+          "menuqty_cnt": "11",
+          "menutype_cnt": "2",
+          "total_price": "99.000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00077",
+      "latency_seconds": 1.6840265989994805,
+      "leaf_f1": 0.9,
+      "leaf_gold": 10,
+      "leaf_predicted": 10,
+      "leaf_true_positive": 9,
+      "prediction": {
+        "menu": {
+          "cnt": "*2",
+          "nm": "Cheese Tart",
+          "price": "Rp 58000.00",
+          "sub": [
+            {
+              "nm": "Bag-S"
+            },
+            {
+              "nm": "PS Carrier"
+            }
+          ]
+        },
+        "sub_total": {
+          "subtotal_price": "Rp 58000.00",
+          "tax_price": "Rp 5272.73"
+        },
+        "total": {
+          "cashprice": "Rp 10000.00",
+          "changeprice": "Rp 42000.00",
+          "total_price": "Rp 58000.00"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> Cheese Tart</s_nm><s_cnt> *2</s_cnt><s_price> Rp 58000.00</s_price><s_sub><s_nm> Bag-S</s_nm><sep/><s_nm> PS Carrier</s_nm></s_sub></s_menu><s_sub_total><s_subtotal_price> Rp 58000.00</s_subtotal_price><s_tax_price> Rp 5272.73</s_tax_price></s_sub_total><s_total><s_total_price> Rp 58000.00</s_total_price><s_cashprice> Rp 10000.00</s_cashprice><s_changeprice> Rp 42000.00</s_changeprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9897204041481018,
+      "truth": {
+        "menu": {
+          "cnt": "*2",
+          "nm": "Cheese Tart",
+          "price": "Rp 58000.00",
+          "sub": [
+            {
+              "nm": "Bag-S"
+            },
+            {
+              "nm": "PS Carrier"
+            }
+          ]
+        },
+        "sub_total": {
+          "subtotal_price": "Rp 58000.00",
+          "tax_price": "Rp 5272.73"
+        },
+        "total": {
+          "cashprice": "Rp 100000.00",
+          "changeprice": "Rp 42000.00",
+          "total_price": "Rp 58000.00"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00078",
+      "latency_seconds": 4.338587305999681,
+      "leaf_f1": 0.9411764705882353,
+      "leaf_gold": 17,
+      "leaf_predicted": 17,
+      "leaf_true_positive": 16,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "2",
+            "nm": "Mineral Water",
+            "price": "18 000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Teh Tawar Dingin",
+            "price": "11.000"
+          },
+          {
+            "cnt": "2",
+            "nm": "Soto Betawi",
+            "price": "116.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "NASI PUTIH",
+            "price": "9 000"
+          }
+        ],
+        "sub_total": {
+          "service_price": "7 700",
+          "subtotal_price": "154 000",
+          "tax_price": "16 170"
+        },
+        "total": {
+          "menuqty_cnt": "6",
+          "total_price": "177.870"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> Mineral Water</s_nm><s_cnt> 2</s_cnt><s_price> 18 000</s_price><sep/><s_nm> Teh Tawar Dingin</s_nm><s_cnt> 1</s_cnt><s_price> 11.000</s_price><sep/><s_nm> Soto Betawi</s_nm><s_cnt> 2</s_cnt><s_price> 116.000</s_price><sep/><s_nm> NASI PUTIH</s_nm><s_cnt> 1</s_cnt><s_price> 9 000</s_price></s_menu><s_sub_total><s_subtotal_price> 154 000</s_subtotal_price><s_service_price> 7 700</s_service_price><s_tax_price> 16 170</s_tax_price></s_sub_total><s_total><s_total_price> 177.870</s_total_price><s_menuqty_cnt> 6</s_menuqty_cnt></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.982973039150238,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "2",
+            "nm": "Mineral Water",
+            "price": "18 000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Teh Tawar Dingin",
+            "price": "11.000"
+          },
+          {
+            "cnt": "2",
+            "nm": "Soto Betawi",
+            "price": "116.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "NASI PUTIH",
+            "price": "9.000"
+          }
+        ],
+        "sub_total": {
+          "service_price": "7 700",
+          "subtotal_price": "154 000",
+          "tax_price": "16 170"
+        },
+        "total": {
+          "menuqty_cnt": "6",
+          "total_price": "177.870"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00079",
+      "latency_seconds": 3.021991485000399,
+      "leaf_f1": 0.8979591836734694,
+      "leaf_gold": 25,
+      "leaf_predicted": 24,
+      "leaf_true_positive": 22,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "Krab Stick",
+            "price": "9.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Bakso Lobster",
+            "price": "10.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Sawi Putih",
+            "price": "7.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Jamur Enoki",
+            "price": "8.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Jamur Kuping",
+            "price": "8.000"
+          },
+          {
+            "cnt": "2",
+            "nm": "Mallng",
+            "price": "24.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Nasi (MLY)",
+            "price": "6.000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "72.000"
+        },
+        "total": {
+          "creditcardprice": "72.000",
+          "total_price": "72.000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> Krab Stick</s_nm><s_cnt> 1</s_cnt><s_price> 9.000</s_price><sep/><s_nm> Bakso Lobster</s_nm><s_cnt> 1</s_cnt><s_price> 10.000</s_price><sep/><s_nm> Sawi Putih</s_nm><s_cnt> 1</s_cnt><s_price> 7.000</s_price><sep/><s_nm> Jamur Enoki</s_nm><s_cnt> 1</s_cnt><s_price> 8.000</s_price><sep/><s_nm> Jamur Kuping</s_nm><s_cnt> 1</s_cnt><s_price> 8.000</s_price><sep/><s_nm> Mallng</s_nm><s_cnt> 2</s_cnt><s_price> 24.000</s_price><sep/><s_nm> Nasi (MLY)</s_nm><s_cnt> 1</s_cnt><s_price> 6.000</s_price></s_menu><s_sub_total><s_subtotal_price> 72.000</s_subtotal_price></s_sub_total><s_total><s_total_price> 72.000</s_total_price><s_creditcardprice> 72.000</s_creditcardprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.980749785900116,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "Crab Stick",
+            "price": "9.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Bakso Lobster",
+            "price": "10.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Sawi Putih",
+            "price": "7.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Jamur Enoki",
+            "price": "8.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Jamur Kuping",
+            "price": "8.000"
+          },
+          {
+            "cnt": "2",
+            "nm": "Maling",
+            "price": "24.000",
+            "unitprice": "12000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Nasi (MLY)",
+            "price": "6.000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "72.000"
+        },
+        "total": {
+          "creditcardprice": "72.000",
+          "total_price": "72.000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00080",
+      "latency_seconds": 1.5195612750012515,
+      "leaf_f1": 0.6666666666666666,
+      "leaf_gold": 6,
+      "leaf_predicted": 6,
+      "leaf_true_positive": 4,
+      "prediction": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Sate Padang",
+          "price": "25 000"
+        },
+        "total": {
+          "cashprice": "25 000",
+          "menuqty_cnt": "1",
+          "total_price": "25.000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> Sate Padang</s_nm><s_cnt> 1</s_cnt><s_price> 25 000</s_price></s_menu><s_total><s_total_price> 25.000</s_total_price><s_cashprice> 25 000</s_cashprice><s_menuqty_cnt> 1</s_menuqty_cnt></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9868932366371155,
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Sate Padang",
+          "price": "25.000"
+        },
+        "total": {
+          "cashprice": "25.000",
+          "menuqty_cnt": "1",
+          "total_price": "25.000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00081",
+      "latency_seconds": 3.4563232860000426,
+      "leaf_f1": 1.0,
+      "leaf_gold": 18,
+      "leaf_predicted": 18,
+      "leaf_true_positive": 18,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "SURIMI",
+            "price": "29,091"
+          },
+          {
+            "cnt": "1",
+            "nm": "CREAMY CHK CLS FTC",
+            "price": "42,727"
+          },
+          {
+            "cnt": "1",
+            "nm": "MIX 4FUN CHOCOLATE",
+            "price": "19,091"
+          },
+          {
+            "cnt": "1",
+            "nm": "GREEN ITSODA PITCHER",
+            "price": "60,909"
+          },
+          {
+            "cnt": "1",
+            "nm": "SC/R GRILLED STEAK",
+            "price": "99,091"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "250,909",
+          "tax_price": "25,091"
+        },
+        "total": {
+          "total_price": "276,000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> SURIMI</s_nm><s_cnt> 1</s_cnt><s_price> 29,091</s_price><sep/><s_nm> CREAMY CHK CLS FTC</s_nm><s_cnt> 1</s_cnt><s_price> 42,727</s_price><sep/><s_nm> MIX 4FUN CHOCOLATE</s_nm><s_cnt> 1</s_cnt><s_price> 19,091</s_price><sep/><s_nm> GREEN ITSODA PITCHER</s_nm><s_cnt> 1</s_cnt><s_price> 60,909</s_price><sep/><s_nm> SC/R GRILLED STEAK</s_nm><s_cnt> 1</s_cnt><s_price> 99,091</s_price></s_menu><s_sub_total><s_subtotal_price> 250,909</s_subtotal_price><s_tax_price> 25,091</s_tax_price></s_sub_total><s_total><s_total_price> 276,000</s_total_price></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9929488897323608,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "SURIMI",
+            "price": "29,091"
+          },
+          {
+            "cnt": "1",
+            "nm": "CREAMY CHK CLS FTC",
+            "price": "42,727"
+          },
+          {
+            "cnt": "1",
+            "nm": "MIX 4FUN CHOCOLATE",
+            "price": "19,091"
+          },
+          {
+            "cnt": "1",
+            "nm": "GREEN ITSODA PITCHER",
+            "price": "60,909"
+          },
+          {
+            "cnt": "1",
+            "nm": "SC/R GRILLED STEAK",
+            "price": "99,091"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "250,909",
+          "tax_price": "25,091"
+        },
+        "total": {
+          "total_price": "276,000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00082",
+      "latency_seconds": 3.062445726000078,
+      "leaf_f1": 0.9411764705882353,
+      "leaf_gold": 17,
+      "leaf_predicted": 17,
+      "leaf_true_positive": 16,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "PEARL CHOCO TEA",
+            "price": "17,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "GREEN TEA LYCHEE",
+            "price": "18.000"
+          },
+          {
+            "cnt": "2",
+            "nm": "TUTUP SEAL",
+            "price": "0"
+          },
+          {
+            "cnt": "2",
+            "nm": "CUP 14 OZ",
+            "price": "0"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "35.000"
+        },
+        "total": {
+          "cashprice": "100.000",
+          "changeprice": "65.000",
+          "menuqty_cnt": "6",
+          "total_price": "35.000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> PEARL CHOCO TEA</s_nm><s_cnt> 1</s_cnt><s_price> 17,000</s_price><sep/><s_nm> GREEN TEA LYCHEE</s_nm><s_cnt> 1</s_cnt><s_price> 18.000</s_price><sep/><s_nm> TUTUP SEAL</s_nm><s_cnt> 2</s_cnt><s_price> 0</s_price><sep/><s_nm> CUP 14 OZ</s_nm><s_cnt> 2</s_cnt><s_price> 0</s_price></s_menu><s_sub_total><s_subtotal_price> 35.000</s_subtotal_price></s_sub_total><s_total><s_total_price> 35.000</s_total_price><s_cashprice> 100.000</s_cashprice><s_changeprice> 65.000</s_changeprice><s_menuqty_cnt> 6</s_menuqty_cnt></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.982540488243103,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "PEARL CHOCO TEA",
+            "price": "17.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "GREEN TEA LYCHEE",
+            "price": "18.000"
+          },
+          {
+            "cnt": "2",
+            "nm": "TUTUP SEAL",
+            "price": "0"
+          },
+          {
+            "cnt": "2",
+            "nm": "CUP 14 OZ",
+            "price": "0"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "35.000"
+        },
+        "total": {
+          "cashprice": "100.000",
+          "changeprice": "65.000",
+          "menuqty_cnt": "6",
+          "total_price": "35.000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00083",
+      "latency_seconds": 2.120277170000918,
+      "leaf_f1": 1.0,
+      "leaf_gold": 10,
+      "leaf_predicted": 10,
+      "leaf_true_positive": 10,
+      "prediction": {
+        "menu": {
+          "cnt": "1X",
+          "nm": "S-Milk tea",
+          "price": "17,000",
+          "sub": {
+            "nm": "100%"
+          },
+          "unitprice": "@17,000"
+        },
+        "sub_total": {
+          "subtotal_price": "17,000",
+          "tax_price": "0"
+        },
+        "total": {
+          "cashprice": "17,000",
+          "changeprice": "0",
+          "total_price": "17,000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> S-Milk tea</s_nm><s_unitprice> @17,000</s_unitprice><s_cnt> 1X</s_cnt><s_price> 17,000</s_price><s_sub><s_nm> 100%</s_nm></s_sub></s_menu><s_sub_total><s_subtotal_price> 17,000</s_subtotal_price><s_tax_price> 0</s_tax_price></s_sub_total><s_total><s_total_price> 17,000</s_total_price><s_cashprice> 17,000</s_cashprice><s_changeprice> 0</s_changeprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9961076378822327,
+      "truth": {
+        "menu": {
+          "cnt": "1X",
+          "nm": "S-Milk tea",
+          "price": "17,000",
+          "sub": {
+            "nm": "100%"
+          },
+          "unitprice": "@17,000"
+        },
+        "sub_total": {
+          "subtotal_price": "17,000",
+          "tax_price": "0"
+        },
+        "total": {
+          "cashprice": "17,000",
+          "changeprice": "0",
+          "total_price": "17,000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00084",
+      "latency_seconds": 3.111376487000598,
+      "leaf_f1": 0.5833333333333334,
+      "leaf_gold": 12,
+      "leaf_predicted": 12,
+      "leaf_true_positive": 7,
+      "prediction": {
+        "menu": {
+          "cnt": "1 x",
+          "nm": "HAZELNUT CHOCO III ( R )",
+          "price": "24,000",
+          "sub": [
+            {
+              "nm": "PEARL ( R )",
+              "price": "4,000"
+            },
+            {
+              "cnt": "1 x",
+              "nm": "HAZELNUT CHOCO III ( R )",
+              "price": "24,000"
+            }
+          ]
+        },
+        "sub_total": {
+          "subtotal_price": "52,000"
+        },
+        "total": {
+          "creditcardprice": "52,000",
+          "menuqty_cnt": "2",
+          "total_price": "52,000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> HAZELNUT CHOCO III ( R )</s_nm><s_cnt> 1 x</s_cnt><s_price> 24,000</s_price><s_sub><s_nm> PEARL ( R )</s_nm><s_price> 4,000</s_price><sep/><s_nm> HAZELNUT CHOCO III ( R )</s_nm><s_cnt> 1 x</s_cnt><s_price> 24,000</s_price></s_sub></s_menu><s_sub_total><s_subtotal_price> 52,000</s_subtotal_price></s_sub_total><s_total><s_total_price> 52,000</s_total_price><s_creditcardprice> 52,000</s_creditcardprice><s_menuqty_cnt> 2</s_menuqty_cnt></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9821234345436096,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1 x",
+            "nm": "HAZELNUT CHOCO MT (R)",
+            "price": "24,000",
+            "sub": {
+              "nm": "PEARL (R)",
+              "price": "4,000"
+            }
+          },
+          {
+            "cnt": "1 x",
+            "nm": "HAZELNUT CHOCO MT (R)",
+            "price": "24,000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "52,000"
+        },
+        "total": {
+          "creditcardprice": "52,000",
+          "menuqty_cnt": "2",
+          "total_price": "52,000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00085",
+      "latency_seconds": 0.7953145100000256,
+      "leaf_f1": 1.0,
+      "leaf_gold": 8,
+      "leaf_predicted": 8,
+      "leaf_true_positive": 8,
+      "prediction": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Peanut & Cheese",
+          "price": "13,636"
+        },
+        "sub_total": {
+          "subtotal_price": "13,636",
+          "tax_price": "1,364"
+        },
+        "total": {
+          "cashprice": "20,000",
+          "changeprice": "5,000",
+          "total_price": "15,000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> Peanut & Cheese</s_nm><s_cnt> 1</s_cnt><s_price> 13,636</s_price></s_menu><s_sub_total><s_subtotal_price> 13,636</s_subtotal_price><s_tax_price> 1,364</s_tax_price></s_sub_total><s_total><s_total_price> 15,000</s_total_price><s_cashprice> 20,000</s_cashprice><s_changeprice> 5,000</s_changeprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9999909996986389,
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Peanut & Cheese",
+          "price": "13,636"
+        },
+        "sub_total": {
+          "subtotal_price": "13,636",
+          "tax_price": "1,364"
+        },
+        "total": {
+          "cashprice": "20,000",
+          "changeprice": "5,000",
+          "total_price": "15,000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00086",
+      "latency_seconds": 1.6740752929999871,
+      "leaf_f1": 0.875,
+      "leaf_gold": 8,
+      "leaf_predicted": 8,
+      "leaf_true_positive": 7,
+      "prediction": {
+        "menu": {
+          "cnt": "1",
+          "nm": "LEMONADE22OZ",
+          "price": "26,000",
+          "unitprice": "26,000"
+        },
+        "sub_total": {
+          "subtotal_price": "26,000"
+        },
+        "total": {
+          "changeprice": "0",
+          "emoneyprice": "26,000",
+          "total_price": "26,000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> LEMONADE22OZ</s_nm><s_unitprice> 26,000</s_unitprice><s_cnt> 1</s_cnt><s_price> 26,000</s_price></s_menu><s_sub_total><s_subtotal_price> 26,000</s_subtotal_price></s_sub_total><s_total><s_total_price> 26,000</s_total_price><s_changeprice> 0</s_changeprice><s_emoneyprice> 26,000</s_emoneyprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9832435250282288,
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "LEMONADE22OZ",
+          "price": "26,000",
+          "sub": {
+            "price": "26,000"
+          }
+        },
+        "sub_total": {
+          "subtotal_price": "26,000"
+        },
+        "total": {
+          "changeprice": "0",
+          "emoneyprice": "26,000",
+          "total_price": "26,000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00087",
+      "latency_seconds": 2.5786287440005253,
+      "leaf_f1": 1.0,
+      "leaf_gold": 11,
+      "leaf_predicted": 11,
+      "leaf_true_positive": 11,
+      "prediction": {
+        "menu": {
+          "cnt": "1X",
+          "nm": "M-Passion Fruit Mac",
+          "price": "29,000",
+          "sub": [
+            {
+              "nm": "25%"
+            },
+            {
+              "nm": "Less Ice"
+            }
+          ],
+          "unitprice": "@29,000"
+        },
+        "sub_total": {
+          "subtotal_price": "29,000",
+          "tax_price": "0"
+        },
+        "total": {
+          "cashprice": "30,000",
+          "changeprice": "1,000",
+          "total_price": "29,000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> M-Passion Fruit Mac</s_nm><s_unitprice> @29,000</s_unitprice><s_cnt> 1X</s_cnt><s_price> 29,000</s_price><s_sub><s_nm> 25%</s_nm><sep/><s_nm> Less Ice</s_nm></s_sub></s_menu><s_sub_total><s_subtotal_price> 29,000</s_subtotal_price><s_tax_price> 0</s_tax_price></s_sub_total><s_total><s_total_price> 29,000</s_total_price><s_cashprice> 30,000</s_cashprice><s_changeprice> 1,000</s_changeprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9971086382865906,
+      "truth": {
+        "menu": {
+          "cnt": "1X",
+          "nm": "M-Passion Fruit Mac",
+          "price": "29,000",
+          "sub": [
+            {
+              "nm": "25%"
+            },
+            {
+              "nm": "Less Ice"
+            }
+          ],
+          "unitprice": "@29,000"
+        },
+        "sub_total": {
+          "subtotal_price": "29,000",
+          "tax_price": "0"
+        },
+        "total": {
+          "cashprice": "30,000",
+          "changeprice": "1,000",
+          "total_price": "29,000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00088",
+      "latency_seconds": 5.155933003999962,
+      "leaf_f1": 0.9615384615384616,
+      "leaf_gold": 26,
+      "leaf_predicted": 26,
+      "leaf_true_positive": 25,
+      "prediction": {
+        "menu": {
+          "cnt": "1",
+          "nm": "PAKET BER4 UP3",
+          "price": "154,545",
+          "sub": [
+            {
+              "cnt": "1",
+              "nm": "BREAD M CHEESE DEL"
+            },
+            {
+              "cnt": "1",
+              "nm": "TUNA DEL"
+            },
+            {
+              "cnt": "1",
+              "nm": "CRABSTICK FUSILLI DEL"
+            },
+            {
+              "cnt": "1",
+              "nm": "LEMON TEA HANGAT DEL"
+            },
+            {
+              "cnt": "1",
+              "nm": "BLACKCURRANT DEL"
+            },
+            {
+              "cnt": "1",
+              "nm": "SC/P THOUSAND IS DEL"
+            },
+            {
+              "cnt": "1",
+              "nm": "SCSC/P BBQ BEEF DEL"
+            },
+            {
+              "cnt": "1",
+              "nm": "CR/P BEEF MAYO DEL"
+            },
+            {
+              "cnt": "1",
+              "nm": "SUNRISE ITALIAN SODA"
+            },
+            {
+              "cnt": "1",
+              "nm": "SUNRISE ITALIAN SODA"
+            }
+          ]
+        },
+        "sub_total": {
+          "subtotal_price": "154,545",
+          "tax_price": "15,455"
+        },
+        "total": {
+          "total_price": "170,000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> PAKET BER4 UP3</s_nm><s_cnt> 1</s_cnt><s_price> 154,545</s_price><s_sub><s_nm> BREAD M CHEESE DEL</s_nm><s_cnt> 1</s_cnt><sep/><s_nm> TUNA DEL</s_nm><s_cnt> 1</s_cnt><sep/><s_nm> CRABSTICK FUSILLI DEL</s_nm><s_cnt> 1</s_cnt><sep/><s_nm> LEMON TEA HANGAT DEL</s_nm><s_cnt> 1</s_cnt><sep/><s_nm> BLACKCURRANT DEL</s_nm><s_cnt> 1</s_cnt><sep/><s_nm> SC/P THOUSAND IS DEL</s_nm><s_cnt> 1</s_cnt><sep/><s_nm> SCSC/P BBQ BEEF DEL</s_nm><s_cnt> 1</s_cnt><sep/><s_nm> CR/P BEEF MAYO DEL</s_nm><s_cnt> 1</s_cnt><sep/><s_nm> SUNRISE ITALIAN SODA</s_nm><s_cnt> 1</s_cnt><sep/><s_nm> SUNRISE ITALIAN SODA</s_nm><s_cnt> 1</s_cnt></s_sub></s_menu><s_sub_total><s_subtotal_price> 154,545</s_subtotal_price><s_tax_price> 15,455</s_tax_price></s_sub_total><s_total><s_total_price> 170,000</s_total_price></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9969521164894104,
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "PAKET BER4 UP3",
+          "price": "154,545",
+          "sub": [
+            {
+              "cnt": "1",
+              "nm": "BREAD N CHEESE DEL"
+            },
+            {
+              "cnt": "1",
+              "nm": "TUNA DEL"
+            },
+            {
+              "cnt": "1",
+              "nm": "CRABSTICK FUSILLI DEL"
+            },
+            {
+              "cnt": "1",
+              "nm": "LEMON TEA HANGAT DEL"
+            },
+            {
+              "cnt": "1",
+              "nm": "BLACKCURRANT DEL"
+            },
+            {
+              "cnt": "1",
+              "nm": "SC/P THOUSAND IS DEL"
+            },
+            {
+              "cnt": "1",
+              "nm": "SCSC/P BBQ BEEF DEL"
+            },
+            {
+              "cnt": "1",
+              "nm": "CR/P BEEF MAYO DEL"
+            },
+            {
+              "cnt": "1",
+              "nm": "SUNRISE ITALIAN SODA"
+            },
+            {
+              "cnt": "1",
+              "nm": "SUNRISE ITALIAN SODA"
+            }
+          ]
+        },
+        "sub_total": {
+          "subtotal_price": "154,545",
+          "tax_price": "15,455"
+        },
+        "total": {
+          "total_price": "170,000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00089",
+      "latency_seconds": 2.067283823998878,
+      "leaf_f1": 0.6153846153846153,
+      "leaf_gold": 14,
+      "leaf_predicted": 12,
+      "leaf_true_positive": 8,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "x 1",
+            "nm": "1023-Chocochip & Walnut",
+            "price": "29.000",
+            "unitprice": "29.000"
+          },
+          {
+            "cnt": "x 1",
+            "nm": "6001-Plastic Bag Small",
+            "price": "0",
+            "unitprice": "0"
+          }
+        ],
+        "total": {
+          "cashprice": "100.000",
+          "changeprice": "71.000",
+          "menuqty_cnt": "2",
+          "total_price": "29.000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> 1023-Chocochip & Walnut</s_nm><s_unitprice> 29.000</s_unitprice><s_cnt> x 1</s_cnt><s_price> 29.000</s_price><sep/><s_nm> 6001-Plastic Bag Small</s_nm><s_unitprice> 0</s_unitprice><s_cnt> x 1</s_cnt><s_price> 0</s_price></s_menu><s_total><s_total_price> 29.000</s_total_price><s_cashprice> 100.000</s_cashprice><s_changeprice> 71.000</s_changeprice><s_menuqty_cnt> 2</s_menuqty_cnt></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9997638463973999,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "x1",
+            "nm": "Chocochip & Walnut",
+            "num": "1023-",
+            "price": "29.000",
+            "unitprice": "29.000"
+          },
+          {
+            "cnt": "x1",
+            "nm": "Plastic Bag Small",
+            "num": "6001-",
+            "price": "0",
+            "unitprice": "0"
+          }
+        ],
+        "total": {
+          "cashprice": "100.000",
+          "changeprice": "71.000",
+          "menuqty_cnt": "2",
+          "total_price": "29.000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00090",
+      "latency_seconds": 1.8089134159999958,
+      "leaf_f1": 0.375,
+      "leaf_gold": 7,
+      "leaf_predicted": 9,
+      "leaf_true_positive": 3,
+      "prediction": {
+        "menu": {
+          "cnt": "2",
+          "nm": "CINEMAXX",
+          "num": "REGULAR",
+          "price": "70000.00",
+          "unitprice": "35000,00"
+        },
+        "sub_total": {
+          "discount_price": "70000.00",
+          "subtotal_price": "70000.00"
+        },
+        "total": {
+          "cashprice": "0.00",
+          "total_price": "70000.00"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> CINEMAXX</s_nm><s_num> REGULAR</s_num><s_unitprice> 35000,00</s_unitprice><s_cnt> 2</s_cnt><s_price> 70000.00</s_price></s_menu><s_sub_total><s_subtotal_price> 70000.00</s_subtotal_price><s_discount_price> 70000.00</s_discount_price></s_sub_total><s_total><s_total_price> 70000.00</s_total_price><s_cashprice> 0.00</s_cashprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9109846949577332,
+      "truth": {
+        "menu": {
+          "cnt": "2",
+          "nm": "REGULAR",
+          "price": "70000.00",
+          "unitprice": "35000.00"
+        },
+        "total": {
+          "changeprice": "0.00",
+          "total_etc": "70000.00",
+          "total_price": "70000.00"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00091",
+      "latency_seconds": 2.3708710110004176,
+      "leaf_f1": 0.6666666666666666,
+      "leaf_gold": 9,
+      "leaf_predicted": 9,
+      "leaf_true_positive": 6,
+      "prediction": {
+        "menu": [
+          {
+            "nm": "K7 1217",
+            "price": "39,091"
+          },
+          {
+            "nm": "ADD CHICKEN BOX",
+            "price": "909"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "40,000",
+          "tax_price": "4,000"
+        },
+        "total": {
+          "cashprice": "Rp. 50,000",
+          "changeprice": "Rp.6,000",
+          "total_price": "44,000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> K7 1217</s_nm><s_price> 39,091</s_price><sep/><s_nm> ADD CHICKEN BOX</s_nm><s_price> 909</s_price></s_menu><s_sub_total><s_subtotal_price> 40,000</s_subtotal_price><s_tax_price> 4,000</s_tax_price></s_sub_total><s_total><s_total_price> 44,000</s_total_price><s_cashprice> Rp. 50,000</s_cashprice><s_changeprice> Rp.6,000</s_changeprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9994338750839233,
+      "truth": {
+        "menu": {
+          "nm": "K7 1217",
+          "price": "39,091",
+          "sub": {
+            "nm": "ADD CHICKEN BOX",
+            "price": "909"
+          }
+        },
+        "sub_total": {
+          "subtotal_price": "40,000",
+          "tax_price": "4,000"
+        },
+        "total": {
+          "cashprice": "Rp. 50,000",
+          "changeprice": "Rp. 6,000",
+          "total_price": "44,000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00092",
+      "latency_seconds": 1.9548838610007806,
+      "leaf_f1": 1.0,
+      "leaf_gold": 12,
+      "leaf_predicted": 12,
+      "leaf_true_positive": 12,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "<FC Winger HC",
+            "price": "20,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "CHARGE TA",
+            "price": "909"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "20,909",
+          "tax_price": "2,091"
+        },
+        "total": {
+          "cashprice": "25,000",
+          "changeprice": "2,000",
+          "menuqty_cnt": "2",
+          "total_price": "23,000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> <FC Winger HC</s_nm><s_cnt> 1</s_cnt><s_price> 20,000</s_price><sep/><s_nm> CHARGE TA</s_nm><s_cnt> 1</s_cnt><s_price> 909</s_price></s_menu><s_sub_total><s_subtotal_price> 20,909</s_subtotal_price><s_tax_price> 2,091</s_tax_price></s_sub_total><s_total><s_total_price> 23,000</s_total_price><s_cashprice> 25,000</s_cashprice><s_changeprice> 2,000</s_changeprice><s_menuqty_cnt> 2</s_menuqty_cnt></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9990040063858032,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "<FC Winger HC",
+            "price": "20,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "CHARGE TA",
+            "price": "909"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "20,909",
+          "tax_price": "2,091"
+        },
+        "total": {
+          "cashprice": "25,000",
+          "changeprice": "2,000",
+          "menuqty_cnt": "2",
+          "total_price": "23,000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00093",
+      "latency_seconds": 6.565689537999788,
+      "leaf_f1": 0.25,
+      "leaf_gold": 29,
+      "leaf_predicted": 27,
+      "leaf_true_positive": 7,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "BREAD N CHEESE DEL",
+            "price": "138,182"
+          },
+          {
+            "cnt": "1",
+            "nm": "BREAD N CHEESE DEL"
+          },
+          {
+            "cnt": "1",
+            "nm": "CRABSTICK FUSILLI DEL"
+          },
+          {
+            "cnt": "1",
+            "nm": "LIME SQUASH DEL"
+          },
+          {
+            "cnt": "1",
+            "nm": "LIME SQUASH DEL"
+          },
+          {
+            "cnt": "1",
+            "nm": "P/P SPICY TUNA DEL"
+          },
+          {
+            "cnt": "1",
+            "nm": "P/P THUOSAND ISL DEL"
+          },
+          {
+            "cnt": "1",
+            "nm": "P/P BEEF CORN"
+          },
+          {
+            "cnt": "1",
+            "nm": "SUNRISE ITALIAN SODA"
+          },
+          {
+            "cnt": "1",
+            "nm": "LIPTON ICE TEA DEL"
+          },
+          {
+            "cnt": "1",
+            "nm": "CHICKEN ROYAL",
+            "price": "18,182"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "156,364",
+          "tax_price": "15,636"
+        },
+        "total": {
+          "total_price": "172,000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> PAKET BER4</s_nm><s_cnt> 1</s_cnt><s_price> 138,182</s_price><s_sub><s_nm> BREAD N CHEESE DEL</s_nm><s_cnt> 1</s_cnt><sep/><s_nm> BREAD N CHEESE DEL</s_nm><s_cnt> 1</s_cnt><sep/><s_nm> CRABSTICK FUSILLI DEL</s_nm><s_cnt> 1</s_cnt><sep/><s_nm> LIME SQUASH DEL</s_nm><s_cnt> 1</s_cnt><sep/><s_nm> LIME SQUASH DEL</s_nm><s_cnt> 1</s_cnt><sep/><s_nm> P/P SPICY TUNA DEL</s_nm><s_cnt> 1</s_cnt><sep/><s_nm> P/P THUOSAND ISL DEL</s_nm><s_cnt> 1</s_cnt><sep/><s_nm> P/P BEEF CORN</s_nm><s_cnt> 1</s_cnt><sep/><s_nm> SUNRISE ITALIAN SODA</s_nm><s_cnt> 1</s_cnt><sep/><s_nm> LIPTON ICE TEA DEL</s_nm><s_cnt> 1</s_cnt><sep/><s_nm> CHICKEN ROYAL</s_nm><s_cnt> 1</s_cnt><s_price> 18,182</s_price></s_menu><s_sub_total><s_subtotal_price> 156,364</s_subtotal_price><s_tax_price> 15,636</s_tax_price></s_sub_total><s_total><s_total_price> 172,000</s_total_price></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9957303404808044,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "PAKET BER4",
+            "price": "138,182",
+            "sub": [
+              {
+                "cnt": "1",
+                "nm": "BREAD N CHEESE DEL"
+              },
+              {
+                "cnt": "1",
+                "nm": "BREAD N CHEESE DEL"
+              },
+              {
+                "cnt": "1",
+                "nm": "CRABSTICK FUSILLI DEL"
+              },
+              {
+                "cnt": "1",
+                "nm": "LIME SQUASH DEL"
+              },
+              {
+                "cnt": "1",
+                "nm": "LIME SQUASH DEL"
+              },
+              {
+                "cnt": "1",
+                "nm": "P/P SPICY TUNA DEL"
+              },
+              {
+                "cnt": "1",
+                "nm": "P/P THUOSAND ISL DEL"
+              },
+              {
+                "cnt": "1",
+                "nm": "P/P BEEF CORN"
+              },
+              {
+                "cnt": "1",
+                "nm": "SUNRISE ITALIAN SODA"
+              },
+              {
+                "cnt": "1",
+                "nm": "LIPTON ICE TEA DEL"
+              }
+            ]
+          },
+          {
+            "cnt": "1",
+            "nm": "50% CHICKEN ROYAL",
+            "price": "18,182"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "156,364",
+          "tax_price": "15,636"
+        },
+        "total": {
+          "total_price": "172,000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00094",
+      "latency_seconds": 2.970894922000298,
+      "leaf_f1": 0.6956521739130435,
+      "leaf_gold": 11,
+      "leaf_predicted": 12,
+      "leaf_true_positive": 8,
+      "prediction": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Emily's Shrimp Scampi",
+          "price": "69.000",
+          "sub": {
+            "nm": "Fettucine"
+          }
+        },
+        "sub_total": {
+          "discount_price": "0",
+          "etc": "+25",
+          "service_price": "3.795",
+          "subtotal_price": "69.000",
+          "tax_price": "7.280"
+        },
+        "total": {
+          "changeprice": "0",
+          "creditcardprice": "80.100",
+          "total_price": "80.100"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> Emily's Shrimp Scampi</s_nm><s_cnt> 1</s_cnt><s_price> 69.000</s_price><s_sub><s_nm> Fettucine</s_nm></s_sub></s_menu><s_sub_total><s_subtotal_price> 69.000</s_subtotal_price><s_discount_price> 0</s_discount_price><s_service_price> 3.795</s_service_price><s_tax_price> 7.280</s_tax_price><s_etc> +25</s_etc></s_sub_total><s_total><s_total_price> 80.100</s_total_price><s_changeprice> 0</s_changeprice><s_creditcardprice> 80.100</s_creditcardprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9826393723487854,
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Emily's Shrimp Scampi Fettucine",
+          "price": "69.000"
+        },
+        "sub_total": {
+          "discount_price": "0",
+          "etc": [
+            "7.280",
+            "+25"
+          ],
+          "service_price": "3.795",
+          "subtotal_price": "69.000"
+        },
+        "total": {
+          "changeprice": "0",
+          "total_etc": "80.100",
+          "total_price": "80.100"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00095",
+      "latency_seconds": 3.724049742999341,
+      "leaf_f1": 1.0,
+      "leaf_gold": 12,
+      "leaf_predicted": 12,
+      "leaf_true_positive": 12,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "SAYAP",
+            "price": "13,636"
+          },
+          {
+            "cnt": "1",
+            "nm": "PAHA BAWAH",
+            "price": "13,636"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "27,272",
+          "tax_price": "2,700"
+        },
+        "total": {
+          "cashprice": "50,000",
+          "changeprice": "20,000",
+          "menuqty_cnt": "2",
+          "total_price": "30,000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> SAYAP</s_nm><s_cnt> 1</s_cnt><s_price> 13,636</s_price><sep/><s_nm> PAHA BAWAH</s_nm><s_cnt> 1</s_cnt><s_price> 13,636</s_price></s_menu><s_sub_total><s_subtotal_price> 27,272</s_subtotal_price><s_tax_price> 2,700</s_tax_price></s_sub_total><s_total><s_total_price> 30,000</s_total_price><s_cashprice> 50,000</s_cashprice><s_changeprice> 20,000</s_changeprice><s_menuqty_cnt> 2</s_menuqty_cnt></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9959394931793213,
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "SAYAP",
+            "price": "13,636"
+          },
+          {
+            "cnt": "1",
+            "nm": "PAHA BAWAH",
+            "price": "13,636"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "27,272",
+          "tax_price": "2,700"
+        },
+        "total": {
+          "cashprice": "50,000",
+          "changeprice": "20,000",
+          "menuqty_cnt": "2",
+          "total_price": "30,000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00096",
+      "latency_seconds": 2.063421587999983,
+      "leaf_f1": 0.8888888888888888,
+      "leaf_gold": 9,
+      "leaf_predicted": 9,
+      "leaf_true_positive": 8,
+      "prediction": {
+        "menu": {
+          "cnt": "1",
+          "discountprice": "-2,045",
+          "nm": "Choco Cheese",
+          "price": "13,636"
+        },
+        "sub_total": {
+          "discount_price": "-2,045",
+          "subtotal_price": "13,636",
+          "tax_price": "1,159"
+        },
+        "total": {
+          "cashprice": "12,750",
+          "total_price": "12,750"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> Choco Cheese</s_nm><s_cnt> 1</s_cnt><s_discountprice> -2,045</s_discountprice><s_price> 13,636</s_price></s_menu><s_sub_total><s_subtotal_price> 13,636</s_subtotal_price><s_discount_price> -2,045</s_discount_price><s_tax_price> 1,159</s_tax_price></s_sub_total><s_total><s_total_price> 12,750</s_total_price><s_cashprice> 12,750</s_cashprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9991681575775146,
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "discountprice": "-2,045",
+          "nm": "Choco Cheese",
+          "unitprice": "13,636"
+        },
+        "sub_total": {
+          "discount_price": "-2,045",
+          "subtotal_price": "13,636",
+          "tax_price": "1,159"
+        },
+        "total": {
+          "cashprice": "12,750",
+          "total_price": "12,750"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00097",
+      "latency_seconds": 0.4863625680009136,
+      "leaf_f1": 1.0,
+      "leaf_gold": 6,
+      "leaf_predicted": 6,
+      "leaf_true_positive": 6,
+      "prediction": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Lemon Tea (L)",
+          "price": "25.000"
+        },
+        "total": {
+          "cashprice": "30.000",
+          "changeprice": "5.000",
+          "total_price": "25.000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> Lemon Tea (L)</s_nm><s_cnt> 1</s_cnt><s_price> 25.000</s_price></s_menu><s_total><s_total_price> 25.000</s_total_price><s_cashprice> 30.000</s_cashprice><s_changeprice> 5.000</s_changeprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9996668696403503,
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Lemon Tea (L)",
+          "price": "25.000"
+        },
+        "total": {
+          "cashprice": "30.000",
+          "changeprice": "5.000",
+          "total_price": "25.000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00098",
+      "latency_seconds": 0.531599322999682,
+      "leaf_f1": 1.0,
+      "leaf_gold": 6,
+      "leaf_predicted": 6,
+      "leaf_true_positive": 6,
+      "prediction": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Hulk Topper Package",
+          "price": "100.000"
+        },
+        "total": {
+          "cashprice": "100.000",
+          "changeprice": "0",
+          "total_price": "100.000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> Hulk Topper Package</s_nm><s_cnt> 1</s_cnt><s_price> 100.000</s_price></s_menu><s_total><s_total_price> 100.000</s_total_price><s_cashprice> 100.000</s_cashprice><s_changeprice> 0</s_changeprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.999812126159668,
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Hulk Topper Package",
+          "price": "100.000"
+        },
+        "total": {
+          "cashprice": "100.000",
+          "changeprice": "0",
+          "total_price": "100.000"
+        }
+      }
+    },
+    {
+      "document_id": "cord-v2-validation-00099",
+      "latency_seconds": 2.213022302999889,
+      "leaf_f1": 0.64,
+      "leaf_gold": 13,
+      "leaf_predicted": 12,
+      "leaf_true_positive": 8,
+      "prediction": {
+        "menu": [
+          {
+            "cnt": "x 1",
+            "nm": "Giant Squid",
+            "price": "Rp. 39.000",
+            "sub": [
+              {
+                "nm": "C.Finishing - Cut",
+                "price": "Rp. 0"
+              },
+              {
+                "nm": "B.Spicy Level - Extreme Hot Rp. 0"
+              }
+            ]
+          },
+          {
+            "nm": "A.Flavour - Salt & Pepper",
+            "price": "Rp. 0"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "Rp. 39.000"
+        },
+        "total": {
+          "cashprice": "Rp. 50.000",
+          "changeprice": "Rp. 11.000",
+          "total_price": "Rp. 39.000"
+        }
+      },
+      "raw_sequence": "<s_menu><s_nm> Giant Squid</s_nm><s_cnt> x 1</s_cnt><s_price> Rp. 39.000</s_price><s_sub><s_nm> C.Finishing - Cut</s_nm><s_price> Rp. 0</s_price><sep/><s_nm> B.Spicy Level - Extreme Hot Rp. 0</s_nm></s_sub><sep/><s_nm> A.Flavour - Salt & Pepper</s_nm><s_price> Rp. 0</s_price></s_sub></s_menu><s_sub_total><s_subtotal_price> Rp. 39.000</s_subtotal_price></s_sub_total><s_total><s_total_price> Rp. 39.000</s_total_price><s_cashprice> Rp. 50.000</s_cashprice><s_changeprice> Rp. 11.000</s_changeprice></s_total>",
+      "schema_valid": true,
+      "sequence_confidence": 0.9846101999282837,
+      "truth": {
+        "menu": {
+          "cnt": "x1",
+          "nm": "Giant Squid",
+          "price": "Rp. 39.000",
+          "sub": [
+            {
+              "nm": "C.Finishing - Cut",
+              "price": "Rp. 0"
+            },
+            {
+              "nm": "B.Spicy Level - Extreme Hot",
+              "price": "Rp. 0"
+            },
+            {
+              "nm": "A.Flavour- Salt & Pepper",
+              "price": "Rp. 0"
+            }
+          ]
+        },
+        "sub_total": {
+          "subtotal_price": "Rp. 39.000"
+        },
+        "total": {
+          "cashprice": "Rp. 50.000",
+          "changeprice": "Rp. 11.000",
+          "total_price": "Rp. 39.000"
+        }
+      }
+    }
+  ],
+  "revision": "8003d433113256b4ce3a0f5bf604b29ff78a7451",
+  "runtime_seconds": 256.8028480039975,
+  "split": "validation",
+  "true_positive_leaves": 1067
+}

@@ -1,0 +1,56 @@
+{
+  "critical_error_documents": 30,
+  "dataset": "R-FDI Synthetic V2",
+  "development_documents": 100,
+  "development_ood_documents": 87,
+  "experiment_id": "V2-E13",
+  "in_domain_training_documents": 19,
+  "layout_novelty_limitation": "All V2 development templates and vendors are disjoint from training, so layout novelty AUROC has no in-split negative class and is not estimated.",
+  "methods": {
+    "isolation_forest": {
+      "auprc": 0.8806106003522255,
+      "auroc": 0.4624226348364279,
+      "review_at_20pct": {
+        "critical_error_capture_rate": 0.3,
+        "critical_errors_captured": 9,
+        "residual_critical_error_rate": 0.21,
+        "review_rate": 0.2
+      }
+    },
+    "mahalanobis": {
+      "auprc": 0.8988323462811002,
+      "auroc": 0.5013262599469497,
+      "review_at_20pct": {
+        "critical_error_capture_rate": 0.43333333333333335,
+        "critical_errors_captured": 13,
+        "residual_critical_error_rate": 0.17,
+        "review_rate": 0.2
+      }
+    },
+    "ocr_confidence": {
+      "auprc": 0.8489152590392228,
+      "auroc": 0.3059239610963749,
+      "review_at_20pct": {
+        "critical_error_capture_rate": 0.5,
+        "critical_errors_captured": 15,
+        "residual_critical_error_rate": 0.15,
+        "review_rate": 0.2
+      }
+    },
+    "random_no_ood": {
+      "review_at_20pct": {
+        "critical_error_capture_rate": 0.3,
+        "critical_errors_captured": 9,
+        "residual_critical_error_rate": 0.21,
+        "review_rate": 0.2
+      }
+    }
+  },
+  "observable_features": [
+    "OCR mean confidence",
+    "OCR text length",
+    "OCR latency",
+    "non-ASCII fraction"
+  ],
+  "ood_definition": "Any controlled visual corruption versus uncorrupted rendered documents"
+}

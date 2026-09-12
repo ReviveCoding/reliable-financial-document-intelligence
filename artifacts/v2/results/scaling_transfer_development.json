@@ -1,0 +1,43 @@
+{
+  "cross_dataset_transfer": {
+    "limitation": "Document-type transfer only; no incompatible field schemas were pooled.",
+    "prediction_counts": {
+      "invoice": 48,
+      "payment_instruction": 22,
+      "purchase_order": 9,
+      "receipt": 11,
+      "remittance": 10
+    },
+    "receipt_accuracy": 0.11,
+    "source": "R-FDI Synthetic V2 train",
+    "target": "CORD v2 validation (all receipts)",
+    "target_documents": 100
+  },
+  "experiment_id": "V2-E14",
+  "larger_conditions_status": "NOT_RUN_COMPUTE_LIMIT",
+  "predefined_stop_rule": "Stop when the last two macro-F1 points differ by less than 0.01.",
+  "stop_rule_satisfied": false,
+  "synthetic_scaling_curve": [
+    {
+      "balanced_accuracy": 0.36000000000000004,
+      "macro_f1": 0.35752814561325197,
+      "training_documents": 25
+    },
+    {
+      "balanced_accuracy": 0.5700000000000001,
+      "macro_f1": 0.5694084294084294,
+      "training_documents": 50
+    },
+    {
+      "balanced_accuracy": 0.95,
+      "macro_f1": 0.9497373358348968,
+      "training_documents": 100
+    },
+    {
+      "balanced_accuracy": 0.97,
+      "macro_f1": 0.969993746091307,
+      "training_documents": 150
+    }
+  ],
+  "task": "TF-IDF document classification over GPU OCR text"
+}

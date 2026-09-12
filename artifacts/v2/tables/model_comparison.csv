@@ -1,0 +1,6 @@
+family,task,split,quality_metric,quality,mean_latency_s,peak_vram_mib
+B0 OCR+rules,CORD total,test,exact match,0.4631578947368421,1.0017744404499536,6292.789794921875
+B2 LayoutLMv3,FUNSD token labels,test,macro-F1,0.7009069498961189,0.12754328156035627,789.07177734375
+B3 Donut,CORD KIE,test,leaf F1,0.8371913580246914,1.4888037923798765,813.96337890625
+B4 PaddleOCR-VL-1.6,CORD content presence,development-20,leaf recall,0.891889409609998,20.40360346539983,6022.970947265625
+B5 Qwen3-VL-4B,CORD compatible fields,development-20,exact match,1.0,25.427363399594014,11078.8095703125

@@ -1,0 +1,53 @@
+{
+  "ablations": [
+    {
+      "condition": "FULL",
+      "metrics": {
+        "calibrated_total_ece": 0.029523809523809508,
+        "financial_high_confidence_errors_caught": 1,
+        "ood_review_error_capture_20pct": 0.43333333333333335,
+        "synthetic_document_macro_f1": 0.8999229781771503
+      },
+      "scope": "measured V2 reliability components"
+    },
+    {
+      "condition": "minus adaptive routing",
+      "fixed_donut_accuracy": 1.0,
+      "fixed_donut_latency": 2.8112912659999347,
+      "full_cascade_accuracy": 1.0,
+      "full_cascade_latency": 4.582761129099927,
+      "result": "Fixed Donut retained identical accuracy and reduced mean latency.",
+      "scope": "CORD total extraction"
+    },
+    {
+      "condition": "minus OOD",
+      "full_error_capture": 0.43333333333333335,
+      "scope": "synthetic visual-corruption review at 20% budget",
+      "without_ood_error_capture": 0.5
+    },
+    {
+      "condition": "minus calibration",
+      "full_brier": 0.24494331065759634,
+      "full_ece": 0.029523809523809508,
+      "scope": "Paddle total correctness on held-out odd-index CORD validation",
+      "without_calibration_brier": 0.34381342532397724,
+      "without_calibration_ece": 0.3146456169224642
+    },
+    {
+      "condition": "minus financial validation",
+      "eligible_errors": 3,
+      "full_errors_caught": 1,
+      "scope": "high-confidence synthetic OCR total errors",
+      "without_validation_errors_caught": 0
+    },
+    {
+      "condition": "minus synthetic augmentation",
+      "full_tfidf_macro_f1": 0.8999229781771503,
+      "limitation": "This isolates learned synthetic examples versus rules, not synthetic augmentation of LayoutLMv3.",
+      "scope": "rendered synthetic document-type classification",
+      "without_learned_synthetic_examples_rule_macro_f1": 0.6481481481481481
+    }
+  ],
+  "design": "Component-scoped one-removal ablations; incompatible task metrics are not collapsed into a fake global score.",
+  "experiment_id": "V2-E16"
+}

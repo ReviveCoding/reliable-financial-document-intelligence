@@ -1,0 +1,6 @@
+dataset,revision,train,development,final,status
+CORD v2,7f0115a4b758a71d6473b8d085751692da2fef98,800,100,100,COMPLETE
+FUNSD,official-2019-07-05,149,29,50,COMPLETE
+R-FDI Synthetic V2,v2.0.0 seed 20260911,300,100,100,COMPLETE
+SROIE,official RRC,0,0,0,BLOCKED_ACCESS
+DocILE,official,0,0,0,BLOCKED_ACCESS

@@ -1,0 +1,85 @@
+{
+  "concurrency": {
+    "fits_physical_vram": false,
+    "independent_heavy_jobs_authorized": 1,
+    "qwen_plus_donut_with_30pct_headroom_bytes": 17619452620.8,
+    "reason": "The heaviest useful pair fails the configured VRAM formula; no alternate pair was throughput-validated concurrently."
+  },
+  "cost_scope": "Measured GPU seconds and throughput only; no electricity tariff was assumed and no paid API was called.",
+  "experiment_id": "V2-E15",
+  "models": [
+    {
+      "batch_size": 1,
+      "cold_load_seconds": 6.025170136001179,
+      "device": "NVIDIA GeForce RTX 4090 Laptop GPU",
+      "mean_latency_seconds": 1.606752141480065,
+      "model": "PP-OCRv5",
+      "peak_vram_bytes": 4981982208,
+      "precision": "framework default FP32",
+      "throughput_units_per_second": 0.6223735286755845,
+      "units": 100,
+      "warm_latency_p50_seconds": 0.9151818550008102,
+      "warm_latency_p95_seconds": 5.145531649551503,
+      "warm_latency_p99_seconds": 6.643025411670012
+    },
+    {
+      "batch_size": 1,
+      "cold_load_seconds": 6.601017271001183,
+      "device": "NVIDIA GeForce RTX 4090 Laptop GPU",
+      "mean_latency_seconds": 2.568028480039975,
+      "model": "Donut CORD v2",
+      "peak_vram_bytes": 851034624,
+      "precision": "FP16",
+      "throughput_units_per_second": 0.38940378106103934,
+      "units": 100,
+      "warm_latency_p50_seconds": 2.2832826434996605,
+      "warm_latency_p95_seconds": 5.5409858756501285,
+      "warm_latency_p99_seconds": 7.418448058529377
+    },
+    {
+      "batch_size": 1,
+      "cold_load_seconds": 39.24292986799992,
+      "device": "NVIDIA GeForce RTX 4090 Laptop GPU",
+      "mean_latency_seconds": 25.427363399594014,
+      "model": "Qwen3-VL-4B-Instruct",
+      "peak_vram_bytes": 11616973824,
+      "precision": "BF16",
+      "throughput_units_per_second": 0.03932771102866161,
+      "units": 32,
+      "warm_latency_p50_seconds": 26.031434761000128,
+      "warm_latency_p95_seconds": 34.95832588584945,
+      "warm_latency_p99_seconds": 37.44554438613061
+    },
+    {
+      "batch_size": 1,
+      "cold_load_seconds": 2.931365001000813,
+      "device": "NVIDIA GeForce RTX 4090 Laptop GPU",
+      "mean_latency_seconds": 20.40360346539983,
+      "model": "PaddleOCR-VL-1.6 whole-image",
+      "peak_vram_bytes": 6315542784,
+      "precision": "native backend default",
+      "throughput_units_per_second": 0.04901095052625323,
+      "units": 20,
+      "warm_latency_p50_seconds": 11.277052773501055,
+      "warm_latency_p95_seconds": 29.949299530798953,
+      "warm_latency_p99_seconds": 176.92394403415716
+    },
+    {
+      "batch_size": 2,
+      "cold_load_seconds": 1.917416606000188,
+      "device": "NVIDIA GeForce RTX 4090 Laptop GPU",
+      "mean_latency_seconds": 0.357604208933238,
+      "model": "LayoutLMv3 evaluation batch",
+      "peak_vram_bytes": 4093885952,
+      "precision": "FP16 autocast",
+      "throughput_units_per_second": 2.7963876683193414,
+      "units": 15,
+      "warm_latency_p50_seconds": 0.2930580949996511,
+      "warm_latency_p95_seconds": 0.7977916269992414,
+      "warm_latency_p99_seconds": 1.0805423525998774
+    }
+  ],
+  "physical_gpu": "NVIDIA GeForce RTX 4090 Laptop GPU",
+  "physical_gpu_count": 1,
+  "physical_vram_bytes_from_nvidia_smi": 17171480576
+}

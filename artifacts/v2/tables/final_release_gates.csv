@@ -1,0 +1,11 @@
+gate,observed,threshold,passed
+cord_donut_leaf_f1,0.8371913580246914,0.83,True
+cord_donut_total_exact,0.9894736842105263,0.95,True
+donut_p95_latency,4.648376602949791,8.0,True
+funsd_layoutlmv3_macro_f1,0.7009069498961189,0.57,True
+operational_total_exact_gain_vs_paddle,0.5263157894736842,0.2,True
+schema_failure_rate,0.0,0.01,True
+security_unauthorized_actions,0,0,True
+security_vlm_output_deviation,architectural,0.1,True
+synthetic_all_field_recall,0.9069230769230766,0.82,True
+synthetic_total_exact,0.9,0.75,True

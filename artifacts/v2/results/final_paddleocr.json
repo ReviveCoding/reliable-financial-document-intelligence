@@ -1,0 +1,1031 @@
+{
+  "batch_size": 1,
+  "cer": 0.19828219057407134,
+  "dataset": "CORD v2",
+  "device": "NVIDIA GeForce RTX 4090 Laptop GPU",
+  "documents": 100,
+  "downstream_total_exact_match": 0.4631578947368421,
+  "experiment_id": "V2-E04",
+  "latency_seconds": {
+    "mean": 1.0017744404499536,
+    "values": [
+      8.62945795899941,
+      0.5505558340009884,
+      0.30704301000150735,
+      0.2870519499992952,
+      0.2982366030009871,
+      4.704309963002743,
+      0.3368270540013327,
+      0.1480456579993188,
+      0.2584517789982783,
+      0.11758573600309319,
+      0.18270909000057145,
+      0.11540890700052842,
+      0.15556189899871242,
+      0.24572555999839096,
+      1.1402534549997654,
+      0.1585297609999543,
+      0.2523617719998583,
+      0.32944944399787346,
+      0.14535002699994948,
+      0.11214899900005548,
+      0.31856664400038426,
+      0.33748562300024787,
+      0.20095885599948815,
+      0.2128491999974358,
+      0.18105777199889417,
+      0.3456231910022325,
+      0.24785094799881335,
+      0.25449961699996493,
+      0.4231614880009147,
+      0.3106740479997825,
+      0.1919202659992152,
+      2.5750175670000317,
+      0.9164926670018758,
+      0.1881119520003267,
+      0.20040569200136815,
+      0.2756772520006052,
+      1.8456128819998412,
+      0.1406968089977454,
+      1.7270709610020276,
+      0.3208161200018367,
+      0.21963144499750342,
+      0.2821070760001021,
+      0.9188115370016021,
+      2.010751923000498,
+      0.22221138899840298,
+      0.32968966299813474,
+      0.2742844009990222,
+      0.2748329370006104,
+      0.307826001997455,
+      0.21590170600029523,
+      0.2893776160017296,
+      0.4204773439996643,
+      0.28783992500029854,
+      0.43322239099870785,
+      0.37469979700108524,
+      0.45253767800022615,
+      0.5690495680028107,
+      0.14929654299703543,
+      1.5438736690011865,
+      4.386779414999182,
+      1.0577806889996282,
+      0.8879502650015638,
+      0.4119521970023925,
+      1.523161610999523,
+      0.7416936619993066,
+      0.77096520899795,
+      0.4175821150020056,
+      0.2520232599999872,
+      0.23885935199723463,
+      4.519211574999645,
+      2.4082924030008144,
+      0.2752474400003848,
+      1.3964854029982234,
+      0.6249357000015152,
+      4.421659236002597,
+      0.6191824579982494,
+      0.7270375970001624,
+      3.8862004229995364,
+      3.9465971579993493,
+      0.3486274550014059,
+      0.24510124799780897,
+      4.572080117999576,
+      1.7386700789975293,
+      0.5141575689995079,
+      0.4560505129993544,
+      1.7593316000020423,
+      0.5002516319982533,
+      1.9747217059994,
+      0.49251112599813496,
+      1.616320002998691,
+      0.901955667999573,
+      0.10807089299851214,
+      0.22771696400013752,
+      1.6340525509986037,
+      0.49064645300313714,
+      1.42929189500137,
+      1.1640216119994875,
+      1.641330056998413,
+      3.5454369300023245,
+      2.037464180000825
+    ]
+  },
+  "load_seconds": 42.168304391001584,
+  "model_revisions": {
+    "PP-OCRv5_server_det": "ca867c897ecbca8873081573a802ad70d499cb94",
+    "PP-OCRv5_server_rec": "b26c3587fda8da3c8ec0ce357214b4d661ff1558"
+  },
+  "ocr_model": "PP-OCRv5_server_det+PP-OCRv5_server_rec",
+  "paddle": "3.3.0",
+  "paddleocr": "3.7.0",
+  "peak_vram_bytes": 6598468352,
+  "physical_gpu_count": 1,
+  "precision": "framework default FP32",
+  "predictions": [
+    {
+      "document_id": "cord-v2-test-00000",
+      "latency_seconds": 8.62945795899941,
+      "mean_confidence": 0.9654746611913045,
+      "reference": "901016 -TICKET CP 2 60.000 60.000 TOTAL DISC $ -60.000 TAX 5.455 Subtotal 60.000 TOTAL 60.000 (Qty 2.00 EDC CIMB NIAGA No: xx7730 60.000",
+      "text": "901016 -TICKET CP 2 60.000 60.000 TOTAL DISC S -60.000 TAX 5.455 Subtotal 60.000 TOTAL (Qty 2.0060.000 -EDC CIMB NIAGA NO:XX7730 60.000",
+      "total_prediction": "60000",
+      "total_truth": "60.000"
+    },
+    {
+      "document_id": "cord-v2-test-00001",
+      "latency_seconds": 0.5505558340009884,
+      "mean_confidence": 0.4488450207493522,
+      "reference": "J.STB PROMO 17500 Y.B.BAT 46000 Y.BASO PROM 27500 TOTAL 91000 CASH 91000",
+      "text": "J.STB PROMO 17500 Y.B.BAT 46000 Y.BASO PROM 27500 91000 TOTAL 91000 CASH",
+      "total_prediction": "91000",
+      "total_truth": "91000"
+    },
+    {
+      "document_id": "cord-v2-test-00002",
+      "latency_seconds": 0.30704301000150735,
+      "mean_confidence": 0.8523222282528877,
+      "reference": "1 JASMINE MT ( L ) 24,000 COCONUT JELLY ( L ) 4,000 SUB TOTAL 28,000 TOTAL SAI S 28,000 TOTAL ITEMS 1 CASH 100,000 CHANGE 72,000",
+      "text": "JIASMINE MT(L) 24,000 LUCONUT JELLY(L) 4.000 SUB TOIAL 28,000 TOTAL SALES 28.000 TOTAL IIEMS \u4e00 CASH 100.000 72.000 CHANGE Queue No:",
+      "total_prediction": null,
+      "total_truth": "28,000"
+    },
+    {
+      "document_id": "cord-v2-test-00003",
+      "latency_seconds": 0.2870519499992952,
+      "mean_confidence": 0.6335947653826546,
+      "reference": "1X @11000 DONAT GULA 11,000 1.00xITEMs SUBTOTAL 11,000 TOTAL 11,000 CASH 11,000",
+      "text": "@11000 1X 11,000 DONAT GULA 1.00xITEMs 11,000 SUBTOTAL 11,000 TOTAL 11,000 CASH",
+      "total_prediction": "11000",
+      "total_truth": "11,000"
+    },
+    {
+      "document_id": "cord-v2-test-00004",
+      "latency_seconds": 0.2982366030009871,
+      "mean_confidence": 0.7394598121754825,
+      "reference": "ICE BLACKCOFFE 2 82,000 AVOCADO COFFEE 1 61,000 CHIKEN KATSU FF 1 51,000 SUB_TOTAL 194,000 DISCOUNT 19,400 TOTAL 174,600 CASH 200,000 CHANGE 25,400",
+      "text": ")SC=1 vadl Rne R.w Sala Jin8 P.ger tHe now ICE BLACKCOFFE 2 82,000 AVOCADO COFFEE lbe 61,000 CHIKEN KATSU FF 61,000 Bibu R9 SUB T8TAL 194,000 DISCOUNT le. 19,400 TOTAL 174,600 CASH 200,000 CHANGE 25,400",
+      "total_prediction": "174600",
+      "total_truth": "174,600"
+    },
+    {
+      "document_id": "cord-v2-test-00005",
+      "latency_seconds": 4.704309963002743,
+      "mean_confidence": 0.18918830156326294,
+      "reference": "TRAD KY TOAST CARTE 28.182 ITEMS 1.00 SUBTTL 28.182 PB-1 10% 2.818 TOTAL 31.000 CASH 31.000",
+      "text": "E",
+      "total_prediction": null,
+      "total_truth": "31.000"
+    },
+    {
+      "document_id": "cord-v2-test-00006",
+      "latency_seconds": 0.3368270540013327,
+      "mean_confidence": 0.5751221804664686,
+      "reference": "1 EGG TART 13,000 2 CHOCO CUS ARD PASTRY 24,000 1 REDBEAN BREAD 9,000 TOTAL 46,000 CASH 50,000 CHANGE 4,000",
+      "text": "1 EGG TART 13,000 2 CHOCO CUS ARD PASTRY 24,000 1 REDBEAN BREAD 9,000 TOTAL 46,000 50,000 CASH CHANGE 4,000 \u4e00",
+      "total_prediction": "4600050000",
+      "total_truth": "46,000"
+    },
+    {
+      "document_id": "cord-v2-test-00007",
+      "latency_seconds": 0.1480456579993188,
+      "mean_confidence": 0.9685859034458796,
+      "reference": "Kupon 15 100,000 ADD CHICKEN BOX 909 Subtotal 100,909 PB1 (10%) 10,091 Total 111,000 Cash Rp. 111,000",
+      "text": "Kupon 15 100,000 ADD CHICKEN BOX 909 Subtotal 100,909 PB1\uff0810%\uff09 10,091 Total 111,000 Cash Rp.111,000",
+      "total_prediction": "111000",
+      "total_truth": "111,000"
+    },
+    {
+      "document_id": "cord-v2-test-00008",
+      "latency_seconds": 0.2584517789982783,
+      "mean_confidence": 0.8942180812358856,
+      "reference": "1 [REG] BLACK SAKURA 45,455 1 COOKIE DOH SAUCES 0 1 NATA DE COCO 0 Sub Total 45,455 PB1 (10%) 4,545 Rounding 0 Total 50,000 Card Payment 50,000",
+      "text": "1 [REG] BLACK SAKURA 45,455 1 COOKIE DOH SAUCES 0 NATA DE COCO 0 1 Sub Total 45,455 PB1(10%) 4,545 Rounding 0 50,000 Total Card Payment 50,000 \u2605\u2605\u2605 \u2605\u2605\u2605",
+      "total_prediction": "45455",
+      "total_truth": "50,000"
+    },
+    {
+      "document_id": "cord-v2-test-00009",
+      "latency_seconds": 0.11758573600309319,
+      "mean_confidence": 0.9736720979213714,
+      "reference": "Bumbu Kaldu Ayam 1 36000 36000 Sub Total 36000 Discount (0%) Tunai 50000 Kembalian 14000",
+      "text": "Bumbu Kaldu Ayam 1 36000 36000 Sub Tofal 36000 Discount (0%) Tunai 50000 Kembalian 14000",
+      "total_prediction": null,
+      "total_truth": null
+    },
+    {
+      "document_id": "cord-v2-test-00010",
+      "latency_seconds": 0.18270909000057145,
+      "mean_confidence": 0.6347974248230457,
+      "reference": "CINNAMON SUGAR 1 x 17,000 17,000 SUB TOTAL 17,000 GRAND TOTAL 17,000 CASH IDR 20,000 CHANGE DUE 3,000",
+      "text": "AuntleAnnes 1 CINNAMONSUGAR 1 \u00d7 17,000 17,000 SUBTOTAL 17,000 GRANDTOTAL 17,000 CASHIDR 20,000 CHANGEDUE 3,000",
+      "total_prediction": "17000",
+      "total_truth": "17,000"
+    },
+    {
+      "document_id": "cord-v2-test-00011",
+      "latency_seconds": 0.11540890700052842,
+      "mean_confidence": 0.9796981641224453,
+      "reference": "1 BANABERRY FRESH CREAM CAK 230,000 TOTAL 230,000 CASH 230,000 CHANGE 0",
+      "text": "1BANABERRY FRESH CREAM CAK230,000 TOTAL 230,000 230,000 CASH 0 CHANGE",
+      "total_prediction": "230000230000",
+      "total_truth": "230,000"
+    },
+    {
+      "document_id": "cord-v2-test-00012",
+      "latency_seconds": 0.15556189899871242,
+      "mean_confidence": 0.9488002583384514,
+      "reference": "0571-1854 BLUS WANITA 1 @120,000 0% 120,000 1002-0060 SHOPPING BAG 1 @880 100% 0 TOTAL 120,000 (2 item) CC.Visa.BCA 120,000 Total Kembalian 0",
+      "text": "27 0571-1854 BLUS WANITA 1 8120,000 0% 120,000 1002-0060 SHOPPING BAG 1 2880100% 0 TOTAL (2 item) 120,000 CC.Visa.BCA 120,000 Total Kembalian 0",
+      "total_prediction": null,
+      "total_truth": "120,000"
+    },
+    {
+      "document_id": "cord-v2-test-00013",
+      "latency_seconds": 0.24572555999839096,
+      "mean_confidence": 0.7877963925509349,
+      "reference": "BASO KUAH 1 43.636 43.636 A.MINERAL GELAS 1 3,000 3,000 TOTAL 46.636 DPP 46.636 TAX 10.00 % 4.664 GRAND TOTAL 51.300 TUNAI 52.000 KEMBALI 700",
+      "text": "AFUNG AFUNG 1 ODJOURNIY BASO KUAH FUNG 1 43.636 A.MINERAL GELAS 3,000 TOTAL DFP 46 AFUNG TAX 10.00 % \u54c1 GRAND TOTAL: 51 TUNAI OC KEMBALI 700 \u7167",
+      "total_prediction": "51",
+      "total_truth": "51.300"
+    },
+    {
+      "document_id": "cord-v2-test-00014",
+      "latency_seconds": 1.1402534549997654,
+      "mean_confidence": 0.9052377827465534,
+      "reference": "1 RedVelvet Cheese Slc 38,000 1 Chicken Baked Rice 55,000 1 Fish n Chips 65,000 1 Mushroom Soup 35,000 1 Chamomile 25,000 1 Iced Tea 20,000 SUBTOTAL 238,000 Service 17,850 PB1 25,585 TOTAL 281,435 Coupon 100,000 CASH 200,000 Change 18,565",
+      "text": "1 RedVelvet Cheese Slc 38 ,000 1 Chicken Baked Rice 55 ,000 1Fishn Chips 65,000 1 Mushroom Soup 35,000 1 Chamonile 25,000 1 Iced Tea 20,000 SUBTOTAL 238,000 Service 17,850 PB1 25,585 TOTAL 281,435 Coupon 100,000 CASH 200,000 Change 18,565 4",
+      "total_prediction": "281435",
+      "total_truth": "281,435"
+    },
+    {
+      "document_id": "cord-v2-test-00015",
+      "latency_seconds": 0.1585297609999543,
+      "mean_confidence": 0.6611244827508926,
+      "reference": "1 Lemon Tea (L) 25.000 1 Caramel Small 38.000 TOTAL 63.000 CASH 70.000 CHANGED 7.000",
+      "text": "XXI cafe 1 Lemon Tea (L) 25.000 Caramel Small 38.000 63.000 TOTAL CASH 70.000 CHANGED 7.000 -",
+      "total_prediction": null,
+      "total_truth": "63.000"
+    },
+    {
+      "document_id": "cord-v2-test-00016",
+      "latency_seconds": 0.2523617719998583,
+      "mean_confidence": 0.9348721181352934,
+      "reference": "1 [LG] BLACK SAKURA 59,091 1 LONGAN 0 1 ROASTED ALMOND 0 1 IVANGGO 0 1 IVINERAL WATER (bundling) 5k 4,545 Sub Total 63,636 PB1 (10%) 6,364 Rounding 0 Total 70,000 Cash Payment 100,000 Change 30,000",
+      "text": "1[LG]BLACKSAKURA 59,091 1LONGAN 0 1ROASTEDALMOND 0 1NANGGO 0 1VINERAL WATER(bundling)5k 4,545 Sub Total 63,636 PB1(10%) 6,364 Rounding 0 Total 70,000 Cash Payment 100,000 Change 30,000 \u2605** ***",
+      "total_prediction": "70000",
+      "total_truth": "70,000"
+    },
+    {
+      "document_id": "cord-v2-test-00017",
+      "latency_seconds": 0.32944944399787346,
+      "mean_confidence": 0.8714020161917715,
+      "reference": "Goblin's Mace 1 25,000 Mozarella Hot Dog 2 38,000 Chili Pepper Croquette 1 14,000 Cheese Croquette 1 14,000 Plastik Amook 1 0 Plastik Putih Take Away 1 0 Subtotal 91,000 Discount (0) TOTAL Rp. 91,000 Debit 91,000",
+      "text": "Goblin's Mace 1 25,000 Mozarella Hot 2 38,000 Dog Chili Pepper 1 14,000 Croquette Cheese 14,000 Croquette Plastik Amook 1 0 Plastik Putih 1 0 Take Away Subtotal 91,000 Discount (0) TOTAL Rp. 91,000 Debit 91,000 XXXXXXXXXXXX",
+      "total_prediction": "91000",
+      "total_truth": "Rp. 91,000"
+    },
+    {
+      "document_id": "cord-v2-test-00018",
+      "latency_seconds": 0.14535002699994948,
+      "mean_confidence": 0.9721488157908121,
+      "reference": "Propolis Cair 1 156000 156000 Sub Tofal 156000 Tunai 156000 Kembalian Rp. 0",
+      "text": "Propolis Cair1 156000 156000 Sub Tofal 156000 Tunai 156000 Kembalian Rp.0",
+      "total_prediction": null,
+      "total_truth": "156000"
+    },
+    {
+      "document_id": "cord-v2-test-00019",
+      "latency_seconds": 0.11214899900005548,
+      "mean_confidence": 0.9564910158514977,
+      "reference": "4 AMBUSH DBL CHS 60000 10 AMBUSH CHS BUR 100000 NET SALES 160000 TAX 16000 AMOUNT DUE 176000",
+      "text": "4 ANBUSH DBL CHS 60000 10 ANBUSH CHS BUR 100000 NET SALES 160000 TAX 16000 ANOUNT DUE 176000",
+      "total_prediction": null,
+      "total_truth": "176000"
+    },
+    {
+      "document_id": "cord-v2-test-00020",
+      "latency_seconds": 0.31856664400038426,
+      "mean_confidence": 0.6005427821956831,
+      "reference": "1 cashew nuts chkn 64,500 1 garlic pepper beef 79,500 1 red curry beef 69,500 1 phad thai 64,500 4 steamed rice 47,600 SUBTOTAL 325,600 Service chrg 17,908 10% PB1 34,351 TOTAL 377,859",
+      "text": "64,500 1 cashew nuts chkn 79,500 1 garlic pepper beef 1 red curry beef phad thai 47,600 4 steamed rice ,600 SUBTOTAL 2 17,908 Service chrg 34 351 10% PB1 TOTAL \u5fc3 2 1 4 2 1 4   ",
+      "total_prediction": "217908",
+      "total_truth": "377,859"
+    },
+    {
+      "document_id": "cord-v2-test-00021",
+      "latency_seconds": 0.33748562300024787,
+      "mean_confidence": 0.42096383976084845,
+      "reference": "1 35.000 Rp 35.000 NASI GOR SFD TLR 1 3.000 Rp 3.000 ES TEH TAWAR ***TOTAL Rp 38.000 CASH Rp 50.000 CHANGE Rp 12.000",
+      "text": "\u2026 135.000 Rp35.000 NASI GOR SFD TLR 13.000 Rr3.000 ES TEH TAWAR ***TOTAL RP38.000 CASH Rp50.000 CHANGE Rp12.000",
+      "total_prediction": null,
+      "total_truth": "Rp 38.000"
+    },
+    {
+      "document_id": "cord-v2-test-00022",
+      "latency_seconds": 0.20095885599948815,
+      "mean_confidence": 0.8103312303622564,
+      "reference": "2 [MD] SOFT STEAMED CHEESEC 20,000 2 [MD] SOFT STEAMED CHOCOCA 20,000 TOTAL 40,000 CASH 100,000 CHANGE 60,000",
+      "text": "2 [MD] SOFT STEAMED CHEESEC 20,000 2 [MD] SOFT STEAMED CHOCOCA 20,000 TOTAL 40,000 CASH 100,000 CHANGE 60,000",
+      "total_prediction": "40000",
+      "total_truth": "40,000"
+    },
+    {
+      "document_id": "cord-v2-test-00023",
+      "latency_seconds": 0.2128491999974358,
+      "mean_confidence": 0.9724387705326081,
+      "reference": "6 TWIST DONUT 54,000 1 REDBEAN BREAD 9,000 TOTAL 63,000 CASH 70,000 CHANGE 7,000",
+      "text": "6 TWIST DONUT 54,000 1 REDBEAN BREAD 9,000 TOTAL 63,000 CASH 70,000 CHANGE 7,000",
+      "total_prediction": "63000",
+      "total_truth": "63,000"
+    },
+    {
+      "document_id": "cord-v2-test-00024",
+      "latency_seconds": 0.18105777199889417,
+      "mean_confidence": 0.9216654797395071,
+      "reference": "5001-Corn Flakes Cookies Rp.56.000 x1 Rp.56.000 5003-Chokoreto Cookies Rp.62.000 x1 Rp.62.000 6002-Plastic Bag Medium Rp.0 x1 Rp.0 Total Item: 3 Total, Rp.118.000 Debet Card 118.000",
+      "text": "5001-Corn Flakes Cokies Rp.56.000 X1 Rp.56.000 5003-Chokoreto Cookies Rp.62.000 x1 Rp.62.000 6002-Plastic Bag Medium Rp.0 x1 Rp.0 Total Item: 3 Total. Rp.118.000 Debet Card 118.000",
+      "total_prediction": null,
+      "total_truth": "Rp.118.000"
+    },
+    {
+      "document_id": "cord-v2-test-00025",
+      "latency_seconds": 0.3456231910022325,
+      "mean_confidence": 0.5048245911143328,
+      "reference": "1 TWIST STRAWBERRY DONUT 10,000 1 TLJ CROQUETTE 17,000 1 POTATO PEPPER BAGEL 16,000 TOTAL 43,000 CASH 50,000 CHANGE 7,000",
+      "text": "1 \u4e00 1 TWIST STRAWBERRY DONUT 10,000 1 TLJ CROQUETTE 17,000 1 POTATO PEPPER BAGEL 16,000 TOTAL 43,000 CASH 50,000 CHANGE 7,000 1",
+      "total_prediction": "43000",
+      "total_truth": "43,000"
+    },
+    {
+      "document_id": "cord-v2-test-00026",
+      "latency_seconds": 0.24785094799881335,
+      "mean_confidence": 0.9684543733795484,
+      "reference": "Cap Cay Nasi Cap Cay Porsi B esar 1 65.000 65.000 Minuman Teh Tawar 2 4.000 Lain-lain Fu Yung Hai 1 65.000 65.000 Subtotal Rp 138.000 Total Rp 138.000 Cash Rp 138.000 Change Rp 0",
+      "text": "Cap Cay Nasi Cap Cay Porsi B esar 65.000 1 65.000 Minuman Teh Tawar .000 2 4.000 Lain-lain Fu Yung Hai 65.000 1 65.000 Rp138.000 Subtotal Rp 138.000 Total Rp 138.000 Cash Rp0 Change",
+      "total_prediction": null,
+      "total_truth": "Rp 138.000"
+    },
+    {
+      "document_id": "cord-v2-test-00027",
+      "latency_seconds": 0.25449961699996493,
+      "mean_confidence": 0.7600993037223815,
+      "reference": "PKT AYAM 33,000 GULAI OTAK 23,000 2.00 ITEMS SUBTOTAL 56,000 TAX 10% 5,600 TOTAL 61,600 CHARGE5 61,600",
+      "text": "Foa PKT AYAM 33,000 GULAI IOTAK 23,000 2.00 ITEMS 56,000 SUBTOTAL 10% 5,600 TAX 61,600 TOTAL 61,600 CHARGE5",
+      "total_prediction": "61600",
+      "total_truth": "61,600"
+    },
+    {
+      "document_id": "cord-v2-test-00028",
+      "latency_seconds": 0.4231614880009147,
+      "mean_confidence": 0.911497209753309,
+      "reference": "SAMGYOPSAL 2 194,000 SUL LUNG TANG 1 75,000 MAKOLI 1 100,000 Sub Total 369,000 Service 18,450 VAT 38,745 Discount 0 TOTAL 426,195",
+      "text": "SAMGYOPSAL 2 194,000 Sul LUNG TANG 1 75,000 1 100,000 MAKOLI 369,000 Sub Total Service 18,450 38,745 VAT 0 Discount 426,195 TOTAL  ",
+      "total_prediction": null,
+      "total_truth": "426,195"
+    },
+    {
+      "document_id": "cord-v2-test-00029",
+      "latency_seconds": 0.3106740479997825,
+      "mean_confidence": 0.9123339779449232,
+      "reference": "COLD OCHA 1 10,909 BCA PROMO 1 54,455 ABURA UDON SPICY 1 0 1 :-KAKE UDON 0 SKEWERED SHUMAI 1 12,727 SKEWERED TOFU ROLL 1 12,727 EBI TEMPURA 1 13,636 KITSUNE UDON (KIDS) 1 28,182 SUB, TOTAL 132,636 RESTAURANT TAX 13,264 GRAND TOTAL 145,900 ~ BCA EDC [145,900]",
+      "text": "COLDOCHA 1 10,909 BCA PROMO 1 54,455 -ABURA UDONSPICY 1 0 :-KAKE UDON 1 0 SKEWEREDSHUMAI 1 12,727 SKEWERED TOFU ROLL 1 12,727 EBI TEMPURA 1 13,636 KITSUNE UDON (KIDS) 1 28,182 SUB.TOTAL 132,636 RESTAURANT TAX 13,264 GRAND TOTAL ~BCA EDC.[145,900] 145,900",
+      "total_prediction": "132636",
+      "total_truth": "145,900"
+    },
+    {
+      "document_id": "cord-v2-test-00030",
+      "latency_seconds": 0.1919202659992152,
+      "mean_confidence": 0.9659528831640879,
+      "reference": "Kupon 3 28,636 Subtotal 28,636 PB1 (10%) 2,864 Dine In Total 31,500 Cash 50,000 Change 18,500",
+      "text": "Kupon 3 28,636 Subtotal 28,636 PB1\uff0810%\uff09 2,864 Dine In Total 31,500 Cash 50,000 Change 18,500",
+      "total_prediction": "31500",
+      "total_truth": "31,500"
+    },
+    {
+      "document_id": "cord-v2-test-00031",
+      "latency_seconds": 2.5750175670000317,
+      "mean_confidence": 0.8522131741046906,
+      "reference": "1 SALMON PESTO 85,500 1 SALMON PESTO 85,500 Disc -100% (ITM06) -85,500 SUBTTL 85,500 SVC CHG 6% 10,260 PB1 10% 18,126 TOTAL 113,886",
+      "text": "85,500 SALMON PESTO 1 85,500 SALMON PESTO -85,500 Disc -100%(ITM06) 85,500 SUBTTL 10,260 SVC CHG 6% 18,126 PB1 10% 113,886 TOTAL -",
+      "total_prediction": null,
+      "total_truth": "113,886"
+    },
+    {
+      "document_id": "cord-v2-test-00032",
+      "latency_seconds": 0.9164926670018758,
+      "mean_confidence": 0.7733690818150838,
+      "reference": "THAI ICED GREEN TEA 1 @24.000 24.000 SUB-TOTAL 24.000 GRANDTOTAL 24.000 CASH 50.000 CHANGED 26.000",
+      "text": "THAI ICED GREEN TEA \u4e00 @24.000 24.000 SUB-TOTAL 24.000 GRANDTOTAL 24.000 CASH 50.000 CHANGED 26.000",
+      "total_prediction": "24000",
+      "total_truth": "24.000"
+    },
+    {
+      "document_id": "cord-v2-test-00033",
+      "latency_seconds": 0.1881119520003267,
+      "mean_confidence": 0.9692664882716011,
+      "reference": "1 GRILLED BABY POTATO (R 50,500 1 HOT TUNA 67,000 1 HOT TUNA 67,000 Disc -100% (ITM06) -67,000 SUBTTL 117,500 SVC CHG 6% 11,070 PB1 10% 19,557 TOTAL 148,127",
+      "text": "1 GRILLED BABY POTATO\uff08R 50,500 HOT TUNA 67,000 HOT TUNA 67,000 Disc-100%\uff08ITMO6\uff09 -67,000 SUBTTL 117,500 SVC CHG 6% 11,070 PB110% 19,557 TOTAL 148,127",
+      "total_prediction": "148127",
+      "total_truth": "148,127"
+    },
+    {
+      "document_id": "cord-v2-test-00034",
+      "latency_seconds": 0.20040569200136815,
+      "mean_confidence": 0.899577409029007,
+      "reference": "Ash Chick Sambal Matah 5 75.000 Jamur Goreng 2 10.000 Subtotal 85.000 Pajak (10%) 8.500 Total 93.500 Tunai 100.000 Kembali 6.500",
+      "text": "Ash Chick Samba Matah5 75.000 Jamur Goreng 2 10.000 Subtotal 85.000 Pajak(10%) 8.500 Total 93.500 Tunai 100.000 Kembali 6.500 Scareo vitl CanSceu",
+      "total_prediction": "93500",
+      "total_truth": "93.500"
+    },
+    {
+      "document_id": "cord-v2-test-00035",
+      "latency_seconds": 0.2756772520006052,
+      "mean_confidence": 0.8813641402456496,
+      "reference": "2 TWIST DONUT 18,000 1 BANANA DONUT 11,000 1 CREAMCHEESE BREAD 13,000 1 FRANKFRUT SAUSAGE ROLL 12,000 TOTAL 54,000 CASH 104,000 CHANGE 50,000",
+      "text": "2 TWIST DONUT 18,000 BANANA DONUT 11,000 CREAMCHEESE BREAD 13,000 1 FRANKFRUT SAUSAGE ROLL 12,000 TOTAL 5,000 CASH 104,000 CHANGE 50,000",
+      "total_prediction": "5000",
+      "total_truth": "54,000"
+    },
+    {
+      "document_id": "cord-v2-test-00036",
+      "latency_seconds": 1.8456128819998412,
+      "mean_confidence": 0.4079261653517422,
+      "reference": "1 XXL Crispy Chicken 40,000 1 - Sedang 0 ITEMS: 1 40,000 Total 40,000 Cash 100,000 Pay Change : 60,000",
+      "text": "0 XXL Crispy Chicken 40,000 -Sedang T 40.000 ITEMS:1 Tatal... Change :60,000 Pay Cash 100.000 - A",
+      "total_prediction": null,
+      "total_truth": "40,000"
+    },
+    {
+      "document_id": "cord-v2-test-00037",
+      "latency_seconds": 0.1406968089977454,
+      "mean_confidence": 0.8317576259374618,
+      "reference": "Popcorn Salt (S) 1 20.000 TOTAL 20.000 CASH 50.000 CHANGED 30.000",
+      "text": "Popcorn Salt (S) 20.000 20.000 TOTAL CASH 50.000 CHANGED 30.000 -",
+      "total_prediction": null,
+      "total_truth": null
+    },
+    {
+      "document_id": "cord-v2-test-00038",
+      "latency_seconds": 1.7270709610020276,
+      "mean_confidence": 0.8163351388648152,
+      "reference": "1 XLB Org Pork 10x 78,000 1 Sicito Babi 65,000 1 Hotplate Tahu 58,000 1 DF Fish Fillet Garlc 108,000 1 LM Pork Belly 88,000 1 Siew Mai 38,800 5 Kwan Yin Cup 50,000 1 Herbal Jelly 38,000 1 Onde-Onde 38,000 561,800 ITEMS: 13 Service charge 42,135 PB1 60,394 Total 664,329",
+      "text": "111111511 XLB Org Park 10x 78,000 Sicita Babi 65,000 Hatplate Tahu 58,000 DF Fish Fillet Garic 108,000 LM Pork Belly 88,000 Siew Mai 38,800 Kwan Yin Cup 50,000 Herbal Jelly 38,000 Onde-Onde 38,000 4 ITEMS:13 561,800 Service charge 42,135 PB1 60,394 Totalnu# 664,329",
+      "total_prediction": null,
+      "total_truth": "664,329"
+    },
+    {
+      "document_id": "cord-v2-test-00039",
+      "latency_seconds": 0.3208161200018367,
+      "mean_confidence": 0.9315196697910627,
+      "reference": "HPL754DR LUNCH BOX 3P SET W/RED BAG & SP00 N. 8 PCS 243,000 1,944,000 DISKON: (20%) 1,555,200 HPL500 RICE CASE 7L W/CUP 5 PCS 195,000 975,000 DISKON: (20%) 780,000 HPL754DB LUNCH BOX 3P SET W/BLACK BAG & SP OON 4 PCS 243,000 972,000 DISKON: (20%) 777,600 TOTAL ITEM 3 TOTAL QTY 17 BAYAR CREDIT CARD 3,112,800",
+      "text": "HPL754DR LUNCH BOX 3P SET W/RED BAG & SPO0 N. 8PCS 243,000 1,944,000 DISKON:(20%) 1,555,200 HPL500 RICE CASE 7L W/CUP 5PCS 195,000 975,000 DISKON:(20%) 780.000 HPL754BB LUNCH BOX 3P SET H/BLACK BAG & SP OON 4PCS 243.000 972,000 DISKON:(20%) 777.600 TOTAL ITEM TOTAL OTY BAYAR CREDIT CARD 3112800",
+      "total_prediction": null,
+      "total_truth": null
+    },
+    {
+      "document_id": "cord-v2-test-00040",
+      "latency_seconds": 0.21963144499750342,
+      "mean_confidence": 0.9077973047892253,
+      "reference": "Snack Lestari All 27,000 2 54,000 Bakery Aneka Sisir Banana,Pizza,yoko,Mar mer,Daging,abon,keju,cokelat,dll 7,000 2 14,000 TOTAL 68,000 CASH 100,000 CHANGE 32,000",
+      "text": "Siack Lestar 227,000 54.000 Bakery Aneka Sisir banana,Pizza,yoko,Har mer,Daging,abon,Reju,cokelat,dl1 27,000 14,000 TOTAL 68,000 CASH 100,000 CHANGE 32,000 Seanned With ComSconnet",
+      "total_prediction": "68000",
+      "total_truth": "68,000"
+    },
+    {
+      "document_id": "cord-v2-test-00041",
+      "latency_seconds": 0.2821070760001021,
+      "mean_confidence": 0.9756694504847894,
+      "reference": "Chicken Maryland 47619.00 Cappucino (Hot/Iced) 30303.00 Naga Lychee Juice 34632.00 Cafe Latte 30303.00 Hot Chocolate Marshmallo 30303.00 Chicken Cesar Salad 43290.00 Mineral Water 12987.00 Mineral Water 12987.00 Lychee/Peach/Lemon/Mango 25974.00 Chicken Maryland 47619.00 Subtotal 316017.00 Service Charge 5% + 48982.68 TOTAL 365000.00",
+      "text": "Chicken Maryland 47619.00 Cappucino(Hot/Iced\uff09 30303.00 Naga Lychee Juice 34632.00 Cafe Latte 30303.00 Hot Chocolate Marshmallo 30303.00 Chicken Cesar Salad 43290.00 Mineral Water 12987.00 12987.00 Mineral Water 25974.00 Lychee/Peach/Lemon/Mango 47619.00 Chicken Maryland Subtotal 316017.00 48982.68 Service Charge 5%+ 365000.00 TOTAL",
+      "total_prediction": "316017004898268",
+      "total_truth": "365000.00"
+    },
+    {
+      "document_id": "cord-v2-test-00042",
+      "latency_seconds": 0.9188115370016021,
+      "mean_confidence": 0.906244478055409,
+      "reference": "1 Chicken HCC. 1Pcs 15.000 Sub Total 15,000 P.Rest 10 % 1,500 Total 16,500 Cash 50,000 Kembali 33,500 1 Items,",
+      "text": "Chicken HCC, PCs 15.000 Sub Total 15,000 P.Rest 10 1.500 16,500 Total Cash 50,000 Kembali 33,500 + 1 Items,",
+      "total_prediction": "15000",
+      "total_truth": "16,500"
+    },
+    {
+      "document_id": "cord-v2-test-00043",
+      "latency_seconds": 2.010751923000498,
+      "mean_confidence": 0.852043700845618,
+      "reference": "6 Pcs Cheese Tart 165000.00 Box of 6 PP Carrier Subtotal: Rp 165000.00 Total Tax Included: Rp 15000.00 Total: Rp 165000.00 Customer Paid Cash: Rp 200000.00 Customer Change: Rp 35000.00",
+      "text": "KB BANE m  6 Pcs Cheese Tart 165000.00 Box of6 PP Carrier Rp165000.00 Subtotal: Rp15000.00 Total Tax Included: Rp165000.00 Total: Rp200000.00 Customer Paid Cash: Rp35000.00 Customer Change: 18101 Total",
+      "total_prediction": null,
+      "total_truth": "Rp 165000.00"
+    },
+    {
+      "document_id": "cord-v2-test-00044",
+      "latency_seconds": 0.22221138899840298,
+      "mean_confidence": 0.6458970858500555,
+      "reference": "1 Combo 1 30.000 TOTAL 30.000 CASH 50.000 CHANGED 20.000",
+      "text": "XX Combo 30.000 30.000 TOTAL CASH 50.000 CHANGED 20.000",
+      "total_prediction": null,
+      "total_truth": "30.000"
+    },
+    {
+      "document_id": "cord-v2-test-00045",
+      "latency_seconds": 0.32968966299813474,
+      "mean_confidence": 0.8922412014669843,
+      "reference": "1 Lemon Tea (L). 25.000 1 Mike & Ike Original 28.000 1 Mike & Berry 28.000 1 Roti Keju Manis. 7.000 TOTAL 88,000 CASH 88.000 0 CHANGED",
+      "text": "XXI afe 1 25.000 1 Lemon Tea (L). 28.000 Mike & Ike Original 28.000 Mike & Berry 7.000 Roti Keju Manis. 88.000 TOTAL 88.000 CASH 0 CHANGED",
+      "total_prediction": "88000",
+      "total_truth": "88,000"
+    },
+    {
+      "document_id": "cord-v2-test-00046",
+      "latency_seconds": 0.2742844009990222,
+      "mean_confidence": 0.8607110997041066,
+      "reference": "1X S-Bubble Milk Tea @20,000 20,000 100% 1X S-Caramel Milk Tea @20,000 20,000 100% Total: 40,000 Cash: 40,000 CHANGE 0",
+      "text": "\u4e00 1X S-Bubble Milk Tea @20,000 20,000 100% 1X S-Caramel Milk Tea @20,000 20,000 100% Total: 40,000 Cash: 40,000 CHANGE",
+      "total_prediction": "40000",
+      "total_truth": "40,000"
+    },
+    {
+      "document_id": "cord-v2-test-00047",
+      "latency_seconds": 0.2748329370006104,
+      "mean_confidence": 0.7450589044340725,
+      "reference": "COPIA 1 /GB 1 45,000.00 2100252000358 45,000.00 PLASTIC BAG RED CENTRAL SI 1 0.00 9100544260074 0.00 COPIA 1 /GB 1 18,000.00 2100252000358 18,000.00 Total 63,000.00 Total discount 0.00 Total quantity 3 Card Payment DEBIT CARD 63,000.00",
+      "text": "COPIA1/GB 1 45,000.00 2100252000358 45,000.00 PLASTIC BAG RED CENTRAL SI1 0.00 9100544260074 0.00 COPIA1/GB 1 18,000.00 2100252000358 18,000.00 Total 63,000.00 Total discount 0.00 Total quantity 3 Card Payment DEBIT CARD 63,000.00",
+      "total_prediction": "6300000",
+      "total_truth": "63,000.00"
+    },
+    {
+      "document_id": "cord-v2-test-00048",
+      "latency_seconds": 0.307826001997455,
+      "mean_confidence": 0.9749822020530701,
+      "reference": "1X S-Hazelnut KOI Cafe 25,000 @25,000 25% Less Ice PB1: 2,272 Subtotal: 22,728 Total: 25,000 Cash: 100,000 CHANGE: 75,000",
+      "text": "1X S-Hazelnut KOI Cafe @25,000 25,000 25% Less Ice PB1: 2,272 Subtotal: 22,728 Total: 25,000 Cash: 100,000 CHANGE: 75,000",
+      "total_prediction": "25000",
+      "total_truth": "25,000"
+    },
+    {
+      "document_id": "cord-v2-test-00049",
+      "latency_seconds": 0.21590170600029523,
+      "mean_confidence": 0.9068092902501425,
+      "reference": "1 Ptgs Eggtart 12,000 1 Choco Melt 11,000 SUBTOTAL 23,000 DUE 23,000 CASH 50,000 CHANGE 27,000 TOTAL QTY 2 PCS 2 ITEM",
+      "text": "1 Ptgs Eggtart 12,000 1 Choco Melt 11,000 SUBTOTAL 23,000 DUE 23,000 CASH 50,000 CHANGE 27,000 TOTAL QTY 2 ITEM2 PCS",
+      "total_prediction": "2",
+      "total_truth": "23,000"
+    },
+    {
+      "document_id": "cord-v2-test-00050",
+      "latency_seconds": 0.2893776160017296,
+      "mean_confidence": 0.6150550591318231,
+      "reference": "1 Superice Cauburry 17,727 SubTulal: 17,727 PB1: 1,773 Total: 19,500 Lash: 100,000 Change: 80,500",
+      "text": "\u56fd 1 S\u03bcLPrie Cauburry 17,727 17,727 SubTuial: PB1: 1,773 Total: 19,500 Lash: 100,00 Chanye: 80,500 \u4e00",
+      "total_prediction": "19500",
+      "total_truth": "19,500"
+    },
+    {
+      "document_id": "cord-v2-test-00051",
+      "latency_seconds": 0.4204773439996643,
+      "mean_confidence": 0.9303227001253296,
+      "reference": "(TA) NASI GRG TERI MEDAN 4 165,460 (TA) BIHUN GORENG SEAFOOD 1 40,456 (TA) KWETIAW SEAFOOD SIRAM 1 42,274 (TA) NASI GORENG 2 55,456 ITEMS: 8 303,646 Pb1 10% 30,365 Rounding 334,011 Rounding -11 Total 334,000 DEBIT BCA 334,000",
+      "text": "\u798f SOLAAA N train Custor (TA)NASI\u3001RG TERI 4 165,460 MEDAN (TA\uff09BIHUN GORENG 1 40,456 SEAFOOD (TA)KWETIAW SEAFOOD 1 42,274 SIRAM (TA)NASI GORENG 2 55,456 ITEMS:S 303,646 Ph110% 30,365 e Rounding 334,011 Rounding 11 Total 334,000 DEBIT BCA 334,000 A ijungan",
+      "total_prediction": "334000",
+      "total_truth": "334,000"
+    },
+    {
+      "document_id": "cord-v2-test-00052",
+      "latency_seconds": 0.28783992500029854,
+      "mean_confidence": 0.7812439888715744,
+      "reference": "THAI ICED TEA 1 @20.000 20.000 THAI ICED TEA 1 @20.000 20.000 SUB-TOTAL 40.000 GRANDTOTAL 40.000 CASH 100.000 CHANGED 60.000",
+      "text": "THA! THAI ICED TEA 20.000 @20.000 THAI ICED TEA 20.000 1 @20.000 40.000 SUB-TOTAL 40.000 GRANDTOTAL 100.000 CASH 60.000 CHANGED",
+      "total_prediction": "100000",
+      "total_truth": "40.000"
+    },
+    {
+      "document_id": "cord-v2-test-00053",
+      "latency_seconds": 0.43322239099870785,
+      "mean_confidence": 0.8218232421647935,
+      "reference": "1 Pecel Komplit + Nasi 42.000 1 SOTO KUDUS 47.000 2 Mineral Water 18.000 Subtotal 107.000 Servi Charge 57 5.350 Pajak Rest 10% 11.235 Total 123.585 4",
+      "text": "Kopidegit **\u7c73\u7c73******\u7c73******\u7c73****************\u7c73* 1 Pecel Komplit +Nasi 42.000 SOTO KUDUS 47.000 2 Mineral Water 18.000 Subtotal 107.000 Servi Charge 5 5.350 11.235 Pajak Rest 10 4 Total 123.585",
+      "total_prediction": "123585",
+      "total_truth": "123.585"
+    },
+    {
+      "document_id": "cord-v2-test-00054",
+      "latency_seconds": 0.37469979700108524,
+      "mean_confidence": 0.5121413416722241,
+      "reference": "KACANG MERAH 10,000 SUBTOTAL 10,000 TOTAL 10,000 CASH 10,000",
+      "text": "ai . 10,000 KACANG MERAH 10,000 SUBTOTAL 10,000 TOTAL 10,000 CASH",
+      "total_prediction": "10000",
+      "total_truth": "10,000"
+    },
+    {
+      "document_id": "cord-v2-test-00055",
+      "latency_seconds": 0.45253767800022615,
+      "mean_confidence": 0.45894211881300984,
+      "reference": "1 APPLE CINNAMON PASTRY 22,000 2 ROYAL CHEESE TART 32,000 TOTAL 54,000 CARD 54,000",
+      "text": "1 APPLE CINNAMON PASTRY 22,000 2 ROYAL CHEESE TART 32,000 TOTAL 5 ,000 CARD 54 ,000",
+      "total_prediction": "5000",
+      "total_truth": "54,000"
+    },
+    {
+      "document_id": "cord-v2-test-00056",
+      "latency_seconds": 0.5690495680028107,
+      "mean_confidence": 0.5435394843419393,
+      "reference": "AIR MINERAL 8,181 SUBTOTAL 8,181 TAX 818 TL 8,999 CASH 10,000 CG 1,001",
+      "text": ".8,181 AIR MINERAL. 8,181 SUBTOTAL 818 TAX TL .8.999 CASH 10,000 CG \u00b71,001",
+      "total_prediction": "818",
+      "total_truth": "8,999"
+    },
+    {
+      "document_id": "cord-v2-test-00057",
+      "latency_seconds": 0.14929654299703543,
+      "mean_confidence": 0.8127744708742414,
+      "reference": "ICED TT 20,000 ICED GT 22,000 CASH 42,000",
+      "text": "ICED TT \u00b720,000 ICED GT 22,000 CASH 42,000",
+      "total_prediction": null,
+      "total_truth": null
+    },
+    {
+      "document_id": "cord-v2-test-00058",
+      "latency_seconds": 1.5438736690011865,
+      "mean_confidence": 0.8811394311487675,
+      "reference": "1 PHO BO TAI 55,000 CASH 100,000 Sub Total: 55,000 PB1 5,500 Total: 60,500 Pay: 100,000 Change Due: 39,500",
+      "text": "55,000 PHO BO TAI 100,000 CASH 55,000 Sub Total: 5,500 PB1 60,500 Totale 100,000 Pay: 37,500 Change Due:",
+      "total_prediction": "5500",
+      "total_truth": "60,500"
+    },
+    {
+      "document_id": "cord-v2-test-00059",
+      "latency_seconds": 4.386779414999182,
+      "mean_confidence": 0.889873077792506,
+      "reference": "Tahu Isi 2 78,000 Tea 5 30,000 Kepiting 7-8.4ons - Chilly 0.7 1 1 297,490 Udang Telur Asin - Regular 1 47,500 Kailan 2 Rasa 1 45,000 Mantau - 2 pcs 1 25,000 Sweet Tea 2 16,000 Nasi Putih 7 42,000 Mantau - 3 pcs 1 37,500 Total Item 9 Total Qty 21 Subtotal 618,490 Tax 61,849 Total 680,500",
+      "text": "4 \u56fd me    f    2 Tahu Isi 78,000 5.Tea 30,000 1 Kepiting 7-8.4ons-Ch1ly0.7297,490 1 1 Udang Telur Asin - Regular. 47,500 1Kailan2 Rasa 45,000 1Mantau-2 pcs 25,000 2 Sweet Tea 16,000 7 Nasi Putih 42,000 1 Mantau -:3 pcs 37,500 Total Item total.aty 21 Subtotal 618,490 Tax 61,849 Total 680,500",
+      "total_prediction": "680500",
+      "total_truth": "680,500"
+    },
+    {
+      "document_id": "cord-v2-test-00060",
+      "latency_seconds": 1.0577806889996282,
+      "mean_confidence": 0.9719799862188452,
+      "reference": "Topping Milo Sparkle (untuk 1 Po rsi) 1x 1.250 1.250 Bola Ubi Mini Original (14 Pcs ) 2x 12.500 25.000 Subtotal 26.250 Pajak - Total 26.250 Pembayaran GO-PAY",
+      "text": "Topping Milo Sparkle (untuk 1 Po rsi) 1x 1.250 1.250 Bola Ubi Mini Original (14 Pcs 2x 12.500 25.000 Subtotal 26.250 Pajak Total 26.250 GO-PAY Pembayaran",
+      "total_prediction": "26250",
+      "total_truth": "26.250"
+    },
+    {
+      "document_id": "cord-v2-test-00061",
+      "latency_seconds": 0.8879502650015638,
+      "mean_confidence": 0.9309302920644934,
+      "reference": "1x 6500 TALAM UNGU 6,500 DISC ITEM -40.000% AMOUNT -2 600 1X 8000 AREM - AREM 8,000 DISC ITEM -40.000% AMOUNT -3,200 2X 9000 LEMPER 18,000 DISC ITEM -40.000% AMOUNT -7.200 1X 0 MIKA SEDANG 0 1X 0 PLASTIK KECIL 0 1X 5000 TEH KOTAK 5,000 7.00 ITEMs SUBTOTAL 24,500 TOTAL 24,500 CARD 24,500",
+      "text": "Dnt 1X 6500 TALAM UNGU 6,500 DISC ITEM -40.000% AMOUNT -2600 1X 3000 AREM-AREM 8,000 DISC ITEM -40.000% AHOUNT -3,200 2X 9000 LEHPER 18.000 DISC ITEM -40.000 AHOUNT -7,200 1X 0 MIKA SEDANG 0 1X 0 PLASTIKKECIL 0 1X 5000 TEH KOTAK 5,000 7.00 ITEMS SUBTOTAL 24,500 TOTAL 24,500 CARD 24,500",
+      "total_prediction": "24500",
+      "total_truth": "24,500"
+    },
+    {
+      "document_id": "cord-v2-test-00062",
+      "latency_seconds": 0.4119521970023925,
+      "mean_confidence": 0.8612810922786593,
+      "reference": "1 XXI Java Tea (M) 18.000 1 Combo 2 30.000 TOTAL 48.000 CASH 50.000 CHANGED 2,000",
+      "text": "XXI cafe 1 1 XXI Java Tea (M) 18.000 1 Combo2 30.000 48.000 TOTAL CASH 50.000 CHANGED 2.000",
+      "total_prediction": null,
+      "total_truth": "48.000"
+    },
+    {
+      "document_id": "cord-v2-test-00063",
+      "latency_seconds": 1.523161610999523,
+      "mean_confidence": 0.542469106854931,
+      "reference": "Kopi Susu Kampung. x1 19.000 Ice Kopi Susu Kampung Less Ice 0 Kopi Susu Kampung. x2 38.000 Ice Subtotal 57.000 Total 57.000 Cash 60.000 Change 3.000",
+      "text": "\u4e00 Kopi Susu Kampung. x1 19.000 Ice Kopi Susu Kampung Less Ice Kopi Susu Kampung. x2 38.000 Ice Subtotal 57.000 Total 57.000 Cash 60.000 Change 3.000",
+      "total_prediction": "57000",
+      "total_truth": "57.000"
+    },
+    {
+      "document_id": "cord-v2-test-00064",
+      "latency_seconds": 0.7416936619993066,
+      "mean_confidence": 0.9891548007726669,
+      "reference": "SINGLE SCOOP 16.000 TOTAL 16.000 CATEND 50.000 CHANGE 34.000",
+      "text": "SINGLE SCOOP 16.000 TOTAL 16.000 CATEND 50.000 CHANGE 34.000",
+      "total_prediction": "16000",
+      "total_truth": "16.000"
+    },
+    {
+      "document_id": "cord-v2-test-00065",
+      "latency_seconds": 0.77096520899795,
+      "mean_confidence": 0.6727265194058418,
+      "reference": "Bubur Polos + Telur 1 13.000 13.000 Subtotal 13.000 Pajak - Total 13.000",
+      "text": "1 ubur Polos + Telur 13.000 13.000 subtotal 13.000 ajak otal 13.000 \u4e2d",
+      "total_prediction": "13000",
+      "total_truth": "13.000"
+    },
+    {
+      "document_id": "cord-v2-test-00066",
+      "latency_seconds": 0.4175821150020056,
+      "mean_confidence": 0.8832211559638381,
+      "reference": "PILLOW DURIA 36,364 PLASTIK 25 0 SUBTOTAL 36,364 PD1 10% 10.000Z AMOUNT 3,636 TOTAL 40,000 CASH 50,000 CHANGE 10,000",
+      "text": "PILLOW DURIA 36364 PLASTIK 25 \u9c7c SUBTOTAL 36.364 PB1 102 10.000% AMOUNT 3,636 TOTAL 40,000 CASH 50.000 CHANGE 10,000",
+      "total_prediction": "40000",
+      "total_truth": "40,000"
+    },
+    {
+      "document_id": "cord-v2-test-00067",
+      "latency_seconds": 0.2520232599999872,
+      "mean_confidence": 0.865670613267205,
+      "reference": "2005- CHEESE JOHN 9.500,00 x1 9.500,00 Total Item: 1 Total. 9.500,00 Cash Tendered: 9.500,00",
+      "text": "2005-CHEESE JOHN 9.500,00 x1 9.500.00 Total Item: vr1 Total. 9.500,00 Cash Tendered: 9.500.00",
+      "total_prediction": null,
+      "total_truth": "9.500,00"
+    },
+    {
+      "document_id": "cord-v2-test-00068",
+      "latency_seconds": 0.23885935199723463,
+      "mean_confidence": 0.9533829092979431,
+      "reference": "ICED TT 20,000 TOTAL 20,000 CASH 50,000 CHANGE 30,000",
+      "text": "\u00b720,000 ICED TT \u00b720,000 TOTAL 50,000 CASH 30,000 CHANGE",
+      "total_prediction": "50000",
+      "total_truth": "20,000"
+    },
+    {
+      "document_id": "cord-v2-test-00069",
+      "latency_seconds": 4.519211574999645,
+      "mean_confidence": 0.7769934013485909,
+      "reference": "1 [MD] SOFT MORNING ROLL 18,000 2 REAL HONEY PANCAKE BREAD 20,000 4 CUSTARD BRIOCHE 36,000 TOTAL 74,000 CASH 100,000 CHANGE 26,000",
+      "text": "\u4e00 23//2017 1 [MD] SOFT MORNING ROLL 18,000 2 REAL HONEY PANCAKE BREAD 20,000 4 CUSTARD BRIOCHE 36,000 TOTAL 74,000 CASH 100,000 26,000 CHANGE Thar < T -",
+      "total_prediction": "74000",
+      "total_truth": "74,000"
+    },
+    {
+      "document_id": "cord-v2-test-00070",
+      "latency_seconds": 2.4082924030008144,
+      "mean_confidence": 0.9261734538608127,
+      "reference": "2 UDANG RE 216,000 432,000 2 =*LARGE*== 1 AYM GR JUN NJAN 108,000 =*MEDIUM*= 1 SAPO TH SEAFOOD 172,000 =*LARGE*== 2 POCAI 3 111,000 222.000 2 =*MEDIUM*= 1 GURAME FILLET M 163,000 ASAM MANIS 1 BIHUN GORENG JJ 116,000 =*LARGE*== 5 ICED TEA 12,000 60,000 7 NASI PUTIH 10,000 70,000 FOOD 1,213,000 BEVERAGES 60,000 OTHERS 70,000 SUBTOTAL 1,343,000 SERVICE CHARGE 80,580 Tax 10% 142,358 DU 1,565,938",
+      "text": "2 UDANG RE 216,000 432,000 2 =*LARGE*== 1 AYM GR JUN NJAN 108,000 =*MEDIUM*= SAPO TH SEAFOOD 172,000 =*LARGE*== 2 POCAI 3 111,000222,000 2 =*MEDIUM*= GURAME FILLET M 163,000 ASAM MANIS 1 BIHUN GORENG JJ 116,000 =*LARGE*== 5 ICED TEA 12,000 60,000 7 NASI PUTIH 10,000 70,000 FOOD 1,213,000 BEVERAGES 60,000 OTHERS 70,000 SUBTOTAL 1,343,000 SERVICE CHARGE 80,580 Tax 10% 142,358 DU 1,565,938",
+      "total_prediction": "1343000",
+      "total_truth": "1,565,938"
+    },
+    {
+      "document_id": "cord-v2-test-00071",
+      "latency_seconds": 0.2752474400003848,
+      "mean_confidence": 0.9795452025201585,
+      "reference": "Cuka Apel Tetes 1 198000 198000 Sub Total 198000 Tunai 200200 Kembalian 22000",
+      "text": "Cuka Apel Tetes1 198000 198000 Sub Tolal 198000 Tunai 200200 Kembalian 22000",
+      "total_prediction": null,
+      "total_truth": "198000"
+    },
+    {
+      "document_id": "cord-v2-test-00072",
+      "latency_seconds": 1.3964854029982234,
+      "mean_confidence": 0.6631131414324045,
+      "reference": "1 Choco Devil 15,909 SubTotal: 15,909 PB1: 1,591 Total: 17,500 cash: 20,000 Change: 2,500",
+      "text": "D'arepes \u56fd Dar 1Choco Devil 15,909 SubTotal: 15,909 PB1: 1,591 Total: 17,500 cash: 20,000 Change: 2,500",
+      "total_prediction": "17500",
+      "total_truth": "17,500"
+    },
+    {
+      "document_id": "cord-v2-test-00073",
+      "latency_seconds": 0.6249357000015152,
+      "mean_confidence": 0.7057376411699113,
+      "reference": "1001-Choco Bun 22.000 x1 22.000 6001-Plastic Bag Small 0 x1 0 Total Item: 2 22.000 Total. Cash 25.000 Tendered: 3.000 Change:",
+      "text": "A 1001-Choco Bun 22.000 X1 22.000 6001-Plastic Bag Small 0x1 0 C Total Item: 22.000 Total. Cash 25.000 Tendered: 3.000 Change:",
+      "total_prediction": null,
+      "total_truth": "22.000"
+    },
+    {
+      "document_id": "cord-v2-test-00074",
+      "latency_seconds": 4.421659236002597,
+      "mean_confidence": 0.7531531918151625,
+      "reference": "1 BLACKCURRANT 32,000 1 SPRITE 32,000 BEVERAGE 64,000 1 GRILLED CALAMARI 85,000 1 DINE FOR 2 129,000 * DANISH FISH & CHIPS DF * NEW YORK FISH & CHIPS FOOD 214,000 SUBTTL 278,000 Service Charge 22,240 TAX 30,024 TOTAL 330,264",
+      "text": "N 32,000 1 BLACKCURRANT 1 SPRITE 32,000 64,000 **BEVERAGE 85,000 1 GRILLED CALAMARI 129,000 1 DINE FOR 2 *DANISH FISH & CHIPS DF * NEW YORK FISH & CHIPS 214,000 **FOOD SUBTTL 278,000 22,240 Service Charge TAX 30,024 TOTAL 330.264 2",
+      "total_prediction": "3302642",
+      "total_truth": "330,264"
+    },
+    {
+      "document_id": "cord-v2-test-00075",
+      "latency_seconds": 0.6191824579982494,
+      "mean_confidence": 0.9138800282227365,
+      "reference": "1 CHOCO PUFF 29,091 1 CREAMY BEEF CLS FTC 42,727 1 NEW ORIENTAL CHK RICE 34,545 1 LIPTON PITCHER 54,545 1 SC/P SUPER SUPREME 47,273 1 CB/P BLACK PEPP BEEF 48,182 SUBTOTAL 256,363 TAX 25,637 TOTAL 282,000",
+      "text": "1 CHOCO PUFF 29091 1 CREAMY BEEF CLS FTC 42,727 1 NEW ORIENTAL CHK RICE 34,545 1 LIPTON PITCHER 54,545 1 SC/P SUPER SUPREME 47,273 1 CB/P BLACK PEPP BEEF 48,182 SUBTOTAL 256,363 TAX 25,637 TOTAL 282,000",
+      "total_prediction": "282000",
+      "total_truth": "282,000"
+    },
+    {
+      "document_id": "cord-v2-test-00076",
+      "latency_seconds": 0.7270375970001624,
+      "mean_confidence": 0.5213438694675764,
+      "reference": "BASO TAHU *46000 NASI PUTIH *6000 BASO TAHU *46000 2x 6000 NASI PUTIH *12000 TEMS 50 - ASH *110000",
+      "text": "I BASO TAHU 46000 NASI PUTIH *6000 BASO TAHU *46000 2x6000 NASI PUTIH *12000 TEMS 50- ASH \uffe5110000",
+      "total_prediction": null,
+      "total_truth": null
+    },
+    {
+      "document_id": "cord-v2-test-00077",
+      "latency_seconds": 3.8862004229995364,
+      "mean_confidence": 0.4131359060605367,
+      "reference": "TRIPPLE CHEESE 1 x 17,000 17,000 SUB TOTAL 17,000 GRAND TOTAL 17,000 CASH IDR 22,000 CHANGE DUE 5,000",
+      "text": "TRIPPLE CHEESE 17,000 17,000 1 X 17,000 SUB TOTAL 17,000 GRANDTOTAL 22,000 CASH IDR CHANGE DUE 5,000",
+      "total_prediction": "22000",
+      "total_truth": "17,000"
+    },
+    {
+      "document_id": "cord-v2-test-00078",
+      "latency_seconds": 3.9465971579993493,
+      "mean_confidence": 0.6020151908612914,
+      "reference": "1 Lemon Tea (L) 25.000 1 Extra Jelly Lychee 5.000 TOTAL 30.000 CASH 30.000 CHANGED 0",
+      "text": "2 \u4e00 E 25.000 Lemon Tea (L) 1 5.000 Extra Jelly Lychee 30.000 TOTAL 30.000 CASH 0 CHANGED",
+      "total_prediction": "30000",
+      "total_truth": "30.000"
+    },
+    {
+      "document_id": "cord-v2-test-00079",
+      "latency_seconds": 0.3486274550014059,
+      "mean_confidence": 0.8903979174792767,
+      "reference": "1001-Choco Bun 22.000 x1 22.000 6001-Plastic Bag Small 0 x1 0 Total Item: 2 22.000 22.000",
+      "text": "1001-Choco Bun 22.000 X1 22.000 6001-Plastic Bag Small 0 x1 0 Total Iten: 2 otal. 22.000 ash endered: 22.000",
+      "total_prediction": null,
+      "total_truth": "22.000"
+    },
+    {
+      "document_id": "cord-v2-test-00080",
+      "latency_seconds": 0.24510124799780897,
+      "mean_confidence": 0.9634759922822317,
+      "reference": "1 Viet Milk Coffee 25,000 +Ice +M Subtotal 25.000 Total 25.000 CASH 25.000 Kembalian 0",
+      "text": "25.000 1 Viet Milk Coffee +Ice +M 25.000 Subtotal 25.000 Total 25.000 CASH Kembalian 0",
+      "total_prediction": "25000",
+      "total_truth": "25.000"
+    },
+    {
+      "document_id": "cord-v2-test-00081",
+      "latency_seconds": 4.572080117999576,
+      "mean_confidence": 0.6999548132482328,
+      "reference": "3002-Kyoto Choco Mochi x2 14.000 28.000 1001-Choco Bun x1 22.000 22.000 6001-Plastic Bag Small x1 0 0 Total Item: 4 Total. 50.000",
+      "text": "3002-Kyoto Choco Mochi 28.000 14.000 X2 1001-Choco Bun 22.000 22.000 x1 6001-Plastic Bag Small 0 x1 0 Total Item: 50.000 Total. \u4e00 \u798f",
+      "total_prediction": null,
+      "total_truth": "50.000"
+    },
+    {
+      "document_id": "cord-v2-test-00082",
+      "latency_seconds": 1.7386700789975293,
+      "mean_confidence": 0.7455771400740272,
+      "reference": "Chocolate Log Cake 1x 115,000 115,000 Snowman Cake Chocolate 1x 60,000 60,000 Strawberry Log Cake 2x 105,000 210,000 Sub Total 385,000 GRAND TOTAL 385,000 VISA MASTER 385,000 8213 CHANGE 0",
+      "text": "40 Chocolate Log Cake 1x 115,000 115,000 cake Chocolate 1x 60,000 60,000 Snowman TRA Strawberry Log Cake 2x 105,000 210,000 Sub Total 385,000 GRAND TOTAL 385,000 VISA MASTER 385,000 8213 CHANGE 1 TIME IN",
+      "total_prediction": "385000",
+      "total_truth": "385,000"
+    },
+    {
+      "document_id": "cord-v2-test-00083",
+      "latency_seconds": 0.5141575689995079,
+      "mean_confidence": 0.9635594586531321,
+      "reference": "1 COOKIES AND CREAM 20,909 Subtotal 20,909 PAJAK 10% 2,091 Total 23,000 1 Tendered 25.000 Kembali 2.000",
+      "text": "20.909 1 COOKIES AND CREAM Subtotal 20.909 PAJAK 10% 2.091 1Total 23.000 Tendered 25.000 2.000 Kembali",
+      "total_prediction": "23000",
+      "total_truth": "23,000"
+    },
+    {
+      "document_id": "cord-v2-test-00084",
+      "latency_seconds": 0.4560505129993544,
+      "mean_confidence": 0.9239033195707533,
+      "reference": "Kroket @ 12.000 1x 12.000 Arem Arem @ 12.000 2x 24.000 Subtotal Rp 36.000 Tax (10.0%) Rp 3.600 Total Rp 39.600 Other Rp 39.600",
+      "text": "Kroket 1x 012.000 12.000 Arem Arem 2x @12.000 24.000 Subtotal Rp 36.000 Tax (10.0%) Rp 3.600 Total Rp 39.600 Other Rp 39.600",
+      "total_prediction": null,
+      "total_truth": "Rp 39.600"
+    },
+    {
+      "document_id": "cord-v2-test-00085",
+      "latency_seconds": 1.7593316000020423,
+      "mean_confidence": 0.8389549800535527,
+      "reference": "3 Nasi Putih 30.000 1 Nasi Tambah 7.000 2 Ayam Pop 40.000 1 Samabal SP 11.000 1 Sambal Gabus Asin Cb 18.000 1 Kerupuk Kuah 15.000 1 Ikan Bawal Besa 28.500 1 Telur Dadar 10.000 1 Teh Es 7.000 1 Teh Manis 9.000 1 Es Batu 4.000 Subtotal 179.500 Pajak Rest. 10% 17.950 Total 197.450 14 Ttl Makanan 159.500 Ttl Minuman 20.000 Cash 197.450",
+      "text": "\u570b *********************** 3 Nasi Putih 30.000 1 Nasi Tambah 7.000 2 Ayam Pop 40.000 1 Samabal SP 11.000 1 Sambal Gabus Asin Cb 18.000 Kerupuk Kuah 15.000 Ikan Bawal Besa 28.500 Telur Dadar 10.000 Teh Es 7.000 Teh Manis 9.000 1Es Batu 4.000 Subtotal 179.500 Pajak Rest.10 17.950 14 Total 197.450 TtL Makanan 159.500 Tti Minuman 20.000 Cash 197.450",
+      "total_prediction": "197450",
+      "total_truth": "197.450"
+    },
+    {
+      "document_id": "cord-v2-test-00086",
+      "latency_seconds": 0.5002516319982533,
+      "mean_confidence": 0.8982783520922941,
+      "reference": "1 Cheezemania 9,500 1 Mamamia 12,500 SUBTOTAL 22,000 DUE 22,000 CASH 52,000 CHANGE 30,000 2 ITEM TOTAL QTY 2 PCS",
+      "text": "BreadLife 9,500 1 Chcezemania 12,500 1 Mamamia SUBTOTAL 22,000 DUE 22,000 CASH 52,000 30,000 CHANGE TOTAL QTY 2ITEM 2PCS",
+      "total_prediction": "2",
+      "total_truth": "22,000"
+    },
+    {
+      "document_id": "cord-v2-test-00087",
+      "latency_seconds": 1.9747217059994,
+      "mean_confidence": 0.7062748115171086,
+      "reference": "1 PHOTAI CHIN 36,500 Sub Total 36,500 : PB1 10.0% 3,650 : Grand Total 40,150 5183230101 CREDIT CARD 40,150",
+      "text": "EIOODN ANTEA 36,500 1 PHOTAI CHIN 36,500 1 Sub Total 3,650 H \"\u2026 PB1 10.0% P 40,150 Grand Total CARD 40,150 E7G 5183230101CREDIT E E",
+      "total_prediction": "3650",
+      "total_truth": "40,150"
+    },
+    {
+      "document_id": "cord-v2-test-00088",
+      "latency_seconds": 0.49251112599813496,
+      "mean_confidence": 0.7792797741435823,
+      "reference": "STIX ECLAIRS 1 x 19,000 19,000 ALMOND CREAM CHEESE 1 x 28,000 28,000 SUB TOTAL 47,000 GRAND TOTAL 47,000 VISA 8945 47,000 CHANGE DUE 0",
+      "text": "AuntieAnnes STIX ECLAIRS 19,000 1 \u00d7 19,000 ALMONDCREAMCHEESE 28,000 1 x 28,000 47,000 SUB TOTAL 47,000 GRANDTOTAL 47,000 VISA8945 0 CHANGE DUE",
+      "total_prediction": "47000",
+      "total_truth": "47,000"
+    },
+    {
+      "document_id": "cord-v2-test-00089",
+      "latency_seconds": 1.616320002998691,
+      "mean_confidence": 0.8460942953824997,
+      "reference": "1 XXL Crispy Chicken 40,000 1 Pedas sedikit 0 ITEMS: 1 40,000 Total 40,000 Pay Cash 50,000 Change : 10,000",
+      "text": "\u7279#\u7eaf#\u5783\u7816#\u7a0b## XXL Cnispy Chicken 40,000 -Pedas sedikit 0 ITEMS:1 40.000 Tatal Pay Cash 50,000 Change :10,000",
+      "total_prediction": null,
+      "total_truth": "40,000"
+    },
+    {
+      "document_id": "cord-v2-test-00090",
+      "latency_seconds": 0.901955667999573,
+      "mean_confidence": 0.798024082885069,
+      "reference": "1 CIRENG PANDAWA 26,818 Subtotal 26,818 Pb1 2,681 Total 29,500 CASH 29,500 Total Item 1 Total Qty 1",
+      "text": "1 CIRENG PANDAWA 26,818 Subtotal 26,818 pb1 2,681 Total 29,500 CASH 29,500 Total Item 1 Total Qty 1",
+      "total_prediction": "1",
+      "total_truth": "29,500"
+    },
+    {
+      "document_id": "cord-v2-test-00091",
+      "latency_seconds": 0.10807089299851214,
+      "mean_confidence": 0.9097135446288369,
+      "reference": "1 BAKSO BNGKS 15.000 6 GORENGAN 6.000 TL 21.000 CASH 30.000 CG 9.000",
+      "text": "1 BAKSO BNGKS 15.000 6 GORENGAN 6,000 TL \u25a100 CASH 30.000 CG 9.000 TERIRA KASIH",
+      "total_prediction": null,
+      "total_truth": "21.000"
+    },
+    {
+      "document_id": "cord-v2-test-00092",
+      "latency_seconds": 0.22771696400013752,
+      "mean_confidence": 0.7450946103781462,
+      "reference": "901016 - TICKET CP 4 60.000 240,000 (Qty=4.00) TOTAL 240.000 CASH 250.000 CHANGE 10,000",
+      "text": "901016 -TICKETCP 60.000 240.000 TOTAL \uff08Qty=4.00\uff09240.000 -CASH 250.000 CHANGE 10.000 **** 1 ****",
+      "total_prediction": null,
+      "total_truth": "240.000"
+    },
+    {
+      "document_id": "cord-v2-test-00093",
+      "latency_seconds": 1.6340525509986037,
+      "mean_confidence": 0.7336267431577047,
+      "reference": "THAI ICED TEA (L) 1 X 16,363 16,363 Jumlah Item 1 Sub Total 16,363 Pajak Resto 1,636 Grand Total 17,999",
+      "text": "  404 4 THAI ICED TEA (L) 16,363 16,363 1X Jumlah Item 16,363 Sub Total 1,636 Pajak Resto 17,999 Grand Total",
+      "total_prediction": "1636",
+      "total_truth": "17,999"
+    },
+    {
+      "document_id": "cord-v2-test-00094",
+      "latency_seconds": 0.49064645300313714,
+      "mean_confidence": 0.7887822435133987,
+      "reference": "1 TAHU GORENG 28,000 1 CAKWE 17,000 1 PHO TAI CHIN(R) 63,000 1 TEA 11,000 Sub Total 119,000 Serv. 7.0% 8,330 PB1 10.0% 12,733 Grand Total 140,063 CREDIT CAR: 140,063",
+      "text": "SEEANSEEE ON OHd ASEELNNEE ETGOON 1 TAHUGORENG 28,000 o 1 CAKWE 17,000 \u5de5 1 PHOTAI CHIN(R) P 63,000 1 TEA 11,000 119,000 E E Sub Total 100 S Serv. 7.0% 8,330 E PB1 10.0% 12,733 AANSEE Grand Total 140,063 \u3002 04 CREDIT CAR: 140,063 N",
+      "total_prediction": "140063",
+      "total_truth": "140,063"
+    },
+    {
+      "document_id": "cord-v2-test-00095",
+      "latency_seconds": 1.42929189500137,
+      "mean_confidence": 0.9084305167198181,
+      "reference": "BASO TAHU 1 43,181 43,181 ES JERUK 1 13,000 13,000 TOTAL 56,181 TAX 10.00 % 5,618 GRAND TOTAL 61,799 TUNAI 62,000 KEMBALI 201",
+      "text": "43,181 143,181 BASO TAHU 113.000 13,000 ES JERUK 56.181 TOTAL FU 5.618 TAX 10.00% 61,799 GRAND TOTAL 62,000 TUNAI 201 KEMBALI",
+      "total_prediction": "62000",
+      "total_truth": "61,799"
+    },
+    {
+      "document_id": "cord-v2-test-00096",
+      "latency_seconds": 1.1640216119994875,
+      "mean_confidence": 0.826061645692045,
+      "reference": "1 BBQ Chicken 41,000 0 1 - Tidak Pedas ITEMS: 1 41,000 Total. 41,000 Pay Cash 50,000 Change: 9,000",
+      "text": "41,000 BBQChicken 0 -Tidak Pedas \u5e7f 41,000 ITEMS:1 41,000 Total. Pay Cash 50,000 Change :9,000 \u6b66#\u626b\u9632##\u7ebf\u7528\u4f20\u94c1\u4f20\u94c1####\u7ecf\u7ebf\u9632\u4efd",
+      "total_prediction": null,
+      "total_truth": "41,000"
+    },
+    {
+      "document_id": "cord-v2-test-00097",
+      "latency_seconds": 1.641330056998413,
+      "mean_confidence": 0.780420029705221,
+      "reference": "2 20.000 BUBUR GO 40.000 PUYUH GO 6.000 3 3.000 SATE ATI GO 9.000 6.00xITEMS TOTAL 55.000 CASH 55.000",
+      "text": "AVAN PAKERAN 2 20.000 BUBURGO 40.000 PUYUHGO 6.000 3 3.000 SATECATICGO 9.000 6.00xITEMS TOTAL 55.000 55.000 CASH W",
+      "total_prediction": "5500055000",
+      "total_truth": "55.000"
+    },
+    {
+      "document_id": "cord-v2-test-00098",
+      "latency_seconds": 3.5454369300023245,
+      "mean_confidence": 0.804085572808981,
+      "reference": "1 BLACK PAPPER MEATBALL PAS 79,000 1 TRUFFLE CREAM 77,000 1 EARL GREY MILK TEA 59,000 SUBTTL 215,000 Service Charge 6% 12,900 TAX 10% 22,790 TOTAL 250,690",
+      "text": "7 pancic FOOD 3 Quality/k Presentat Taste/Ras BEVERAG Quality/K Presentat 79,000 Taste/Ras 1 BLACK PEPPER MEATBALL PAS 77,000 1 TRUFFLE CREAM 59,000 1 EARL GREY MILK TEA 215,000 SERVICE SUBTTL 12,900 Friendlin Service Charge 6% 22,790 Promptn TAX 10% Attentive 250,690 TOTAL Time/Wa - OTHERS Cleanline Ambiance Value forl",
+      "total_prediction": null,
+      "total_truth": "250,690"
+    },
+    {
+      "document_id": "cord-v2-test-00099",
+      "latency_seconds": 2.037464180000825,
+      "mean_confidence": 0.9300799204243554,
+      "reference": "1 FL-Xmas 30 Off 68,180 1 PAKET SLICES 0 1  FL Cake - French Vanilla SLC 0 1 PAKET SLICES 0 1 FL Cake - Green Tea SLC 0 1 PAKET SLICES 0 1 FL Cake - Belgium Choco SLC 0 SUBTOTAL 68,180 DISKON 0 BIAYA TAMBAHAN 0 PAJAK PPN 10 % 6,818 PAJAK 0% 0 BIAYA CC 0 PEMBULATAN 2 TOTAL 75,000 TUNAI 0 NON TUNAI 75,000 KEMBALI 0",
+      "text": "FL-Xmas 30 Off 7 68,180 PAKET SLICES 0 T FLCake-French 0 Vanilla SLC 1 PAKET SLICES 0 1 FLCake-Green 0 Tea SLC 1 PAKET SLICES 0 1 FL Cake-Belgium 0 Choco SLC SUBTOTAL 68,180 DISKON 0 BIAYA TAMBAHAN 0 PAJAK PPN10% 6,818 PAJAK0% 0 BIAYACC 0 PEMBULATAN 2 TOTAL 75,000 TUNAI 0 75,000 NON TUNAI KEMBALI 0",
+      "total_prediction": "75000",
+      "total_truth": "75,000"
+    }
+  ],
+  "runtime_seconds": 100.17744404499535,
+  "split": "official test",
+  "total_evaluated": 95,
+  "wer": 0.37155963302752293
+}

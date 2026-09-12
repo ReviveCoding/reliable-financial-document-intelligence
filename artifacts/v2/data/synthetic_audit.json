@@ -1,0 +1,41 @@
+{
+  "audited_content_splits": [
+    "train",
+    "dev"
+  ],
+  "bad_boxes": 0,
+  "bad_images": 0,
+  "corruptions": {
+    "blur": 51,
+    "clipping": 49,
+    "illumination": 51,
+    "jpeg": 51,
+    "low_resolution": 49,
+    "none": 51,
+    "perspective": 49,
+    "rotation": 49
+  },
+  "dataset": "R-FDI Rendered Synthetic V2",
+  "document_types": {
+    "invoice": 80,
+    "payment_instruction": 80,
+    "purchase_order": 80,
+    "receipt": 80,
+    "remittance": 80
+  },
+  "documents_audited": 400,
+  "experiment_id": "V2-E03",
+  "final_content_policy": "Only the final JSONL checksum was read before authorization; final record content was not parsed.",
+  "jsonl_sha256": {
+    "dev": "04087158050fc814fa3e97cf7fdd4573cb18d848827cb3f9a1b9ae4d0dc6840d",
+    "final": "679b941d123e8c4583396ae336a98a791f2e465d4e6bb538e8765c41a0d36496",
+    "train": "21f9a3989aadb577a44c5ed995bfc70d01e819a5a60af9b46a94a947edb92f1e"
+  },
+  "layout_id_overlap_train_dev": 0,
+  "line_item_cells_with_boxes": 8784,
+  "pages_verified": 438,
+  "seed": 20260911,
+  "split_geometry_policy": "Train/dev/final use disjoint margin ranges, header offsets, table columns, and template variant IDs.",
+  "vendor_overlap_train_dev": 0,
+  "version": "2.0.0"
+}

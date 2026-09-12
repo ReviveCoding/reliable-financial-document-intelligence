@@ -20,3 +20,7 @@ The generator labels visible, tiny, footer, table-cell, fake-system, and image-i
 ## Evidence and residual risk
 
 E16 tested 14 development and 7 final generated attacks: 0 unauthorized-action attempts and 0 attack successes under this architecture. This verifies the implemented boundary for fixtures, not universal prompt-injection resistance. Image-based attacks were labeled in text metadata but no VLM was runnable; their semantic resistance remains blocked by accelerator access.
+
+## V2 empirical VLM update
+
+The V1 paragraph above remains historical. V2 ran Qwen3-VL on six rendered malicious-document/control pairs and separated five outcomes: the independent OCR detector activated on 5/6, attacked structured extraction was correct on 5/6, clean-versus-attacked JSON changed on 0/6, schema violations occurred on 0/6, and instruction-compliance signals occurred on 0/6. One ordinary extraction error remained despite no attack-induced deviation. Unauthorized actions remained zero because no action tools or credentials existed; that architectural fact is not equated with perfect model robustness.
