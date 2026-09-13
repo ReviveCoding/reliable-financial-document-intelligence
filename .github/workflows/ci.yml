@@ -16,6 +16,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v7
@@ -34,7 +36,7 @@ jobs:
         run: python scripts/verify_evidence.py
 
       - name: Verify V2 evidence
-        run: python scripts/v2_verify_evidence.py
+        run: python scripts/verify_v2_committed_evidence.py
 
       - name: Verify V3 evidence and immutable V2 lineage
         run: python scripts/v3/verify_evidence.py
