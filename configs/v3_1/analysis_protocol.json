@@ -1,0 +1,107 @@
+{
+  "analysis_version": "3.1.0",
+  "bootstrap": {"replicates": 2000, "seed": 3102026},
+  "minimum_support": {"headline": 20, "descriptive": 10, "insufficient_support_label": "INSUFFICIENT_SUPPORT"},
+  "correction": {"method": "Benjamini-Hochberg FDR", "alpha": 0.05},
+  "paired_comparisons_require_identical_document_ids": true,
+  "practical_significance": {
+    "absolute_binary_rate_delta": 0.05,
+    "absolute_f1_delta": 0.05,
+    "absolute_selective_risk_delta": 0.02,
+    "relative_latency_delta": 0.2
+  },
+  "cutpoint_derivation": {
+    "method": "33rd and 67th percentiles from the authorized 100-document CORD validation split",
+    "source": "CORD v2 revision 7f0115a4b758a71d6473b8d085751692da2fef98 validation",
+    "values": {
+      "blur": [129.0688293472279, 360.8802008417441],
+      "contrast": [34.54553627357585, 51.702812314902424],
+      "document_text_length": [79.0, 113.33],
+      "edge_density": [0.013042362759960369, 0.020924643880848002],
+      "foreground_density": [0.2630991860639575, 0.4290807939368578],
+      "ground_truth_leaf_count": [9.0, 13.0],
+      "hierarchy_depth": [3.0, 3.0],
+      "image_aspect_ratio": [0.6666666666666666, 0.6666666666666666],
+      "image_megapixels": [1.119744, 1.2288],
+      "line_item_count": [3.0, 4.0],
+      "luminance": [128.6183205268347, 159.21699198524598],
+      "monetary_field_density": [0.5714285714285714, 0.6666666666666666],
+      "numeric_token_density": [0.45454545454545453, 0.5263157894736842],
+      "ocr_token_count": [16.67, 24.0],
+      "text_density_tokens_per_megapixel": [12.955698952669641, 24.112654320987655],
+      "total_amount": [25000.0, 61665.0]
+    },
+    "zero_variance_handling": "Hierarchy-depth and aspect-ratio ties are not headline-eligible. Skew validation quantiles were zero, so skew is zero versus non-zero and exploratory."
+  },
+  "slice_families": {
+    "document_complexity": ["ground_truth_leaf_count", "line_item_count", "ocr_token_count", "document_text_length", "hierarchy_depth", "image_aspect_ratio", "image_megapixels", "text_density_tokens_per_megapixel"],
+    "financial_structure": ["total_present", "subtotal_present", "tax_present", "discount_present", "monetary_field_density", "total_amount", "simple_vs_multi_line_item"],
+    "image_quality": ["blur", "luminance", "contrast", "abs_skew", "edge_density", "foreground_density", "image_megapixels", "image_aspect_ratio"],
+    "model_family": "Task-compatible comparisons only; native versus vLLM is a serving comparison, not model accuracy.",
+    "prohibited_slices": ["CORD vendor", "CORD beneficiary"]
+  },
+  "field_criticality": {
+    "critical_monetary": ["total.total_price", "total.subtotal_price", "total.tax_price", "menu.price"],
+    "medium_impact": ["menu.cnt", "total.cashprice", "total.changeprice", "total.creditcardprice", "total.emoneyprice"],
+    "low_impact_descriptive": ["menu.nm", "total.menuqty_cnt"],
+    "unmapped_policy": "medium_impact"
+  },
+  "field_families": {
+    "total": ["total.total_price"],
+    "subtotal": ["total.subtotal_price"],
+    "tax": ["total.tax_price"],
+    "item_price": ["menu.price"],
+    "item_count": ["menu.cnt"],
+    "item_name": ["menu.nm"],
+    "date": ["date"],
+    "currency": ["currency"],
+    "other_numeric": ["total.cashprice", "total.changeprice", "total.menuqty_cnt"],
+    "free_text": ["menu.nm"]
+  },
+  "statistical_methods": {
+    "binary_interval": "Wilson 95%",
+    "continuous_interval": "deterministic percentile bootstrap 95%",
+    "paired_model_delta": "paired document bootstrap 95%",
+    "slice_vs_overall_p_value": "two-sided deterministic bootstrap around zero delta"
+  },
+  "calibration": {
+    "fit_split": "CORD validation only",
+    "test_split": "CORD locked test; evaluation only, never fit",
+    "methods": ["raw_confidence", "temperature_scaling", "isotonic_regression"],
+    "not_applicable_label": "CALIBRATION_NOT_APPLICABLE"
+  },
+  "review_budget_operating_points": [0.05, 0.1, 0.2, 0.3, 0.4, 0.5],
+  "risk_coverage_reporting_points": [0.5, 0.7, 0.8, 0.9, 0.95],
+  "business_risk": {
+    "interpretation": "Illustrative normalized costs; not costs from JPMorgan, another bank, or a production deployment.",
+    "base_costs": {"human_review": 1.0, "low_impact_error": 2.0, "medium_impact_error": 5.0, "critical_field_error": 10.0, "unsafe_automatic_acceptance": 25.0},
+    "sensitivity_multipliers": {
+      "review_inexpensive": {"human_review": 0.5, "critical_field_error": 1.0},
+      "review_expensive": {"human_review": 2.0, "critical_field_error": 1.0},
+      "critical_error_high": {"human_review": 1.0, "critical_field_error": 2.0}
+    }
+  },
+  "robustness": {
+    "development_only": true,
+    "sample_documents": 10,
+    "sample_method": "Deterministic stratified sample across frozen leaf-count bands",
+    "seed": 3102026,
+    "models_priority": ["Donut", "PaddleOCR-VL Docker/vLLM"],
+    "gpu_maximum_concurrent_heavy_jobs": 1,
+    "gpu_pause_temperature_c": 87,
+    "gpu_minimum_vram_headroom_pct": 30,
+    "corruptions": {
+      "gaussian_blur": [{"severity": "low", "kernel": 5, "sigma": 1.0}, {"severity": "high", "kernel": 9, "sigma": 2.0}],
+      "rotation": [{"severity": "low", "degrees": 2.0}, {"severity": "high", "degrees": 5.0}],
+      "downsampling": [{"severity": "low", "scale": 0.75}, {"severity": "high", "scale": 0.5}],
+      "jpeg": [{"severity": "low", "quality": 70}, {"severity": "high", "quality": 40}],
+      "contrast": [{"severity": "low", "factor": 0.75}, {"severity": "high", "factor": 0.5}],
+      "occlusion": [{"severity": "low", "area_fraction": 0.05}, {"severity": "high", "area_fraction": 0.12}]
+    }
+  },
+  "success_criteria": {
+    "required": ["canonical_evaluation_table", "primary_slice_analysis", "error_taxonomy", "statistical_uncertainty", "risk_coverage_when_inputs_exist", "controlled_development_robustness", "mix_shift_analysis", "simulated_drift", "visualizations", "traceable_evidence"],
+    "calibration": "Complete with genuine confidence or NOT_APPLICABLE_WITH_REASON."
+  },
+  "created_before_locked_slice_results": true
+}

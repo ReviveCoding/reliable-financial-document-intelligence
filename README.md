@@ -114,8 +114,15 @@ cd reliable-financial-document-intelligence
 python -m compileall -q src scripts tests
 PYTHONPATH=src python -m unittest discover -s tests -v
 python scripts/verify_evidence.py
-python scripts/v2_verify_evidence.py
+python scripts/verify_v2_committed_evidence.py
 python scripts/v3/verify_evidence.py
+```
+
+Full-data V2 verification additionally hashes the authorized locked CORD, FUNSD,
+and synthetic inputs and therefore requires those local datasets:
+
+```bash
+python scripts/v2_verify_evidence.py
 ```
 
 For Docker runtime and authorized GPU reproduction, follow the [V3 reproducibility guide](reports/v3/REPRODUCIBILITY.md) and [runbook](docs/RUNBOOK.md). Do not rerun locked-final experiments for tuning.
