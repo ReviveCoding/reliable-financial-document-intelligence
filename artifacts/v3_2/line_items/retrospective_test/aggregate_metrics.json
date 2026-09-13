@@ -1,0 +1,19 @@
+{
+  "designation": "RETROSPECTIVE_LOCKED_BENCHMARK",
+  "document_mean_metrics": {
+    "E0_historical_flat_f1": 0.7886895205184681,
+    "E1_strict_row_order_f1": 0.7886895205184681,
+    "E2_line_item_f1": 0.95338455988456,
+    "critical_monetary_row_f1": 0.8377539682539681,
+    "field_within_row_micro_f1": 0.8282489747095012,
+    "item_name_f1": 0.7681046453546452,
+    "item_price_f1": 0.8377539682539681,
+    "quantity_f1": 0.8979047619047619,
+    "row_exact_match_rate": 0.6022575757575758,
+    "unit_price_f1": 0.893
+  },
+  "documents": 100,
+  "row_alignment_failure_rate": 0.1,
+  "spurious_predicted_rows": 22,
+  "unmatched_gt_rows": 11
+}

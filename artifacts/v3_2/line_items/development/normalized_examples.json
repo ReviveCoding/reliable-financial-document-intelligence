@@ -1,0 +1,2022 @@
+{
+  "designation": "DEVELOPMENT",
+  "examples": [
+    {
+      "E0_historical_flat_f1": 0.6666666666666665,
+      "E0_historical_flat_precision": 0.6,
+      "E0_historical_flat_recall": 0.75,
+      "E1_strict_row_order_f1": 0.6666666666666665,
+      "E1_strict_row_order_precision": 0.6,
+      "E1_strict_row_order_recall": 0.75,
+      "E2_line_item_f1": 0.6666666666666666,
+      "E2_line_item_precision": 0.5,
+      "E2_line_item_recall": 1.0,
+      "critical_monetary_row_f1": 0.6666666666666666,
+      "document_id": "cord-v2-validation-00007",
+      "field_within_row_micro_f1": 0.6666666666666665,
+      "field_within_row_precision": 0.6,
+      "field_within_row_recall": 0.75,
+      "gt_items": [
+        {
+          "fields": [
+            [
+              "cnt",
+              "4"
+            ],
+            [
+              "discountprice",
+              "-9,545"
+            ],
+            [
+              "nm",
+              "choco devil"
+            ],
+            [
+              "price",
+              "63,636"
+            ]
+          ],
+          "group_id": "",
+          "position": 0,
+          "row_id": "",
+          "sub_group_id": ""
+        }
+      ],
+      "gt_rows": 1,
+      "item_name_f1": 0.6666666666666666,
+      "item_price_f1": 0.6666666666666666,
+      "matches": [
+        {
+          "exact": false,
+          "gt_index": 0,
+          "predicted_index": 0,
+          "weight": 4.0
+        }
+      ],
+      "optimal_matching_weight": 4.0,
+      "predicted_items": [
+        {
+          "fields": [
+            [
+              "cnt",
+              "4"
+            ],
+            [
+              "nm",
+              "choco devil"
+            ],
+            [
+              "price",
+              "63,636"
+            ]
+          ],
+          "group_id": "",
+          "position": 0,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "nm",
+              "cp 360 club card"
+            ],
+            [
+              "price",
+              "-9,545"
+            ]
+          ],
+          "group_id": "",
+          "position": 1,
+          "row_id": "",
+          "sub_group_id": ""
+        }
+      ],
+      "predicted_rows": 2,
+      "quantity_f1": 1.0,
+      "row_alignment_error": false,
+      "row_exact_match_rate": 0.0,
+      "row_exact_matches": 0,
+      "spurious_predicted_rows": 1,
+      "strict_matching_weight": 4.0,
+      "unit_price_f1": 1.0,
+      "unmatched_gt_rows": 0
+    },
+    {
+      "E0_historical_flat_f1": 0.25,
+      "E0_historical_flat_precision": 0.2857142857142857,
+      "E0_historical_flat_recall": 0.2222222222222222,
+      "E1_strict_row_order_f1": 0.25,
+      "E1_strict_row_order_precision": 0.2857142857142857,
+      "E1_strict_row_order_recall": 0.2222222222222222,
+      "E2_line_item_f1": 0.3333333333333333,
+      "E2_line_item_precision": 0.3333333333333333,
+      "E2_line_item_recall": 0.3333333333333333,
+      "critical_monetary_row_f1": 0.5,
+      "document_id": "cord-v2-validation-00040",
+      "field_within_row_micro_f1": 0.25,
+      "field_within_row_precision": 0.2857142857142857,
+      "field_within_row_recall": 0.2222222222222222,
+      "gt_items": [
+        {
+          "fields": [
+            [
+              "cnt",
+              "1"
+            ],
+            [
+              "nm",
+              "gojek chicken chilli sauce h"
+            ],
+            [
+              "price",
+              "95,000"
+            ]
+          ],
+          "group_id": "",
+          "position": 0,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "1"
+            ],
+            [
+              "nm",
+              "gojek chicken soy sauce f"
+            ],
+            [
+              "price",
+              "180,000"
+            ]
+          ],
+          "group_id": "",
+          "position": 1,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "1"
+            ],
+            [
+              "nm",
+              "gojek french fries"
+            ],
+            [
+              "price",
+              "70,000"
+            ]
+          ],
+          "group_id": "",
+          "position": 2,
+          "row_id": "",
+          "sub_group_id": ""
+        }
+      ],
+      "gt_rows": 3,
+      "item_name_f1": 0.0,
+      "item_price_f1": 0.5,
+      "matches": [
+        {
+          "exact": false,
+          "gt_index": 0,
+          "predicted_index": 0,
+          "weight": 3.0
+        }
+      ],
+      "optimal_matching_weight": 3.0,
+      "predicted_items": [
+        {
+          "fields": [
+            [
+              "cnt",
+              "1"
+            ],
+            [
+              "nm",
+              "gojek chicken"
+            ],
+            [
+              "price",
+              "95,000"
+            ]
+          ],
+          "group_id": "",
+          "position": 0,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "nm",
+              "chilli sauce h"
+            ],
+            [
+              "price.cnt",
+              "1"
+            ]
+          ],
+          "group_id": "",
+          "position": 1,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "nm",
+              "soy sauce f"
+            ],
+            [
+              "price.cnt",
+              "1"
+            ]
+          ],
+          "group_id": "",
+          "position": 2,
+          "row_id": "",
+          "sub_group_id": ""
+        }
+      ],
+      "predicted_rows": 3,
+      "quantity_f1": 0.3333333333333333,
+      "row_alignment_error": false,
+      "row_exact_match_rate": 0.0,
+      "row_exact_matches": 0,
+      "spurious_predicted_rows": 2,
+      "strict_matching_weight": 3.0,
+      "unit_price_f1": 1.0,
+      "unmatched_gt_rows": 2
+    },
+    {
+      "E0_historical_flat_f1": 0.23880597014925375,
+      "E0_historical_flat_precision": 0.23529411764705882,
+      "E0_historical_flat_recall": 0.24242424242424243,
+      "E1_strict_row_order_f1": 0.23880597014925375,
+      "E1_strict_row_order_precision": 0.23529411764705882,
+      "E1_strict_row_order_recall": 0.24242424242424243,
+      "E2_line_item_f1": 0.9565217391304348,
+      "E2_line_item_precision": 0.9166666666666666,
+      "E2_line_item_recall": 1.0,
+      "critical_monetary_row_f1": 0.9565217391304348,
+      "document_id": "cord-v2-validation-00041",
+      "field_within_row_micro_f1": 0.6865671641791046,
+      "field_within_row_precision": 0.6764705882352942,
+      "field_within_row_recall": 0.696969696969697,
+      "gt_items": [
+        {
+          "fields": [
+            [
+              "cnt",
+              "1"
+            ],
+            [
+              "nm",
+              "sogogi japchae"
+            ],
+            [
+              "price",
+              "150,000"
+            ]
+          ],
+          "group_id": "",
+          "position": 0,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "7"
+            ],
+            [
+              "nm",
+              "gong gibab"
+            ],
+            [
+              "price",
+              "105,000"
+            ]
+          ],
+          "group_id": "",
+          "position": 1,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "1"
+            ],
+            [
+              "nm",
+              "chulpan cheese dak galbi"
+            ],
+            [
+              "price",
+              "230,000"
+            ]
+          ],
+          "group_id": "",
+          "position": 2,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "1"
+            ],
+            [
+              "nm",
+              "cream teok po ki"
+            ],
+            [
+              "price",
+              "95,000"
+            ]
+          ],
+          "group_id": "",
+          "position": 3,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "1"
+            ],
+            [
+              "nm",
+              "el keun hwangtae"
+            ],
+            [
+              "price",
+              "120,000"
+            ]
+          ],
+          "group_id": "",
+          "position": 4,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "2"
+            ],
+            [
+              "nm",
+              "sundubu(tukbegi) cham kkot sal"
+            ],
+            [
+              "price",
+              "620,000"
+            ]
+          ],
+          "group_id": "",
+          "position": 5,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "2"
+            ],
+            [
+              "nm",
+              "u sam gyeop"
+            ],
+            [
+              "price",
+              "290,000"
+            ]
+          ],
+          "group_id": "",
+          "position": 6,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "2"
+            ],
+            [
+              "nm",
+              "u seol"
+            ],
+            [
+              "price",
+              "390,000"
+            ]
+          ],
+          "group_id": "",
+          "position": 7,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "1"
+            ],
+            [
+              "nm",
+              "u sam gyeop"
+            ],
+            [
+              "price",
+              "0"
+            ]
+          ],
+          "group_id": "",
+          "position": 8,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "3"
+            ],
+            [
+              "nm",
+              "ice coffe mix"
+            ],
+            [
+              "price",
+              "0"
+            ]
+          ],
+          "group_id": "",
+          "position": 9,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "1"
+            ],
+            [
+              "nm",
+              "ice black coffe"
+            ],
+            [
+              "price",
+              "0"
+            ]
+          ],
+          "group_id": "",
+          "position": 10,
+          "row_id": "",
+          "sub_group_id": ""
+        }
+      ],
+      "gt_rows": 11,
+      "item_name_f1": 0.43478260869565216,
+      "item_price_f1": 0.9565217391304348,
+      "matches": [
+        {
+          "exact": false,
+          "gt_index": 0,
+          "predicted_index": 0,
+          "weight": 2.0
+        },
+        {
+          "exact": false,
+          "gt_index": 1,
+          "predicted_index": 2,
+          "weight": 3.0
+        },
+        {
+          "exact": true,
+          "gt_index": 2,
+          "predicted_index": 3,
+          "weight": 4.0
+        },
+        {
+          "exact": true,
+          "gt_index": 3,
+          "predicted_index": 4,
+          "weight": 4.0
+        },
+        {
+          "exact": true,
+          "gt_index": 4,
+          "predicted_index": 5,
+          "weight": 4.0
+        },
+        {
+          "exact": false,
+          "gt_index": 5,
+          "predicted_index": 6,
+          "weight": 2.0
+        },
+        {
+          "exact": false,
+          "gt_index": 6,
+          "predicted_index": 7,
+          "weight": 3.0
+        },
+        {
+          "exact": false,
+          "gt_index": 7,
+          "predicted_index": 8,
+          "weight": 3.0
+        },
+        {
+          "exact": false,
+          "gt_index": 8,
+          "predicted_index": 9,
+          "weight": 2.0
+        },
+        {
+          "exact": true,
+          "gt_index": 9,
+          "predicted_index": 10,
+          "weight": 4.0
+        },
+        {
+          "exact": false,
+          "gt_index": 10,
+          "predicted_index": 11,
+          "weight": 3.0
+        }
+      ],
+      "optimal_matching_weight": 34.0,
+      "predicted_items": [
+        {
+          "fields": [
+            [
+              "nm",
+              "sir"
+            ],
+            [
+              "price",
+              "150,000"
+            ]
+          ],
+          "group_id": "",
+          "position": 0,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "1"
+            ],
+            [
+              "nm",
+              "sogogi japchae"
+            ],
+            [
+              "price",
+              "105,000"
+            ]
+          ],
+          "group_id": "",
+          "position": 1,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "7"
+            ],
+            [
+              "nm",
+              "gong gibbb"
+            ],
+            [
+              "price",
+              "105,000"
+            ]
+          ],
+          "group_id": "",
+          "position": 2,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "1"
+            ],
+            [
+              "nm",
+              "chulpan cheese dak galbi"
+            ],
+            [
+              "price",
+              "230,000"
+            ]
+          ],
+          "group_id": "",
+          "position": 3,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "1"
+            ],
+            [
+              "nm",
+              "cream teok po ki"
+            ],
+            [
+              "price",
+              "95,000"
+            ]
+          ],
+          "group_id": "",
+          "position": 4,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "1"
+            ],
+            [
+              "nm",
+              "el keun hwangtae"
+            ],
+            [
+              "price",
+              "120,000"
+            ]
+          ],
+          "group_id": "",
+          "position": 5,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "1"
+            ],
+            [
+              "nm",
+              "sundubu(tukbegi)"
+            ],
+            [
+              "price",
+              "620,000"
+            ]
+          ],
+          "group_id": "",
+          "position": 6,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "2"
+            ],
+            [
+              "nm",
+              "cham kkot sal"
+            ],
+            [
+              "price",
+              "290,000"
+            ]
+          ],
+          "group_id": "",
+          "position": 7,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "2"
+            ],
+            [
+              "nm",
+              "u sam gyeop"
+            ],
+            [
+              "price",
+              "390,000"
+            ]
+          ],
+          "group_id": "",
+          "position": 8,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "nm",
+              "u seol u sam gyeden"
+            ],
+            [
+              "price",
+              "0"
+            ]
+          ],
+          "group_id": "",
+          "position": 9,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "3"
+            ],
+            [
+              "nm",
+              "ice coffe mix"
+            ],
+            [
+              "price",
+              "0"
+            ]
+          ],
+          "group_id": "",
+          "position": 10,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "3"
+            ],
+            [
+              "nm",
+              "ice black coffe"
+            ],
+            [
+              "price",
+              "0"
+            ]
+          ],
+          "group_id": "",
+          "position": 11,
+          "row_id": "",
+          "sub_group_id": ""
+        }
+      ],
+      "predicted_rows": 12,
+      "quantity_f1": 0.6666666666666666,
+      "row_alignment_error": true,
+      "row_exact_match_rate": 0.36363636363636365,
+      "row_exact_matches": 4,
+      "spurious_predicted_rows": 1,
+      "strict_matching_weight": 12.0,
+      "unit_price_f1": 1.0,
+      "unmatched_gt_rows": 0
+    },
+    {
+      "E0_historical_flat_f1": 0.7999999999999999,
+      "E0_historical_flat_precision": 0.75,
+      "E0_historical_flat_recall": 0.8571428571428571,
+      "E1_strict_row_order_f1": 0.7999999999999999,
+      "E1_strict_row_order_precision": 0.75,
+      "E1_strict_row_order_recall": 0.8571428571428571,
+      "E2_line_item_f1": 0.8,
+      "E2_line_item_precision": 0.6666666666666666,
+      "E2_line_item_recall": 1.0,
+      "critical_monetary_row_f1": 0.8,
+      "document_id": "cord-v2-validation-00055",
+      "field_within_row_micro_f1": 0.7999999999999999,
+      "field_within_row_precision": 0.75,
+      "field_within_row_recall": 0.8571428571428571,
+      "gt_items": [
+        {
+          "fields": [
+            [
+              "cnt",
+              "x2"
+            ],
+            [
+              "nm",
+              "cha keaw l..."
+            ],
+            [
+              "price",
+              "60.000"
+            ]
+          ],
+          "group_id": "",
+          "position": 0,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "x2"
+            ],
+            [
+              "discountprice",
+              "60.000)"
+            ],
+            [
+              "nm",
+              "cha keaw l..."
+            ],
+            [
+              "price",
+              "60.000"
+            ]
+          ],
+          "group_id": "",
+          "position": 1,
+          "row_id": "",
+          "sub_group_id": ""
+        }
+      ],
+      "gt_rows": 2,
+      "item_name_f1": 0.8,
+      "item_price_f1": 0.8,
+      "matches": [
+        {
+          "exact": true,
+          "gt_index": 0,
+          "predicted_index": 0,
+          "weight": 4.0
+        },
+        {
+          "exact": false,
+          "gt_index": 1,
+          "predicted_index": 1,
+          "weight": 4.0
+        }
+      ],
+      "optimal_matching_weight": 8.0,
+      "predicted_items": [
+        {
+          "fields": [
+            [
+              "cnt",
+              "x2"
+            ],
+            [
+              "nm",
+              "cha keaw l..."
+            ],
+            [
+              "price",
+              "60.000"
+            ]
+          ],
+          "group_id": "",
+          "position": 0,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "x2"
+            ],
+            [
+              "nm",
+              "cha keaw l..."
+            ],
+            [
+              "price",
+              "60.000"
+            ]
+          ],
+          "group_id": "",
+          "position": 1,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "nm",
+              "bca pay... (100%)"
+            ],
+            [
+              "price",
+              "60.000)"
+            ]
+          ],
+          "group_id": "",
+          "position": 2,
+          "row_id": "",
+          "sub_group_id": ""
+        }
+      ],
+      "predicted_rows": 3,
+      "quantity_f1": 1.0,
+      "row_alignment_error": false,
+      "row_exact_match_rate": 0.5,
+      "row_exact_matches": 1,
+      "spurious_predicted_rows": 1,
+      "strict_matching_weight": 8.0,
+      "unit_price_f1": 1.0,
+      "unmatched_gt_rows": 0
+    },
+    {
+      "E0_historical_flat_f1": 0.5,
+      "E0_historical_flat_precision": 0.5,
+      "E0_historical_flat_recall": 0.5,
+      "E1_strict_row_order_f1": 0.5,
+      "E1_strict_row_order_precision": 0.5,
+      "E1_strict_row_order_recall": 0.5,
+      "E2_line_item_f1": 0.6666666666666666,
+      "E2_line_item_precision": 0.5,
+      "E2_line_item_recall": 1.0,
+      "critical_monetary_row_f1": 0.5,
+      "document_id": "cord-v2-validation-00071",
+      "field_within_row_micro_f1": 0.5,
+      "field_within_row_precision": 0.5,
+      "field_within_row_recall": 0.5,
+      "gt_items": [
+        {
+          "fields": [
+            [
+              "cnt",
+              "1"
+            ],
+            [
+              "nm",
+              "dum dum thai coffee"
+            ],
+            [
+              "price",
+              "19.000"
+            ],
+            [
+              "sub.cnt",
+              "1"
+            ],
+            [
+              "sub.nm",
+              "ice"
+            ],
+            [
+              "sub.price",
+              "1.000"
+            ]
+          ],
+          "group_id": "",
+          "position": 0,
+          "row_id": "",
+          "sub_group_id": ""
+        }
+      ],
+      "gt_rows": 1,
+      "item_name_f1": 0.5,
+      "item_price_f1": 0.5,
+      "matches": [
+        {
+          "exact": false,
+          "gt_index": 0,
+          "predicted_index": 0,
+          "weight": 4.0
+        }
+      ],
+      "optimal_matching_weight": 4.0,
+      "predicted_items": [
+        {
+          "fields": [
+            [
+              "cnt",
+              "1"
+            ],
+            [
+              "nm",
+              "dum dum thai coffee"
+            ],
+            [
+              "price",
+              "19.000"
+            ]
+          ],
+          "group_id": "",
+          "position": 0,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "1"
+            ],
+            [
+              "nm",
+              "ice"
+            ],
+            [
+              "price",
+              "1.000"
+            ]
+          ],
+          "group_id": "",
+          "position": 1,
+          "row_id": "",
+          "sub_group_id": ""
+        }
+      ],
+      "predicted_rows": 2,
+      "quantity_f1": 0.5,
+      "row_alignment_error": false,
+      "row_exact_match_rate": 0.0,
+      "row_exact_matches": 0,
+      "spurious_predicted_rows": 1,
+      "strict_matching_weight": 4.0,
+      "unit_price_f1": 1.0,
+      "unmatched_gt_rows": 0
+    },
+    {
+      "E0_historical_flat_f1": 0.5925925925925926,
+      "E0_historical_flat_precision": 0.6666666666666666,
+      "E0_historical_flat_recall": 0.5333333333333333,
+      "E1_strict_row_order_f1": 0.5925925925925926,
+      "E1_strict_row_order_precision": 0.6666666666666666,
+      "E1_strict_row_order_recall": 0.5333333333333333,
+      "E2_line_item_f1": 0.888888888888889,
+      "E2_line_item_precision": 1.0,
+      "E2_line_item_recall": 0.8,
+      "critical_monetary_row_f1": 0.888888888888889,
+      "document_id": "cord-v2-validation-00075",
+      "field_within_row_micro_f1": 0.888888888888889,
+      "field_within_row_precision": 1.0,
+      "field_within_row_recall": 0.8,
+      "gt_items": [
+        {
+          "fields": [
+            [
+              "cnt",
+              "2"
+            ],
+            [
+              "nm",
+              "kfc winger hc"
+            ],
+            [
+              "price",
+              "40,000"
+            ]
+          ],
+          "group_id": "",
+          "position": 0,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "1"
+            ],
+            [
+              "nm",
+              "ori bento"
+            ],
+            [
+              "price",
+              "13,636"
+            ]
+          ],
+          "group_id": "",
+          "position": 1,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "1"
+            ],
+            [
+              "nm",
+              "mango float"
+            ],
+            [
+              "price",
+              "5,909"
+            ]
+          ],
+          "group_id": "",
+          "position": 2,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "1"
+            ],
+            [
+              "nm",
+              "f.wngr ges-hc"
+            ],
+            [
+              "price",
+              "0"
+            ]
+          ],
+          "group_id": "",
+          "position": 3,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "1"
+            ],
+            [
+              "nm",
+              "charge ta"
+            ],
+            [
+              "price",
+              "909"
+            ]
+          ],
+          "group_id": "",
+          "position": 4,
+          "row_id": "",
+          "sub_group_id": ""
+        }
+      ],
+      "gt_rows": 5,
+      "item_name_f1": 0.888888888888889,
+      "item_price_f1": 0.888888888888889,
+      "matches": [
+        {
+          "exact": true,
+          "gt_index": 0,
+          "predicted_index": 0,
+          "weight": 4.0
+        },
+        {
+          "exact": true,
+          "gt_index": 1,
+          "predicted_index": 1,
+          "weight": 4.0
+        },
+        {
+          "exact": true,
+          "gt_index": 3,
+          "predicted_index": 2,
+          "weight": 4.0
+        },
+        {
+          "exact": true,
+          "gt_index": 4,
+          "predicted_index": 3,
+          "weight": 4.0
+        }
+      ],
+      "optimal_matching_weight": 16.0,
+      "predicted_items": [
+        {
+          "fields": [
+            [
+              "cnt",
+              "2"
+            ],
+            [
+              "nm",
+              "kfc winger hc"
+            ],
+            [
+              "price",
+              "40,000"
+            ]
+          ],
+          "group_id": "",
+          "position": 0,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "1"
+            ],
+            [
+              "nm",
+              "ori bento"
+            ],
+            [
+              "price",
+              "13,636"
+            ]
+          ],
+          "group_id": "",
+          "position": 1,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "1"
+            ],
+            [
+              "nm",
+              "f.wngr ges-hc"
+            ],
+            [
+              "price",
+              "0"
+            ]
+          ],
+          "group_id": "",
+          "position": 2,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "1"
+            ],
+            [
+              "nm",
+              "charge ta"
+            ],
+            [
+              "price",
+              "909"
+            ]
+          ],
+          "group_id": "",
+          "position": 3,
+          "row_id": "",
+          "sub_group_id": ""
+        }
+      ],
+      "predicted_rows": 4,
+      "quantity_f1": 0.888888888888889,
+      "row_alignment_error": true,
+      "row_exact_match_rate": 0.8,
+      "row_exact_matches": 4,
+      "spurious_predicted_rows": 0,
+      "strict_matching_weight": 10.0,
+      "unit_price_f1": 1.0,
+      "unmatched_gt_rows": 1
+    },
+    {
+      "E0_historical_flat_f1": 0.375,
+      "E0_historical_flat_precision": 0.375,
+      "E0_historical_flat_recall": 0.375,
+      "E1_strict_row_order_f1": 0.375,
+      "E1_strict_row_order_precision": 0.375,
+      "E1_strict_row_order_recall": 0.375,
+      "E2_line_item_f1": 0.6666666666666666,
+      "E2_line_item_precision": 1.0,
+      "E2_line_item_recall": 0.5,
+      "critical_monetary_row_f1": 0.6666666666666666,
+      "document_id": "cord-v2-validation-00084",
+      "field_within_row_micro_f1": 0.375,
+      "field_within_row_precision": 0.375,
+      "field_within_row_recall": 0.375,
+      "gt_items": [
+        {
+          "fields": [
+            [
+              "cnt",
+              "1 x"
+            ],
+            [
+              "nm",
+              "hazelnut choco mt (r)"
+            ],
+            [
+              "price",
+              "24,000"
+            ],
+            [
+              "sub.nm",
+              "pearl (r)"
+            ],
+            [
+              "sub.price",
+              "4,000"
+            ]
+          ],
+          "group_id": "",
+          "position": 0,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "1 x"
+            ],
+            [
+              "nm",
+              "hazelnut choco mt (r)"
+            ],
+            [
+              "price",
+              "24,000"
+            ]
+          ],
+          "group_id": "",
+          "position": 1,
+          "row_id": "",
+          "sub_group_id": ""
+        }
+      ],
+      "gt_rows": 2,
+      "item_name_f1": 0.0,
+      "item_price_f1": 0.6666666666666666,
+      "matches": [
+        {
+          "exact": false,
+          "gt_index": 0,
+          "predicted_index": 0,
+          "weight": 5.0
+        }
+      ],
+      "optimal_matching_weight": 5.0,
+      "predicted_items": [
+        {
+          "fields": [
+            [
+              "cnt",
+              "1 x"
+            ],
+            [
+              "nm",
+              "hazelnut choco iii ( r )"
+            ],
+            [
+              "price",
+              "24,000"
+            ],
+            [
+              "sub.nm",
+              "pearl ( r )"
+            ],
+            [
+              "sub.price",
+              "4,000"
+            ],
+            [
+              "sub.cnt",
+              "1 x"
+            ],
+            [
+              "sub.nm",
+              "hazelnut choco iii ( r )"
+            ],
+            [
+              "sub.price",
+              "24,000"
+            ]
+          ],
+          "group_id": "",
+          "position": 0,
+          "row_id": "",
+          "sub_group_id": ""
+        }
+      ],
+      "predicted_rows": 1,
+      "quantity_f1": 0.5,
+      "row_alignment_error": false,
+      "row_exact_match_rate": 0.0,
+      "row_exact_matches": 0,
+      "spurious_predicted_rows": 0,
+      "strict_matching_weight": 5.0,
+      "unit_price_f1": 1.0,
+      "unmatched_gt_rows": 1
+    },
+    {
+      "E0_historical_flat_f1": 0.5,
+      "E0_historical_flat_precision": 0.5,
+      "E0_historical_flat_recall": 0.5,
+      "E1_strict_row_order_f1": 0.5,
+      "E1_strict_row_order_precision": 0.5,
+      "E1_strict_row_order_recall": 0.5,
+      "E2_line_item_f1": 0.6666666666666666,
+      "E2_line_item_precision": 0.5,
+      "E2_line_item_recall": 1.0,
+      "critical_monetary_row_f1": 0.5,
+      "document_id": "cord-v2-validation-00091",
+      "field_within_row_micro_f1": 0.5,
+      "field_within_row_precision": 0.5,
+      "field_within_row_recall": 0.5,
+      "gt_items": [
+        {
+          "fields": [
+            [
+              "nm",
+              "k7 1217"
+            ],
+            [
+              "price",
+              "39,091"
+            ],
+            [
+              "sub.nm",
+              "add chicken box"
+            ],
+            [
+              "sub.price",
+              "909"
+            ]
+          ],
+          "group_id": "",
+          "position": 0,
+          "row_id": "",
+          "sub_group_id": ""
+        }
+      ],
+      "gt_rows": 1,
+      "item_name_f1": 0.5,
+      "item_price_f1": 0.5,
+      "matches": [
+        {
+          "exact": false,
+          "gt_index": 0,
+          "predicted_index": 0,
+          "weight": 3.0
+        }
+      ],
+      "optimal_matching_weight": 3.0,
+      "predicted_items": [
+        {
+          "fields": [
+            [
+              "nm",
+              "k7 1217"
+            ],
+            [
+              "price",
+              "39,091"
+            ]
+          ],
+          "group_id": "",
+          "position": 0,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "nm",
+              "add chicken box"
+            ],
+            [
+              "price",
+              "909"
+            ]
+          ],
+          "group_id": "",
+          "position": 1,
+          "row_id": "",
+          "sub_group_id": ""
+        }
+      ],
+      "predicted_rows": 2,
+      "quantity_f1": 1.0,
+      "row_alignment_error": false,
+      "row_exact_match_rate": 0.0,
+      "row_exact_matches": 0,
+      "spurious_predicted_rows": 1,
+      "strict_matching_weight": 3.0,
+      "unit_price_f1": 1.0,
+      "unmatched_gt_rows": 0
+    },
+    {
+      "E0_historical_flat_f1": 0.12000000000000001,
+      "E0_historical_flat_precision": 0.125,
+      "E0_historical_flat_recall": 0.11538461538461539,
+      "E1_strict_row_order_f1": 0.12000000000000001,
+      "E1_strict_row_order_precision": 0.125,
+      "E1_strict_row_order_recall": 0.11538461538461539,
+      "E2_line_item_f1": 0.3076923076923077,
+      "E2_line_item_precision": 0.18181818181818182,
+      "E2_line_item_recall": 1.0,
+      "critical_monetary_row_f1": 1.0,
+      "document_id": "cord-v2-validation-00093",
+      "field_within_row_micro_f1": 0.16,
+      "field_within_row_precision": 0.16666666666666666,
+      "field_within_row_recall": 0.15384615384615385,
+      "gt_items": [
+        {
+          "fields": [
+            [
+              "cnt",
+              "1"
+            ],
+            [
+              "nm",
+              "paket ber4"
+            ],
+            [
+              "price",
+              "138,182"
+            ],
+            [
+              "sub.cnt",
+              "1"
+            ],
+            [
+              "sub.nm",
+              "bread n cheese del"
+            ],
+            [
+              "sub.cnt",
+              "1"
+            ],
+            [
+              "sub.nm",
+              "bread n cheese del"
+            ],
+            [
+              "sub.cnt",
+              "1"
+            ],
+            [
+              "sub.nm",
+              "crabstick fusilli del"
+            ],
+            [
+              "sub.cnt",
+              "1"
+            ],
+            [
+              "sub.nm",
+              "lime squash del"
+            ],
+            [
+              "sub.cnt",
+              "1"
+            ],
+            [
+              "sub.nm",
+              "lime squash del"
+            ],
+            [
+              "sub.cnt",
+              "1"
+            ],
+            [
+              "sub.nm",
+              "p/p spicy tuna del"
+            ],
+            [
+              "sub.cnt",
+              "1"
+            ],
+            [
+              "sub.nm",
+              "p/p thuosand isl del"
+            ],
+            [
+              "sub.cnt",
+              "1"
+            ],
+            [
+              "sub.nm",
+              "p/p beef corn"
+            ],
+            [
+              "sub.cnt",
+              "1"
+            ],
+            [
+              "sub.nm",
+              "sunrise italian soda"
+            ],
+            [
+              "sub.cnt",
+              "1"
+            ],
+            [
+              "sub.nm",
+              "lipton ice tea del"
+            ]
+          ],
+          "group_id": "",
+          "position": 0,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "1"
+            ],
+            [
+              "nm",
+              "50% chicken royal"
+            ],
+            [
+              "price",
+              "18,182"
+            ]
+          ],
+          "group_id": "",
+          "position": 1,
+          "row_id": "",
+          "sub_group_id": ""
+        }
+      ],
+      "gt_rows": 2,
+      "item_name_f1": 0.0,
+      "item_price_f1": 1.0,
+      "matches": [
+        {
+          "exact": false,
+          "gt_index": 0,
+          "predicted_index": 0,
+          "weight": 3.0
+        },
+        {
+          "exact": false,
+          "gt_index": 1,
+          "predicted_index": 10,
+          "weight": 3.0
+        }
+      ],
+      "optimal_matching_weight": 6.0,
+      "predicted_items": [
+        {
+          "fields": [
+            [
+              "cnt",
+              "1"
+            ],
+            [
+              "nm",
+              "bread n cheese del"
+            ],
+            [
+              "price",
+              "138,182"
+            ]
+          ],
+          "group_id": "",
+          "position": 0,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "1"
+            ],
+            [
+              "nm",
+              "bread n cheese del"
+            ]
+          ],
+          "group_id": "",
+          "position": 1,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "1"
+            ],
+            [
+              "nm",
+              "crabstick fusilli del"
+            ]
+          ],
+          "group_id": "",
+          "position": 2,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "1"
+            ],
+            [
+              "nm",
+              "lime squash del"
+            ]
+          ],
+          "group_id": "",
+          "position": 3,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "1"
+            ],
+            [
+              "nm",
+              "lime squash del"
+            ]
+          ],
+          "group_id": "",
+          "position": 4,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "1"
+            ],
+            [
+              "nm",
+              "p/p spicy tuna del"
+            ]
+          ],
+          "group_id": "",
+          "position": 5,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "1"
+            ],
+            [
+              "nm",
+              "p/p thuosand isl del"
+            ]
+          ],
+          "group_id": "",
+          "position": 6,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "1"
+            ],
+            [
+              "nm",
+              "p/p beef corn"
+            ]
+          ],
+          "group_id": "",
+          "position": 7,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "1"
+            ],
+            [
+              "nm",
+              "sunrise italian soda"
+            ]
+          ],
+          "group_id": "",
+          "position": 8,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "1"
+            ],
+            [
+              "nm",
+              "lipton ice tea del"
+            ]
+          ],
+          "group_id": "",
+          "position": 9,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "cnt",
+              "1"
+            ],
+            [
+              "nm",
+              "chicken royal"
+            ],
+            [
+              "price",
+              "18,182"
+            ]
+          ],
+          "group_id": "",
+          "position": 10,
+          "row_id": "",
+          "sub_group_id": ""
+        }
+      ],
+      "predicted_rows": 11,
+      "quantity_f1": 0.17391304347826086,
+      "row_alignment_error": true,
+      "row_exact_match_rate": 0.0,
+      "row_exact_matches": 0,
+      "spurious_predicted_rows": 9,
+      "strict_matching_weight": 4.0,
+      "unit_price_f1": 1.0,
+      "unmatched_gt_rows": 0
+    },
+    {
+      "E0_historical_flat_f1": 0.47058823529411764,
+      "E0_historical_flat_precision": 0.5,
+      "E0_historical_flat_recall": 0.4444444444444444,
+      "E1_strict_row_order_f1": 0.47058823529411764,
+      "E1_strict_row_order_precision": 0.5,
+      "E1_strict_row_order_recall": 0.4444444444444444,
+      "E2_line_item_f1": 0.6666666666666666,
+      "E2_line_item_precision": 0.5,
+      "E2_line_item_recall": 1.0,
+      "critical_monetary_row_f1": 0.5714285714285715,
+      "document_id": "cord-v2-validation-00099",
+      "field_within_row_micro_f1": 0.47058823529411764,
+      "field_within_row_precision": 0.5,
+      "field_within_row_recall": 0.4444444444444444,
+      "gt_items": [
+        {
+          "fields": [
+            [
+              "cnt",
+              "x1"
+            ],
+            [
+              "nm",
+              "giant squid"
+            ],
+            [
+              "price",
+              "rp. 39.000"
+            ],
+            [
+              "sub.nm",
+              "c.finishing - cut"
+            ],
+            [
+              "sub.price",
+              "rp. 0"
+            ],
+            [
+              "sub.nm",
+              "b.spicy level - extreme hot"
+            ],
+            [
+              "sub.price",
+              "rp. 0"
+            ],
+            [
+              "sub.nm",
+              "a.flavour- salt & pepper"
+            ],
+            [
+              "sub.price",
+              "rp. 0"
+            ]
+          ],
+          "group_id": "",
+          "position": 0,
+          "row_id": "",
+          "sub_group_id": ""
+        }
+      ],
+      "gt_rows": 1,
+      "item_name_f1": 0.5,
+      "item_price_f1": 0.5714285714285715,
+      "matches": [
+        {
+          "exact": false,
+          "gt_index": 0,
+          "predicted_index": 0,
+          "weight": 6.0
+        }
+      ],
+      "optimal_matching_weight": 6.0,
+      "predicted_items": [
+        {
+          "fields": [
+            [
+              "cnt",
+              "x 1"
+            ],
+            [
+              "nm",
+              "giant squid"
+            ],
+            [
+              "price",
+              "rp. 39.000"
+            ],
+            [
+              "sub.nm",
+              "c.finishing - cut"
+            ],
+            [
+              "sub.price",
+              "rp. 0"
+            ],
+            [
+              "sub.nm",
+              "b.spicy level - extreme hot rp. 0"
+            ]
+          ],
+          "group_id": "",
+          "position": 0,
+          "row_id": "",
+          "sub_group_id": ""
+        },
+        {
+          "fields": [
+            [
+              "nm",
+              "a.flavour - salt & pepper"
+            ],
+            [
+              "price",
+              "rp. 0"
+            ]
+          ],
+          "group_id": "",
+          "position": 1,
+          "row_id": "",
+          "sub_group_id": ""
+        }
+      ],
+      "predicted_rows": 2,
+      "quantity_f1": 0.0,
+      "row_alignment_error": false,
+      "row_exact_match_rate": 0.0,
+      "row_exact_matches": 0,
+      "spurious_predicted_rows": 1,
+      "strict_matching_weight": 6.0,
+      "unit_price_f1": 1.0,
+      "unmatched_gt_rows": 0
+    }
+  ],
+  "raw_images_published": false
+}

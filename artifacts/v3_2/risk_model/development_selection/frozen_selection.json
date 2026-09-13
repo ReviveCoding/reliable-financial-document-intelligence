@@ -1,0 +1,116 @@
+{
+  "baseline_R0_AURC": 0.2550294297332314,
+  "best_overall_candidate": "R0",
+  "calibration_selection_metrics": {
+    "isotonic": {
+      "AURC": 0.010409356725146198,
+      "AUROC": 0.875,
+      "Brier": 0.06785714285714287,
+      "ECE": 9.714451465470119e-18,
+      "PR_AUC": 0.3611111111111111
+    },
+    "platt": {
+      "AURC": 0.029858027894018608,
+      "AUROC": 0.7916666666666666,
+      "Brier": 0.08931064044197448,
+      "ECE": 0.10733600190625145,
+      "PR_AUC": 0.3611111111111111
+    },
+    "uncalibrated": {
+      "AURC": 0.029858027894018608,
+      "AUROC": 0.7916666666666666,
+      "Brier": 0.11711563004110907,
+      "ECE": 0.24018259810427697,
+      "PR_AUC": 0.3611111111111111
+    }
+  },
+  "candidate_parameters": {
+    "R3": {
+      "C": 10.0,
+      "class_weight": "balanced"
+    },
+    "R4": {
+      "learning_rate": 0.05,
+      "max_depth": 1,
+      "n_estimators": 50
+    }
+  },
+  "certification_outcomes_evaluated": false,
+  "document_group_bootstrap": {
+    "absolute_AURC_reduction_ci95": [
+      -0.16736037148268332,
+      0.09920993828654522
+    ],
+    "relative_AURC_reduction_ci95": [
+      -0.9449603402130581,
+      0.2926767385199216
+    ],
+    "replicates": 2000,
+    "support_groups": 60
+  },
+  "features": [
+    "image_width",
+    "image_height",
+    "image_megapixels",
+    "aspect_ratio",
+    "blur",
+    "luminance",
+    "contrast",
+    "estimated_skew",
+    "edge_density",
+    "foreground_density",
+    "sequence_confidence",
+    "predicted_field_count",
+    "predicted_line_item_count",
+    "predicted_output_length",
+    "schema_valid",
+    "parse_failure",
+    "missing_total",
+    "missing_subtotal",
+    "missing_tax",
+    "missing_discount",
+    "missing_any_item_price",
+    "reconciliation_residual",
+    "reconciliation_contradiction_count",
+    "latency_seconds",
+    "predicted_repeated_value_density",
+    "predicted_long_description",
+    "predicted_monetary_density"
+  ],
+  "fit_documents": 60,
+  "model_artifact_sha256": "2e5a73ff5a3898bd6b44f7be7002be5ff8d7718e3c35e4b4032b9db94e85abfb",
+  "operating_gate": false,
+  "practical_improvement_gate": false,
+  "protocol_sha256": "703086931438ca2e38ca406660be3d5e1f6f2963f33fd3b53854bce7b77b9387",
+  "provisional_promotion_gates_pass": false,
+  "relative_AURC_reduction": -0.1116951083567474,
+  "retrospective_test_accessed": false,
+  "selected_AURC": 0.28351496952144417,
+  "selected_candidate": "R4",
+  "selected_model_role": "BEST_LEARNED_CANDIDATE_FOR_EVALUATION; not promoted unless every frozen gate passes",
+  "selection_rule": "Choose the minimum grouped-CV AURC among R3/R4/R5, preferring interpretable R3 when its AURC is within 5% relative of that learned candidate.",
+  "threshold_selection_documents": 20,
+  "thresholds": [
+    {
+      "selection_accepted_n": 11,
+      "selection_coverage": 0.55,
+      "selection_observed_risk": 0.0,
+      "target_risk": 0.05,
+      "threshold": 0.2635410800913949
+    },
+    {
+      "selection_accepted_n": 20,
+      "selection_coverage": 1.0,
+      "selection_observed_risk": 0.1,
+      "target_risk": 0.1,
+      "threshold": 0.6191360552058423
+    },
+    {
+      "selection_accepted_n": 20,
+      "selection_coverage": 1.0,
+      "selection_observed_risk": 0.1,
+      "target_risk": 0.2,
+      "threshold": 0.6191360552058423
+    }
+  ]
+}

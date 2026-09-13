@@ -1,0 +1,47 @@
+{
+  "critical_error_prevalence": 0.3,
+  "designation": "DEVELOPMENT",
+  "forbidden_features_present_only_as_retrospective_metadata": [
+    "ground_truth_leaf_count",
+    "true_line_item_count",
+    "true_ocr_token_count"
+  ],
+  "line_item_critical_error_prevalence": 0.27,
+  "mean_weighted_critical_loss": 0.10223545923777837,
+  "partitions": {
+    "FIT": 60,
+    "INDEPENDENT_CERTIFICATION": 20,
+    "THRESHOLD_SELECTION": 20
+  },
+  "risk_model_eligible_features": [
+    "image_width",
+    "image_height",
+    "image_megapixels",
+    "aspect_ratio",
+    "blur",
+    "luminance",
+    "contrast",
+    "estimated_skew",
+    "edge_density",
+    "foreground_density",
+    "sequence_confidence",
+    "predicted_field_count",
+    "predicted_line_item_count",
+    "predicted_output_length",
+    "schema_valid",
+    "parse_failure",
+    "missing_total",
+    "missing_subtotal",
+    "missing_tax",
+    "missing_discount",
+    "missing_any_item_price",
+    "reconciliation_residual",
+    "reconciliation_contradiction_count",
+    "latency_seconds",
+    "predicted_repeated_value_density",
+    "predicted_long_description",
+    "predicted_monetary_density"
+  ],
+  "row_alignment_error_prevalence": 0.03,
+  "rows": 100
+}

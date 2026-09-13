@@ -1,0 +1,38 @@
+feature,availability_tag,eligible_for_risk_model,provenance,missing_policy
+image_width,PRE_INFERENCE,True,image pixels before inference,development median plus missing indicator
+image_height,PRE_INFERENCE,True,image pixels before inference,development median plus missing indicator
+image_megapixels,PRE_INFERENCE,True,image pixels before inference,development median plus missing indicator
+aspect_ratio,PRE_INFERENCE,True,image pixels before inference,development median plus missing indicator
+blur,PRE_INFERENCE,True,image pixels before inference,development median plus missing indicator
+luminance,PRE_INFERENCE,True,image pixels before inference,development median plus missing indicator
+contrast,PRE_INFERENCE,True,image pixels before inference,development median plus missing indicator
+estimated_skew,PRE_INFERENCE,True,image pixels before inference,development median plus missing indicator
+edge_density,PRE_INFERENCE,True,image pixels before inference,development median plus missing indicator
+foreground_density,PRE_INFERENCE,True,image pixels before inference,development median plus missing indicator
+sequence_confidence,POST_EXTRACTION,True,frozen extractor output,development median plus missing indicator
+predicted_field_count,POST_EXTRACTION,True,frozen extractor output,development median plus missing indicator
+predicted_line_item_count,POST_EXTRACTION,True,frozen extractor output,development median plus missing indicator
+predicted_output_length,POST_EXTRACTION,True,frozen extractor output,development median plus missing indicator
+schema_valid,POST_EXTRACTION,True,frozen extractor output,development median plus missing indicator
+parse_failure,POST_EXTRACTION,True,frozen extractor output,development median plus missing indicator
+missing_total,POST_EXTRACTION,True,frozen extractor output,development median plus missing indicator
+missing_subtotal,POST_EXTRACTION,True,frozen extractor output,development median plus missing indicator
+missing_tax,POST_EXTRACTION,True,frozen extractor output,development median plus missing indicator
+missing_discount,POST_EXTRACTION,True,frozen extractor output,development median plus missing indicator
+missing_any_item_price,POST_EXTRACTION,True,frozen extractor output,development median plus missing indicator
+reconciliation_residual,POST_EXTRACTION,True,frozen extractor output,development median plus missing indicator
+reconciliation_contradiction_count,POST_EXTRACTION,True,frozen extractor output,development median plus missing indicator
+latency_seconds,POST_EXTRACTION,True,frozen extractor output,development median plus missing indicator
+predicted_repeated_value_density,POST_EXTRACTION,True,frozen extractor output,development median plus missing indicator
+predicted_long_description,POST_EXTRACTION,True,frozen extractor output,development median plus missing indicator
+predicted_monetary_density,POST_EXTRACTION,True,frozen extractor output,development median plus missing indicator
+total_field_disagreement,POST_EXTRACTION,False,frozen extractor output,not used
+critical_field_disagreement,POST_EXTRACTION,False,frozen extractor output,not used
+row_line_item_disagreement,POST_EXTRACTION,False,frozen extractor output,not used
+ground_truth_leaf_count,NOT_PRODUCTION_SAFE,False,retrospective ground truth or unavailable disagreement,not used
+true_line_item_count,NOT_PRODUCTION_SAFE,False,retrospective ground truth or unavailable disagreement,not used
+true_ocr_token_count,NOT_PRODUCTION_SAFE,False,retrospective ground truth or unavailable disagreement,not used
+document_has_critical_error,NOT_PRODUCTION_SAFE,False,evaluation target from ground truth,target only
+document_has_line_item_critical_error,NOT_PRODUCTION_SAFE,False,evaluation target from ground truth,target only
+document_has_row_alignment_error,NOT_PRODUCTION_SAFE,False,evaluation target from ground truth,target only
+weighted_critical_loss,NOT_PRODUCTION_SAFE,False,evaluation target from ground truth,target only

@@ -1,0 +1,19 @@
+{
+  "designation": "DEVELOPMENT",
+  "document_mean_metrics": {
+    "E0_historical_flat_f1": 0.8504132999649948,
+    "E1_strict_row_order_f1": 0.8504132999649948,
+    "E2_line_item_f1": 0.9661976960237832,
+    "critical_monetary_row_f1": 0.8913350586611456,
+    "field_within_row_micro_f1": 0.8582538748682562,
+    "item_name_f1": 0.8308196875588177,
+    "item_price_f1": 0.8913350586611456,
+    "quantity_f1": 0.8739613526570049,
+    "row_exact_match_rate": 0.6153903318903319,
+    "unit_price_f1": 0.9416666666666668
+  },
+  "documents": 100,
+  "row_alignment_failure_rate": 0.03,
+  "spurious_predicted_rows": 17,
+  "unmatched_gt_rows": 4
+}
