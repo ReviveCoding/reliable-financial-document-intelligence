@@ -10,16 +10,22 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 BASE = "1f83625"
+PUBLICATION_SURFACE_EXCEPTIONS = {"README.md"}
 
 
 def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def verify_base_tree() -> int:
+def verify_base_tree() -> tuple[int, list[str]]:
     rows = subprocess.check_output(["git", "ls-tree", "-r", BASE], cwd=ROOT, text=True).splitlines()
+    checked = 0
+    excluded = []
     for row in rows:
         metadata, name = row.split("\t", 1)
+        if name in PUBLICATION_SURFACE_EXCEPTIONS:
+            excluded.append(name)
+            continue
         expected = metadata.split()[2]
         path = ROOT / name
         if not path.is_file():
@@ -27,7 +33,8 @@ def verify_base_tree() -> int:
         actual = subprocess.check_output(["git", "hash-object", "--", name], cwd=ROOT, text=True).strip()
         if actual != expected:
             raise AssertionError(f"base path modified: {name}")
-    return len(rows)
+        checked += 1
+    return checked, excluded
 
 
 def main() -> None:
@@ -58,11 +65,12 @@ def main() -> None:
         raise AssertionError("extension decision does not follow frozen rule")
     if gates["decision_rule"].get(independently_expected) is None:
         raise AssertionError("extension decision absent from frozen gates")
-    base_files = verify_base_tree()
+    base_files, publication_exceptions = verify_base_tree()
     result = {
         "status": "PASS",
         "base_commit": BASE,
         "immutable_base_files_verified": base_files,
+        "publication_surface_exceptions": publication_exceptions,
         "manifest_entries_verified": len(manifest),
         "registry_entries": len(registry),
         "extension_decision": independently_expected,

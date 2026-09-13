@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="462" viewBox="0 0 900 462" role="img" aria-labelledby="title desc">
+  <title id="title">V3 extension requirement status</title>
+  <desc id="desc">Generated from committed R-FDI evidence by docs/generate_visualizations.py.</desc>
+  <style>
+    .bg { fill: #f8fafc; } .panel { fill: #ffffff; stroke: #cbd5e1; }
+    .title { fill: #0f172a; font: 700 24px system-ui, sans-serif; }
+    .label { fill: #334155; font: 600 16px system-ui, sans-serif; }
+    .value { fill: #0f172a; font: 700 16px system-ui, sans-serif; }
+    .note { fill: #64748b; font: 13px system-ui, sans-serif; }
+    .native { fill: #64748b; } .served { fill: #0f766e; }
+    .pass { fill: #0f766e; } .track { fill: #e2e8f0; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #0f172a; } .panel { fill: #111827; stroke: #475569; }
+      .title, .value { fill: #f8fafc; } .label { fill: #e2e8f0; }
+      .note { fill: #94a3b8; } .native { fill: #94a3b8; }
+      .served, .pass { fill: #2dd4bf; } .track { fill: #334155; }
+    }
+  </style>
+  <rect class="bg" width="100%" height="100%" rx="16"/>
+
+  <rect class="panel" x="24" y="24" width="852" height="414" rx="12"/>
+  <text class="title" x="52" y="68">V3 frozen extension requirements</text>
+  <text class="note" x="52" y="94">8/8 passed · decision: V3_EXTENSION_SUCCESS</text>
+  <circle class="pass" cx="66" cy="120" r="9"/><text class="label" x="88" y="126">Production Docker stack</text><text class="value" x="790" y="126" text-anchor="end">PASS</text><circle class="pass" cx="66" cy="158" r="9"/><text class="label" x="88" y="164">MLflow PostgreSQL + MinIO</text><text class="value" x="790" y="164" text-anchor="end">PASS</text><circle class="pass" cx="66" cy="196" r="9"/><text class="label" x="88" y="202">API and load evidence</text><text class="value" x="790" y="202" text-anchor="end">PASS</text><circle class="pass" cx="66" cy="234" r="9"/><text class="label" x="88" y="240">Fault recovery</text><text class="value" x="790" y="240" text-anchor="end">PASS</text><circle class="pass" cx="66" cy="272" r="9"/><text class="label" x="88" y="278">Expanded security</text><text class="value" x="790" y="278" text-anchor="end">PASS</text><circle class="pass" cx="66" cy="310" r="9"/><text class="label" x="88" y="316">Reviewer application</text><text class="value" x="790" y="316" text-anchor="end">PASS</text><circle class="pass" cx="66" cy="348" r="9"/><text class="label" x="88" y="354">Docker GPU</text><text class="value" x="790" y="354" text-anchor="end">PASS</text><circle class="pass" cx="66" cy="386" r="9"/><text class="label" x="88" y="392">Accelerated serving</text><text class="value" x="790" y="392" text-anchor="end">PASS</text>
+  <text class="note" x="52" y="418">Source: artifacts/v3/statistics/summary.json</text>
+</svg>

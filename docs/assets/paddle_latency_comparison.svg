@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="380" viewBox="0 0 900 380" role="img" aria-labelledby="title desc">
+  <title id="title">PaddleOCR-VL native and Docker vLLM mean latency</title>
+  <desc id="desc">Generated from committed R-FDI evidence by docs/generate_visualizations.py.</desc>
+  <style>
+    .bg { fill: #f8fafc; } .panel { fill: #ffffff; stroke: #cbd5e1; }
+    .title { fill: #0f172a; font: 700 24px system-ui, sans-serif; }
+    .label { fill: #334155; font: 600 16px system-ui, sans-serif; }
+    .value { fill: #0f172a; font: 700 16px system-ui, sans-serif; }
+    .note { fill: #64748b; font: 13px system-ui, sans-serif; }
+    .native { fill: #64748b; } .served { fill: #0f766e; }
+    .pass { fill: #0f766e; } .track { fill: #e2e8f0; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #0f172a; } .panel { fill: #111827; stroke: #475569; }
+      .title, .value { fill: #f8fafc; } .label { fill: #e2e8f0; }
+      .note { fill: #94a3b8; } .native { fill: #94a3b8; }
+      .served, .pass { fill: #2dd4bf; } .track { fill: #334155; }
+    }
+  </style>
+  <rect class="bg" width="100%" height="100%" rx="16"/>
+
+  <rect class="panel" x="24" y="24" width="852" height="332" rx="12"/>
+  <text class="title" x="52" y="68">PaddleOCR-VL mean latency</text>
+  <text class="note" x="52" y="94">Paired CORD development sample · 20 documents · lower is better</text>
+  <text class="label" x="52" y="145">Native</text>
+  <rect class="track" x="230" y="122" width="500" height="34" rx="7"/>
+  <rect class="native" x="230" y="122" width="500.00" height="34" rx="7"/>
+  <text class="value" x="750" y="145">20.403603 s</text>
+  <text class="label" x="52" y="211">Docker / vLLM</text>
+  <rect class="track" x="230" y="188" width="500" height="34" rx="7"/>
+  <rect class="served" x="230" y="188" width="262.87" height="34" rx="7"/>
+  <text class="value" x="750" y="211">10.726820 s</text>
+  <text class="value" x="52" y="276">1.902111× mean speedup</text>
+  <text class="note" x="52" y="310">Source: artifacts/v3/serving/paddleocr_vllm_comparison.json</text>
+  <text class="note" x="52" y="332">Development evidence; content-presence quality metric is not official structured CORD F1.</text>
+</svg>

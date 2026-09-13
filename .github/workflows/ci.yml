@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  deterministic-validation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.10"
+
+      - name: Compile Python sources
+        run: python -m compileall -q src scripts tests docs/generate_visualizations.py
+
+      - name: Run deterministic unit tests
+        env:
+          PYTHONPATH: src
+        run: python -m unittest discover -s tests -v
+
+      - name: Verify V1 evidence
+        run: python scripts/verify_evidence.py
+
+      - name: Verify V2 evidence
+        run: python scripts/v2_verify_evidence.py
+
+      - name: Verify V3 evidence and immutable V2 lineage
+        run: python scripts/v3/verify_evidence.py
+
+      - name: Regenerate publication visualizations
+        run: |
+          python docs/generate_visualizations.py
+          git diff --exit-code -- docs/assets
+
+      - name: Check whitespace
+        run: git diff --check HEAD^
