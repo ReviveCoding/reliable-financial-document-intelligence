@@ -1,0 +1,133 @@
+{
+  "protocol_version": "3.2.0",
+  "baseline_commit": "00cf00516fc28a4716d29a9c65f49cc482d57db7",
+  "frozen_before_v3_2_results": true,
+  "scientific_scope": {
+    "extractor_weights_changed": false,
+    "extractor_weight_tuning_prohibited": true,
+    "cord_test_designation": "RETROSPECTIVE_LOCKED_BENCHMARK",
+    "cord_test_is_fresh_holdout": false,
+    "cord_test_use": "One evaluation after development-only model and threshold selection; never training, model selection, calibration fitting, or threshold tuning.",
+    "historical_decisions_preserved": ["NO_PROMOTION", "PROMOTE", "V3_EXTENSION_SUCCESS", "V3_1_ANALYSIS_SUCCESS"]
+  },
+  "determinism": {
+    "seed": 3202026,
+    "bootstrap_replicates": 2000,
+    "confidence_level": 0.95
+  },
+  "line_item_evaluation": {
+    "E0": "Historical v3.1 path/occurrence comparison with ordered repeated leaves and row identity discarded.",
+    "E1": "Strict diagnostic comparison of ground-truth and predicted menu rows by list position.",
+    "E2": "Primary permutation-invariant maximum-weight bipartite matching; row identifiers need not agree.",
+    "matching_field_weights": {
+      "nm": 1.0,
+      "cnt": 1.0,
+      "price": 2.0,
+      "unitprice": 2.0,
+      "subtotal_price": 2.0,
+      "etc": 0.5
+    },
+    "match_acceptance_minimum_weight": 1.0,
+    "tie_breaker": "Stable lexicographic predicted/ground-truth indices only; financial arithmetic never changes primary matching.",
+    "row_exact_definition": "A matched row has identical normalized field multisets, with no missing or spurious leaf.",
+    "row_alignment_error_definition": "E2 finds a positive-weight match different from E1 position, or E1 has a lower matched-field weight than E2.",
+    "primary_metrics": ["line_item_precision", "line_item_recall", "line_item_f1", "row_exact_match_rate", "field_within_row_micro_f1", "item_name_f1", "item_price_f1", "quantity_f1", "unit_price_f1", "critical_monetary_row_f1", "row_alignment_failure_rate", "unmatched_gt_rows", "spurious_predicted_rows"]
+  },
+  "targets": {
+    "critical_field_weights": {
+      "document_total": 10.0,
+      "subtotal": 7.0,
+      "tax": 6.0,
+      "discount": 5.0,
+      "item_total_price": 8.0,
+      "item_unit_price": 8.0,
+      "quantity": 3.0
+    },
+    "quantity_criticality": "MEDIUM",
+    "document_has_critical_error": "Any non-exact supported document total, subtotal, tax, discount, matched/unmatched item total price, or item unit price.",
+    "document_has_line_item_critical_error": "Any missing, spurious, or incorrect critical monetary field within E2 matched/unmatched menu rows.",
+    "document_has_row_alignment_error": "The frozen E2 row_alignment_error_definition is true for at least one document row.",
+    "weighted_critical_loss": "Sum of erroneous supported field weights divided by the sum of supported ground-truth plus spurious-prediction weights; bounded to [0,1].",
+    "sensitivity_weight_sets": {
+      "equal": {"document_total": 1, "subtotal": 1, "tax": 1, "discount": 1, "item_total_price": 1, "item_unit_price": 1, "quantity": 1},
+      "item_price_high": {"document_total": 10, "subtotal": 5, "tax": 5, "discount": 4, "item_total_price": 12, "item_unit_price": 12, "quantity": 3},
+      "document_total_high": {"document_total": 20, "subtotal": 7, "tax": 6, "discount": 5, "item_total_price": 6, "item_unit_price": 6, "quantity": 2}
+    },
+    "institutional_cost_claim": false
+  },
+  "feature_policy": {
+    "allowed_tags": ["PRE_INFERENCE", "CHEAP_PREFLIGHT", "POST_EXTRACTION"],
+    "forbidden_model_tag": "NOT_PRODUCTION_SAFE",
+    "ground_truth_features_forbidden": ["ground_truth_leaf_count", "true_line_item_count", "true_ocr_token_count", "CORD_valid_line_count", "ground_truth_total", "error_taxonomy_label"],
+    "image_features": ["width", "height", "megapixels", "aspect_ratio", "blur", "luminance", "contrast", "skew", "edge_density", "foreground_density"],
+    "cheap_preflight_features": ["detected_text_box_count", "ocr_mean_confidence", "ocr_confidence_q10", "ocr_confidence_q50", "estimated_text_density", "estimated_numeric_density", "ocr_text_length"],
+    "post_extraction_features": ["sequence_confidence", "predicted_field_count", "predicted_line_item_count", "predicted_output_length", "schema_valid", "parse_failure", "missing_total", "missing_subtotal", "missing_tax", "missing_discount", "missing_any_item_price", "reconciliation_residual", "reconciliation_contradiction_count", "latency_seconds"],
+    "disagreement_features": ["total_field_disagreement", "critical_field_disagreement", "row_line_item_disagreement"],
+    "disagreement_rule": "Include only when task-compatible predictions for the same inference document genuinely exist. Total-only disagreement must never be named row/line-item disagreement.",
+    "missing_feature_policy": "Unavailable candidate families are omitted, not imputed from ground truth. Numeric production features may use a development-fitted median plus an explicit missing indicator when naturally missing at inference."
+  },
+  "development_data": {
+    "source": "Authorized CORD validation clean predictions plus v3.1 controlled-corruption validation predictions; no CORD test rows.",
+    "group": "source_document_id",
+    "variant_group_integrity": "All clean/corrupted versions of a source document remain in one split and one grouped-CV fold.",
+    "fixed_partition": {
+      "method": "Sort SHA-256(seed + source_document_id); first 60% FIT, next 20% THRESHOLD_SELECTION, final 20% INDEPENDENT_CERTIFICATION.",
+      "fit_fraction": 0.6,
+      "threshold_selection_fraction": 0.2,
+      "certification_fraction": 0.2
+    },
+    "error_diversity_policy": "Prefer source-document diversity; corrupted variants are never counted as independent statistical units. Expand validation-only frozen inference only if candidate fitting cannot proceed because a target class is absent."
+  },
+  "candidate_models": {
+    "R0": {"name": "one_minus_raw_sequence_confidence", "fit": false},
+    "R1": {"name": "current_rfdi_heuristic", "formula": "clip(1-confidence + 0.3*reconciliation_conflict + 0.2*genuine_disagreement,0,1)", "fit": false},
+    "R2": {"name": "development_isotonic_calibrated_confidence", "fit": true},
+    "R3": {"name": "regularized_logistic_regression", "C": [0.1, 1.0, 10.0], "class_weight": [null, "balanced"], "max_iter": 2000},
+    "R4": {"name": "shallow_gradient_boosting", "n_estimators": [50, 100], "learning_rate": [0.05, 0.1], "max_depth": [1, 2]},
+    "R5": {"name": "rank_average_R3_R4", "eligibility": "Only if both components are valid; no additional learned weight."}
+  },
+  "model_selection": {
+    "fit_partition_only": true,
+    "cross_validation": "Five-fold GroupKFold by source_document_id within FIT; reduce folds only if fewer than five positive-containing source groups, and report.",
+    "primary_metric": "AURC",
+    "lower_is_better": true,
+    "secondary_metrics": ["PR_AUC", "AUROC", "Brier", "ECE", "critical_error_capture_at_review_budgets", "critical_false_accept_at_automation_coverage"],
+    "interpretability_preference": "Prefer an interpretable model when its relative AURC is within 5% of the best candidate.",
+    "bootstrap": "Document-group bootstrap with 2000 replicates; all variants from a sampled group move together.",
+    "practical_thresholds": {"absolute_capture_improvement": 0.05, "absolute_false_accept_reduction": 0.05}
+  },
+  "review_budgets": [0.05, 0.10, 0.20, 0.30, 0.40, 0.50, 0.60, 0.70, 0.80],
+  "certification": {
+    "targets": [0.05, 0.10, 0.20],
+    "alpha": 0.05,
+    "minimum_accepted_documents": 10,
+    "binary_bound": "One-sided exact Clopper-Pearson 95% upper bound.",
+    "weighted_loss_bound": "One-sided empirical Bernstein bound for losses in [0,1], with the exact formula recorded in code and evidence.",
+    "threshold_selection": "For each target, select the maximum-coverage eligible threshold using FIT and THRESHOLD_SELECTION only, then freeze before opening INDEPENDENT_CERTIFICATION outcomes.",
+    "assumptions": "Experimental research certificate conditional on source-document exchangeability and unchanged pipeline; not regulatory or universally distribution-free.",
+    "insufficient_label": "INSUFFICIENT_CERTIFICATION_SUPPORT"
+  },
+  "promotion_gates": {
+    "evaluator_validation": "PASS",
+    "production_feature_leakage_count": 0,
+    "development_grouped_cv_relative_aurc_improvement_minimum": 0.10,
+    "practical_risk_improvement_required": true,
+    "operating_gate": "At review_rate <= 0.50, critical-error capture >= 0.85 OR critical false-accept <= 0.10 with automation coverage >= 0.50.",
+    "deterministic_regression_gates": "V1/V2/V3/v3.1 tests, evidence, schema, fault, security and runtime verification remain passing.",
+    "artifact_reproducible_and_versioned": true,
+    "shadow_only": true,
+    "direct_autonomous_promotion_prohibited": true
+  },
+  "retrospective_test": {
+    "designation": "RETROSPECTIVE_LOCKED_BENCHMARK",
+    "evaluated_candidates": ["R0", "R1", "selected_development_model"],
+    "single_evaluation_after_freeze": true,
+    "retuning_after_evaluation_prohibited": true
+  },
+  "robustness": {
+    "reuse_v3_1_evidence_first": true,
+    "gpu_rerun_requires_integrity_reason": true,
+    "grouped_by_source_document": true
+  },
+  "final_decisions": ["V3_2_RISK_MODEL_PROMOTE_TO_SHADOW", "V3_2_RISK_MODEL_NO_PROMOTION", "V3_2_RISK_MODEL_BLOCKED"]
+}
