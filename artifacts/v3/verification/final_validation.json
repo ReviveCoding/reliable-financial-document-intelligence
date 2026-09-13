@@ -1,0 +1,15 @@
+{
+  "base_commit": "1f83625",
+  "extension_decision": "V3_EXTENSION_SUCCESS",
+  "immutable_v2_files_verified": 206,
+  "invalid_v3_evidence_entries": 1,
+  "legacy_evidence_records_verified": 17,
+  "python_unittest_failures": 0,
+  "python_unittest_tests": 12,
+  "status": "PASS",
+  "v2_decision": "PROMOTE",
+  "v2_evidence_records_verified": 28,
+  "v2_experiments_verified": 19,
+  "v3_manifest_entries_verified_before_final_repackaging": 31,
+  "v3_registry_entries": 11
+}

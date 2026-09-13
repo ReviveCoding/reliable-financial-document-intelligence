@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "defined_before_execution": true,
+  "success_requires": [
+    "actual Docker Compose stack execution",
+    "end-to-end API execution",
+    "MLflow metadata in PostgreSQL and artifacts in MinIO verified",
+    "load benchmark completed",
+    "fault/recovery study completed",
+    "PaddleOCR-VL native-versus-accelerated serving completed",
+    "expanded security benchmark completed"
+  ],
+  "decision_rule": {
+    "V3_EXTENSION_SUCCESS": "All success requirements complete; external DocILE/REFinD access may remain human-blocked.",
+    "V3_EXTENSION_PARTIAL": "At least API, load, fault/recovery, expanded security, and reviewer application complete, but one or more infrastructure/serving requirements are externally blocked or fail bounded pilots.",
+    "V3_EXTENSION_BLOCKED": "The minimum operational evidence set cannot be completed."
+  }
+}

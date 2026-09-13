@@ -1,0 +1,28 @@
+{
+  "experiment_id": "V3-E03",
+  "executed_at_utc": "2026-09-13T01:06:00Z",
+  "docker_desktop_version": "4.90.0",
+  "docker_engine_version": "29.7.2",
+  "docker_compose_version": "5.5.1",
+  "context": "desktop-linux",
+  "invocation": "Windows Docker CLI through powershell.exe from WSL",
+  "services": {
+    "rfdi-postgres": "healthy",
+    "rfdi-redis": "healthy",
+    "rfdi-minio": "healthy",
+    "rfdi-minio-init": "completed_exit_0",
+    "rfdi-mlflow": "healthy",
+    "rfdi-api": "healthy",
+    "rfdi-worker": "healthy",
+    "rfdi-review-ui": "healthy"
+  },
+  "endpoint_checks": {
+    "api_health_http": 200,
+    "api_metrics_http": 200,
+    "mlflow_health_http": 200,
+    "minio_ready_http": 200,
+    "reviewer_html_http": 200
+  },
+  "all_required_services_verified": true,
+  "registry_correction": "The original Docker Hub MinIO references failed; equivalent pinned releases were verified and pulled from quay.io/minio."
+}

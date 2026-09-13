@@ -1,0 +1,115 @@
+{
+  "base_commit": "1f83625",
+  "extension_decision": "V3_EXTENSION_SUCCESS",
+  "extension_state": "COMPLETE",
+  "lineage": "R-FDI V3: Financial-Domain + Production Hardening Extension",
+  "phases": {
+    "V3-P00": {
+      "evidence": [
+        "reports/v3/RECOVERY.md"
+      ],
+      "name": "Branch and recovery",
+      "status": "COMPLETE"
+    },
+    "V3-P01": {
+      "evidence": [
+        "reports/v3/DESKTOP_STUDY_UPDATE.md"
+      ],
+      "name": "Desktop study update",
+      "status": "COMPLETE"
+    },
+    "V3-P02": {
+      "evidence": [
+        "reports/v3/DOCILE_ACCESS.md",
+        "reports/v3/REFIND_ACCESS.md"
+      ],
+      "name": "External access audit",
+      "status": "COMPLETE"
+    },
+    "V3-P03": {
+      "evidence": [
+        "artifacts/v3/docker/stack_validation.json"
+      ],
+      "name": "Production-style Docker stack",
+      "status": "COMPLETE"
+    },
+    "V3-P04": {
+      "evidence": [
+        "artifacts/v3/docker/mlflow_persistence.json"
+      ],
+      "name": "MLflow persistence",
+      "status": "COMPLETE"
+    },
+    "V3-P05": {
+      "evidence": [
+        "artifacts/v3/docker/fault_recovery.json"
+      ],
+      "name": "Infrastructure fault recovery",
+      "status": "COMPLETE"
+    },
+    "V3-P06": {
+      "evidence": [
+        "artifacts/v3/docker/gpu_validation.json"
+      ],
+      "name": "Docker GPU",
+      "status": "COMPLETE"
+    },
+    "V3-P07": {
+      "evidence": [
+        "artifacts/v3/serving/paddleocr_vllm_comparison.json"
+      ],
+      "name": "PaddleOCR-VL accelerated serving",
+      "status": "COMPLETE"
+    },
+    "V3-P08": {
+      "evidence": [
+        "artifacts/v3/security/adversarial_benchmark.json"
+      ],
+      "name": "Expanded security",
+      "status": "COMPLETE"
+    },
+    "V3-P09": {
+      "evidence": [
+        "artifacts/v3/runtime/docker_api_reviewer.json"
+      ],
+      "name": "Runtime and reviewer",
+      "status": "COMPLETE"
+    },
+    "V3-P10": {
+      "evidence": [
+        "artifacts/v3/statistics/summary.json"
+      ],
+      "name": "Statistics and packaging",
+      "status": "COMPLETE"
+    },
+    "V3-P11": {
+      "evidence": [
+        "configs/v3/extension_gates.json"
+      ],
+      "name": "Extension gates",
+      "status": "COMPLETE"
+    },
+    "V3-P12": {
+      "evidence": [
+        "artifacts/v3/verification/v2_immutable.json"
+      ],
+      "name": "V2 immutable verification",
+      "status": "COMPLETE"
+    },
+    "V3-P13": {
+      "evidence": [
+        "artifacts/v3/verification/final_validation.json"
+      ],
+      "name": "V1/V2/V3 validation",
+      "status": "COMPLETE"
+    },
+    "V3-P14": {
+      "evidence": [],
+      "name": "Local checkpoint",
+      "status": "READY_FOR_COMMIT"
+    }
+  },
+  "schema_version": 1,
+  "updated_at_utc": "2026-09-13T02:07:32.175973+00:00",
+  "v2_immutable": true
+}

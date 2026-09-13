@@ -1,0 +1,31 @@
+{
+  "experiment_id": "V3-E05",
+  "executed_at_utc": "2026-09-13T01:08:00Z",
+  "cases": [
+    {
+      "service": "Redis",
+      "fault": "controlled container stop/start",
+      "outage_observed": true,
+      "durable_probe_before": "rfdi-v3-fault-recovery",
+      "durable_probe_after": "rfdi-v3-fault-recovery",
+      "passed": true,
+      "limitation": "The preserved V3 application runtime uses SQLite polling; the API remained healthy during Redis loss. Redis persistence was tested directly, but Redis is not the job transport implementation."
+    },
+    {
+      "service": "PostgreSQL",
+      "fault": "controlled container stop/start",
+      "outage_http_status": 503,
+      "recovered_http_status": 200,
+      "persisted_mlflow_run_id": "ebaf889519954ed387676f5a0a04e474",
+      "passed": true
+    },
+    {
+      "service": "MinIO",
+      "fault": "controlled container stop/start",
+      "outage_artifact_http_status": 500,
+      "recovered_artifact_content": "R-FDI V3 MLflow artifact persistence evidence\\n",
+      "passed": true
+    }
+  ],
+  "all_cases_passed": true
+}

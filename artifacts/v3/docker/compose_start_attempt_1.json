@@ -1,0 +1,7 @@
+{
+  "attempt": 1,
+  "status": "FAILED",
+  "observed_error": "Docker Hub denied access for minio/minio:RELEASE.2024-08-03T04-33-23Z; the original minio/mc date also did not resolve by manifest inspection.",
+  "action": "Preserved the MinIO server release while changing its registry to quay.io; selected a verified dated mc release from quay.io.",
+  "root_cause_scope": "Registry/image-reference failure for this attempt only; unrelated to the prior exit-135 interruption."
+}

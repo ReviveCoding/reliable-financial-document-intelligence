@@ -1,0 +1,67 @@
+{
+  "all_executed_passed": true,
+  "backend": "SQLite durable queue + filesystem object store",
+  "cases": [
+    {
+      "fault": "duplicate event and key",
+      "passed": true
+    },
+    {
+      "fault": "malformed image",
+      "passed": true
+    },
+    {
+      "fault": "crash after extraction",
+      "passed": true
+    },
+    {
+      "fault": "inference timeout",
+      "passed": true
+    },
+    {
+      "fault": "object-store temporary interruption",
+      "passed": true
+    },
+    {
+      "fault": "worker restart",
+      "passed": true
+    },
+    {
+      "fault": "replay finalized document",
+      "passed": true
+    },
+    {
+      "fault": "Redis interruption",
+      "passed": null,
+      "status": "BLOCKED_DOCKER"
+    },
+    {
+      "fault": "PostgreSQL restart",
+      "passed": null,
+      "status": "BLOCKED_DOCKER"
+    },
+    {
+      "fault": "MinIO interruption",
+      "passed": null,
+      "status": "BLOCKED_DOCKER"
+    },
+    {
+      "fault": "GPU model process restart",
+      "passed": null,
+      "status": "NOT_RUN_BOUNDED_CORE_FIRST"
+    }
+  ],
+  "executed_passed": 7,
+  "executed_total": 7,
+  "experiment_id": "V3-E07",
+  "initial_failure": "Replay state regression and claimed_at propagation bugs were discovered by tests and corrected before this confirmation.",
+  "metrics": {
+    "documents": 6,
+    "finalization_commits": 5,
+    "pending_jobs": 0,
+    "states": {
+      "AUTO_ACCEPTED": 5,
+      "PERMANENT_FAILURE": 1
+    }
+  }
+}

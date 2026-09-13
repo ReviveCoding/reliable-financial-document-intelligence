@@ -1,0 +1,60 @@
+{
+  "all_checks_passed": true,
+  "backend_reported": "sqlite-durable-queue+filesystem-object-store",
+  "checks": {
+    "api_reviewer_html": true,
+    "create_accepted": true,
+    "duplicate_deduplicated": true,
+    "metrics_exposed": true,
+    "review_committed": true,
+    "reviewer_service_html": true,
+    "worker_completed": true
+  },
+  "document_id": "f6d60186-f348-58c7-8083-4a32cb74f299",
+  "experiment_id": "V3-E03-API-REVIEWER",
+  "health": {
+    "backend": "sqlite-durable-queue+filesystem-object-store",
+    "documents": 1,
+    "finalization_commits": 1,
+    "pending_jobs": 0,
+    "states": {
+      "REVIEWED": 1
+    },
+    "status": "ok"
+  },
+  "result": {
+    "confidence": 0.98,
+    "created_at": "2026-09-13T01:17:23.749100+00:00",
+    "db_ms": 3.8607149999734247,
+    "decision": "AUTO_ACCEPTED",
+    "document_id": "f6d60186-f348-58c7-8083-4a32cb74f299",
+    "id": 1,
+    "inference_ms": 10.708561999990707,
+    "model": "cheap",
+    "model_version": "v3-regex-1",
+    "normalized": {
+      "currency": "USD",
+      "invoice_number": "DOCKER-V3-001",
+      "subtotal": "10.00",
+      "tax": "2.00",
+      "total": "12.00"
+    },
+    "queue_wait_ms": 27.150145999939923,
+    "raw": {
+      "fields": {
+        "currency": "USD",
+        "invoice_number": "DOCKER-V3-001",
+        "subtotal": "10.00",
+        "tax": "2.00",
+        "total": "12.00"
+      },
+      "text": "Invoice: DOCKER-V3-001\nSubtotal: 10.00\nTax: 2.00\nTotal: 12.00\nCurrency: USD\n"
+    },
+    "reconciliation": [],
+    "risk": 0.010000000000000009
+  },
+  "review": {
+    "document_id": "f6d60186-f348-58c7-8083-4a32cb74f299",
+    "state": "REVIEWED"
+  }
+}

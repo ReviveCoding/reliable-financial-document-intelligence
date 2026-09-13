@@ -1,0 +1,8 @@
+{
+  "attempts": 6,
+  "classification": "SETUP_FAILURE_BEFORE_INFERENCE",
+  "experiment_result": false,
+  "message": "Six setup attempts stopped before an HTTP inference request: missing PaddleX OCR extras; zero-byte/corrupt SciPy; missing package metadata for regex/safetensors/sentencepiece; missing GenAI client extra; zero-byte/corrupt OpenCV; and zero-byte/corrupt sniffio.",
+  "remediation": "Installed version-matched paddlex[ocr,genai-client]==3.7.2 requirements and repaired the affected pinned packages in the dedicated V3 serving environment. Pipeline construction then passed and the subsequent frozen evaluation completed.",
+  "documents_processed": 0
+}

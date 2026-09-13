@@ -1,0 +1,13 @@
+{
+  "experiment_id": "V3-E08-GPU-DOCKER",
+  "image": "nvidia/cuda:13.0.0-base-ubuntu24.04",
+  "image_digest": "sha256:6e43a6b02e5f16e4a715953be8b29c40acbe84aed11a61357ef0fc899967fbd9",
+  "docker_context": "desktop-linux",
+  "gpus_requested": "all",
+  "physical_gpu_count_observed": 1,
+  "gpu": "NVIDIA GeForce RTX 4090 Laptop GPU",
+  "gpu_uuid": "GPU-4e7ef1bc-f2eb-a548-c925-9a5da45315f5",
+  "driver_version": "616.92",
+  "memory_total_mib": 16376,
+  "passed": true
+}

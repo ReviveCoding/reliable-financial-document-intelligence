@@ -1,0 +1,39 @@
+{
+  "cached_load_peak_throughput_docs_second": 26.62704246770435,
+  "corrected_donut_peak_throughput_docs_second": 0.8121527605594042,
+  "docker_fault_cases_passed": 3,
+  "experiment_id": "V3-E10",
+  "extension_decision": "V3_EXTENSION_SUCCESS",
+  "generated_at_utc": "2026-09-13T02:07:32.175973+00:00",
+  "invalid_deduplicated_gpu_result_retained": true,
+  "limitations": [
+    "Redis persistence/restart was verified directly, but the preserved application job transport is SQLite polling.",
+    "PaddleOCR-VL content-presence recall is not official structured CORD F1.",
+    "DocILE and REFinD remain human-access blocked; Textract remains skipped without budget/credentials.",
+    "The invalid deduplicated GPU load result is retained and excluded from comparisons."
+  ],
+  "local_fault_cases_passed": 7,
+  "paddleocr_vllm": {
+    "documents": 20,
+    "leaf_value_recall": 0.9171275048480931,
+    "mean_latency_seconds": 10.726819756649956,
+    "median_latency_seconds": 10.59233136350008,
+    "native_mean_latency_seconds": 20.40360346539983,
+    "native_median_latency_seconds": 11.277052773501055,
+    "native_total_value_presence": 0.9,
+    "speedup_mean": 1.902111150208418,
+    "total_value_presence": 0.95
+  },
+  "requirements": {
+    "accelerated_serving": true,
+    "api_load": true,
+    "docker_gpu": true,
+    "expanded_security": true,
+    "fault_recovery": true,
+    "mlflow_postgresql_minio_persistence": true,
+    "production_docker_stack": true,
+    "reviewer_application": true
+  },
+  "security_cases": 24,
+  "security_detector_activations": 20
+}

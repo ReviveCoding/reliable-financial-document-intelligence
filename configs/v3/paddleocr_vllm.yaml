@@ -1,0 +1,5 @@
+# Official PaddleOCR genai_server/vLLM keys. One bounded client; measured free VRAM exceeds 30%.
+gpu-memory-utilization: 0.30
+max-num-seqs: 4
+max-num-batched-tokens: 8192
+enforce-eager: true

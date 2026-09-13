@@ -1,0 +1,60 @@
+services:
+  rfdi-postgres:
+    image: postgres:16.4
+    environment: {POSTGRES_USER: rfdi, POSTGRES_PASSWORD: rfdi-dev-only, POSTGRES_DB: mlflow}
+    volumes: [v3-postgres:/var/lib/postgresql/data]
+    ports: ["5433:5432"]
+    healthcheck: {test: [CMD-SHELL, "pg_isready -U rfdi -d mlflow"], interval: 5s, timeout: 3s, retries: 10}
+  rfdi-redis:
+    image: redis:7.4.0-alpine
+    command: [redis-server, --appendonly, "yes"]
+    volumes: [v3-redis:/data]
+    ports: ["6379:6379"]
+    healthcheck: {test: [CMD, redis-cli, ping], interval: 5s, timeout: 3s, retries: 10}
+  rfdi-minio:
+    image: quay.io/minio/minio:RELEASE.2024-08-03T04-33-23Z
+    command: server /data --console-address :9001
+    environment: {MINIO_ROOT_USER: rfdi-minio, MINIO_ROOT_PASSWORD: rfdi-minio-dev-only}
+    volumes: [v3-minio:/data]
+    ports: ["9000:9000", "9001:9001"]
+    healthcheck: {test: [CMD, mc, ready, local], interval: 5s, timeout: 3s, retries: 10}
+  rfdi-minio-init:
+    image: quay.io/minio/mc:RELEASE.2024-08-13T05-33-17Z
+    depends_on:
+      rfdi-minio: {condition: service_healthy}
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - >-
+        mc alias set local http://rfdi-minio:9000 rfdi-minio rfdi-minio-dev-only &&
+        mc mb --ignore-existing local/mlflow-artifacts &&
+        mc anonymous set none local/mlflow-artifacts
+  rfdi-mlflow:
+    build: {context: ../.., dockerfile: services/v3/mlflow.Dockerfile}
+    environment: {AWS_ACCESS_KEY_ID: rfdi-minio, AWS_SECRET_ACCESS_KEY: rfdi-minio-dev-only, MLFLOW_S3_ENDPOINT_URL: "http://rfdi-minio:9000"}
+    depends_on:
+      rfdi-postgres: {condition: service_healthy}
+      rfdi-minio-init: {condition: service_completed_successfully}
+    ports: ["5000:5000"]
+    healthcheck: {test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://localhost:5000/health')"], interval: 10s, timeout: 5s, retries: 12}
+  rfdi-api:
+    build: {context: ../.., dockerfile: services/v3/Dockerfile}
+    environment: {RFDI_V3_SERVICE_ROOT: /runtime, RFDI_EMBEDDED_WORKER: "false", RFDI_QUEUE_BACKEND: redis, RFDI_REDIS_URL: "redis://rfdi-redis:6379", MLFLOW_TRACKING_URI: "http://rfdi-mlflow:5000"}
+    volumes: [v3-runtime:/runtime]
+    ports: ["8000:8000"]
+    depends_on:
+      rfdi-redis: {condition: service_healthy}
+      rfdi-mlflow: {condition: service_healthy}
+    healthcheck: {test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"], interval: 5s, timeout: 3s, retries: 10}
+  rfdi-worker:
+    build: {context: ../.., dockerfile: services/v3/Dockerfile}
+    command: [python, /app/services/v3/worker.py]
+    environment: {RFDI_V3_SERVICE_ROOT: /runtime, RFDI_QUEUE_BACKEND: redis, RFDI_REDIS_URL: "redis://rfdi-redis:6379"}
+    volumes: [v3-runtime:/runtime]
+    depends_on: {rfdi-redis: {condition: service_healthy}}
+    healthcheck: {test: [CMD, python, -c, "import os; os.kill(1,0)"], interval: 10s, timeout: 3s, retries: 3}
+  rfdi-review-ui:
+    build: {context: ../.., dockerfile: services/v3/Dockerfile}
+    command: [python, -m, http.server, "8080", --directory, /app/services/v3]
+    ports: ["8080:8080"]
+    healthcheck: {test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://localhost:8080/review.html')"], interval: 5s, timeout: 3s, retries: 10}
+volumes: {v3-postgres: {}, v3-redis: {}, v3-minio: {}, v3-runtime: {}}

@@ -1,0 +1,10 @@
+{
+  "experiment_id": "V3-E11-V2-IMMUTABLE",
+  "base_commit_requested": "1f83625",
+  "base_commit_full": "1f836250c3e3f69cb914f77b40a6126aaceeaf4c",
+  "base_tree": "e92aba36df64b282521577edaaf99ac2f8d2cef7",
+  "tracked_blobs_checked": 206,
+  "mismatch_count": 0,
+  "method": "Compared git hash-object for every working-tree path in git ls-tree -r 1f83625 to the commit's blob ID.",
+  "passed": true
+}

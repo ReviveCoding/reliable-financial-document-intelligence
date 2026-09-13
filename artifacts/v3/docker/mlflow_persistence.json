@@ -1,0 +1,19 @@
+{
+  "experiment_id": "V3-E04",
+  "run_id": "ebaf889519954ed387676f5a0a04e474",
+  "experiment_id_in_mlflow": "1",
+  "run_status": "FINISHED",
+  "postgres": {
+    "run_row_found": true,
+    "parameter": {"purpose": "postgres-minio-validation"},
+    "metric": {"evidence_value": 1.0},
+    "artifact_uri": "mlflow-artifacts:/1/ebaf889519954ed387676f5a0a04e474/artifacts"
+  },
+  "minio": {
+    "object_found": true,
+    "path": "mlflow-artifacts/1/ebaf889519954ed387676f5a0a04e474/artifacts/validation/rfdi-v3-artifact.txt",
+    "size_bytes": 47,
+    "content": "R-FDI V3 MLflow artifact persistence evidence\\n"
+  },
+  "metadata_in_postgresql_and_artifact_in_minio": true
+}

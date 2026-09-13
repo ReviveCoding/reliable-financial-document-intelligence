@@ -1,0 +1,187 @@
+{
+  "backend": "Docker vLLM server",
+  "dataset": "CORD v2",
+  "documents": 20,
+  "experiment_id": "V3-E08",
+  "leaf_value_recall": 0.9171275048480931,
+  "load_seconds": 1.3321346889997585,
+  "mean_latency_seconds": 10.726819756649956,
+  "median_latency_seconds": 10.59233136350008,
+  "metric_limitation": "Content-presence recall over canonical leaf values; not official structured CORD F1.",
+  "model": "PaddleOCR-VL-1.6-0.9B",
+  "native_comparison": {
+    "artifact": "artifacts/v2/results/paddleocr_vl_development.json",
+    "leaf_value_recall": 0.8918894096099979,
+    "mean_latency_seconds": 20.40360346539983,
+    "median_latency_seconds": 11.277052773501055,
+    "total_value_presence": 0.9
+  },
+  "predictions": [
+    {
+      "document_id": "cord-v2-validation-00000",
+      "extracted_text": "/home/bjw-0/.local/share/rfdi-runtime/data/processed/cord_v2/7f0115a4b758a71d6473b8d085751692da2fef98/images/validation/00000.png number footnote header header_image footer footer_image aside_text ocr 1 real ganache 1 egg tart 1 pizza toast 16,500 13,000 16,000 total cash 45,500 50,000 change 4,500",
+      "latency_seconds": 17.369716229000005,
+      "leaf_value_recall": 1.0,
+      "result_count": 1,
+      "total_value_present": true
+    },
+    {
+      "document_id": "cord-v2-validation-00001",
+      "extracted_text": "/home/bjw-0/.local/share/rfdi-runtime/data/processed/cord_v2/7f0115a4b758a71d6473b8d085751692da2fef98/images/validation/00001.png number footnote header header_image footer footer_image aside_text ocr 404 kopi susu kolonel 1 total 23.000 tunai 50.000 kembali 27.000 ****",
+      "latency_seconds": 3.2236451850003505,
+      "leaf_value_recall": 1.0,
+      "result_count": 1,
+      "total_value_present": true
+    },
+    {
+      "document_id": "cord-v2-validation-00002",
+      "extracted_text": "/home/bjw-0/.local/share/rfdi-runtime/data/processed/cord_v2/7f0115a4b758a71d6473b8d085751692da2fef98/images/validation/00002.png number footnote header header_image footer footer_image aside_text ocr 20,000 20,000 s-oval tine 50% pb1: subtotal: total: cash: 1,818 18,181 20,000 100,000 change: 80,000 10% tax included",
+      "latency_seconds": 6.811532848999832,
+      "leaf_value_recall": 0.9,
+      "result_count": 1,
+      "total_value_present": true
+    },
+    {
+      "document_id": "cord-v2-validation-00003",
+      "extracted_text": "/home/bjw-0/.local/share/rfdi-runtime/data/processed/cord_v2/7f0115a4b758a71d6473b8d085751692da2fef98/images/validation/00003.png number footnote header header_image footer footer_image aside_text ocr 1x m-caramel black tea @28,000 28,000 70% less ice pb1: 0 subtotal: 28,000 total: 28,000 cash: 28,000 change: 0",
+      "latency_seconds": 14.702637583000069,
+      "leaf_value_recall": 1.0,
+      "result_count": 1,
+      "total_value_present": true
+    },
+    {
+      "document_id": "cord-v2-validation-00004",
+      "extracted_text": "/home/bjw-0/.local/share/rfdi-runtime/data/processed/cord_v2/7f0115a4b758a71d6473b8d085751692da2fef98/images/validation/00004.png number footnote header header_image footer footer_image aside_text ocr bbq chicken - sedang 41,000 0 items:1 total..... pay cash 50.000 change:9,000",
+      "latency_seconds": 4.17250678299979,
+      "leaf_value_recall": 1.0,
+      "result_count": 1,
+      "total_value_present": true
+    },
+    {
+      "document_id": "cord-v2-validation-00005",
+      "extracted_text": "/home/bjw-0/.local/share/rfdi-runtime/data/processed/cord_v2/7f0115a4b758a71d6473b8d085751692da2fef98/images/validation/00005.png number footnote header header_image footer footer_image aside_text ocr le mineral 1.00 nett amt tax amt total cash b,000 727 8,000 b,000",
+      "latency_seconds": 11.720956926999861,
+      "leaf_value_recall": 0.8571428571428571,
+      "result_count": 1,
+      "total_value_present": true
+    },
+    {
+      "document_id": "cord-v2-validation-00006",
+      "extracted_text": "/home/bjw-0/.local/share/rfdi-runtime/data/processed/cord_v2/7f0115a4b758a71d6473b8d085751692da2fef98/images/validation/00006.png number footnote header header_image footer footer_image aside_text ocr 1 potato sausage bread 19,000 1 oreo green tea spread 152,000 1 white choco banana spread 152,000 total 123,000 card 123,000",
+      "latency_seconds": 12.938002560999848,
+      "leaf_value_recall": 1.0,
+      "result_count": 1,
+      "total_value_present": true
+    },
+    {
+      "document_id": "cord-v2-validation-00007",
+      "extracted_text": "/home/bjw-0/.local/share/rfdi-runtime/data/processed/cord_v2/7f0115a4b758a71d6473b8d085751692da2fef98/images/validation/00007.png number footnote header header_image footer footer_image aside_text ocr 4 choco devil cp 360 club card subtotal: 63,636 discount: -9,545 pb1: 5,409 total: 59,500 cash: 100,000 change: 40,500",
+      "latency_seconds": 10.323679814000116,
+      "leaf_value_recall": 1.0,
+      "result_count": 1,
+      "total_value_present": true
+    },
+    {
+      "document_id": "cord-v2-validation-00008",
+      "extracted_text": "/home/bjw-0/.local/share/rfdi-runtime/data/processed/cord_v2/7f0115a4b758a71d6473b8d085751692da2fef98/images/validation/00008.png number footnote header header_image footer footer_image aside_text ocr 3x talam ungu disc item amount 1x mika kecil 4.00xitems subtotal total cash change @6500 19,500 -40.000% -7,800 @0 0 11,700 11,700 20,000 8,300",
+      "latency_seconds": 9.61499576399956,
+      "leaf_value_recall": 1.0,
+      "result_count": 1,
+      "total_value_present": true
+    },
+    {
+      "document_id": "cord-v2-validation-00009",
+      "extracted_text": "/home/bjw-0/.local/share/rfdi-runtime/data/processed/cord_v2/7f0115a4b758a71d6473b8d085751692da2fef98/images/validation/00009.png number footnote header header_image footer footer_image aside_text ocr 1 tahu ikan oma giok 20.000 total 20.000 cash 20.000 changed 0",
+      "latency_seconds": 9.642623750999974,
+      "leaf_value_recall": 0.5,
+      "result_count": 1,
+      "total_value_present": false
+    },
+    {
+      "document_id": "cord-v2-validation-00010",
+      "extracted_text": "/home/bjw-0/.local/share/rfdi-runtime/data/processed/cord_v2/7f0115a4b758a71d6473b8d085751692da2fef98/images/validation/00010.png number footnote header header_image footer footer_image aside_text ocr 2 serbu 1 2 choco peanut bread 40.000 20.000 total 60.000 cash 60.000 changed 0",
+      "latency_seconds": 7.363434551999944,
+      "leaf_value_recall": 1.0,
+      "result_count": 1,
+      "total_value_present": true
+    },
+    {
+      "document_id": "cord-v2-validation-00011",
+      "extracted_text": "/home/bjw-0/.local/share/rfdi-runtime/data/processed/cord_v2/7f0115a4b758a71d6473b8d085751692da2fef98/images/validation/00011.png number footnote header header_image footer footer_image aside_text ocr se'i sapi sambal matah (r) 120.000 se'i sapi lada hitam (j) 135.000 nasi putih 2 10.000 milk shake coklat 1 16.000 subtotal 81.000 pb 1 10% 8.100 total 89.100 kartu 89.100 kembali 0",
+      "latency_seconds": 14.939891018999788,
+      "leaf_value_recall": 0.9411764705882353,
+      "result_count": 1,
+      "total_value_present": true
+    },
+    {
+      "document_id": "cord-v2-validation-00012",
+      "extracted_text": "/home/bjw-0/.local/share/rfdi-runtime/data/processed/cord_v2/7f0115a4b758a71d6473b8d085751692da2fef98/images/validation/00012.png number footnote header header_image footer footer_image aside_text ocr es kopi susu 4 72.000 total 72.000 gopay 72.000 kembali 0",
+      "latency_seconds": 7.5601862779999465,
+      "leaf_value_recall": 1.0,
+      "result_count": 1,
+      "total_value_present": true
+    },
+    {
+      "document_id": "cord-v2-validation-00013",
+      "extracted_text": "/home/bjw-0/.local/share/rfdi-runtime/data/processed/cord_v2/7f0115a4b758a71d6473b8d085751692da2fef98/images/validation/00013.png number footnote header header_image footer footer_image aside_text ocr bornga 1 mineral 600 ml 7,727 1 bulgogi rice r 33,636 subtotal 41,364 tax 4,136 total 45,500 cash 50,000 cash change -4,500",
+      "latency_seconds": 11.673717146999934,
+      "leaf_value_recall": 1.0,
+      "result_count": 1,
+      "total_value_present": true
+    },
+    {
+      "document_id": "cord-v2-validation-00014",
+      "extracted_text": "/home/bjw-0/.local/share/rfdi-runtime/data/processed/cord_v2/7f0115a4b758a71d6473b8d085751692da2fef98/images/validation/00014.png number footnote header header_image footer footer_image aside_text ocr arem arem 2x @12.000 kroket 1x @12.000 subtotal tax (10.0%) total other 24.000 12.000 rp 36.000 rp 3.600 rp 39.600 rp 39.600",
+      "latency_seconds": 13.334275581999918,
+      "leaf_value_recall": 0.6666666666666666,
+      "result_count": 1,
+      "total_value_present": true
+    },
+    {
+      "document_id": "cord-v2-validation-00015",
+      "extracted_text": "/home/bjw-0/.local/share/rfdi-runtime/data/processed/cord_v2/7f0115a4b758a71d6473b8d085751692da2fef98/images/validation/00015.png number footnote header header_image footer footer_image aside_text ocr arem arem 2 12.000 pepenero pastel 2 15.000 subtotal tax (10.0%) total cash change rp 100.000 rp 40.600 rp 54.000 rp 59.400",
+      "latency_seconds": 16.19783878699991,
+      "leaf_value_recall": 0.7692307692307693,
+      "result_count": 1,
+      "total_value_present": true
+    },
+    {
+      "document_id": "cord-v2-validation-00016",
+      "extracted_text": "/home/bjw-0/.local/share/rfdi-runtime/data/processed/cord_v2/7f0115a4b758a71d6473b8d085751692da2fef98/images/validation/00016.png number footnote header header_image footer footer_image aside_text ocr 22 1 20,000 tt 20,000 total 20,000 cash 100,000 change 80,000",
+      "latency_seconds": 10.860982913000043,
+      "leaf_value_recall": 1.0,
+      "result_count": 1,
+      "total_value_present": true
+    },
+    {
+      "document_id": "cord-v2-validation-00017",
+      "extracted_text": "/home/bjw-0/.local/share/rfdi-runtime/data/processed/cord_v2/7f0115a4b758a71d6473b8d085751692da2fef98/images/validation/00017.png number footnote header header_image footer footer_image aside_text ocr lemonade 16oz 1 x 20,000 sub total grand total cash idr change due 20.000 20.000 100,000 80,000",
+      "latency_seconds": 9.716374169000119,
+      "leaf_value_recall": 0.875,
+      "result_count": 1,
+      "total_value_present": true
+    },
+    {
+      "document_id": "cord-v2-validation-00018",
+      "extracted_text": "/home/bjw-0/.local/share/rfdi-runtime/data/processed/cord_v2/7f0115a4b758a71d6473b8d085751692da2fef98/images/validation/00018.png number footnote header header_image footer footer_image aside_text ocr chef's bank 10,000 10,000 15,000 15,000 total cash 25,000 100,000 change 75,000",
+      "latency_seconds": 7.255538232000163,
+      "leaf_value_recall": 0.8333333333333334,
+      "result_count": 1,
+      "total_value_present": true
+    },
+    {
+      "document_id": "cord-v2-validation-00019",
+      "extracted_text": "/home/bjw-0/.local/share/rfdi-runtime/data/processed/cord_v2/7f0115a4b758a71d6473b8d085751692da2fef98/images/validation/00019.png number footnote header header_image footer footer_image aside_text ocr futami 17 green tea (clas 12,500) 1 egg tart 13,000 1 grain croque monsieur 17,000 total 42,500 cash 50,000 change 7,500",
+      "latency_seconds": 15.113859007999963,
+      "leaf_value_recall": 1.0,
+      "result_count": 1,
+      "total_value_present": true
+    }
+  ],
+  "runtime_seconds": 214.53639513299913,
+  "same_document_ids_as_native": true,
+  "server_url": "http://127.0.0.1:8118/v1",
+  "speedup_mean": 1.902111150208418,
+  "split": "validation development",
+  "total_value_presence": 0.95
+}

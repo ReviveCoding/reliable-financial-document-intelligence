@@ -1,0 +1,9 @@
+{
+  "base_commit": "1f83625",
+  "extension_decision": "V3_EXTENSION_SUCCESS",
+  "immutable_base_files_verified": 206,
+  "invalid_evidence_entries": 1,
+  "manifest_entries_verified": 31,
+  "registry_entries": 11,
+  "status": "PASS"
+}
