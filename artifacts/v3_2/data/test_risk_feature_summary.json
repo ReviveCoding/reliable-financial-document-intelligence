@@ -1,0 +1,45 @@
+{
+  "critical_error_prevalence": 0.41,
+  "designation": "RETROSPECTIVE_LOCKED_BENCHMARK",
+  "forbidden_features_present_only_as_retrospective_metadata": [
+    "ground_truth_leaf_count",
+    "true_line_item_count",
+    "true_ocr_token_count"
+  ],
+  "line_item_critical_error_prevalence": 0.32,
+  "mean_weighted_critical_loss": 0.17310588780992092,
+  "partitions": {
+    "RETROSPECTIVE_ONLY": 100
+  },
+  "risk_model_eligible_features": [
+    "image_width",
+    "image_height",
+    "image_megapixels",
+    "aspect_ratio",
+    "blur",
+    "luminance",
+    "contrast",
+    "estimated_skew",
+    "edge_density",
+    "foreground_density",
+    "sequence_confidence",
+    "predicted_field_count",
+    "predicted_line_item_count",
+    "predicted_output_length",
+    "schema_valid",
+    "parse_failure",
+    "missing_total",
+    "missing_subtotal",
+    "missing_tax",
+    "missing_discount",
+    "missing_any_item_price",
+    "reconciliation_residual",
+    "reconciliation_contradiction_count",
+    "latency_seconds",
+    "predicted_repeated_value_density",
+    "predicted_long_description",
+    "predicted_monetary_density"
+  ],
+  "row_alignment_error_prevalence": 0.1,
+  "rows": 100
+}

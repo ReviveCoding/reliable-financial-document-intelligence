@@ -1,0 +1,74 @@
+{
+  "candidate_metrics": [
+    {
+      "AURC": 0.23558816566154708,
+      "AUROC": 0.8189334435717237,
+      "Brier": 0.38455214942499905,
+      "ECE": 0.3930142503976821,
+      "PR_AUC": 0.8200298726540889,
+      "candidate": "R0_raw_confidence",
+      "designation": "RETROSPECTIVE_LOCKED_BENCHMARK"
+    },
+    {
+      "AURC": 0.2574231254295832,
+      "AUROC": 0.7614716825134353,
+      "Brier": 0.3475238128046682,
+      "ECE": 0.34501425039768213,
+      "PR_AUC": 0.6995937264386645,
+      "candidate": "R1_current_heuristic",
+      "designation": "RETROSPECTIVE_LOCKED_BENCHMARK"
+    },
+    {
+      "AURC": 0.33142580140460515,
+      "AUROC": 0.6554361306324927,
+      "Brier": 0.22881594776802333,
+      "ECE": 0.09781999299982638,
+      "PR_AUC": 0.5753612639342836,
+      "candidate": "R4_best_learned",
+      "designation": "RETROSPECTIVE_LOCKED_BENCHMARK"
+    }
+  ],
+  "certificate_results": [
+    {
+      "accepted_n": 9,
+      "binary_upper_bound_95": 0.6550586340562967,
+      "coverage": 0.45,
+      "observed_binary_risk": 0.3333333333333333,
+      "observed_weighted_loss": 0.1435544845032114,
+      "status": "INSUFFICIENT_CERTIFICATION_SUPPORT",
+      "target_risk": 0.05,
+      "threshold": 0.2635410800913949,
+      "weighted_upper_bound_95": 1.0
+    },
+    {
+      "accepted_n": 18,
+      "binary_upper_bound_95": 0.5540455583593004,
+      "coverage": 0.9,
+      "observed_binary_risk": 0.3333333333333333,
+      "observed_weighted_loss": 0.10589873612352776,
+      "status": "UNCERTIFIED",
+      "target_risk": 0.1,
+      "threshold": 0.6191360552058423,
+      "weighted_upper_bound_95": 0.7280970802146776
+    },
+    {
+      "accepted_n": 18,
+      "binary_upper_bound_95": 0.5540455583593004,
+      "coverage": 0.9,
+      "observed_binary_risk": 0.3333333333333333,
+      "observed_weighted_loss": 0.10589873612352776,
+      "status": "UNCERTIFIED",
+      "target_risk": 0.2,
+      "threshold": 0.6191360552058423,
+      "weighted_upper_bound_95": 0.7280970802146776
+    }
+  ],
+  "certification_partition_opened_after_threshold_freeze_commit": "3532686",
+  "certification_support": 20,
+  "critical_error_prevalence": 0.41,
+  "extractor_weights_changed": false,
+  "line_item_critical_error_prevalence": 0.32,
+  "retrospective_support": 100,
+  "retrospective_test_designation": "RETROSPECTIVE_LOCKED_BENCHMARK",
+  "retrospective_test_is_fresh_holdout": false
+}

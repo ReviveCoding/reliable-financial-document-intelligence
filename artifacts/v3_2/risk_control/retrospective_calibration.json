@@ -1,0 +1,31 @@
+{
+  "designation": "RETROSPECTIVE_LOCKED_BENCHMARK",
+  "isotonic": {
+    "AURC": 0.2812386638460013,
+    "AUROC": 0.6750723439437785,
+    "Brier": 0.2962473526327474,
+    "ECE": 0.27776195672305526,
+    "PR_AUC": 0.5428479125730503,
+    "calibration_intercept": 0.35642307790210465,
+    "calibration_slope": 0.11005731879148517
+  },
+  "note": "Calibration changes probability estimates, not the learned ranking; fitted on development threshold-selection only.",
+  "platt": {
+    "AURC": 0.33142580140460515,
+    "AUROC": 0.6554361306324927,
+    "Brier": 0.3363933587592333,
+    "ECE": 0.30910476787955743,
+    "PR_AUC": 0.5753612639342836,
+    "calibration_intercept": 31.12202788034064,
+    "calibration_slope": 14.397173973846863
+  },
+  "uncalibrated": {
+    "AURC": 0.33142580140460515,
+    "AUROC": 0.6554361306324927,
+    "Brier": 0.22881594776802333,
+    "ECE": 0.09781999299982638,
+    "PR_AUC": 0.5753612639342836,
+    "calibration_intercept": 0.2799366423041969,
+    "calibration_slope": 0.8720927301925228
+  }
+}

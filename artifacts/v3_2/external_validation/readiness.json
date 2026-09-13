@@ -1,0 +1,22 @@
+{
+  "assessment_date": "2026-09-13",
+  "docile": {
+    "access_status": "HUMAN_ACTION_REQUIRED_OPTIONAL",
+    "authorized_local_copy_found": false,
+    "evaluation_question": "Fresh external invoice line-item recognition and risk-ranking validation using official LIR grouping and matching.",
+    "official_evaluator": "https://github.com/rossumai/docile",
+    "official_access": "https://docile.rossum.ai/",
+    "reason": "The official download requires a secret access token; no authorized local token or dataset is present. Access controls were not bypassed.",
+    "task_compatibility": "HIGH_FOR_FUTURE_EXTERNAL_LINE_ITEM_VALIDATION"
+  },
+  "wildreceipt": {
+    "access_status": "ASSESSED_NOT_ADDED",
+    "downloaded": false,
+    "evaluation_question": "Potential unseen-template KIE/domain-shift study, not CORD line-item evaluation.",
+    "official_implementation_reference": "https://github.com/open-mmlab/mmocr/blob/main/configs/kie/_base_/datasets/wildreceipt.py",
+    "reason": "WildReceipt is a KIE dataset and does not supply a task-compatible substitute for DocILE LIR or the frozen CORD row-aware monetary targets. Adding it would not answer the primary v3.2 promotion question.",
+    "task_compatibility": "OPTIONAL_KIE_DOMAIN_SHIFT_ONLY"
+  },
+  "datasets_added": 0,
+  "external_validation_complete": false
+}

@@ -1,0 +1,14 @@
+{
+  "absolute_AURC_reduction": -0.09583763574305806,
+  "absolute_AURC_reduction_ci95": [
+    -0.20220747163615943,
+    0.010746072252426664
+  ],
+  "relative_AURC_reduction": -0.4068015703332961,
+  "relative_AURC_reduction_ci95": [
+    -1.2219364364368737,
+    0.0379506860803333
+  ],
+  "replicates": 2000,
+  "support_document_groups": 100
+}

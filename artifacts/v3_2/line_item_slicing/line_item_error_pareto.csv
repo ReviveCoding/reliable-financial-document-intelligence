@@ -1,0 +1,7 @@
+error_mode,document_support,prevalence,representative_document_ids,raw_document_data_published
+row_not_exact,52,0.52,cord-v2-test-00000;cord-v2-test-00002;cord-v2-test-00004,False
+line_item_critical_error,32,0.32,cord-v2-test-00000;cord-v2-test-00002;cord-v2-test-00007,False
+correct_total_wrong_item_price,25,0.25,cord-v2-test-00000;cord-v2-test-00002;cord-v2-test-00007,False
+spurious_predicted_row,10,0.1,cord-v2-test-00002;cord-v2-test-00007;cord-v2-test-00016,False
+row_alignment_failure,10,0.1,cord-v2-test-00016;cord-v2-test-00017;cord-v2-test-00026,False
+unmatched_gt_row,6,0.06,cord-v2-test-00017;cord-v2-test-00039;cord-v2-test-00041,False

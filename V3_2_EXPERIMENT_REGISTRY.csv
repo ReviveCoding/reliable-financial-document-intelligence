@@ -1,0 +1,12 @@
+experiment_id,experiment,status,designation,evidence
+V3.2-E00,protocol_freeze,COMPLETE,239824f,configs/v3_2/risk_protocol.json
+V3.2-E01,synthetic_line_item_evaluator,PASS_10_CASES,DEVELOPMENT,tests/test_v3_2_line_item_evaluation.py
+V3.2-E02,row_aware_line_item_evaluation,COMPLETE,RETROSPECTIVE_LOCKED_BENCHMARK,artifacts/v3_2/line_items/retrospective_test/aggregate_metrics.json
+V3.2-E03,production_safe_feature_table,COMPLETE_NO_LEAKAGE,DEVELOPMENT_AND_RETROSPECTIVE,artifacts/v3_2/data/risk_feature_table.csv
+V3.2-E04,grouped_cv_risk_model_selection,R4_BEST_LEARNED_R0_BEST_OVERALL,DEVELOPMENT,artifacts/v3_2/risk_model/development_selection/frozen_selection.json
+V3.2-E05,finite_sample_certification,NO_TARGET_CERTIFIED,INDEPENDENT_CERTIFICATION,artifacts/v3_2/risk_control/certification_results.csv
+V3.2-E06,retrospective_risk_benchmark,COMPLETE_NO_RETUNING,RETROSPECTIVE_LOCKED_BENCHMARK,artifacts/v3_2/risk_control/evaluation_summary.json
+V3.2-E07,risk_ranker_robustness,COMPLETE_REUSED_V3_1,DEVELOPMENT_PROXY,artifacts/v3_2/robustness/robustness_risk_response_summary.csv
+V3.2-E08,shadow_runtime,NOT_INTEGRATED_GATE_FAILED,OFFLINE_ONLY,artifacts/v3_2/risk_control/shadow_runtime_status.json
+V3.2-E09,external_validation,HUMAN_ACTION_REQUIRED_OPTIONAL,NOT_BLOCKING,artifacts/v3_2/external_validation/readiness.json
+V3.2-E10,mlflow_analysis_logging,COMPLETE,LOCAL_COMPOSE,artifacts/v3_2/mlflow/analysis_run.json

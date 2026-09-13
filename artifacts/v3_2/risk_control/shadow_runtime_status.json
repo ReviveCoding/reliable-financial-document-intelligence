@@ -1,0 +1,7 @@
+{
+  "candidate_exposed_in_api": false,
+  "decision": "V3_2_RISK_MODEL_NO_PROMOTION",
+  "existing_action_semantics_changed": false,
+  "mode": "UNCHANGED_V3_RUNTIME",
+  "shadow_integration_permitted": false
+}

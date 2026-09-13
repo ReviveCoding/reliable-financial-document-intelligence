@@ -35,9 +35,11 @@ def path_error(truth: Any, prediction: Any, path: tuple[str,...]) -> tuple[int,i
 
 def critical_targets(truth: Any, prediction: Any, line: dict[str,Any]) -> dict[str,Any]:
     numerator=denominator=0.0; document_error=False
+    error_counts={name: 0 for name in WEIGHTS}; supports={name: 0 for name in WEIGHTS}
     mapping=[("document_total",("total","total_price")),("subtotal",("sub_total","subtotal_price")),("tax",("sub_total","tax_price")),("discount",("sub_total","discount_price"))]
     for name,path in mapping:
         error,supported=path_error(truth,prediction,path)
+        error_counts[name]+=error; supports[name]+=supported
         numerator+=error*float(WEIGHTS[name]); denominator+=supported*float(WEIGHTS[name]); document_error |= bool(error)
     gt=extract_line_items(truth); pred=extract_line_items(prediction); matrix=[[intersection_counts(g,p)[1] for p in pred] for g in gt]; pairs=[x for x in maximum_weight_assignment(matrix) if matrix[x[0]][x[1]]>=1.0] if matrix and pred else []
     matched_gt={g for g,_ in pairs}; matched_pred={p for _,p in pairs}; line_error=False
@@ -45,19 +47,25 @@ def critical_targets(truth: Any, prediction: Any, line: dict[str,Any]) -> dict[s
         weight=float(WEIGHTS[weight_name])
         for gi,pi in pairs:
             left=collections.Counter((k,v) for k,v in gt[gi].fields if field_family(k)==family); right=collections.Counter((k,v) for k,v in pred[pi].fields if field_family(k)==family)
-            supported=max(sum(left.values()),sum(right.values())); errors=supported-sum((left&right).values())
-            numerator+=errors*weight; denominator+=supported*weight
-            if family in {"item_price","unit_price"} and errors: line_error=True
+            supported=max(sum(left.values()),sum(right.values())); field_errors=supported-sum((left&right).values())
+            supports[weight_name]+=supported; error_counts[weight_name]+=field_errors
+            numerator+=field_errors*weight; denominator+=supported*weight
+            if family in {"item_price","unit_price"} and field_errors: line_error=True
         for gi,row in enumerate(gt):
             if gi not in matched_gt:
                 count=sum(field_family(k)==family for k,_ in row.fields); numerator+=count*weight; denominator+=count*weight; line_error |= family in {"item_price","unit_price"} and count>0
+                error_counts[weight_name]+=count; supports[weight_name]+=count
         for pi,row in enumerate(pred):
             if pi not in matched_pred:
                 count=sum(field_family(k)==family for k,_ in row.fields); numerator+=count*weight; denominator+=count*weight; line_error |= family in {"item_price","unit_price"} and count>0
+                error_counts[weight_name]+=count; supports[weight_name]+=count
     if line["row_alignment_error"] and any(field_family(k) in {"item_price","unit_price"} for row in gt+pred for k,_ in row.fields):
         numerator+=float(WEIGHTS["item_total_price"]); denominator+=float(WEIGHTS["item_total_price"]); line_error=True
+        error_counts["item_total_price"]+=1; supports["item_total_price"]+=1
     document_error |= line_error
-    return {"document_has_critical_error":document_error,"document_has_line_item_critical_error":line_error,"document_has_row_alignment_error":bool(line["row_alignment_error"]),"weighted_critical_loss":min(1.0,numerator/denominator) if denominator else 0.0,"critical_error_weight":numerator,"critical_supported_weight":denominator}
+    detail={f"critical_error_count_{name}":error_counts[name] for name in WEIGHTS}
+    detail.update({f"critical_support_count_{name}":supports[name] for name in WEIGHTS})
+    return {"document_has_critical_error":document_error,"document_has_line_item_critical_error":line_error,"document_has_row_alignment_error":bool(line["row_alignment_error"]),"weighted_critical_loss":min(1.0,numerator/denominator) if denominator else 0.0,"critical_error_weight":numerator,"critical_supported_weight":denominator,**detail}
 
 
 def reconciliation(prediction: Any) -> tuple[float,int]:

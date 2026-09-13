@@ -1,0 +1,12 @@
+{
+  "artifact_reproducible_and_versioned": true,
+  "decision": "V3_2_RISK_MODEL_NO_PROMOTION",
+  "development_relative_AURC_improvement": -0.1116951083567474,
+  "evaluator_validation": "PASS",
+  "operating_gate": false,
+  "practical_improvement_gate": false,
+  "production_feature_leakage_count": 0,
+  "reason": "Best learned candidate failed frozen development discrimination, practical-improvement, and operating gates.",
+  "required_relative_AURC_improvement": 0.1,
+  "runtime_integration": "OFFLINE_ONLY_NO_SHADOW_INTEGRATION"
+}

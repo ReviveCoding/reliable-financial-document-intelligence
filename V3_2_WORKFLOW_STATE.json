@@ -1,0 +1,17 @@
+{
+  "baseline_commit": "00cf00516fc28a4716d29a9c65f49cc482d57db7",
+  "cord_test_designation": "RETROSPECTIVE_LOCKED_BENCHMARK",
+  "cord_test_is_fresh_holdout": false,
+  "decision": "V3_2_RISK_MODEL_NO_PROMOTION",
+  "extractor_weights_changed": false,
+  "manifest_entries": 60,
+  "optional_blockers": [
+    "DocILE authorized access/token absent"
+  ],
+  "protocol_commit": "239824f",
+  "protocol_sha256": "703086931438ca2e38ca406660be3d5e1f6f2963f33fd3b53854bce7b77b9387",
+  "selection_freeze_commit": "3532686",
+  "shadow_runtime_integrated": false,
+  "status": "COMPLETE",
+  "workflow": "R-FDI v3.2 Critical Risk Control & Line-Item Reliability"
+}

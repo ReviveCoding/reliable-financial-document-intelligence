@@ -56,6 +56,8 @@ V1, V2, and V3 answer different questions; later phases do not erase earlier neg
 flowchart LR
     V1["V1<br/>Governance and pipeline validation<br/><b>NO_PROMOTION</b>"] --> V2["V2<br/>Real public documents and CUDA model study<br/><b>PROMOTE</b>"]
     V2 --> V3["V3<br/>Financial-domain and production hardening<br/><b>V3_EXTENSION_SUCCESS</b>"]
+    V3 --> V31["V3.1<br/>Evaluation analytics<br/><b>V3_1_ANALYSIS_SUCCESS</b>"]
+    V31 --> V32["V3.2<br/>Critical-risk and row reliability<br/><b>NO PROMOTION</b>"]
 ```
 
 - **V1:** Can the governance, evaluation, risk, and audit pipeline fail closed? Its historical `NO_PROMOTION` result remains intact.
@@ -84,6 +86,37 @@ V3 executed a real Docker Compose stack with FastAPI, worker, reviewer UI, Redis
 ![V3 extension-gate summary](docs/assets/v3_evidence_summary.svg)
 
 ## Where the system works — and where it fails
+
+### V3.2 critical-risk control
+
+V3.2 leaves extractor weights unchanged and treats CORD test as a
+`RETROSPECTIVE_LOCKED_BENCHMARK`, not a fresh holdout. Permutation-invariant
+row matching raises line-item F1 from the historical flat **0.7887** to
+**0.9534**, but row exact match is only **60.23%**, row-alignment failures affect
+**10.0%**, and **41.0%** of documents contain at least one broadly defined
+critical monetary error.
+
+The strongest adequately supported retrospective slices are high sequence
+confidence (N=33, **9.1%** critical-error rate), high resolution (N=26,
+**30.8%**), and low predicted line-item count (N=40, **35.0%**). The weakest
+are low sequence confidence (N=34, **76.5%**), high predicted line-item count
+(N=20, **65.0%**), and high reconciliation residual (N=20, **55.0%**).
+
+The best learned candidate, shallow gradient boosting R4, does not beat raw
+confidence: retrospective AURC is **0.3314** versus **0.2356** (lower is
+better). At 50% review, raw confidence captures **75.6%** of critical errors
+but leaves **20.0%** critical risk among accepted documents. No 5%, 10%, or
+20% finite-sample target is certified, so the frozen decision is
+`V3_2_RISK_MODEL_NO_PROMOTION` and runtime routing remains unchanged.
+
+![V3.2 row-aware evaluation](docs/assets/v3_2/historical_vs_row_aware.svg)
+
+![V3.2 risk coverage](docs/assets/v3_2/risk_coverage_curve.svg)
+
+See the [v3.2 final report](reports/v3_2/FINAL_REPORT.md) and
+[executive findings](reports/v3_2/EXECUTIVE_FINDINGS.md).
+
+### V3.1 slicing baseline
 
 V3.1 analyzes frozen model evidence; it does not change model weights or tune on
 the locked test. Donut's document-average CORD test leaf F1 is **0.8453** across
@@ -150,6 +183,8 @@ PYTHONPATH=src python -m unittest discover -s tests -v
 python scripts/verify_evidence.py
 python scripts/verify_v2_committed_evidence.py
 python scripts/v3/verify_evidence.py
+python scripts/v3_1/verify_evidence.py
+python scripts/v3_2/verify_evidence.py
 ```
 
 Full-data V2 verification additionally hashes the authorized locked CORD, FUNSD,
@@ -163,7 +198,7 @@ For Docker runtime and authorized GPU reproduction, follow the [V3 reproducibili
 
 ## Evidence governance
 
-Every phase maintains workflow state, experiment registries, decisions, blockers, and hash-based evidence manifests. V1 remains `NO_PROMOTION`; V2 is `PROMOTE` only within its offline research scope; V3 is `V3_EXTENSION_SUCCESS` under the unchanged extension rule. Verification scripts independently recompute hashes and decision logic.
+Every phase maintains workflow state, experiment registries, decisions, blockers, and hash-based evidence manifests. V1 remains `NO_PROMOTION`; V2 is `PROMOTE` only within its offline research scope; V3 is `V3_EXTENSION_SUCCESS`; v3.1 is `V3_1_ANALYSIS_SUCCESS`; and v3.2 is `V3_2_RISK_MODEL_NO_PROMOTION`. Verification scripts independently recompute hashes and decision logic.
 
 ## Limitations
 
@@ -180,6 +215,8 @@ Implement an actual Redis-backed queue adapter, broaden paired serving trials, e
 ## Research reports and important artifacts
 
 - [V3 final report](reports/v3/FINAL_REPORT.md) · [V3 infrastructure/runtime](reports/v3/INFRASTRUCTURE_AND_RUNTIME.md) · [V3 accelerated serving](reports/v3/PADDLEOCR_VLLM_SERVING.md) · [V3 security](reports/v3/SECURITY_BENCHMARK.md)
+- [V3.2 final report](reports/v3_2/FINAL_REPORT.md) · [V3.2 row evaluation](reports/v3_2/ROW_AWARE_LINE_ITEM_EVALUATION.md) · [V3.2 certification](reports/v3_2/RISK_CERTIFICATION.md)
+- [V3.1 final analysis](reports/v3_1/FINAL_ANALYSIS_REPORT.md) · [V3.1 executive findings](reports/v3_1/EXECUTIVE_FINDINGS.md)
 - [V2 final technical report](reports/v2/FINAL_TECHNICAL_REPORT.md) · [V2 release decision](artifacts/v2/release/decision.json) · [V2 model comparison](artifacts/v2/tables/model_comparison.csv)
 - [V1 final technical report](reports/FINAL_TECHNICAL_REPORT.md) · [V1 final status](FINAL_STATUS.md)
 - [V3 workflow state](V3_WORKFLOW_STATE.json) · [V3 evidence manifest](V3_EVIDENCE_MANIFEST.jsonl) · [V3 blockers](V3_BLOCKERS.md)

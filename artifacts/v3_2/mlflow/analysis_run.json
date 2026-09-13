@@ -1,0 +1,11 @@
+{
+  "artifact_uri": "mlflow-artifacts:/3/2be38e36e61b4177914ee2f35cde8a70/artifacts",
+  "experiment_id": "3",
+  "experiment_name": "rfdi-v3-2-critical-risk-control",
+  "logged_scope": "v3.2 compact artifacts and visualization assets",
+  "minio_artifacts_verified": true,
+  "overwrote_prior_runs": false,
+  "postgres_metadata_verified": true,
+  "run_id": "2be38e36e61b4177914ee2f35cde8a70",
+  "status": "FINISHED"
+}
