@@ -1,7 +1,5 @@
 # Design and protocol
 
-The v3.2 protocol was frozen at commit `239824f` before new v3.2 results and the development candidate/threshold checkpoint was committed at `3532686` before certification or retrospective test evaluation. CORD test is a `RETROSPECTIVE_LOCKED_BENCHMARK`, not a fresh untouched holdout. Extractor weights were unchanged.
+The original v3.2 protocol was frozen at `239824f`; methodology erratum `081ba8f` precedes corrected results. Corrected development replay was frozen at `274a2c0` before reopening already-observed certification/test partitions. Extractor weights and the exact R0–R5 algorithms, production-safe features, 60/20/20 grouping, grids, seed, 2,000-replicate bootstrap, risk weights, budgets, and gates remain unchanged.
 
-The primary target is any supported critical monetary error; secondary targets are line-item monetary errors, row alignment errors, and bounded weighted critical loss. Only `PRE_INFERENCE`, `CHEAP_PREFLIGHT`, and `POST_EXTRACTION` features are eligible. All source-document variants are grouped. Candidate selection uses five-fold grouped CV, AURC, fixed grids, 2,000 document bootstrap replicates, and the frozen review/certification budgets in [`risk_protocol.json`](../../configs/v3_2/risk_protocol.json).
-
-Promotion is shadow-only and requires every frozen gate. No autonomous-action promotion is permitted.
+Designations are `DEVELOPMENT_CORRECTION_REPLAY`, `DEVELOPMENT_THRESHOLD_REPLAY`, `POST_AUDIT_REUSED_CERTIFICATION_PARTITION`, and `RETROSPECTIVE_LOCKED_BENCHMARK`. All have `fresh_confirmatory_evidence=false`; corrected replay alone cannot promote a model.

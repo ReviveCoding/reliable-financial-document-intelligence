@@ -90,11 +90,13 @@ V3 executed a real Docker Compose stack with FastAPI, worker, reviewer UI, Redis
 ### V3.2 critical-risk control
 
 V3.2 leaves extractor weights unchanged and treats CORD test as a
-`RETROSPECTIVE_LOCKED_BENCHMARK`, not a fresh holdout. Permutation-invariant
-row matching raises line-item F1 from the historical flat **0.7887** to
-**0.9534**, but row exact match is only **60.23%**, row-alignment failures affect
-**10.0%**, and **41.0%** of documents contain at least one broadly defined
-critical monetary error.
+`RETROSPECTIVE_LOCKED_BENCHMARK`, not a fresh holdout. A methodology correction
+now separates historical path-occurrence field accuracy (**0.8016**), strict
+positional-row field F1 (**0.7887**), permutation-invariant matched-row F1
+(**0.9534**), matched-field micro F1 (**0.8585**), and row exactness
+(**0.6023**). Matched-row F1 measures matchability—not field extraction
+accuracy. Benign permutation-only prevalence is **0.0%** in this retrospective
+sample; semantic row-association errors affect **10.0%**.
 
 The strongest adequately supported retrospective slices are high sequence
 confidence (N=33, **9.1%** critical-error rate), high resolution (N=26,
@@ -102,11 +104,16 @@ confidence (N=33, **9.1%** critical-error rate), high resolution (N=26,
 are low sequence confidence (N=34, **76.5%**), high predicted line-item count
 (N=20, **65.0%**), and high reconciliation residual (N=20, **55.0%**).
 
-The best learned candidate, shallow gradient boosting R4, does not beat raw
+Corrected critical prevalence is **41.0%** and line-item critical prevalence is
+**33.0%**. Across development and test, one label changed from positive to
+negative; weighted loss decreased for 11 documents and increased for four as
+actual monetary association errors became explicit. The best learned candidate,
+shallow gradient boosting R4, does not beat raw
 confidence: retrospective AURC is **0.3314** versus **0.2356** (lower is
 better). At 50% review, raw confidence captures **75.6%** of critical errors
 but leaves **20.0%** critical risk among accepted documents. No 5%, 10%, or
-20% finite-sample target is certified, so the frozen decision is
+20% replayed target supplies fresh certification; the previously opened
+partition is explicitly non-confirmatory and promotion-ineligible. The decision is
 `V3_2_RISK_MODEL_NO_PROMOTION` and runtime routing remains unchanged.
 
 ![V3.2 row-aware evaluation](docs/assets/v3_2/historical_vs_row_aware.svg)
@@ -114,7 +121,7 @@ but leaves **20.0%** critical risk among accepted documents. No 5%, 10%, or
 ![V3.2 risk coverage](docs/assets/v3_2/risk_coverage_curve.svg)
 
 See the [v3.2 final report](reports/v3_2/FINAL_REPORT.md) and
-[executive findings](reports/v3_2/EXECUTIVE_FINDINGS.md).
+[methodology correction](reports/v3_2/METHODOLOGY_CORRECTION.md).
 
 ### V3.1 slicing baseline
 

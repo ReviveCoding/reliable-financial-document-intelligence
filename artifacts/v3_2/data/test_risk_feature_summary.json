@@ -6,11 +6,13 @@
     "true_line_item_count",
     "true_ocr_token_count"
   ],
-  "line_item_critical_error_prevalence": 0.32,
-  "mean_weighted_critical_loss": 0.17310588780992092,
+  "fresh_confirmatory_evidence": false,
+  "line_item_critical_error_prevalence": 0.33,
+  "mean_weighted_critical_loss": 0.17362249398541593,
   "partitions": {
     "RETROSPECTIVE_ONLY": 100
   },
+  "promotion_eligible": false,
   "risk_model_eligible_features": [
     "image_width",
     "image_height",
@@ -40,6 +42,10 @@
     "predicted_long_description",
     "predicted_monetary_density"
   ],
-  "row_alignment_error_prevalence": 0.1,
+  "row_designations": {
+    "RETROSPECTIVE_LOCKED_BENCHMARK": 100
+  },
+  "row_permutation_only_prevalence": 0.0,
+  "row_structure_failure_prevalence": 0.15,
   "rows": 100
 }

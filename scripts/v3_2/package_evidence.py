@@ -101,6 +101,10 @@ def main() -> None:
     selection = json.loads((ROOT / "artifacts/v3_2/risk_model/development_selection/frozen_selection.json").read_text())
     decisions = {
         "decision": "V3_2_RISK_MODEL_NO_PROMOTION",
+        "methodology_correction_replay": True,
+        "fresh_confirmatory_evidence": False,
+        "promotion_eligible": False,
+        "methodology_erratum_sha256": sha(ROOT / "configs/v3_2/methodology_erratum.json"),
         "evaluator_validation": "PASS",
         "production_feature_leakage_count": 0,
         "development_relative_AURC_improvement": selection["relative_AURC_reduction"],
@@ -109,7 +113,7 @@ def main() -> None:
         "operating_gate": selection["operating_gate"],
         "artifact_reproducible_and_versioned": True,
         "runtime_integration": "OFFLINE_ONLY_NO_SHADOW_INTEGRATION",
-        "reason": "Best learned candidate failed frozen development discrimination, practical-improvement, and operating gates.",
+        "reason": "Best learned candidate failed frozen development discrimination, practical-improvement, and operating gates; corrected replay is also ineligible for promotion without fresh external evidence.",
     }
     (ROOT / "artifacts/v3_2/risk_control/promotion_gates.json").write_text(json.dumps(decisions, indent=2, sort_keys=True) + "\n")
     runtime = {"mode": "UNCHANGED_V3_RUNTIME", "candidate_exposed_in_api": False, "shadow_integration_permitted": False, "decision": decisions["decision"], "existing_action_semantics_changed": False}

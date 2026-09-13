@@ -1,11 +1,11 @@
-# Finite-sample risk certification
+# Certification correction replay
 
-Thresholds were selected before opening the 20-document independent certification partition. Results use a one-sided exact 95% Clopper–Pearson upper bound for binary loss and a one-sided empirical-Bernstein bound for bounded weighted loss. These are research certificates conditional on source-document exchangeability and an unchanged pipeline, not regulatory guarantees.
+Every row is `POST_AUDIT_REUSED_CERTIFICATION_PARTITION`, `fresh_confirmatory_evidence=false`, and `promotion_eligible=false`. Thresholds were frozen at corrected replay commit `274a2c0`, but this partition had already been observed before correction.
 
-| Target | Accepted | Coverage | Observed risk | Binary upper 95% | Status |
+| Target | Accepted | Coverage | Observed | One-sided upper 95% | Replay status |
 |---:|---:|---:|---:|---:|---|
-| 5% | 9 | 45.0% | 33.3% | 65.5% | `INSUFFICIENT_CERTIFICATION_SUPPORT` |
-| 10% | 18 | 90.0% | 33.3% | 55.4% | `UNCERTIFIED` |
-| 20% | 18 | 90.0% | 33.3% | 55.4% | `UNCERTIFIED` |
+| 5% | 9 | 45.0% | 22.2% | 55.0% | `REPLAY_INSUFFICIENT_SUPPORT` |
+| 10% | 18 | 90.0% | 27.8% | 49.8% | `REPLAY_UNCERTIFIED` |
+| 20% | 18 | 90.0% | 27.8% | 49.8% | `REPLAY_UNCERTIFIED` |
 
-No automatic-accept region is certified. The 5% target also has insufficient accepted support (N=9).
+No target supplies fresh certification. A genuinely fresh external dataset is required.

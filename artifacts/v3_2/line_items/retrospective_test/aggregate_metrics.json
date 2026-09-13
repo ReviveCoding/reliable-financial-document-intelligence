@@ -1,19 +1,22 @@
 {
   "designation": "RETROSPECTIVE_LOCKED_BENCHMARK",
   "document_mean_metrics": {
-    "E0_historical_flat_f1": 0.7886895205184681,
-    "E1_strict_row_order_f1": 0.7886895205184681,
-    "E2_line_item_f1": 0.95338455988456,
-    "critical_monetary_row_f1": 0.8377539682539681,
-    "field_within_row_micro_f1": 0.8282489747095012,
-    "item_name_f1": 0.7681046453546452,
-    "item_price_f1": 0.8377539682539681,
-    "quantity_f1": 0.8979047619047619,
-    "row_exact_match_rate": 0.6022575757575758,
-    "unit_price_f1": 0.893
+    "E0_path_occurrence_f1": 0.8015804979620769,
+    "E1_positional_row_f1": 0.7886895205184681,
+    "E2_matched_field_micro_f1": 0.8585144632170949,
+    "E2_matched_row_f1": 0.95338455988456,
+    "E2_row_exact_match_rate": 0.6022575757575758,
+    "item_name_f1": 0.7946077533577532,
+    "item_price_f1": 0.8731028138528137,
+    "quantity_f1": 0.9189163059163057,
+    "unit_price_f1": 0.903
   },
   "documents": 100,
-  "row_alignment_failure_rate": 0.1,
+  "row_missing_error_rate": 0.06,
+  "row_permutation_only_rate": 0.0,
+  "row_semantic_association_error_rate": 0.1,
+  "row_spurious_error_rate": 0.1,
+  "row_structure_failure_rate": 0.15,
   "spurious_predicted_rows": 22,
   "unmatched_gt_rows": 11
 }

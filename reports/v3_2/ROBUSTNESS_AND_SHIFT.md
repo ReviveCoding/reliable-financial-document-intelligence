@@ -1,7 +1,5 @@
-# Robustness and shift
+# Robustness and shift replay
 
-No GPU inference was rerun: v3.1's frozen 10-document development corruption cohort was reused. To test feature response without inventing extractor outputs, corrupted image descriptors were varied while each document's frozen clean post-extraction features were held fixed. This is a limited risk-sensitivity diagnostic, not a fresh end-to-end robustness benchmark.
+No GPU inference was rerun. Frozen v3.1 corruptions were reused under `RISK_SENSITIVITY_PROXY_NOT_END_TO_END_INFERENCE`: corrupted image descriptors vary while clean post-extraction outputs remain fixed. High occlusion has mean leaf F1 0.5752, mean risk increase +0.0437, proxy AUROC 0.4167, and 2 false-negative proxy errors at/below median risk. Response remains weak and inconsistent.
 
-High occlusion is the extraction bottleneck (mean leaf F1 0.5752); R4 risk rises only +0.0437 from clean and its proxy-error AUROC is 0.4167, with 2 critical proxy errors at or below median risk. Risk response is inconsistent across corruptions, reinforcing no-promotion.
-
-Fresh external LIR evidence remains absent. [DocILE's official toolkit](https://github.com/rossumai/docile) requires an access token and is `HUMAN_ACTION_REQUIRED_OPTIONAL`. WildReceipt was assessed only as KIE/domain shift and was not forced into incompatible CORD line-item metrics.
+Authorized DocILE LIR evidence and a larger fresh grouped certification sample remain missing. WildReceipt was not forced into incompatible line-item metrics.

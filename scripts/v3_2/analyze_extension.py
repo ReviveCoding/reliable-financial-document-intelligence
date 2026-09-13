@@ -70,36 +70,42 @@ def slices(test: list[dict[str, str]], line: list[dict[str, str]], output: Path)
                 "support_n": len(selected),
                 "critical_error_rate": mean_or_blank([flag(row, "document_has_critical_error") for row in selected]),
                 "line_item_critical_error_rate": mean_or_blank([flag(row, "document_has_line_item_critical_error") for row in selected]),
-                "row_alignment_error_rate": mean_or_blank([flag(row, "document_has_row_alignment_error") for row in selected]),
+                "row_structure_failure_rate": mean_or_blank([flag(row, "document_has_row_structure_failure") for row in selected]),
+                "row_semantic_association_error_rate": mean_or_blank([flag(row, "document_has_row_semantic_association_error") for row in selected]),
+                "row_permutation_only_rate": mean_or_blank([flag(row, "row_permutation_only") for row in selected]),
                 "mean_weighted_critical_loss": mean_or_blank([float(row["weighted_critical_loss"]) for row in selected]),
-                "mean_E2_line_item_f1": mean_or_blank([float(row["E2_line_item_f1"]) for row in line_rows]),
+                "mean_E2_matched_row_f1": mean_or_blank([float(row["E2_matched_row_f1"]) for row in line_rows]),
+                "mean_E2_matched_field_micro_f1": mean_or_blank([float(row["E2_matched_field_micro_f1"]) for row in line_rows]),
                 "support_status": "HEADLINE" if len(selected) >= 20 else "EXPLORATORY" if len(selected) >= 10 else "INSUFFICIENT_SUPPORT",
             })
     write_csv(output / "line_item_slices.csv", output_rows)
 
-    modes: collections.Counter[str] = collections.Counter()
+    required_modes=["benign_row_permutation_audit_only","semantic_row_association_error","missing_row","spurious_row","incorrect_item_price","missing_item_price","correct_total_wrong_item_price","document_total_error"]
+    modes: collections.Counter[str] = collections.Counter({name:0 for name in required_modes})
     representatives: dict[str, list[str]] = collections.defaultdict(list)
     for row in test:
         detail = by_id[row["document_id"]]
         candidates = {
-            "line_item_critical_error": flag(row, "document_has_line_item_critical_error"),
-            "row_alignment_failure": flag(row, "document_has_row_alignment_error"),
-            "unmatched_gt_row": int(float(detail["unmatched_gt_rows"]) > 0),
-            "spurious_predicted_row": int(float(detail["spurious_predicted_rows"]) > 0),
-            "row_not_exact": int(float(detail["row_exact_match_rate"]) < 1),
+            "benign_row_permutation_audit_only": flag(row, "row_permutation_only"),
+            "semantic_row_association_error": flag(row, "document_has_row_semantic_association_error"),
+            "missing_row": int(float(detail["unmatched_gt_rows"]) > 0),
+            "spurious_row": int(float(detail["spurious_predicted_rows"]) > 0),
+            "incorrect_item_price": int(float(detail["incorrect_item_price_count"]) > 0),
+            "missing_item_price": int(float(detail["missing_item_price_count"]) > 0),
             "correct_total_wrong_item_price": int(
                 flag(row, "document_has_line_item_critical_error")
                 and float(row["critical_support_count_document_total"]) > 0
                 and float(row["critical_error_count_document_total"]) == 0
-                and float(detail["item_price_f1"]) < 1
+                and (float(detail["incorrect_item_price_count"]) > 0 or float(detail["missing_item_price_count"]) > 0)
             ),
+            "document_total_error": int(float(row["critical_error_count_document_total"]) > 0),
         }
         for name, present in candidates.items():
             if present:
                 modes[name] += 1
                 if len(representatives[name]) < 3:
                     representatives[name].append(row["document_id"])
-    pareto = [{"error_mode": name, "document_support": count, "prevalence": count / len(test), "representative_document_ids": ";".join(representatives[name]), "raw_document_data_published": False} for name, count in modes.most_common()]
+    pareto = [{"error_mode": name, "document_support": count, "prevalence": count / len(test), "classification":"BENIGN_AUDIT_ONLY" if name=="benign_row_permutation_audit_only" else "FAILURE", "included_in_critical_frequency":name!="benign_row_permutation_audit_only", "representative_document_ids": ";".join(representatives[name]), "raw_document_data_published": False} for name, count in modes.most_common()]
     write_csv(output / "line_item_error_pareto.csv", pareto)
 
 
@@ -137,7 +143,7 @@ def robustness(development: list[dict[str, str]], bundle: dict[str, Any], output
             "critical_content_presence_recall": observation["critical_content_presence_recall"],
             "critical_proxy_error": int(float(observation["critical_content_presence_recall"]) < 1),
             "leaf_f1": observation["leaf_f1"], "risk_score": risk,
-            "analysis_scope": "PRE_INFERENCE_IMAGE_FEATURE_RESPONSE_WITH_FROZEN_CLEAN_EXTRACTION_FEATURES",
+            "analysis_scope": "RISK_SENSITIVITY_PROXY_NOT_END_TO_END_INFERENCE",
         })
     clean = {row["document_id"]: float(row["risk_score"]) for row in result if row["corruption"] == "clean"}
     for row in result:

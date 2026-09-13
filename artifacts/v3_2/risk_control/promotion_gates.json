@@ -3,10 +3,14 @@
   "decision": "V3_2_RISK_MODEL_NO_PROMOTION",
   "development_relative_AURC_improvement": -0.1116951083567474,
   "evaluator_validation": "PASS",
+  "fresh_confirmatory_evidence": false,
+  "methodology_correction_replay": true,
+  "methodology_erratum_sha256": "84d7fbca36c05b70d91ef20253b65aa6c69f5e7f390aa0b90156dc3bf4ec3dc1",
   "operating_gate": false,
   "practical_improvement_gate": false,
   "production_feature_leakage_count": 0,
-  "reason": "Best learned candidate failed frozen development discrimination, practical-improvement, and operating gates.",
+  "promotion_eligible": false,
+  "reason": "Best learned candidate failed frozen development discrimination, practical-improvement, and operating gates; corrected replay is also ineligible for promotion without fresh external evidence.",
   "required_relative_AURC_improvement": 0.1,
   "runtime_integration": "OFFLINE_ONLY_NO_SHADOW_INTEGRATION"
 }

@@ -1,7 +1,9 @@
-error_mode,document_support,prevalence,representative_document_ids,raw_document_data_published
-row_not_exact,52,0.52,cord-v2-test-00000;cord-v2-test-00002;cord-v2-test-00004,False
-line_item_critical_error,32,0.32,cord-v2-test-00000;cord-v2-test-00002;cord-v2-test-00007,False
-correct_total_wrong_item_price,25,0.25,cord-v2-test-00000;cord-v2-test-00002;cord-v2-test-00007,False
-spurious_predicted_row,10,0.1,cord-v2-test-00002;cord-v2-test-00007;cord-v2-test-00016,False
-row_alignment_failure,10,0.1,cord-v2-test-00016;cord-v2-test-00017;cord-v2-test-00026,False
-unmatched_gt_row,6,0.06,cord-v2-test-00017;cord-v2-test-00039;cord-v2-test-00041,False
+error_mode,document_support,prevalence,classification,included_in_critical_frequency,representative_document_ids,raw_document_data_published
+correct_total_wrong_item_price,22,0.22,FAILURE,True,cord-v2-test-00000;cord-v2-test-00002;cord-v2-test-00007,False
+incorrect_item_price,18,0.18,FAILURE,True,cord-v2-test-00000;cord-v2-test-00002;cord-v2-test-00013,False
+semantic_row_association_error,10,0.1,FAILURE,True,cord-v2-test-00016;cord-v2-test-00017;cord-v2-test-00026,False
+spurious_row,10,0.1,FAILURE,True,cord-v2-test-00002;cord-v2-test-00007;cord-v2-test-00016,False
+missing_item_price,10,0.1,FAILURE,True,cord-v2-test-00002;cord-v2-test-00007;cord-v2-test-00016,False
+document_total_error,10,0.1,FAILURE,True,cord-v2-test-00004;cord-v2-test-00013;cord-v2-test-00018,False
+missing_row,6,0.06,FAILURE,True,cord-v2-test-00017;cord-v2-test-00039;cord-v2-test-00041,False
+benign_row_permutation_audit_only,0,0.0,BENIGN_AUDIT_ONLY,False,,False

@@ -51,7 +51,9 @@ def lines(name: str, title: str, series: dict[str, list[tuple[float, float]]], s
 def main() -> None:
     line = json.loads((ROOT / "artifacts/v3_2/line_items/retrospective_test/aggregate_metrics.json").read_text())
     m = line["document_mean_metrics"]
-    bars("historical_vs_row_aware.svg", "Historical vs row-aware line-item metrics", [("E0 historical flat F1", m["E0_historical_flat_f1"]), ("E2 matched line-item F1", m["E2_line_item_f1"]), ("field-within-row micro F1", m["field_within_row_micro_f1"]), ("row exact match", m["row_exact_match_rate"])], 1, "CORD test — RETROSPECTIVE_LOCKED_BENCHMARK")
+    bars("historical_vs_row_aware.svg", "Corrected line-item evaluation concepts", [("E0 path-occurrence field F1", m["E0_path_occurrence_f1"]), ("E1 positional-row field F1", m["E1_positional_row_f1"]), ("E2 matched-row F1", m["E2_matched_row_f1"]), ("E2 matched-field micro F1", m["E2_matched_field_micro_f1"]), ("E2 row exact rate", m["E2_row_exact_match_rate"])], 1, "CORD test — retrospective methodology-correction replay")
+    bars("matched_row_vs_field_accuracy.svg", "E2 row matchability vs field accuracy", [("matched-row F1",m["E2_matched_row_f1"]),("matched-field micro F1",m["E2_matched_field_micro_f1"]),("row exact rate",m["E2_row_exact_match_rate"])],1,"These metrics answer different questions and are not interchangeable")
+    bars("row_permutation_vs_semantic.svg", "Row-order audit and structure failures", [("benign permutation only",line["row_permutation_only_rate"]),("semantic association error",line["row_semantic_association_error_rate"]),("missing-row documents",line["row_missing_error_rate"]),("spurious-row documents",line["row_spurious_error_rate"])],1,"Benign permutations are excluded from failure and critical-risk counts")
     composition = data("artifacts/v3_2/risk_control/critical_target_composition.csv")
     bars("critical_risk_target_composition.svg", "Critical-risk target composition", [(r["component"], float(r["component_error_rate"])) for r in composition if r["component_error_rate"] != "NOT_APPLICABLE"], 1, "Error rate within supported field occurrences")
     cv = data("artifacts/v3_2/risk_model/development_selection/candidate_grouped_cv_metrics.csv")
@@ -75,12 +77,12 @@ def main() -> None:
     lines("critical_false_accept_by_review_budget.svg", "Critical false-accept by review budget", {name:[(float(r["review_budget"]),float(r["critical_false_accept_rate"])) for r in budgets if r["candidate"]==name] for name in wanted})
     lines("critical_capture_by_review_budget.svg", "Critical-error capture by review budget", {name:[(float(r["review_budget"]),float(r["critical_error_capture"])) for r in budgets if r["candidate"]==name] for name in wanted})
     cert=data("artifacts/v3_2/risk_control/certification_results.csv")
-    lines("certification_coverage_frontier.svg", "Finite-sample certification frontier", {"coverage":[(float(r["target_risk"]),float(r["coverage"])) for r in cert],"upper bound":[(float(r["target_risk"]),float(r["binary_upper_bound_95"]) if r["binary_upper_bound_95"] else 1) for r in cert]}, "No target certified; x is target risk")
+    lines("certification_coverage_frontier.svg", "Non-confirmatory certification replay", {"coverage":[(float(r["target_risk"]),float(r["coverage"])) for r in cert],"upper bound":[(float(r["target_risk"]),float(r["binary_upper_bound_95"]) if r["binary_upper_bound_95"] else 1) for r in cert]}, "Previously opened partition; promotion_eligible=false")
     pareto=data("artifacts/v3_2/line_item_slicing/line_item_error_pareto.csv")
     bars("line_item_error_pareto.svg", "Line-item error Pareto", [(r["error_mode"],float(r["prevalence"])) for r in pareto], 1, "Document prevalence; categories overlap")
     robust=data("artifacts/v3_2/robustness/robustness_risk_response_summary.csv")
     severe=[r for r in robust if r["severity"] in {"clean","high"}]
-    bars("risk_by_corruption_severity.svg", "Risk score by corruption", [(f"{r['corruption']} {r['severity']}",float(r["mean_risk_score"])) for r in severe], 1, "Frozen clean extraction features; only pre-inference image descriptors vary")
+    bars("risk_by_corruption_severity.svg", "Risk sensitivity proxy by corruption", [(f"{r['corruption']} {r['severity']}",float(r["mean_risk_score"])) for r in severe], 1, "RISK_SENSITIVITY_PROXY_NOT_END_TO_END_INFERENCE")
     importance=data("artifacts/v3_2/risk_model/development_selection/feature_importance.csv")[:10]
     bars("feature_importance.svg", "R4 global feature importance", [(r["feature"],float(r["importance"])) for r in importance], None, "Development-fitted shallow gradient boosting")
     points=[(min(1,float(r["latency_seconds"])/8),float(r["R4_learned_risk"])) for r in cases]
@@ -90,7 +92,7 @@ def main() -> None:
     save("row_misalignment_schematic.svg", "Row-misalignment diagnostic", schematic, "Conceptual example; no raw receipt content")
     slices=data("artifacts/v3_2/line_item_slicing/line_item_slices.csv")
     eligible=sorted([r for r in slices if int(r["support_n"])>=20 and r["critical_error_rate"]!="nan"],key=lambda r:float(r["critical_error_rate"]),reverse=True)[:8]
-    bars("line_item_risk_slices.svg", "Highest-support critical-risk slices", [(f"{r['slice_family']}:{r['slice']}",float(r["critical_error_rate"])) for r in eligible], 1, "Only slices with N ≥ 20")
+    bars("line_item_risk_slices.svg", "Highest-support corrected critical-risk slices", [(f"{r['slice_family']}:{r['slice']}",float(r["critical_error_rate"])) for r in eligible], 1, "Only slices with N ≥ 20; correction replay")
     print(json.dumps({"assets": len(list(OUT.glob("*.svg"))), "output": str(OUT.relative_to(ROOT))}, sort_keys=True))
 
 

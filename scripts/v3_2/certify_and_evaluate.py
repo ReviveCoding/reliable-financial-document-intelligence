@@ -153,7 +153,7 @@ def main() -> None:
     test = read_rows(args.test)
     certification = [row for row in development if row["development_partition"] == "INDEPENDENT_CERTIFICATION"]
     assert len(certification) == 20
-    assert all(row["designation"] == "DEVELOPMENT" for row in certification)
+    assert all(row["designation"] == "POST_AUDIT_REUSED_CERTIFICATION_PARTITION" for row in certification)
     assert all(row["designation"] == "RETROSPECTIVE_LOCKED_BENCHMARK" for row in test)
     bundle = joblib.load(args.model)
     selection = json.loads(args.selection.read_text())
@@ -166,7 +166,7 @@ def main() -> None:
     for frozen in selection["thresholds"]:
         threshold = frozen["threshold"]
         if threshold is None:
-            certificate_rows.append({"target_risk": frozen["target_risk"], "threshold": "", "accepted_n": 0, "coverage": 0.0, "observed_binary_risk": "", "binary_upper_bound_95": "", "observed_weighted_loss": "", "weighted_upper_bound_95": "", "status": "INSUFFICIENT_CERTIFICATION_SUPPORT"})
+            certificate_rows.append({"designation":"POST_AUDIT_REUSED_CERTIFICATION_PARTITION","fresh_confirmatory_evidence":False,"promotion_eligible":False,"target_risk": frozen["target_risk"], "threshold": "", "accepted_n": 0, "coverage": 0.0, "observed_binary_risk": "", "binary_upper_bound_95": "", "observed_weighted_loss": "", "weighted_upper_bound_95": "", "status": "REPLAY_INSUFFICIENT_SUPPORT"})
             continue
         accepted = certification_score <= float(threshold)
         n = int(accepted.sum())
@@ -174,10 +174,10 @@ def main() -> None:
         binary_upper = clopper_pearson_upper(errors, n)
         weighted_upper = empirical_bernstein_upper(cert_weighted[accepted])
         if n < int(PROTOCOL["certification"]["minimum_accepted_documents"]):
-            status = "INSUFFICIENT_CERTIFICATION_SUPPORT"
+            status = "REPLAY_INSUFFICIENT_SUPPORT"
         else:
-            status = "CERTIFIED" if binary_upper is not None and binary_upper <= float(frozen["target_risk"]) else "UNCERTIFIED"
-        certificate_rows.append({"target_risk": frozen["target_risk"], "threshold": threshold, "accepted_n": n, "coverage": n / len(certification), "observed_binary_risk": errors / n if n else "", "binary_upper_bound_95": binary_upper if binary_upper is not None else "", "observed_weighted_loss": float(cert_weighted[accepted].mean()) if n else "", "weighted_upper_bound_95": weighted_upper if weighted_upper is not None else "", "status": status})
+            status = "REPLAY_CERTIFIED_STATISTICALLY" if binary_upper is not None and binary_upper <= float(frozen["target_risk"]) else "REPLAY_UNCERTIFIED"
+        certificate_rows.append({"designation":"POST_AUDIT_REUSED_CERTIFICATION_PARTITION","fresh_confirmatory_evidence":False,"promotion_eligible":False,"target_risk": frozen["target_risk"], "threshold": threshold, "accepted_n": n, "coverage": n / len(certification), "observed_binary_risk": errors / n if n else "", "binary_upper_bound_95": binary_upper if binary_upper is not None else "", "observed_weighted_loss": float(cert_weighted[accepted].mean()) if n else "", "weighted_upper_bound_95": weighted_upper if weighted_upper is not None else "", "status": status})
 
     test_x = matrix(test, features)
     learned = score_selected(bundle, test_x, test)
@@ -203,8 +203,10 @@ def main() -> None:
     combined = development + test
     write_csv(args.development.parent / "risk_feature_table.csv", combined)
     summary = {
-        "certification_partition_opened_after_threshold_freeze_commit": "3532686",
+        "corrected_replay_frozen_before_reopening_at_commit": "274a2c057ab46cc4f47feac0514be423ffc75e61",
         "certification_support": len(certification),
+        "fresh_confirmatory_evidence":False,
+        "promotion_eligible":False,
         "certificate_results": certificate_rows,
         "retrospective_test_designation": "RETROSPECTIVE_LOCKED_BENCHMARK",
         "retrospective_test_is_fresh_holdout": False,

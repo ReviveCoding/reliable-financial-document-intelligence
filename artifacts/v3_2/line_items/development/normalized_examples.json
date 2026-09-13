@@ -45,6 +45,7 @@
         }
       ],
       "gt_rows": 1,
+      "incorrect_item_price_count": 0,
       "item_name_f1": 1.0,
       "item_price_f1": 1.0,
       "matches": [
@@ -55,6 +56,7 @@
           "weight": 4.0
         }
       ],
+      "missing_item_price_count": 0,
       "monetary_association_error_count": 0,
       "optimal_matching_weight": 4.0,
       "predicted_items": [
@@ -102,6 +104,7 @@
       "row_semantic_association_error": false,
       "row_spurious_error": true,
       "row_structure_failure": true,
+      "spurious_item_price_count": 1,
       "spurious_predicted_rows": 1,
       "strict_matching_weight": 4.0,
       "unit_price_f1": 1.0,
@@ -187,6 +190,7 @@
         }
       ],
       "gt_rows": 3,
+      "incorrect_item_price_count": 0,
       "item_name_f1": 0.0,
       "item_price_f1": 1.0,
       "matches": [
@@ -197,6 +201,7 @@
           "weight": 3.0
         }
       ],
+      "missing_item_price_count": 2,
       "monetary_association_error_count": 0,
       "optimal_matching_weight": 3.0,
       "predicted_items": [
@@ -260,6 +265,7 @@
       "row_semantic_association_error": false,
       "row_spurious_error": true,
       "row_structure_failure": true,
+      "spurious_item_price_count": 0,
       "spurious_predicted_rows": 2,
       "strict_matching_weight": 3.0,
       "unit_price_f1": 1.0,
@@ -505,6 +511,7 @@
         }
       ],
       "gt_rows": 11,
+      "incorrect_item_price_count": 3,
       "item_name_f1": 0.45454545454545453,
       "item_price_f1": 1.0,
       "matches": [
@@ -575,6 +582,7 @@
           "weight": 3.0
         }
       ],
+      "missing_item_price_count": 0,
       "monetary_association_error_count": 3,
       "optimal_matching_weight": 34.0,
       "predicted_items": [
@@ -818,6 +826,7 @@
       "row_semantic_association_error": true,
       "row_spurious_error": true,
       "row_structure_failure": true,
+      "spurious_item_price_count": 1,
       "spurious_predicted_rows": 1,
       "strict_matching_weight": 12.0,
       "unit_price_f1": 1.0,
@@ -887,6 +896,7 @@
         }
       ],
       "gt_rows": 2,
+      "incorrect_item_price_count": 0,
       "item_name_f1": 1.0,
       "item_price_f1": 1.0,
       "matches": [
@@ -903,6 +913,7 @@
           "weight": 4.0
         }
       ],
+      "missing_item_price_count": 0,
       "monetary_association_error_count": 0,
       "optimal_matching_weight": 8.0,
       "predicted_items": [
@@ -970,6 +981,7 @@
       "row_semantic_association_error": false,
       "row_spurious_error": true,
       "row_structure_failure": true,
+      "spurious_item_price_count": 1,
       "spurious_predicted_rows": 1,
       "strict_matching_weight": 8.0,
       "unit_price_f1": 1.0,
@@ -1027,6 +1039,7 @@
         }
       ],
       "gt_rows": 1,
+      "incorrect_item_price_count": 0,
       "item_name_f1": 0.6666666666666666,
       "item_price_f1": 0.6666666666666666,
       "matches": [
@@ -1037,6 +1050,7 @@
           "weight": 4.0
         }
       ],
+      "missing_item_price_count": 1,
       "monetary_association_error_count": 0,
       "optimal_matching_weight": 4.0,
       "predicted_items": [
@@ -1088,6 +1102,7 @@
       "row_semantic_association_error": false,
       "row_spurious_error": true,
       "row_structure_failure": true,
+      "spurious_item_price_count": 1,
       "spurious_predicted_rows": 1,
       "strict_matching_weight": 4.0,
       "unit_price_f1": 1.0,
@@ -1213,6 +1228,7 @@
         }
       ],
       "gt_rows": 5,
+      "incorrect_item_price_count": 0,
       "item_name_f1": 1.0,
       "item_price_f1": 1.0,
       "matches": [
@@ -1241,6 +1257,7 @@
           "weight": 4.0
         }
       ],
+      "missing_item_price_count": 1,
       "monetary_association_error_count": 0,
       "optimal_matching_weight": 16.0,
       "predicted_items": [
@@ -1332,6 +1349,7 @@
       "row_semantic_association_error": false,
       "row_spurious_error": false,
       "row_structure_failure": true,
+      "spurious_item_price_count": 0,
       "spurious_predicted_rows": 0,
       "strict_matching_weight": 10.0,
       "unit_price_f1": 1.0,
@@ -1405,6 +1423,7 @@
         }
       ],
       "gt_rows": 2,
+      "incorrect_item_price_count": 0,
       "item_name_f1": 0.0,
       "item_price_f1": 0.8,
       "matches": [
@@ -1415,6 +1434,7 @@
           "weight": 5.0
         }
       ],
+      "missing_item_price_count": 1,
       "monetary_association_error_count": 0,
       "optimal_matching_weight": 5.0,
       "predicted_items": [
@@ -1466,6 +1486,7 @@
       "row_semantic_association_error": false,
       "row_spurious_error": false,
       "row_structure_failure": true,
+      "spurious_item_price_count": 1,
       "spurious_predicted_rows": 0,
       "strict_matching_weight": 5.0,
       "unit_price_f1": 1.0,
@@ -1515,6 +1536,7 @@
         }
       ],
       "gt_rows": 1,
+      "incorrect_item_price_count": 0,
       "item_name_f1": 0.6666666666666666,
       "item_price_f1": 0.6666666666666666,
       "matches": [
@@ -1525,6 +1547,7 @@
           "weight": 3.0
         }
       ],
+      "missing_item_price_count": 1,
       "monetary_association_error_count": 0,
       "optimal_matching_weight": 3.0,
       "predicted_items": [
@@ -1568,6 +1591,7 @@
       "row_semantic_association_error": false,
       "row_spurious_error": true,
       "row_structure_failure": true,
+      "spurious_item_price_count": 1,
       "spurious_predicted_rows": 1,
       "strict_matching_weight": 3.0,
       "unit_price_f1": 1.0,
@@ -1713,6 +1737,7 @@
         }
       ],
       "gt_rows": 2,
+      "incorrect_item_price_count": 0,
       "item_name_f1": 0.0,
       "item_price_f1": 1.0,
       "matches": [
@@ -1729,6 +1754,7 @@
           "weight": 3.0
         }
       ],
+      "missing_item_price_count": 0,
       "monetary_association_error_count": 0,
       "optimal_matching_weight": 6.0,
       "predicted_items": [
@@ -1924,6 +1950,7 @@
       "row_semantic_association_error": true,
       "row_spurious_error": true,
       "row_structure_failure": true,
+      "spurious_item_price_count": 0,
       "spurious_predicted_rows": 9,
       "strict_matching_weight": 4.0,
       "unit_price_f1": 1.0,
@@ -1993,6 +2020,7 @@
         }
       ],
       "gt_rows": 1,
+      "incorrect_item_price_count": 0,
       "item_name_f1": 0.5714285714285715,
       "item_price_f1": 0.6666666666666666,
       "matches": [
@@ -2003,6 +2031,7 @@
           "weight": 6.0
         }
       ],
+      "missing_item_price_count": 2,
       "monetary_association_error_count": 0,
       "optimal_matching_weight": 6.0,
       "predicted_items": [
@@ -2062,6 +2091,7 @@
       "row_semantic_association_error": false,
       "row_spurious_error": true,
       "row_structure_failure": true,
+      "spurious_item_price_count": 1,
       "spurious_predicted_rows": 1,
       "strict_matching_weight": 6.0,
       "unit_price_f1": 1.0,

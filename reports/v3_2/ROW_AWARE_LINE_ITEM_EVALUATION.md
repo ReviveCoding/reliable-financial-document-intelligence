@@ -1,12 +1,10 @@
-# Row-aware line-item evaluation
+# Corrected row-aware line-item evaluation
 
-E0 reproduces historical flat occurrence matching. E1 preserves strict row order. E2, the primary metric, uses maximum-weight bipartite line-item matching and does not require row identifiers to match numerically. Ten synthetic unit cases cover perfect, reordered, duplicated, missing, spurious, cross-row, split-menu, and repeated-value behavior.
-
-| Benchmark | E0 flat F1 | E2 line-item F1 | Field-within-row F1 | Row exact | Alignment failure |
+| Scope | E0 path-occurrence field F1 | E1 positional-row field F1 | E2 matched-row F1 | E2 matched-field micro F1 | E2 row exact |
 |---|---:|---:|---:|---:|---:|
-| Development | 0.8504 | 0.9662 | 0.8583 | 0.6154 | 3.0% |
-| Retrospective CORD test | 0.7887 | 0.9534 | 0.8282 | 0.6023 | 10.0% |
+| Development replay | 0.8523 | 0.8504 | 0.9662 | 0.8727 | 0.6154 |
+| Retrospective CORD | 0.8016 | 0.7887 | 0.9534 | 0.8585 | 0.6023 |
 
-E2 raises the perceived test F1 by +0.1647 because it correctly treats harmless row permutations as equivalent. That does not erase structure failures: 10% of test documents have alignment failures, row exact match is 60.23%, with 11 unmatched GT and 22 spurious predicted rows.
+Matched-row F1 measures whether rows are matchable; matched-field F1 measures content within those matched rows. They are not interchangeable. Retrospective benign permutation-only rate is 0.0%; semantic association error is 10.0%; missing-row and spurious-row document rates are 6.0% and 10.0%. Fifteen synthetic cases validate these distinctions.
 
-![Row matching](../../docs/assets/v3_2/historical_vs_row_aware.svg)
+![Corrected concepts](../../docs/assets/v3_2/historical_vs_row_aware.svg)

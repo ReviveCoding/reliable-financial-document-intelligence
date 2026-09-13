@@ -1,11 +1,19 @@
 {
-  "artifact_uri": "mlflow-artifacts:/3/2be38e36e61b4177914ee2f35cde8a70/artifacts",
   "experiment_id": "3",
   "experiment_name": "rfdi-v3-2-critical-risk-control",
-  "logged_scope": "v3.2 compact artifacts and visualization assets",
+  "original_run": {
+    "run_id": "2be38e36e61b4177914ee2f35cde8a70",
+    "status": "FINISHED",
+    "preserved": true
+  },
+  "methodology_correction_replay_run": {
+    "artifact_uri": "mlflow-artifacts:/3/9ad8c3a84b364bc98b955ec51274df41/artifacts",
+    "designation": "METHODOLOGY_CORRECTION_REPLAY",
+    "fresh_confirmatory_evidence": false,
+    "run_id": "9ad8c3a84b364bc98b955ec51274df41",
+    "status": "FINISHED"
+  },
   "minio_artifacts_verified": true,
   "overwrote_prior_runs": false,
-  "postgres_metadata_verified": true,
-  "run_id": "2be38e36e61b4177914ee2f35cde8a70",
-  "status": "FINISHED"
+  "postgres_metadata_verified_for_both_runs": true
 }

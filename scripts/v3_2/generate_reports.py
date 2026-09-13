@@ -1,164 +1,111 @@
 from __future__ import annotations
-
-import csv
-import json
+import csv,json
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[2]
-OUT = ROOT / "reports/v3_2"
-OUT.mkdir(parents=True, exist_ok=True)
+ROOT=Path(__file__).resolve().parents[2]; OUT=ROOT/"reports/v3_2"; OUT.mkdir(parents=True,exist_ok=True)
+def load_csv(path): return list(csv.DictReader((ROOT/path).open()))
+def load_json(path): return json.loads((ROOT/path).read_text())
+def write(name,text): (OUT/name).write_text(text.strip()+"\n")
 
+old=load_json("artifacts/v3_2/audit/pre_correction_summary.json"); transition=load_json("artifacts/v3_2/audit/label_transition_summary.json")
+dev=load_json("artifacts/v3_2/line_items/development/aggregate_metrics.json"); test=load_json("artifacts/v3_2/line_items/retrospective_test/aggregate_metrics.json"); m=test["document_mean_metrics"]
+selection=load_json("artifacts/v3_2/risk_model/development_selection/frozen_selection.json"); evaluation=load_json("artifacts/v3_2/risk_control/evaluation_summary.json"); boot=load_json("artifacts/v3_2/risk_control/retrospective_bootstrap_delta.json"); cal=load_json("artifacts/v3_2/risk_control/retrospective_calibration.json"); latency=load_json("artifacts/v3_2/risk_control/latency_risk_joint.json")
+metrics={r["candidate"]:r for r in load_csv("artifacts/v3_2/risk_control/retrospective_candidate_metrics.csv")}; budgets=load_csv("artifacts/v3_2/risk_control/retrospective_review_budgets.csv"); cert=load_csv("artifacts/v3_2/risk_control/certification_results.csv"); pareto=load_csv("artifacts/v3_2/line_item_slicing/line_item_error_pareto.csv"); robust=load_csv("artifacts/v3_2/robustness/robustness_risk_response_summary.csv"); importance=load_csv("artifacts/v3_2/risk_model/development_selection/feature_importance.csv")
+def budget(candidate,point): return next(r for r in budgets if r["candidate"]==candidate and r["review_budget"]==point)
+def err(name):
+    row=next((r for r in pareto if r["error_mode"]==name),None); return float(row["prevalence"]) if row else 0.0
 
-def table(path: str) -> list[dict[str, str]]:
-    with (ROOT / path).open(newline="") as handle:
-        return list(csv.DictReader(handle))
+write("METHODOLOGY_CORRECTION.md",f"""# V3.2 methodology correction
 
+The defect was discovered on 2026-09-13 after local commit `1078332` and before remote v3.2 publication. The original protocol at `239824f` remains immutable; the erratum was frozen at `081ba8f` before recomputation.
 
-line_dev = json.loads((ROOT / "artifacts/v3_2/line_items/development/aggregate_metrics.json").read_text())
-line_test = json.loads((ROOT / "artifacts/v3_2/line_items/retrospective_test/aggregate_metrics.json").read_text())
-selection = json.loads((ROOT / "artifacts/v3_2/risk_model/development_selection/frozen_selection.json").read_text())
-evaluation = json.loads((ROOT / "artifacts/v3_2/risk_control/evaluation_summary.json").read_text())
-bootstrap = json.loads((ROOT / "artifacts/v3_2/risk_control/retrospective_bootstrap_delta.json").read_text())
-calibration = json.loads((ROOT / "artifacts/v3_2/risk_control/retrospective_calibration.json").read_text())
-latency = json.loads((ROOT / "artifacts/v3_2/risk_control/latency_risk_joint.json").read_text())
-metrics = {row["candidate"]: row for row in table("artifacts/v3_2/risk_control/retrospective_candidate_metrics.csv")}
-budgets = table("artifacts/v3_2/risk_control/retrospective_review_budgets.csv")
-certificates = table("artifacts/v3_2/risk_control/certification_results.csv")
-slices = [row for row in table("artifacts/v3_2/line_item_slicing/line_item_slices.csv") if int(row["support_n"]) >= 20 and row["critical_error_rate"] != "nan"]
-worst = sorted(slices, key=lambda row: float(row["critical_error_rate"]), reverse=True)
-best = sorted(slices, key=lambda row: float(row["critical_error_rate"]))
-pareto = table("artifacts/v3_2/line_item_slicing/line_item_error_pareto.csv")
-robustness = table("artifacts/v3_2/robustness/robustness_risk_response_summary.csv")
-importance = table("artifacts/v3_2/risk_model/development_selection/feature_importance.csv")
-composition = table("artifacts/v3_2/risk_control/critical_target_composition.csv")
+The old implementation used positional row pairs for E0, duplicated E0 as E1, labeled any changed optimal assignment as a row failure, added a monetary penalty for assignment change alone, and presented matched-row F1 as though it described field accuracy. This mattered because row ordering is not semantic identity and row matchability is not field correctness.
 
+The correction implements historical path-occurrence E0, positional-row E1, separate E2 matched-row and matched-field metrics, and explicit benign-permutation versus semantic/missing/spurious structure diagnostics. Monetary loss now counts actual missing, spurious, incorrect, or demonstrably misbound monetary fields only. Extractor weights, frozen predictions, features, candidate families, grids, seed, partitions, weights, and V1–v3.1 evidence did not change.
 
-def write(name: str, text: str) -> None:
-    (OUT / name).write_text(text.strip() + "\n")
+All dependent labels, model replay, reused certification statistics, retrospective risk evidence, slices, figures, reports, and governance were regenerated. The audit records {transition['unchanged_labels']} unchanged labels, {transition['positive_to_negative']} positive→negative, {transition['negative_to_positive']} negative→positive, {transition['weighted_loss_decreased']} weighted-loss decreases, and {transition['weighted_loss_increased']} increases across 200 development/test documents.
 
-
-def budget(candidate: str, value: str) -> dict[str, str]:
-    return next(row for row in budgets if row["candidate"] == candidate and row["review_budget"] == value)
-
-
-def slice_lines(rows: list[dict[str, str]]) -> str:
-    return "\n".join(f"- `{r['slice_family']}:{r['slice']}` — N={r['support_n']}, critical error {float(r['critical_error_rate']):.1%}, E2 F1 {float(r['mean_E2_line_item_f1']):.4f}." for r in rows[:3])
-
-
-write("DESIGN_AND_PROTOCOL.md", f"""
-# Design and protocol
-
-The v3.2 protocol was frozen at commit `239824f` before new v3.2 results and the development candidate/threshold checkpoint was committed at `3532686` before certification or retrospective test evaluation. CORD test is a `RETROSPECTIVE_LOCKED_BENCHMARK`, not a fresh untouched holdout. Extractor weights were unchanged.
-
-The primary target is any supported critical monetary error; secondary targets are line-item monetary errors, row alignment errors, and bounded weighted critical loss. Only `PRE_INFERENCE`, `CHEAP_PREFLIGHT`, and `POST_EXTRACTION` features are eligible. All source-document variants are grouped. Candidate selection uses five-fold grouped CV, AURC, fixed grids, 2,000 document bootstrap replicates, and the frozen review/certification budgets in [`risk_protocol.json`](../../configs/v3_2/risk_protocol.json).
-
-Promotion is shadow-only and requires every frozen gate. No autonomous-action promotion is permitted.
+CORD test and the certification partition had already been observed, so nothing in this replay is fresh confirmation or promotion-eligible. Remote publication was withheld until the semantics and audit trail were corrected.
 """)
 
-write("ROW_AWARE_LINE_ITEM_EVALUATION.md", f"""
-# Row-aware line-item evaluation
+write("DESIGN_AND_PROTOCOL.md",f"""# Design and protocol
 
-E0 reproduces historical flat occurrence matching. E1 preserves strict row order. E2, the primary metric, uses maximum-weight bipartite line-item matching and does not require row identifiers to match numerically. Ten synthetic unit cases cover perfect, reordered, duplicated, missing, spurious, cross-row, split-menu, and repeated-value behavior.
+The original v3.2 protocol was frozen at `239824f`; methodology erratum `081ba8f` precedes corrected results. Corrected development replay was frozen at `274a2c0` before reopening already-observed certification/test partitions. Extractor weights and the exact R0–R5 algorithms, production-safe features, 60/20/20 grouping, grids, seed, 2,000-replicate bootstrap, risk weights, budgets, and gates remain unchanged.
 
-| Benchmark | E0 flat F1 | E2 line-item F1 | Field-within-row F1 | Row exact | Alignment failure |
+Designations are `DEVELOPMENT_CORRECTION_REPLAY`, `DEVELOPMENT_THRESHOLD_REPLAY`, `POST_AUDIT_REUSED_CERTIFICATION_PARTITION`, and `RETROSPECTIVE_LOCKED_BENCHMARK`. All have `fresh_confirmatory_evidence=false`; corrected replay alone cannot promote a model.
+""")
+
+write("ROW_AWARE_LINE_ITEM_EVALUATION.md",f"""# Corrected row-aware line-item evaluation
+
+| Scope | E0 path-occurrence field F1 | E1 positional-row field F1 | E2 matched-row F1 | E2 matched-field micro F1 | E2 row exact |
 |---|---:|---:|---:|---:|---:|
-| Development | {line_dev['document_mean_metrics']['E0_historical_flat_f1']:.4f} | {line_dev['document_mean_metrics']['E2_line_item_f1']:.4f} | {line_dev['document_mean_metrics']['field_within_row_micro_f1']:.4f} | {line_dev['document_mean_metrics']['row_exact_match_rate']:.4f} | {line_dev['row_alignment_failure_rate']:.1%} |
-| Retrospective CORD test | {line_test['document_mean_metrics']['E0_historical_flat_f1']:.4f} | {line_test['document_mean_metrics']['E2_line_item_f1']:.4f} | {line_test['document_mean_metrics']['field_within_row_micro_f1']:.4f} | {line_test['document_mean_metrics']['row_exact_match_rate']:.4f} | {line_test['row_alignment_failure_rate']:.1%} |
+| Development replay | {dev['document_mean_metrics']['E0_path_occurrence_f1']:.4f} | {dev['document_mean_metrics']['E1_positional_row_f1']:.4f} | {dev['document_mean_metrics']['E2_matched_row_f1']:.4f} | {dev['document_mean_metrics']['E2_matched_field_micro_f1']:.4f} | {dev['document_mean_metrics']['E2_row_exact_match_rate']:.4f} |
+| Retrospective CORD | {m['E0_path_occurrence_f1']:.4f} | {m['E1_positional_row_f1']:.4f} | {m['E2_matched_row_f1']:.4f} | {m['E2_matched_field_micro_f1']:.4f} | {m['E2_row_exact_match_rate']:.4f} |
 
-E2 raises the perceived test F1 by {line_test['document_mean_metrics']['E2_line_item_f1']-line_test['document_mean_metrics']['E0_historical_flat_f1']:+.4f} because it correctly treats harmless row permutations as equivalent. That does not erase structure failures: 10% of test documents have alignment failures, row exact match is 60.23%, with {line_test['unmatched_gt_rows']} unmatched GT and {line_test['spurious_predicted_rows']} spurious predicted rows.
+Matched-row F1 measures whether rows are matchable; matched-field F1 measures content within those matched rows. They are not interchangeable. Retrospective benign permutation-only rate is {test['row_permutation_only_rate']:.1%}; semantic association error is {test['row_semantic_association_error_rate']:.1%}; missing-row and spurious-row document rates are {test['row_missing_error_rate']:.1%} and {test['row_spurious_error_rate']:.1%}. Fifteen synthetic cases validate these distinctions.
 
-![Row matching](../../docs/assets/v3_2/historical_vs_row_aware.svg)
+![Corrected concepts](../../docs/assets/v3_2/historical_vs_row_aware.svg)
 """)
 
-write("CRITICAL_RISK_MODEL.md", f"""
-# Critical risk model
+write("CRITICAL_RISK_MODEL.md",f"""# Corrected critical-risk model replay
 
-R4 shallow gradient boosting is the best learned candidate, selected strictly from development data. Its grouped-CV AURC is {selection['selected_AURC']:.4f}, versus {selection['baseline_R0_AURC']:.4f} for R0: relative improvement {selection['relative_AURC_reduction']:.1%} (negative means worse). The 95% document-bootstrap interval for absolute reduction is [{selection['document_group_bootstrap']['absolute_AURC_reduction_ci95'][0]:.4f}, {selection['document_group_bootstrap']['absolute_AURC_reduction_ci95'][1]:.4f}].
+R4 shallow gradient boosting remains the best learned candidate; R0 remains best overall. Development grouped-CV AURC is {selection['selected_AURC']:.4f} for R4 versus {selection['baseline_R0_AURC']:.4f} for R0, a {selection['relative_AURC_reduction']:.1%} relative reduction (negative is worse), with absolute-reduction 95% CI [{selection['document_group_bootstrap']['absolute_AURC_reduction_ci95'][0]:.4f}, {selection['document_group_bootstrap']['absolute_AURC_reduction_ci95'][1]:.4f}].
 
-On retrospective CORD test, R0 AURC/PR-AUC/AUROC are {float(metrics['R0_raw_confidence']['AURC']):.4f}/{float(metrics['R0_raw_confidence']['PR_AUC']):.4f}/{float(metrics['R0_raw_confidence']['AUROC']):.4f}; R4 gives {float(metrics['R4_best_learned']['AURC']):.4f}/{float(metrics['R4_best_learned']['PR_AUC']):.4f}/{float(metrics['R4_best_learned']['AUROC']):.4f}. The retrospective R0−R4 AURC reduction is {bootstrap['absolute_AURC_reduction']:.4f}, 95% CI [{bootstrap['absolute_AURC_reduction_ci95'][0]:.4f}, {bootstrap['absolute_AURC_reduction_ci95'][1]:.4f}].
-
-Top nonzero production-safe R4 importances are {', '.join(f"`{r['feature']}` ({float(r['importance']):.3f})" for r in importance[:5])}. They describe the fitted model, not causal effects. The learned combination did not rank failures better than raw confidence.
+Retrospective R0 AURC/PR-AUC/AUROC are {float(metrics['R0_raw_confidence']['AURC']):.4f}/{float(metrics['R0_raw_confidence']['PR_AUC']):.4f}/{float(metrics['R0_raw_confidence']['AUROC']):.4f}; R4 is {float(metrics['R4_best_learned']['AURC']):.4f}/{float(metrics['R4_best_learned']['PR_AUC']):.4f}/{float(metrics['R4_best_learned']['AUROC']):.4f}. Retrospective absolute R0−R4 AURC reduction is {boot['absolute_AURC_reduction']:.4f}, 95% CI [{boot['absolute_AURC_reduction_ci95'][0]:.4f}, {boot['absolute_AURC_reduction_ci95'][1]:.4f}]. Top fitted production-safe features are {', '.join(r['feature'] for r in importance[:5])}; importances are descriptive, not causal.
 """)
 
-write("SELECTIVE_AUTOMATION.md", f"""
-# Selective automation
+write("SELECTIVE_AUTOMATION.md",f"""# Corrected selective automation replay
 
-At 50% review, R0 captures {float(budget('R0_raw_confidence','0.5')['critical_error_capture']):.1%} of critical errors and leaves {float(budget('R0_raw_confidence','0.5')['critical_false_accept_rate']):.1%} critical risk among accepted documents. R4 captures {float(budget('R4_best_learned','0.5')['critical_error_capture']):.1%} and leaves {float(budget('R4_best_learned','0.5')['critical_false_accept_rate']):.1%}. Neither satisfies the frozen operating gate at or below 50% review.
+At 50% review, R0 captures {float(budget('R0_raw_confidence','0.5')['critical_error_capture']):.1%} of critical errors and leaves {float(budget('R0_raw_confidence','0.5')['critical_false_accept_rate']):.1%} risk among accepted documents; R4 captures {float(budget('R4_best_learned','0.5')['critical_error_capture']):.1%} and leaves {float(budget('R4_best_learned','0.5')['critical_false_accept_rate']):.1%}. At 80% review, R0 capture is {float(budget('R0_raw_confidence','0.8')['critical_error_capture']):.1%} with {float(budget('R0_raw_confidence','0.8')['critical_false_accept_rate']):.1%} accepted risk.
 
-Even R0 at 80% review retains {float(budget('R0_raw_confidence','0.8')['critical_false_accept_rate']):.1%} critical false-accept risk while capturing {float(budget('R0_raw_confidence','0.8')['critical_error_capture']):.1%}. Therefore v3.2 does not recommend an automatic-accept threshold. The normalized-cost column reuses illustrative v3.1 weights (review=1; unsafe critical acceptance=25), not institutional costs.
-
-![Risk coverage](../../docs/assets/v3_2/risk_coverage_curve.svg)
+No operating gate passes. Illustrative costs are inherited unchanged from v3.1 and are not institutional costs. This replay cannot recommend autonomous acceptance.
 """)
 
-write("RISK_CERTIFICATION.md", """
-# Finite-sample risk certification
+cert_rows="\n".join(f"| {float(r['target_risk']):.0%} | {r['accepted_n']} | {float(r['coverage']):.1%} | {float(r['observed_binary_risk']):.1%} | {float(r['binary_upper_bound_95']):.1%} | `{r['status']}` |" for r in cert)
+write("RISK_CERTIFICATION.md",f"""# Certification correction replay
 
-Thresholds were selected before opening the 20-document independent certification partition. Results use a one-sided exact 95% Clopper–Pearson upper bound for binary loss and a one-sided empirical-Bernstein bound for bounded weighted loss. These are research certificates conditional on source-document exchangeability and an unchanged pipeline, not regulatory guarantees.
+Every row is `POST_AUDIT_REUSED_CERTIFICATION_PARTITION`, `fresh_confirmatory_evidence=false`, and `promotion_eligible=false`. Thresholds were frozen at corrected replay commit `274a2c0`, but this partition had already been observed before correction.
 
-| Target | Accepted | Coverage | Observed risk | Binary upper 95% | Status |
+| Target | Accepted | Coverage | Observed | One-sided upper 95% | Replay status |
 |---:|---:|---:|---:|---:|---|
-""" + "\n".join(f"| {float(r['target_risk']):.0%} | {r['accepted_n']} | {float(r['coverage']):.1%} | {float(r['observed_binary_risk']):.1%} | {float(r['binary_upper_bound_95']):.1%} | `{r['status']}` |" for r in certificates) + "\n\nNo automatic-accept region is certified. The 5% target also has insufficient accepted support (N=9).\n")
+{cert_rows}
 
-worst_robust = min(robustness, key=lambda row: float(row["mean_leaf_f1"]))
-write("ROBUSTNESS_AND_SHIFT.md", f"""
-# Robustness and shift
-
-No GPU inference was rerun: v3.1's frozen 10-document development corruption cohort was reused. To test feature response without inventing extractor outputs, corrupted image descriptors were varied while each document's frozen clean post-extraction features were held fixed. This is a limited risk-sensitivity diagnostic, not a fresh end-to-end robustness benchmark.
-
-High occlusion is the extraction bottleneck (mean leaf F1 {float(worst_robust['mean_leaf_f1']):.4f}); R4 risk rises only {float(worst_robust['mean_risk_increase_from_clean']):+.4f} from clean and its proxy-error AUROC is {float(worst_robust['AUROC']):.4f}, with {worst_robust['false_negative_critical_errors_below_median_risk']} critical proxy errors at or below median risk. Risk response is inconsistent across corruptions, reinforcing no-promotion.
-
-Fresh external LIR evidence remains absent. [DocILE's official toolkit](https://github.com/rossumai/docile) requires an access token and is `HUMAN_ACTION_REQUIRED_OPTIONAL`. WildReceipt was assessed only as KIE/domain shift and was not forced into incompatible CORD line-item metrics.
+No target supplies fresh certification. A genuinely fresh external dataset is required.
 """)
 
-write("SHADOW_RUNTIME.md", """
-# Shadow runtime
+worst=min(robust,key=lambda r:float(r["mean_leaf_f1"]))
+write("ROBUSTNESS_AND_SHIFT.md",f"""# Robustness and shift replay
 
-Decision: `V3_2_RISK_MODEL_NO_PROMOTION`.
+No GPU inference was rerun. Frozen v3.1 corruptions were reused under `RISK_SENSITIVITY_PROXY_NOT_END_TO_END_INFERENCE`: corrupted image descriptors vary while clean post-extraction outputs remain fixed. High {worst['corruption']} has mean leaf F1 {float(worst['mean_leaf_f1']):.4f}, mean risk increase {float(worst['mean_risk_increase_from_clean']):+.4f}, proxy AUROC {float(worst['AUROC']):.4f}, and {worst['false_negative_critical_errors_below_median_risk']} false-negative proxy errors at/below median risk. Response remains weak and inconsistent.
 
-The frozen gates permit runtime integration only after promotion. Because R4 failed development AURC, practical-improvement, and operating gates, the existing V3 runtime and action semantics remain unchanged. The candidate is available only through offline compact evidence; it is not exposed by the API and no MLflow run overwrites V3 or v3.1 history.
+Authorized DocILE LIR evidence and a larger fresh grouped certification sample remain missing. WildReceipt was not forced into incompatible line-item metrics.
 """)
 
-write("FINAL_REPORT.md", f"""
-# R-FDI v3.2 final report
+write("SHADOW_RUNTIME.md","""# Shadow runtime
 
-## Outcome
-
-`V3_2_RISK_MODEL_NO_PROMOTION`. Extractor weights did not change, and CORD test is retrospective—not a fresh holdout.
-
-## Answers
-
-- **How did row awareness change perceived error?** Test E0 F1 {line_test['document_mean_metrics']['E0_historical_flat_f1']:.4f} becomes E2 {line_test['document_mean_metrics']['E2_line_item_f1']:.4f} ({line_test['document_mean_metrics']['E2_line_item_f1']-line_test['document_mean_metrics']['E0_historical_flat_f1']:+.4f}), while row exact match remains {line_test['document_mean_metrics']['row_exact_match_rate']:.1%}.
-- **Which errors dominate?** {pareto[0]['error_mode']} affects {float(pareto[0]['prevalence']):.1%}; line-item critical errors affect {float(pareto[1]['prevalence']):.1%}; correct-total/wrong-item-price cases affect {float(pareto[2]['prevalence']):.1%}.
-- **Which features rank failures?** {', '.join(r['feature'] for r in importance[:5])}; nevertheless, R4 ranking is inferior to R0.
-- **Does learned risk beat raw confidence?** No: retrospective AURC {float(metrics['R4_best_learned']['AURC']):.4f} versus {float(metrics['R0_raw_confidence']['AURC']):.4f}.
-- **Does calibration help?** Uncalibrated R4 has Brier {calibration['uncalibrated']['Brier']:.4f}/ECE {calibration['uncalibrated']['ECE']:.4f}. Platt and isotonic worsen retrospective Brier/ECE; calibration does not repair ranking.
-- **What review budget is needed?** No budget through 50% passes the operating gate; even 80% review leaves 15% accepted critical risk for R0.
-- **Is auto-accept certifiable?** No; 5% is support-insufficient, 10% and 20% are uncertified.
-- **Does corruption raise risk?** Only weakly and inconsistently under the pre-inference-only response test; high occlusion adds {float(worst_robust['mean_risk_increase_from_clean']):+.4f} mean risk despite major degradation.
-- **Can it enter shadow mode?** No under the frozen gate.
-- **What fresh evidence is missing?** Authorized DocILE LIR validation and a larger grouped development/certification set with end-to-end corrupted extraction outputs.
-
-## Slices
-
-Strongest adequately supported cohorts:
-
-{slice_lines(best)}
-
-Weakest adequately supported cohorts:
-
-{slice_lines(worst)}
-
-Latency correlates moderately with predicted line-item count (r={latency['pearson_latency_vs_predicted_line_item_count']:.3f}) but weakly with learned risk (r={latency['pearson_latency_vs_R4_risk']:.3f}); p95 is {latency['latency_p95_seconds']:.3f}s.
+Decision: `V3_2_RISK_MODEL_NO_PROMOTION`. The corrected replay is not fresh evidence, and internal development gates also fail. The candidate remains offline; API fields, routes, and action semantics are unchanged. No autonomous or shadow promotion occurred.
 """)
 
-write("EXECUTIVE_FINDINGS.md", f"""
-# Executive findings
+write("FINAL_REPORT.md",f"""# R-FDI v3.2 corrected final report
 
-R-FDI v3.2 improves the *measurement* of receipt line items but does not produce a promotable risk controller. Permutation-invariant E2 test F1 is {line_test['document_mean_metrics']['E2_line_item_f1']:.4f}, yet only {line_test['document_mean_metrics']['row_exact_match_rate']:.1%} of rows are exact and critical monetary errors affect {evaluation['critical_error_prevalence']:.1%} of retrospective test documents.
+## Decision
 
-Raw confidence remains the strongest evaluated ranker (AURC {float(metrics['R0_raw_confidence']['AURC']):.4f}, PR-AUC {float(metrics['R0_raw_confidence']['PR_AUC']):.4f}, AUROC {float(metrics['R0_raw_confidence']['AUROC']):.4f}). Learned R4 is worse (AURC {float(metrics['R4_best_learned']['AURC']):.4f}) and no 5/10/20% target is certified. The correct action is `V3_2_RISK_MODEL_NO_PROMOTION`: preserve the candidate offline, keep runtime semantics unchanged, and collect larger, genuinely external line-item evidence before another promotion attempt.
+`V3_2_RISK_MODEL_NO_PROMOTION`. This is a methodology-correction replay, not a new model study or fresh confirmation.
 
-The clearest next fixes are line-item association, wrong item prices despite a correct total, and risk features sensitive to extraction degradation rather than appearance alone.
+- Old reported E0 was {old['reported_metrics']['E0_historical_flat_f1']:.4f}; corrected E0 path-occurrence F1 is {m['E0_path_occurrence_f1']:.4f}. E1 positional F1 is {m['E1_positional_row_f1']:.4f}.
+- E2 matched-row F1 is {m['E2_matched_row_f1']:.4f}; distinct matched-field micro F1 is {m['E2_matched_field_micro_f1']:.4f}; row exact rate is {m['E2_row_exact_match_rate']:.4f}.
+- Benign permutation-only rate is {test['row_permutation_only_rate']:.1%}; semantic association error is {test['row_semantic_association_error_rate']:.1%}. Benign permutation is excluded from failures and risk.
+- Retrospective critical prevalence remains {evaluation['critical_error_prevalence']:.1%}; line-item critical prevalence is {evaluation['line_item_critical_error_prevalence']:.1%}. Mean weighted loss changed from {old['reported_metrics'].get('mean_weighted_critical_loss',0.17310588780992092):.6f} to {load_json('artifacts/v3_2/data/test_risk_feature_summary.json')['mean_weighted_critical_loss']:.6f}.
+- Across development and test, {transition['positive_to_negative']} label changed positive→negative, {transition['negative_to_positive']} negative→positive, {transition['weighted_loss_decreased']} losses decreased, and {transition['weighted_loss_increased']} increased. No observed real document was a pure-permutation-only case.
+- Failure prevalence: semantic association {err('semantic_row_association_error'):.1%}, missing row {err('missing_row'):.1%}, spurious row {err('spurious_row'):.1%}, incorrect item price {err('incorrect_item_price'):.1%}, missing item price {err('missing_item_price'):.1%}, correct total/wrong item price {err('correct_total_wrong_item_price'):.1%}, document-total error {err('document_total_error'):.1%}.
+- R4 remains inferior to R0; calibration does not repair ranking. No operating or certification replay gate supports promotion.
+- Latency has r={latency['pearson_latency_vs_predicted_line_item_count']:.3f} with predicted row count and p95 {latency['latency_p95_seconds']:.3f}s.
 """)
 
-print(json.dumps({"reports": len(list(OUT.glob("*.md"))), "decision": "V3_2_RISK_MODEL_NO_PROMOTION"}, sort_keys=True))
+write("EXECUTIVE_FINDINGS.md",f"""# Corrected executive findings
+
+The correction changes what the metrics mean more than the headline risk decision. Corrected retrospective E0 path-occurrence/E1 positional/E2 matched-row/E2 matched-field F1 are {m['E0_path_occurrence_f1']:.4f}/{m['E1_positional_row_f1']:.4f}/{m['E2_matched_row_f1']:.4f}/{m['E2_matched_field_micro_f1']:.4f}. Row matchability is high, but field accuracy and row exactness ({m['E2_row_exact_match_rate']:.4f}) are materially lower.
+
+Critical prevalence remains {evaluation['critical_error_prevalence']:.1%}. R0 remains the stronger ranker (AURC {float(metrics['R0_raw_confidence']['AURC']):.4f} versus R4 {float(metrics['R4_best_learned']['AURC']):.4f}); no certificate replay is promotion-eligible. The correct decision remains `V3_2_RISK_MODEL_NO_PROMOTION`.
+""")
+print(json.dumps({"reports":len(list(OUT.glob('*.md'))),"decision":"V3_2_RISK_MODEL_NO_PROMOTION"},sort_keys=True))

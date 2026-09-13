@@ -157,6 +157,19 @@ def monetary_association_errors(gt: list[LineItem], pred: list[LineItem], pairs:
     return count
 
 
+def family_error_breakdown(gt: list[LineItem], pred: list[LineItem], pairs: list[tuple[int,int]], family: str) -> tuple[int,int,int]:
+    missing=spurious=incorrect=0; matched_gt={g for g,_ in pairs}; matched_pred={p for _,p in pairs}
+    for gi,pi in pairs:
+        left=collections.Counter((k,v) for k,v in gt[gi].fields if field_family(k)==family)
+        right=collections.Counter((k,v) for k,v in pred[pi].fields if field_family(k)==family)
+        common=left&right; left-=common; right-=common
+        paired=min(sum(left.values()),sum(right.values())); incorrect+=paired
+        missing+=sum(left.values())-paired; spurious+=sum(right.values())-paired
+    missing+=sum(field_family(k)==family for i,row in enumerate(gt) if i not in matched_gt for k,_ in row.fields)
+    spurious+=sum(field_family(k)==family for i,row in enumerate(pred) if i not in matched_pred for k,_ in row.fields)
+    return missing,spurious,incorrect
+
+
 def evaluate_document(truth: Any, prediction: Any, document_id: str = "") -> dict[str, Any]:
     gt=extract_line_items(truth); pred=extract_line_items(prediction)
     matrix=[[intersection_counts(g,p)[1] for p in pred] for g in gt]
@@ -178,6 +191,7 @@ def evaluate_document(truth: Any, prediction: Any, document_id: str = "") -> dic
     missing_error=unmatched_gt>0; spurious_error=spurious_pred>0
     structure_failure=semantic_error or missing_error or spurious_error
     association_errors=monetary_association_errors(gt,pred,pairs)
+    price_missing,price_spurious,price_incorrect=family_error_breakdown(gt,pred,pairs,"item_price")
     return {
         "document_id":document_id,"gt_rows":len(gt),"predicted_rows":len(pred),
         "E0_path_occurrence_precision":e0[0],"E0_path_occurrence_recall":e0[1],"E0_path_occurrence_f1":e0[2],
@@ -189,6 +203,7 @@ def evaluate_document(truth: Any, prediction: Any, document_id: str = "") -> dic
         "row_permutation_only":permutation_only,"row_semantic_association_error":semantic_error,
         "row_missing_error":missing_error,"row_spurious_error":spurious_error,"row_structure_failure":structure_failure,
         "monetary_association_error_count":association_errors,
+        "missing_item_price_count":price_missing,"spurious_item_price_count":price_spurious,"incorrect_item_price_count":price_incorrect+association_errors,
         "unmatched_gt_rows":unmatched_gt,"spurious_predicted_rows":spurious_pred,
         "strict_matching_weight":strict_weight,"optimal_matching_weight":optimal_weight,
         "matches":[{"gt_index":g,"predicted_index":p,"weight":matrix[g][p],"exact":collections.Counter(gt[g].fields)==collections.Counter(pred[p].fields)} for g,p in pairs],

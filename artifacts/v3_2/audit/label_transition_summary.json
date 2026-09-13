@@ -1,0 +1,14 @@
+{
+  "changes_attributable_solely_to_benign_permutation": 0,
+  "documents": 200,
+  "fresh_confirmatory_evidence": false,
+  "negative_to_positive": 0,
+  "permutation_only_documents": 0,
+  "positive_to_negative": 1,
+  "pre_correction_commit": "10783326e4cb3e56b205df989e515f75ee3af997",
+  "semantic_association_documents": 12,
+  "unchanged_labels": 199,
+  "weighted_loss_decreased": 11,
+  "weighted_loss_increased": 4,
+  "weighted_loss_unchanged": 185
+}
