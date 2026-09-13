@@ -1,21 +1,23 @@
 {
-  "designation": "DEVELOPMENT",
+  "designation": "DEVELOPMENT_CORRECTION_REPLAY",
   "examples": [
     {
-      "E0_historical_flat_f1": 0.6666666666666665,
-      "E0_historical_flat_precision": 0.6,
-      "E0_historical_flat_recall": 0.75,
-      "E1_strict_row_order_f1": 0.6666666666666665,
-      "E1_strict_row_order_precision": 0.6,
-      "E1_strict_row_order_recall": 0.75,
-      "E2_line_item_f1": 0.6666666666666666,
-      "E2_line_item_precision": 0.5,
-      "E2_line_item_recall": 1.0,
-      "critical_monetary_row_f1": 0.6666666666666666,
+      "E0_path_occurrence_f1": 0.6666666666666665,
+      "E0_path_occurrence_precision": 0.6,
+      "E0_path_occurrence_recall": 0.75,
+      "E1_positional_row_f1": 0.6666666666666665,
+      "E1_positional_row_precision": 0.6,
+      "E1_positional_row_recall": 0.75,
+      "E2_matched_field_micro_f1": 0.8571428571428571,
+      "E2_matched_field_precision": 1.0,
+      "E2_matched_field_recall": 0.75,
+      "E2_matched_row_f1": 0.6666666666666666,
+      "E2_matched_row_precision": 0.5,
+      "E2_matched_row_recall": 1.0,
+      "E2_matched_rows": 1,
+      "E2_row_exact_match_rate": 0.0,
+      "E2_row_exact_matches": 0,
       "document_id": "cord-v2-validation-00007",
-      "field_within_row_micro_f1": 0.6666666666666665,
-      "field_within_row_precision": 0.6,
-      "field_within_row_recall": 0.75,
       "gt_items": [
         {
           "fields": [
@@ -43,8 +45,8 @@
         }
       ],
       "gt_rows": 1,
-      "item_name_f1": 0.6666666666666666,
-      "item_price_f1": 0.6666666666666666,
+      "item_name_f1": 1.0,
+      "item_price_f1": 1.0,
       "matches": [
         {
           "exact": false,
@@ -53,6 +55,7 @@
           "weight": 4.0
         }
       ],
+      "monetary_association_error_count": 0,
       "optimal_matching_weight": 4.0,
       "predicted_items": [
         {
@@ -94,29 +97,33 @@
       ],
       "predicted_rows": 2,
       "quantity_f1": 1.0,
-      "row_alignment_error": false,
-      "row_exact_match_rate": 0.0,
-      "row_exact_matches": 0,
+      "row_missing_error": false,
+      "row_permutation_only": false,
+      "row_semantic_association_error": false,
+      "row_spurious_error": true,
+      "row_structure_failure": true,
       "spurious_predicted_rows": 1,
       "strict_matching_weight": 4.0,
       "unit_price_f1": 1.0,
       "unmatched_gt_rows": 0
     },
     {
-      "E0_historical_flat_f1": 0.25,
-      "E0_historical_flat_precision": 0.2857142857142857,
-      "E0_historical_flat_recall": 0.2222222222222222,
-      "E1_strict_row_order_f1": 0.25,
-      "E1_strict_row_order_precision": 0.2857142857142857,
-      "E1_strict_row_order_recall": 0.2222222222222222,
-      "E2_line_item_f1": 0.3333333333333333,
-      "E2_line_item_precision": 0.3333333333333333,
-      "E2_line_item_recall": 0.3333333333333333,
-      "critical_monetary_row_f1": 0.5,
+      "E0_path_occurrence_f1": 0.25,
+      "E0_path_occurrence_precision": 0.2857142857142857,
+      "E0_path_occurrence_recall": 0.2222222222222222,
+      "E1_positional_row_f1": 0.25,
+      "E1_positional_row_precision": 0.2857142857142857,
+      "E1_positional_row_recall": 0.2222222222222222,
+      "E2_matched_field_micro_f1": 0.6666666666666666,
+      "E2_matched_field_precision": 0.6666666666666666,
+      "E2_matched_field_recall": 0.6666666666666666,
+      "E2_matched_row_f1": 0.3333333333333333,
+      "E2_matched_row_precision": 0.3333333333333333,
+      "E2_matched_row_recall": 0.3333333333333333,
+      "E2_matched_rows": 1,
+      "E2_row_exact_match_rate": 0.0,
+      "E2_row_exact_matches": 0,
       "document_id": "cord-v2-validation-00040",
-      "field_within_row_micro_f1": 0.25,
-      "field_within_row_precision": 0.2857142857142857,
-      "field_within_row_recall": 0.2222222222222222,
       "gt_items": [
         {
           "fields": [
@@ -181,7 +188,7 @@
       ],
       "gt_rows": 3,
       "item_name_f1": 0.0,
-      "item_price_f1": 0.5,
+      "item_price_f1": 1.0,
       "matches": [
         {
           "exact": false,
@@ -190,6 +197,7 @@
           "weight": 3.0
         }
       ],
+      "monetary_association_error_count": 0,
       "optimal_matching_weight": 3.0,
       "predicted_items": [
         {
@@ -246,30 +254,34 @@
         }
       ],
       "predicted_rows": 3,
-      "quantity_f1": 0.3333333333333333,
-      "row_alignment_error": false,
-      "row_exact_match_rate": 0.0,
-      "row_exact_matches": 0,
+      "quantity_f1": 1.0,
+      "row_missing_error": true,
+      "row_permutation_only": false,
+      "row_semantic_association_error": false,
+      "row_spurious_error": true,
+      "row_structure_failure": true,
       "spurious_predicted_rows": 2,
       "strict_matching_weight": 3.0,
       "unit_price_f1": 1.0,
       "unmatched_gt_rows": 2
     },
     {
-      "E0_historical_flat_f1": 0.23880597014925375,
-      "E0_historical_flat_precision": 0.23529411764705882,
-      "E0_historical_flat_recall": 0.24242424242424243,
-      "E1_strict_row_order_f1": 0.23880597014925375,
-      "E1_strict_row_order_precision": 0.23529411764705882,
-      "E1_strict_row_order_recall": 0.24242424242424243,
-      "E2_line_item_f1": 0.9565217391304348,
-      "E2_line_item_precision": 0.9166666666666666,
-      "E2_line_item_recall": 1.0,
-      "critical_monetary_row_f1": 0.9565217391304348,
+      "E0_path_occurrence_f1": 0.38805970149253727,
+      "E0_path_occurrence_precision": 0.38235294117647056,
+      "E0_path_occurrence_recall": 0.3939393939393939,
+      "E1_positional_row_f1": 0.23880597014925375,
+      "E1_positional_row_precision": 0.23529411764705882,
+      "E1_positional_row_recall": 0.24242424242424243,
+      "E2_matched_field_micro_f1": 0.71875,
+      "E2_matched_field_precision": 0.7419354838709677,
+      "E2_matched_field_recall": 0.696969696969697,
+      "E2_matched_row_f1": 0.9565217391304348,
+      "E2_matched_row_precision": 0.9166666666666666,
+      "E2_matched_row_recall": 1.0,
+      "E2_matched_rows": 11,
+      "E2_row_exact_match_rate": 0.36363636363636365,
+      "E2_row_exact_matches": 4,
       "document_id": "cord-v2-validation-00041",
-      "field_within_row_micro_f1": 0.6865671641791046,
-      "field_within_row_precision": 0.6764705882352942,
-      "field_within_row_recall": 0.696969696969697,
       "gt_items": [
         {
           "fields": [
@@ -493,8 +505,8 @@
         }
       ],
       "gt_rows": 11,
-      "item_name_f1": 0.43478260869565216,
-      "item_price_f1": 0.9565217391304348,
+      "item_name_f1": 0.45454545454545453,
+      "item_price_f1": 1.0,
       "matches": [
         {
           "exact": false,
@@ -563,6 +575,7 @@
           "weight": 3.0
         }
       ],
+      "monetary_association_error_count": 3,
       "optimal_matching_weight": 34.0,
       "predicted_items": [
         {
@@ -799,30 +812,34 @@
         }
       ],
       "predicted_rows": 12,
-      "quantity_f1": 0.6666666666666666,
-      "row_alignment_error": true,
-      "row_exact_match_rate": 0.36363636363636365,
-      "row_exact_matches": 4,
+      "quantity_f1": 0.7000000000000001,
+      "row_missing_error": false,
+      "row_permutation_only": false,
+      "row_semantic_association_error": true,
+      "row_spurious_error": true,
+      "row_structure_failure": true,
       "spurious_predicted_rows": 1,
       "strict_matching_weight": 12.0,
       "unit_price_f1": 1.0,
       "unmatched_gt_rows": 0
     },
     {
-      "E0_historical_flat_f1": 0.7999999999999999,
-      "E0_historical_flat_precision": 0.75,
-      "E0_historical_flat_recall": 0.8571428571428571,
-      "E1_strict_row_order_f1": 0.7999999999999999,
-      "E1_strict_row_order_precision": 0.75,
-      "E1_strict_row_order_recall": 0.8571428571428571,
-      "E2_line_item_f1": 0.8,
-      "E2_line_item_precision": 0.6666666666666666,
-      "E2_line_item_recall": 1.0,
-      "critical_monetary_row_f1": 0.8,
+      "E0_path_occurrence_f1": 0.7999999999999999,
+      "E0_path_occurrence_precision": 0.75,
+      "E0_path_occurrence_recall": 0.8571428571428571,
+      "E1_positional_row_f1": 0.7999999999999999,
+      "E1_positional_row_precision": 0.75,
+      "E1_positional_row_recall": 0.8571428571428571,
+      "E2_matched_field_micro_f1": 0.923076923076923,
+      "E2_matched_field_precision": 1.0,
+      "E2_matched_field_recall": 0.8571428571428571,
+      "E2_matched_row_f1": 0.8,
+      "E2_matched_row_precision": 0.6666666666666666,
+      "E2_matched_row_recall": 1.0,
+      "E2_matched_rows": 2,
+      "E2_row_exact_match_rate": 0.5,
+      "E2_row_exact_matches": 1,
       "document_id": "cord-v2-validation-00055",
-      "field_within_row_micro_f1": 0.7999999999999999,
-      "field_within_row_precision": 0.75,
-      "field_within_row_recall": 0.8571428571428571,
       "gt_items": [
         {
           "fields": [
@@ -870,8 +887,8 @@
         }
       ],
       "gt_rows": 2,
-      "item_name_f1": 0.8,
-      "item_price_f1": 0.8,
+      "item_name_f1": 1.0,
+      "item_price_f1": 1.0,
       "matches": [
         {
           "exact": true,
@@ -886,6 +903,7 @@
           "weight": 4.0
         }
       ],
+      "monetary_association_error_count": 0,
       "optimal_matching_weight": 8.0,
       "predicted_items": [
         {
@@ -947,29 +965,33 @@
       ],
       "predicted_rows": 3,
       "quantity_f1": 1.0,
-      "row_alignment_error": false,
-      "row_exact_match_rate": 0.5,
-      "row_exact_matches": 1,
+      "row_missing_error": false,
+      "row_permutation_only": false,
+      "row_semantic_association_error": false,
+      "row_spurious_error": true,
+      "row_structure_failure": true,
       "spurious_predicted_rows": 1,
       "strict_matching_weight": 8.0,
       "unit_price_f1": 1.0,
       "unmatched_gt_rows": 0
     },
     {
-      "E0_historical_flat_f1": 0.5,
-      "E0_historical_flat_precision": 0.5,
-      "E0_historical_flat_recall": 0.5,
-      "E1_strict_row_order_f1": 0.5,
-      "E1_strict_row_order_precision": 0.5,
-      "E1_strict_row_order_recall": 0.5,
-      "E2_line_item_f1": 0.6666666666666666,
-      "E2_line_item_precision": 0.5,
-      "E2_line_item_recall": 1.0,
-      "critical_monetary_row_f1": 0.5,
+      "E0_path_occurrence_f1": 0.5,
+      "E0_path_occurrence_precision": 0.5,
+      "E0_path_occurrence_recall": 0.5,
+      "E1_positional_row_f1": 0.5,
+      "E1_positional_row_precision": 0.5,
+      "E1_positional_row_recall": 0.5,
+      "E2_matched_field_micro_f1": 0.6666666666666666,
+      "E2_matched_field_precision": 1.0,
+      "E2_matched_field_recall": 0.5,
+      "E2_matched_row_f1": 0.6666666666666666,
+      "E2_matched_row_precision": 0.5,
+      "E2_matched_row_recall": 1.0,
+      "E2_matched_rows": 1,
+      "E2_row_exact_match_rate": 0.0,
+      "E2_row_exact_matches": 0,
       "document_id": "cord-v2-validation-00071",
-      "field_within_row_micro_f1": 0.5,
-      "field_within_row_precision": 0.5,
-      "field_within_row_recall": 0.5,
       "gt_items": [
         {
           "fields": [
@@ -1005,8 +1027,8 @@
         }
       ],
       "gt_rows": 1,
-      "item_name_f1": 0.5,
-      "item_price_f1": 0.5,
+      "item_name_f1": 0.6666666666666666,
+      "item_price_f1": 0.6666666666666666,
       "matches": [
         {
           "exact": false,
@@ -1015,6 +1037,7 @@
           "weight": 4.0
         }
       ],
+      "monetary_association_error_count": 0,
       "optimal_matching_weight": 4.0,
       "predicted_items": [
         {
@@ -1059,30 +1082,34 @@
         }
       ],
       "predicted_rows": 2,
-      "quantity_f1": 0.5,
-      "row_alignment_error": false,
-      "row_exact_match_rate": 0.0,
-      "row_exact_matches": 0,
+      "quantity_f1": 0.6666666666666666,
+      "row_missing_error": false,
+      "row_permutation_only": false,
+      "row_semantic_association_error": false,
+      "row_spurious_error": true,
+      "row_structure_failure": true,
       "spurious_predicted_rows": 1,
       "strict_matching_weight": 4.0,
       "unit_price_f1": 1.0,
       "unmatched_gt_rows": 0
     },
     {
-      "E0_historical_flat_f1": 0.5925925925925926,
-      "E0_historical_flat_precision": 0.6666666666666666,
-      "E0_historical_flat_recall": 0.5333333333333333,
-      "E1_strict_row_order_f1": 0.5925925925925926,
-      "E1_strict_row_order_precision": 0.6666666666666666,
-      "E1_strict_row_order_recall": 0.5333333333333333,
-      "E2_line_item_f1": 0.888888888888889,
-      "E2_line_item_precision": 1.0,
-      "E2_line_item_recall": 0.8,
-      "critical_monetary_row_f1": 0.888888888888889,
+      "E0_path_occurrence_f1": 0.5925925925925926,
+      "E0_path_occurrence_precision": 0.6666666666666666,
+      "E0_path_occurrence_recall": 0.5333333333333333,
+      "E1_positional_row_f1": 0.5925925925925926,
+      "E1_positional_row_precision": 0.6666666666666666,
+      "E1_positional_row_recall": 0.5333333333333333,
+      "E2_matched_field_micro_f1": 1.0,
+      "E2_matched_field_precision": 1.0,
+      "E2_matched_field_recall": 1.0,
+      "E2_matched_row_f1": 0.888888888888889,
+      "E2_matched_row_precision": 1.0,
+      "E2_matched_row_recall": 0.8,
+      "E2_matched_rows": 4,
+      "E2_row_exact_match_rate": 0.8,
+      "E2_row_exact_matches": 4,
       "document_id": "cord-v2-validation-00075",
-      "field_within_row_micro_f1": 0.888888888888889,
-      "field_within_row_precision": 1.0,
-      "field_within_row_recall": 0.8,
       "gt_items": [
         {
           "fields": [
@@ -1186,8 +1213,8 @@
         }
       ],
       "gt_rows": 5,
-      "item_name_f1": 0.888888888888889,
-      "item_price_f1": 0.888888888888889,
+      "item_name_f1": 1.0,
+      "item_price_f1": 1.0,
       "matches": [
         {
           "exact": true,
@@ -1214,6 +1241,7 @@
           "weight": 4.0
         }
       ],
+      "monetary_association_error_count": 0,
       "optimal_matching_weight": 16.0,
       "predicted_items": [
         {
@@ -1298,30 +1326,34 @@
         }
       ],
       "predicted_rows": 4,
-      "quantity_f1": 0.888888888888889,
-      "row_alignment_error": true,
-      "row_exact_match_rate": 0.8,
-      "row_exact_matches": 4,
+      "quantity_f1": 1.0,
+      "row_missing_error": true,
+      "row_permutation_only": false,
+      "row_semantic_association_error": false,
+      "row_spurious_error": false,
+      "row_structure_failure": true,
       "spurious_predicted_rows": 0,
       "strict_matching_weight": 10.0,
       "unit_price_f1": 1.0,
       "unmatched_gt_rows": 1
     },
     {
-      "E0_historical_flat_f1": 0.375,
-      "E0_historical_flat_precision": 0.375,
-      "E0_historical_flat_recall": 0.375,
-      "E1_strict_row_order_f1": 0.375,
-      "E1_strict_row_order_precision": 0.375,
-      "E1_strict_row_order_recall": 0.375,
-      "E2_line_item_f1": 0.6666666666666666,
-      "E2_line_item_precision": 1.0,
-      "E2_line_item_recall": 0.5,
-      "critical_monetary_row_f1": 0.6666666666666666,
+      "E0_path_occurrence_f1": 0.375,
+      "E0_path_occurrence_precision": 0.375,
+      "E0_path_occurrence_recall": 0.375,
+      "E1_positional_row_f1": 0.375,
+      "E1_positional_row_precision": 0.375,
+      "E1_positional_row_recall": 0.375,
+      "E2_matched_field_micro_f1": 0.4615384615384615,
+      "E2_matched_field_precision": 0.375,
+      "E2_matched_field_recall": 0.6,
+      "E2_matched_row_f1": 0.6666666666666666,
+      "E2_matched_row_precision": 1.0,
+      "E2_matched_row_recall": 0.5,
+      "E2_matched_rows": 1,
+      "E2_row_exact_match_rate": 0.0,
+      "E2_row_exact_matches": 0,
       "document_id": "cord-v2-validation-00084",
-      "field_within_row_micro_f1": 0.375,
-      "field_within_row_precision": 0.375,
-      "field_within_row_recall": 0.375,
       "gt_items": [
         {
           "fields": [
@@ -1374,7 +1406,7 @@
       ],
       "gt_rows": 2,
       "item_name_f1": 0.0,
-      "item_price_f1": 0.6666666666666666,
+      "item_price_f1": 0.8,
       "matches": [
         {
           "exact": false,
@@ -1383,6 +1415,7 @@
           "weight": 5.0
         }
       ],
+      "monetary_association_error_count": 0,
       "optimal_matching_weight": 5.0,
       "predicted_items": [
         {
@@ -1427,30 +1460,34 @@
         }
       ],
       "predicted_rows": 1,
-      "quantity_f1": 0.5,
-      "row_alignment_error": false,
-      "row_exact_match_rate": 0.0,
-      "row_exact_matches": 0,
+      "quantity_f1": 0.6666666666666666,
+      "row_missing_error": true,
+      "row_permutation_only": false,
+      "row_semantic_association_error": false,
+      "row_spurious_error": false,
+      "row_structure_failure": true,
       "spurious_predicted_rows": 0,
       "strict_matching_weight": 5.0,
       "unit_price_f1": 1.0,
       "unmatched_gt_rows": 1
     },
     {
-      "E0_historical_flat_f1": 0.5,
-      "E0_historical_flat_precision": 0.5,
-      "E0_historical_flat_recall": 0.5,
-      "E1_strict_row_order_f1": 0.5,
-      "E1_strict_row_order_precision": 0.5,
-      "E1_strict_row_order_recall": 0.5,
-      "E2_line_item_f1": 0.6666666666666666,
-      "E2_line_item_precision": 0.5,
-      "E2_line_item_recall": 1.0,
-      "critical_monetary_row_f1": 0.5,
+      "E0_path_occurrence_f1": 0.5,
+      "E0_path_occurrence_precision": 0.5,
+      "E0_path_occurrence_recall": 0.5,
+      "E1_positional_row_f1": 0.5,
+      "E1_positional_row_precision": 0.5,
+      "E1_positional_row_recall": 0.5,
+      "E2_matched_field_micro_f1": 0.6666666666666666,
+      "E2_matched_field_precision": 1.0,
+      "E2_matched_field_recall": 0.5,
+      "E2_matched_row_f1": 0.6666666666666666,
+      "E2_matched_row_precision": 0.5,
+      "E2_matched_row_recall": 1.0,
+      "E2_matched_rows": 1,
+      "E2_row_exact_match_rate": 0.0,
+      "E2_row_exact_matches": 0,
       "document_id": "cord-v2-validation-00091",
-      "field_within_row_micro_f1": 0.5,
-      "field_within_row_precision": 0.5,
-      "field_within_row_recall": 0.5,
       "gt_items": [
         {
           "fields": [
@@ -1478,8 +1515,8 @@
         }
       ],
       "gt_rows": 1,
-      "item_name_f1": 0.5,
-      "item_price_f1": 0.5,
+      "item_name_f1": 0.6666666666666666,
+      "item_price_f1": 0.6666666666666666,
       "matches": [
         {
           "exact": false,
@@ -1488,6 +1525,7 @@
           "weight": 3.0
         }
       ],
+      "monetary_association_error_count": 0,
       "optimal_matching_weight": 3.0,
       "predicted_items": [
         {
@@ -1525,29 +1563,33 @@
       ],
       "predicted_rows": 2,
       "quantity_f1": 1.0,
-      "row_alignment_error": false,
-      "row_exact_match_rate": 0.0,
-      "row_exact_matches": 0,
+      "row_missing_error": false,
+      "row_permutation_only": false,
+      "row_semantic_association_error": false,
+      "row_spurious_error": true,
+      "row_structure_failure": true,
       "spurious_predicted_rows": 1,
       "strict_matching_weight": 3.0,
       "unit_price_f1": 1.0,
       "unmatched_gt_rows": 0
     },
     {
-      "E0_historical_flat_f1": 0.12000000000000001,
-      "E0_historical_flat_precision": 0.125,
-      "E0_historical_flat_recall": 0.11538461538461539,
-      "E1_strict_row_order_f1": 0.12000000000000001,
-      "E1_strict_row_order_precision": 0.125,
-      "E1_strict_row_order_recall": 0.11538461538461539,
-      "E2_line_item_f1": 0.3076923076923077,
-      "E2_line_item_precision": 0.18181818181818182,
-      "E2_line_item_recall": 1.0,
-      "critical_monetary_row_f1": 1.0,
+      "E0_path_occurrence_f1": 0.16,
+      "E0_path_occurrence_precision": 0.16666666666666666,
+      "E0_path_occurrence_recall": 0.15384615384615385,
+      "E1_positional_row_f1": 0.12000000000000001,
+      "E1_positional_row_precision": 0.125,
+      "E1_positional_row_recall": 0.11538461538461539,
+      "E2_matched_field_micro_f1": 0.25,
+      "E2_matched_field_precision": 0.6666666666666666,
+      "E2_matched_field_recall": 0.15384615384615385,
+      "E2_matched_row_f1": 0.3076923076923077,
+      "E2_matched_row_precision": 0.18181818181818182,
+      "E2_matched_row_recall": 1.0,
+      "E2_matched_rows": 2,
+      "E2_row_exact_match_rate": 0.0,
+      "E2_row_exact_matches": 0,
       "document_id": "cord-v2-validation-00093",
-      "field_within_row_micro_f1": 0.16,
-      "field_within_row_precision": 0.16666666666666666,
-      "field_within_row_recall": 0.15384615384615385,
       "gt_items": [
         {
           "fields": [
@@ -1687,6 +1729,7 @@
           "weight": 3.0
         }
       ],
+      "monetary_association_error_count": 0,
       "optimal_matching_weight": 6.0,
       "predicted_items": [
         {
@@ -1875,30 +1918,34 @@
         }
       ],
       "predicted_rows": 11,
-      "quantity_f1": 0.17391304347826086,
-      "row_alignment_error": true,
-      "row_exact_match_rate": 0.0,
-      "row_exact_matches": 0,
+      "quantity_f1": 0.2857142857142857,
+      "row_missing_error": false,
+      "row_permutation_only": false,
+      "row_semantic_association_error": true,
+      "row_spurious_error": true,
+      "row_structure_failure": true,
       "spurious_predicted_rows": 9,
       "strict_matching_weight": 4.0,
       "unit_price_f1": 1.0,
       "unmatched_gt_rows": 0
     },
     {
-      "E0_historical_flat_f1": 0.47058823529411764,
-      "E0_historical_flat_precision": 0.5,
-      "E0_historical_flat_recall": 0.4444444444444444,
-      "E1_strict_row_order_f1": 0.47058823529411764,
-      "E1_strict_row_order_precision": 0.5,
-      "E1_strict_row_order_recall": 0.4444444444444444,
-      "E2_line_item_f1": 0.6666666666666666,
-      "E2_line_item_precision": 0.5,
-      "E2_line_item_recall": 1.0,
-      "critical_monetary_row_f1": 0.5714285714285715,
+      "E0_path_occurrence_f1": 0.47058823529411764,
+      "E0_path_occurrence_precision": 0.5,
+      "E0_path_occurrence_recall": 0.4444444444444444,
+      "E1_positional_row_f1": 0.47058823529411764,
+      "E1_positional_row_precision": 0.5,
+      "E1_positional_row_recall": 0.4444444444444444,
+      "E2_matched_field_micro_f1": 0.5333333333333333,
+      "E2_matched_field_precision": 0.6666666666666666,
+      "E2_matched_field_recall": 0.4444444444444444,
+      "E2_matched_row_f1": 0.6666666666666666,
+      "E2_matched_row_precision": 0.5,
+      "E2_matched_row_recall": 1.0,
+      "E2_matched_rows": 1,
+      "E2_row_exact_match_rate": 0.0,
+      "E2_row_exact_matches": 0,
       "document_id": "cord-v2-validation-00099",
-      "field_within_row_micro_f1": 0.47058823529411764,
-      "field_within_row_precision": 0.5,
-      "field_within_row_recall": 0.4444444444444444,
       "gt_items": [
         {
           "fields": [
@@ -1946,8 +1993,8 @@
         }
       ],
       "gt_rows": 1,
-      "item_name_f1": 0.5,
-      "item_price_f1": 0.5714285714285715,
+      "item_name_f1": 0.5714285714285715,
+      "item_price_f1": 0.6666666666666666,
       "matches": [
         {
           "exact": false,
@@ -1956,6 +2003,7 @@
           "weight": 6.0
         }
       ],
+      "monetary_association_error_count": 0,
       "optimal_matching_weight": 6.0,
       "predicted_items": [
         {
@@ -2009,9 +2057,11 @@
       ],
       "predicted_rows": 2,
       "quantity_f1": 0.0,
-      "row_alignment_error": false,
-      "row_exact_match_rate": 0.0,
-      "row_exact_matches": 0,
+      "row_missing_error": false,
+      "row_permutation_only": false,
+      "row_semantic_association_error": false,
+      "row_spurious_error": true,
+      "row_structure_failure": true,
       "spurious_predicted_rows": 1,
       "strict_matching_weight": 6.0,
       "unit_price_f1": 1.0,

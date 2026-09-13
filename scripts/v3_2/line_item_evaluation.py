@@ -118,15 +118,43 @@ def row_fields(rows: list[LineItem]) -> list[tuple[str,str]]:
     return [field for row in rows for field in row.fields]
 
 
-def aligned_field_counts(gt: list[LineItem], pred: list[LineItem], pairs: list[tuple[int,int]], family: str|None=None) -> tuple[int,int,int]:
+def aligned_field_counts(gt: list[LineItem], pred: list[LineItem], pairs: list[tuple[int,int]], family: str|None=None, matched_only: bool=False) -> tuple[int,int,int]:
     tp=0
     for gi,pi in pairs:
         g=collections.Counter((k,v) for k,v in gt[gi].fields if family is None or field_family(k)==family)
         p=collections.Counter((k,v) for k,v in pred[pi].fields if family is None or field_family(k)==family)
         tp+=sum((g&p).values())
-    gold=sum(family is None or field_family(k)==family for row in gt for k,_ in row.fields)
-    predicted=sum(family is None or field_family(k)==family for row in pred for k,_ in row.fields)
+    gt_scope=[gt[g] for g,_ in pairs] if matched_only else gt
+    pred_scope=[pred[p] for _,p in pairs] if matched_only else pred
+    gold=sum(family is None or field_family(k)==family for row in gt_scope for k,_ in row.fields)
+    predicted=sum(family is None or field_family(k)==family for row in pred_scope for k,_ in row.fields)
     return tp,predicted,gold
+
+
+def path_occurrence_counts(gt: list[LineItem], pred: list[LineItem]) -> tuple[int,int,int]:
+    """Reproduce v3.1 menu path/occurrence semantics with row identity discarded."""
+    gold: dict[str,list[str]]=collections.defaultdict(list); predicted: dict[str,list[str]]=collections.defaultdict(list)
+    for row in gt:
+        for path,value in row.fields: gold[path].append(value)
+    for row in pred:
+        for path,value in row.fields: predicted[path].append(value)
+    tp=0
+    for path in set(gold)|set(predicted):
+        tp+=sum(left==right for left,right in zip(gold[path],predicted[path]))
+    return tp,sum(map(len,predicted.values())),sum(map(len,gold.values()))
+
+
+def monetary_association_errors(gt: list[LineItem], pred: list[LineItem], pairs: list[tuple[int,int]]) -> int:
+    """Count price-to-description bindings contradicted by another predicted row."""
+    count=0
+    for gi,pi in pairs:
+        gt_names={v for k,v in gt[gi].fields if field_family(k)=="item_name"}
+        pred_names={v for k,v in pred[pi].fields if field_family(k)=="item_name"}
+        shared_money={(field_family(k),v) for k,v in gt[gi].fields if field_family(k) in {"item_price","unit_price"}} & {(field_family(k),v) for k,v in pred[pi].fields if field_family(k) in {"item_price","unit_price"}}
+        if shared_money and gt_names and pred_names and not (gt_names & pred_names):
+            if any(gt_names & {v for k,v in other.fields if field_family(k)=="item_name"} for j,other in enumerate(pred) if j!=pi):
+                count+=len(shared_money)
+    return count
 
 
 def evaluate_document(truth: Any, prediction: Any, document_id: str = "") -> dict[str, Any]:
@@ -135,27 +163,33 @@ def evaluate_document(truth: Any, prediction: Any, document_id: str = "") -> dic
     assigned=maximum_weight_assignment(matrix)
     pairs=[(g,p) for g,p in assigned if matrix[g][p]>=MIN_WEIGHT]
     strict_pairs=[(i,i) for i in range(min(len(gt),len(pred)))]
-    e0_tp,e0_pred,e0_gold=aligned_field_counts(gt,pred,strict_pairs); e0=prf(e0_tp,e0_pred,e0_gold)
-    e1=e0
+    e0=prf(*path_occurrence_counts(gt,pred))
+    e1=prf(*aligned_field_counts(gt,pred,strict_pairs))
     matched=len(pairs); row_prf=prf(matched,len(pred),len(gt)); exact=sum(collections.Counter(gt[g].fields)==collections.Counter(pred[p].fields) for g,p in pairs)
-    field_tp,field_pred,field_gold=aligned_field_counts(gt,pred,pairs); field_prf=prf(field_tp,field_pred,field_gold)
+    field_prf=prf(*aligned_field_counts(gt,pred,pairs,matched_only=True))
     families={}
     for family in ("item_name","item_price","quantity","unit_price"):
-        values=aligned_field_counts(gt,pred,pairs,family); families[family]=prf(*values)
-    critical_tp,critical_pred,critical_gold=aligned_field_counts(gt,pred,pairs,"item_price"); critical_prf=prf(critical_tp,critical_pred,critical_gold)
+        values=aligned_field_counts(gt,pred,pairs,family,matched_only=True); families[family]=prf(*values)
     strict_weight=sum(matrix[g][p] for g,p in strict_pairs) if matrix else 0.0; optimal_weight=sum(matrix[g][p] for g,p in pairs) if matrix else 0.0
     assignment_changed=any(g!=p for g,p in pairs)
-    alignment_error=assignment_changed or optimal_weight>strict_weight+1e-12
+    unmatched_gt=len(gt)-matched; spurious_pred=len(pred)-matched
+    permutation_only=assignment_changed and exact==matched and matched==len(gt)==len(pred)
+    semantic_error=assignment_changed and not permutation_only and exact<matched
+    missing_error=unmatched_gt>0; spurious_error=spurious_pred>0
+    structure_failure=semantic_error or missing_error or spurious_error
+    association_errors=monetary_association_errors(gt,pred,pairs)
     return {
         "document_id":document_id,"gt_rows":len(gt),"predicted_rows":len(pred),
-        "E0_historical_flat_precision":e0[0],"E0_historical_flat_recall":e0[1],"E0_historical_flat_f1":e0[2],
-        "E1_strict_row_order_precision":e1[0],"E1_strict_row_order_recall":e1[1],"E1_strict_row_order_f1":e1[2],
-        "E2_line_item_precision":row_prf[0],"E2_line_item_recall":row_prf[1],"E2_line_item_f1":row_prf[2],
-        "row_exact_matches":exact,"row_exact_match_rate":exact/len(gt) if gt else (1.0 if not pred else 0.0),
-        "field_within_row_precision":field_prf[0],"field_within_row_recall":field_prf[1],"field_within_row_micro_f1":field_prf[2],
+        "E0_path_occurrence_precision":e0[0],"E0_path_occurrence_recall":e0[1],"E0_path_occurrence_f1":e0[2],
+        "E1_positional_row_precision":e1[0],"E1_positional_row_recall":e1[1],"E1_positional_row_f1":e1[2],
+        "E2_matched_rows":matched,"E2_matched_row_precision":row_prf[0],"E2_matched_row_recall":row_prf[1],"E2_matched_row_f1":row_prf[2],
+        "E2_row_exact_matches":exact,"E2_row_exact_match_rate":exact/len(gt) if gt else (1.0 if not pred else 0.0),
+        "E2_matched_field_precision":field_prf[0],"E2_matched_field_recall":field_prf[1],"E2_matched_field_micro_f1":field_prf[2],
         "item_name_f1":families["item_name"][2],"item_price_f1":families["item_price"][2],"quantity_f1":families["quantity"][2],"unit_price_f1":families["unit_price"][2],
-        "critical_monetary_row_f1":critical_prf[2],"row_alignment_error":alignment_error,
-        "unmatched_gt_rows":len(gt)-matched,"spurious_predicted_rows":len(pred)-matched,
+        "row_permutation_only":permutation_only,"row_semantic_association_error":semantic_error,
+        "row_missing_error":missing_error,"row_spurious_error":spurious_error,"row_structure_failure":structure_failure,
+        "monetary_association_error_count":association_errors,
+        "unmatched_gt_rows":unmatched_gt,"spurious_predicted_rows":spurious_pred,
         "strict_matching_weight":strict_weight,"optimal_matching_weight":optimal_weight,
         "matches":[{"gt_index":g,"predicted_index":p,"weight":matrix[g][p],"exact":collections.Counter(gt[g].fields)==collections.Counter(pred[p].fields)} for g,p in pairs],
         "gt_items":[asdict(row) for row in gt],"predicted_items":[asdict(row) for row in pred]
@@ -164,8 +198,8 @@ def evaluate_document(truth: Any, prediction: Any, document_id: str = "") -> dic
 
 def aggregate(documents: list[dict[str,Any]], designation: str) -> dict[str,Any]:
     n=len(documents)
-    metric_names=["E0_historical_flat_f1","E1_strict_row_order_f1","E2_line_item_f1","row_exact_match_rate","field_within_row_micro_f1","item_name_f1","item_price_f1","quantity_f1","unit_price_f1","critical_monetary_row_f1"]
-    return {"designation":designation,"documents":n,"document_mean_metrics":{name:sum(float(row[name]) for row in documents)/n if n else 0 for name in metric_names},"row_alignment_failure_rate":sum(bool(row["row_alignment_error"]) for row in documents)/n if n else 0,"unmatched_gt_rows":sum(int(row["unmatched_gt_rows"]) for row in documents),"spurious_predicted_rows":sum(int(row["spurious_predicted_rows"]) for row in documents)}
+    metric_names=["E0_path_occurrence_f1","E1_positional_row_f1","E2_matched_row_f1","E2_matched_field_micro_f1","E2_row_exact_match_rate","item_name_f1","item_price_f1","quantity_f1","unit_price_f1"]
+    return {"designation":designation,"documents":n,"document_mean_metrics":{name:sum(float(row[name]) for row in documents)/n if n else 0 for name in metric_names},"row_permutation_only_rate":sum(bool(row["row_permutation_only"]) for row in documents)/n if n else 0,"row_semantic_association_error_rate":sum(bool(row["row_semantic_association_error"]) for row in documents)/n if n else 0,"row_missing_error_rate":sum(bool(row["row_missing_error"]) for row in documents)/n if n else 0,"row_spurious_error_rate":sum(bool(row["row_spurious_error"]) for row in documents)/n if n else 0,"row_structure_failure_rate":sum(bool(row["row_structure_failure"]) for row in documents)/n if n else 0,"unmatched_gt_rows":sum(int(row["unmatched_gt_rows"]) for row in documents),"spurious_predicted_rows":sum(int(row["spurious_predicted_rows"]) for row in documents)}
 
 
 def main() -> None:
@@ -176,7 +210,7 @@ def main() -> None:
     with (args.output_dir/"document_line_item_metrics.csv").open("w",newline="") as handle:
         writer=csv.DictWriter(handle,fieldnames=list(scalar[0]),lineterminator="\n"); writer.writeheader(); writer.writerows(scalar)
     (args.output_dir/"aggregate_metrics.json").write_text(json.dumps(aggregate(documents,args.designation),indent=2,sort_keys=True)+"\n")
-    examples=[row for row in documents if row["row_alignment_error"] or row["unmatched_gt_rows"] or row["spurious_predicted_rows"]][:20]
+    examples=[row for row in documents if row["row_permutation_only"] or row["row_structure_failure"]][:20]
     (args.output_dir/"normalized_examples.json").write_text(json.dumps({"designation":args.designation,"raw_images_published":False,"examples":examples},indent=2,sort_keys=True)+"\n")
     print(json.dumps(aggregate(documents,args.designation),sort_keys=True))
 

@@ -20,6 +20,7 @@ from sklearn.preprocessing import StandardScaler
 
 ROOT=Path(__file__).resolve().parents[2]
 PROTOCOL=json.loads((ROOT/"configs/v3_2/risk_protocol.json").read_text())
+ERRATUM=json.loads((ROOT/"configs/v3_2/methodology_erratum.json").read_text())
 SEED=int(PROTOCOL["determinism"]["seed"]); REPS=int(PROTOCOL["determinism"]["bootstrap_replicates"])
 
 
@@ -111,7 +112,9 @@ def score_selected(bundle: dict[str,Any],x: np.ndarray,rows: list[dict[str,str]]
 def main() -> None:
     parser=argparse.ArgumentParser(); parser.add_argument("--input",type=Path,required=True); parser.add_argument("--output-dir",type=Path,required=True); args=parser.parse_args()
     all_rows,features=load(args.input); fit=[r for r in all_rows if r["development_partition"]=="FIT"]; selection=[r for r in all_rows if r["development_partition"]=="THRESHOLD_SELECTION"]
-    assert len(fit)==60 and len(selection)==20; assert all(r["designation"]=="DEVELOPMENT" for r in fit+selection)
+    assert len(fit)==60 and len(selection)==20
+    assert all(r["designation"]=="DEVELOPMENT_CORRECTION_REPLAY" for r in fit)
+    assert all(r["designation"]=="DEVELOPMENT_THRESHOLD_REPLAY" for r in selection)
     x=matrix(fit,features); y=np.array([boolean(r["document_has_critical_error"]) for r in fit]); groups=np.array([r["source_document_id"] for r in fit]); candidate_scores=baseline_scores(fit,y); params_by_candidate: dict[str,dict[str,Any]]={}
     r3_grid=[{"C":c,"class_weight":w} for c,w in itertools.product([.1,1.0,10.0],[None,"balanced"])]
     r4_grid=[{"n_estimators":n,"learning_rate":lr,"max_depth":d} for n,lr,d in itertools.product([50,100],[.05,.1],[1,2])]
@@ -157,6 +160,10 @@ def main() -> None:
     best_overall=min(table,key=lambda row:row["AURC"])["candidate"]
     selection_payload={
         "protocol_sha256":hashlib.sha256((ROOT/"configs/v3_2/risk_protocol.json").read_bytes()).hexdigest(),
+        "methodology_erratum_sha256":hashlib.sha256((ROOT/"configs/v3_2/methodology_erratum.json").read_bytes()).hexdigest(),
+        "replay_designation":"METHODOLOGY_CORRECTION_REPLAY",
+        "fresh_confirmatory_evidence":False,
+        "promotion_eligible":False,
         "selected_candidate":selected,
         "selected_model_role":"BEST_LEARNED_CANDIDATE_FOR_EVALUATION; not promoted unless every frozen gate passes",
         "best_overall_candidate":best_overall,
@@ -177,7 +184,9 @@ def main() -> None:
         },
         "practical_improvement_gate":practical,
         "operating_gate":operating,
-        "provisional_promotion_gates_pass":relative>=.10 and practical and operating,
+        "internal_development_gates_pass":relative>=.10 and practical and operating,
+        "provisional_promotion_gates_pass":False,
+        "promotion_prohibition_reason":"Certification and retrospective partitions were observed before methodology correction; genuinely fresh external evidence is required.",
         "thresholds":thresholds,
         "calibration_selection_metrics":{
             "uncalibrated":metrics(ys,raw_selection),

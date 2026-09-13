@@ -1,18 +1,20 @@
 {
-  "critical_error_prevalence": 0.3,
-  "designation": "DEVELOPMENT",
+  "critical_error_prevalence": 0.29,
+  "designation": "CORRECTION_REPLAY",
   "forbidden_features_present_only_as_retrospective_metadata": [
     "ground_truth_leaf_count",
     "true_line_item_count",
     "true_ocr_token_count"
   ],
-  "line_item_critical_error_prevalence": 0.27,
-  "mean_weighted_critical_loss": 0.10223545923777837,
+  "fresh_confirmatory_evidence": false,
+  "line_item_critical_error_prevalence": 0.26,
+  "mean_weighted_critical_loss": 0.10224055770748011,
   "partitions": {
     "FIT": 60,
     "INDEPENDENT_CERTIFICATION": 20,
     "THRESHOLD_SELECTION": 20
   },
+  "promotion_eligible": false,
   "risk_model_eligible_features": [
     "image_width",
     "image_height",
@@ -42,6 +44,12 @@
     "predicted_long_description",
     "predicted_monetary_density"
   ],
-  "row_alignment_error_prevalence": 0.03,
+  "row_designations": {
+    "DEVELOPMENT_CORRECTION_REPLAY": 60,
+    "DEVELOPMENT_THRESHOLD_REPLAY": 20,
+    "POST_AUDIT_REUSED_CERTIFICATION_PARTITION": 20
+  },
+  "row_permutation_only_prevalence": 0.0,
+  "row_structure_failure_prevalence": 0.1,
   "rows": 100
 }

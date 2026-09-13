@@ -59,13 +59,14 @@ def critical_targets(truth: Any, prediction: Any, line: dict[str,Any]) -> dict[s
             if pi not in matched_pred:
                 count=sum(field_family(k)==family for k,_ in row.fields); numerator+=count*weight; denominator+=count*weight; line_error |= family in {"item_price","unit_price"} and count>0
                 error_counts[weight_name]+=count; supports[weight_name]+=count
-    if line["row_alignment_error"] and any(field_family(k) in {"item_price","unit_price"} for row in gt+pred for k,_ in row.fields):
-        numerator+=float(WEIGHTS["item_total_price"]); denominator+=float(WEIGHTS["item_total_price"]); line_error=True
-        error_counts["item_total_price"]+=1; supports["item_total_price"]+=1
+    association_errors=int(line["monetary_association_error_count"])
+    if association_errors:
+        numerator+=association_errors*float(WEIGHTS["item_total_price"]); line_error=True
+        error_counts["item_total_price"]+=association_errors
     document_error |= line_error
     detail={f"critical_error_count_{name}":error_counts[name] for name in WEIGHTS}
     detail.update({f"critical_support_count_{name}":supports[name] for name in WEIGHTS})
-    return {"document_has_critical_error":document_error,"document_has_line_item_critical_error":line_error,"document_has_row_alignment_error":bool(line["row_alignment_error"]),"weighted_critical_loss":min(1.0,numerator/denominator) if denominator else 0.0,"critical_error_weight":numerator,"critical_supported_weight":denominator,**detail}
+    return {"document_has_critical_error":document_error,"document_has_line_item_critical_error":line_error,"document_has_row_structure_failure":bool(line["row_structure_failure"]),"document_has_row_semantic_association_error":bool(line["row_semantic_association_error"]),"row_permutation_only":bool(line["row_permutation_only"]),"weighted_critical_loss":min(1.0,numerator/denominator) if denominator else 0.0,"critical_error_weight":numerator,"critical_supported_weight":denominator,**detail}
 
 
 def reconciliation(prediction: Any) -> tuple[float,int]:
@@ -96,7 +97,7 @@ FEATURES=[
 
 
 def build(split: str, output: Path) -> None:
-    artifact="donut_development.json" if split=="validation" else "final_donut.json"; designation="DEVELOPMENT" if split=="validation" else "RETROSPECTIVE_LOCKED_BENCHMARK"
+    artifact="donut_development.json" if split=="validation" else "final_donut.json"; designation="CORRECTION_REPLAY" if split=="validation" else "RETROSPECTIVE_LOCKED_BENCHMARK"
     predictions=json.loads((ROOT/"artifacts/v2/results"/artifact).read_text())["predictions"]
     partition_by_id=partitions([row["document_id"] for row in predictions]) if split=="validation" else {}
     canonical={r["document_id"]:r for r in csv.DictReader((ROOT/"artifacts/v3_1/data/document_evaluation_table.csv").open()) if r["model"]=="Donut" and r["split"]==split}
@@ -111,14 +112,16 @@ def build(split: str, output: Path) -> None:
             "total_field_disagreement":"","critical_field_disagreement":"","row_line_item_disagreement":"",
             "ground_truth_leaf_count":doc["ground_truth_leaf_count"],"true_line_item_count":doc["line_item_count"],"true_ocr_token_count":doc["text_token_count"]
         }
-        rows.append({"document_id":source["document_id"],"source_document_id":source["document_id"],"dataset":"CORD v2","split":split,"designation":designation,"development_partition":partition_by_id[source["document_id"]] if split=="validation" else "RETROSPECTIVE_ONLY",**feature,**target,"E2_line_item_f1":line["E2_line_item_f1"],"critical_monetary_row_f1":line["critical_monetary_row_f1"]})
+        partition=partition_by_id[source["document_id"]] if split=="validation" else "RETROSPECTIVE_ONLY"
+        row_designation={"FIT":"DEVELOPMENT_CORRECTION_REPLAY","THRESHOLD_SELECTION":"DEVELOPMENT_THRESHOLD_REPLAY","INDEPENDENT_CERTIFICATION":"POST_AUDIT_REUSED_CERTIFICATION_PARTITION"}.get(partition,designation)
+        rows.append({"document_id":source["document_id"],"source_document_id":source["document_id"],"dataset":"CORD v2","split":split,"designation":row_designation,"development_partition":partition,**feature,**target,"E2_matched_row_f1":line["E2_matched_row_f1"],"E2_matched_field_micro_f1":line["E2_matched_field_micro_f1"]})
     output.parent.mkdir(parents=True,exist_ok=True)
     with output.open("w",newline="") as h: writer=csv.DictWriter(h,fieldnames=list(rows[0]),lineterminator="\n"); writer.writeheader(); writer.writerows(rows)
     dictionary=[]
     for name,tag,use in FEATURES: dictionary.append({"feature":name,"availability_tag":tag,"eligible_for_risk_model":use,"provenance":"frozen extractor output" if tag=="POST_EXTRACTION" else "image pixels before inference" if tag=="PRE_INFERENCE" else "retrospective ground truth or unavailable disagreement","missing_policy":"not used" if not use else "development median plus missing indicator"})
-    for label in ["document_has_critical_error","document_has_line_item_critical_error","document_has_row_alignment_error","weighted_critical_loss"]: dictionary.append({"feature":label,"availability_tag":"NOT_PRODUCTION_SAFE","eligible_for_risk_model":False,"provenance":"evaluation target from ground truth","missing_policy":"target only"})
+    for label in ["document_has_critical_error","document_has_line_item_critical_error","document_has_row_structure_failure","document_has_row_semantic_association_error","row_permutation_only","weighted_critical_loss"]: dictionary.append({"feature":label,"availability_tag":"NOT_PRODUCTION_SAFE","eligible_for_risk_model":False,"provenance":"evaluation target from ground truth","missing_policy":"target only"})
     with (output.parent/"risk_feature_dictionary.csv").open("w",newline="") as h: writer=csv.DictWriter(h,fieldnames=list(dictionary[0]),lineterminator="\n"); writer.writeheader(); writer.writerows(dictionary)
-    summary={"designation":designation,"rows":len(rows),"partitions":dict(collections.Counter(r["development_partition"] for r in rows)),"critical_error_prevalence":sum(bool(r["document_has_critical_error"]) for r in rows)/len(rows),"line_item_critical_error_prevalence":sum(bool(r["document_has_line_item_critical_error"]) for r in rows)/len(rows),"row_alignment_error_prevalence":sum(bool(r["document_has_row_alignment_error"]) for r in rows)/len(rows),"mean_weighted_critical_loss":sum(float(r["weighted_critical_loss"]) for r in rows)/len(rows),"risk_model_eligible_features":[name for name,_,use in FEATURES if use],"forbidden_features_present_only_as_retrospective_metadata":[name for name,tag,_ in FEATURES if tag=="NOT_PRODUCTION_SAFE"]}
+    summary={"designation":designation,"row_designations":dict(collections.Counter(r["designation"] for r in rows)),"fresh_confirmatory_evidence":False,"promotion_eligible":False,"rows":len(rows),"partitions":dict(collections.Counter(r["development_partition"] for r in rows)),"critical_error_prevalence":sum(bool(r["document_has_critical_error"]) for r in rows)/len(rows),"line_item_critical_error_prevalence":sum(bool(r["document_has_line_item_critical_error"]) for r in rows)/len(rows),"row_structure_failure_prevalence":sum(bool(r["document_has_row_structure_failure"]) for r in rows)/len(rows),"row_permutation_only_prevalence":sum(bool(r["row_permutation_only"]) for r in rows)/len(rows),"mean_weighted_critical_loss":sum(float(r["weighted_critical_loss"]) for r in rows)/len(rows),"risk_model_eligible_features":[name for name,_,use in FEATURES if use],"forbidden_features_present_only_as_retrospective_metadata":[name for name,tag,_ in FEATURES if tag=="NOT_PRODUCTION_SAFE"]}
     (output.parent/f"{split}_risk_feature_summary.json").write_text(json.dumps(summary,indent=2,sort_keys=True)+"\n"); print(json.dumps(summary,sort_keys=True))
 
 

@@ -34,5 +34,7 @@ true_line_item_count,NOT_PRODUCTION_SAFE,False,retrospective ground truth or una
 true_ocr_token_count,NOT_PRODUCTION_SAFE,False,retrospective ground truth or unavailable disagreement,not used
 document_has_critical_error,NOT_PRODUCTION_SAFE,False,evaluation target from ground truth,target only
 document_has_line_item_critical_error,NOT_PRODUCTION_SAFE,False,evaluation target from ground truth,target only
-document_has_row_alignment_error,NOT_PRODUCTION_SAFE,False,evaluation target from ground truth,target only
+document_has_row_structure_failure,NOT_PRODUCTION_SAFE,False,evaluation target from ground truth,target only
+document_has_row_semantic_association_error,NOT_PRODUCTION_SAFE,False,evaluation target from ground truth,target only
+row_permutation_only,NOT_PRODUCTION_SAFE,False,evaluation target from ground truth,target only
 weighted_critical_loss,NOT_PRODUCTION_SAFE,False,evaluation target from ground truth,target only
