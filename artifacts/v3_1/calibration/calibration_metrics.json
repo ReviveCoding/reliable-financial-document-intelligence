@@ -1,0 +1,35 @@
+{
+  "critical_field_calibration": {
+    "reason": "Only one total-field error exists in the locked test.",
+    "status": "INSUFFICIENT_OUTCOME_VARIATION"
+  },
+  "evaluation": "CORD locked test (100)",
+  "experiment_id": "V3.1-E05",
+  "fit": "CORD validation (100)",
+  "metrics": {
+    "isotonic": {
+      "brier": 0.17188047752205896,
+      "ece": 0.1242440533318386,
+      "intercept": -0.3588070319060574,
+      "mce": 0.8005412991746107,
+      "slope": 0.22824444783238296
+    },
+    "raw": {
+      "brier": 0.619233203778713,
+      "ece": 0.6330142503976821,
+      "intercept": -4.497601754429966,
+      "mce": 0.7579968571662903,
+      "slope": 0.6540165465967187
+    },
+    "temperature_scaling": {
+      "brier": 0.2601484411927311,
+      "ece": 0.3134624416559316,
+      "intercept": -1.3505564284001317,
+      "mce": 0.3332318818124327,
+      "slope": 2.5522787963853486
+    }
+  },
+  "model": "Donut",
+  "target": "document exact leaf extraction",
+  "temperature": 20.0
+}

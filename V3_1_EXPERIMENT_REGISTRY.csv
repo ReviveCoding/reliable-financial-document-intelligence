@@ -1,0 +1,13 @@
+experiment_id,name,status,evidence,notes
+V3.1-E01,Canonical document and field evaluation tables,COMPLETE,artifacts/v3_1/data/document_evaluation_table.csv;artifacts/v3_1/data/field_evaluation_table.csv,Frozen predictions; no locked inference rerun
+V3.1-E02,Predeclared statistical slicing,COMPLETE,artifacts/v3_1/slicing/slice_metrics.csv,"2,000 deterministic replicates; BH FDR"
+V3.1-E03,Field and error taxonomy,COMPLETE,artifacts/v3_1/errors/error_level_dataset.csv,Ambiguous class retained where needed
+V3.1-E04,Paired and mix-shift analysis,COMPLETE,artifacts/v3_1/slicing/mix_shift_analysis.json,Identical eligible document IDs
+V3.1-E05,Calibration and selective risk,COMPLETE,artifacts/v3_1/calibration/calibration_metrics.json;artifacts/v3_1/selective_risk/review_budget_metrics.csv,Genuine Donut sequence confidence only
+V3.1-E06,Business-policy sensitivity,COMPLETE,artifacts/v3_1/business/policy_frontier.csv,Illustrative normalized costs
+V3.1-E07,Exploratory failure discovery,COMPLETE,artifacts/v3_1/discovery/failure_tree.json,Exploratory label; depth <=3
+V3.1-E08,Controlled development robustness,COMPLETE,artifacts/v3_1/robustness/robustness_matrix.csv,Single-GPU Donut then Paddle Docker/vLLM
+V3.1-E09,Simulated drift monitoring,COMPLETE,artifacts/v3_1/drift/drift_metrics.csv,Stress simulation; not production drift
+V3.1-E10,Dataset access assessment,PARTIAL_OPTIONAL,reports/v3_1/DESKTOP_STUDY.md,SROIE and DocILE require human authorization
+V3.1-E11,Visualization and reporting package,COMPLETE,docs/assets/v3_1;reports/v3_1,Generated from evidence
+V3.1-E12,Separate MLflow analysis logging,COMPLETE,artifacts/v3_1/mlflow/mlflow_logging.json,New experiment; V3 runs untouched

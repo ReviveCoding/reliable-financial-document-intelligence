@@ -1,0 +1,34 @@
+{
+  "assessment_date": "2026-09-12",
+  "datasets": {
+    "CORD_v2": {
+      "action": "REUSE_AUTHORIZED_LOCAL_REVISION",
+      "revision": "7f0115a4b758a71d6473b8d085751692da2fef98",
+      "status": "AVAILABLE"
+    },
+    "DocILE": {
+      "action": "HUMAN_ACTION_REQUIRED",
+      "official_source": "https://docile.rossum.ai/",
+      "reason": "The official site requires a research dataset access request; no authorized local data or token is present.",
+      "status": "OPTIONAL_NOT_BLOCKING"
+    },
+    "FUNSD": {
+      "action": "REUSE_AUTHORIZED_LOCAL_REVISION",
+      "status": "AVAILABLE_TASK_COMPATIBLE_FOR_LAYOUT_ENTITY_CLASSIFICATION"
+    },
+    "SROIE": {
+      "action": "HUMAN_ACTION_REQUIRED",
+      "official_source": "https://rrc.cvc.uab.es/?ch=13",
+      "reason": "Official RRC access requires registration; no authorized local copy is present.",
+      "status": "OPTIONAL_NOT_BLOCKING"
+    },
+    "XFUND": {
+      "action": "DO_NOT_ADD_IN_V3_1",
+      "license": "CC BY-NC-SA 4.0",
+      "official_source": "https://github.com/doc-analysis/XFUND",
+      "reason": "Useful for a separate multilingual semantic-entity/relation study, but not task-compatible with frozen CORD receipt extraction metrics or existing trained models. Adding it would require a new predeclared model study rather than analysis of frozen evidence.",
+      "status": "ASSESSED_OPTIONAL"
+    }
+  },
+  "integrity": "No dataset was downloaded, scraped, or accessed through bypassed controls during v3.1."
+}

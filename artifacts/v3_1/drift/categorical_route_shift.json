@@ -1,0 +1,15 @@
+{
+  "current": {
+    "AUTO": 38,
+    "REVIEW": 12
+  },
+  "descriptive_only": true,
+  "pearson_chi_square_statistic": 1.0,
+  "reference": {
+    "AUTO": 42,
+    "REVIEW": 8
+  },
+  "route_policy": "REVIEW when raw confidence is at or below the development-derived 20% review threshold",
+  "threshold": 0.9838137269020081,
+  "total_variation_distance": 0.07999999999999999
+}

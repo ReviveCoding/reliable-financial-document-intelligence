@@ -1,0 +1,13 @@
+{
+  "current": "50 validation documents selected by equal-weight standardized lower-blur and higher-token-count stress score",
+  "interpretation": "Transparent image-quality and complexity stress simulation; not observed bank drift.",
+  "label": "SIMULATED_STRESS_TEST_DRIFT",
+  "prediction_output_descriptors": [
+    "confidence",
+    "risk_score=1-confidence",
+    "20% review route",
+    "latency"
+  ],
+  "production_data": false,
+  "reference": "first 50 CORD validation documents in canonical order"
+}

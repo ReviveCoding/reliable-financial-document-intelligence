@@ -1,0 +1,20 @@
+{
+  "derivation_script": "scripts/v3_1/build_analysis.py",
+  "experiment_id": "V3.1-E01",
+  "feature_provenance": {
+    "confidence": "model-emitted values only",
+    "ground_truth_and_structure": "authorized canonical CORD JSONL",
+    "image_quality": "OpenCV deterministic descriptors on authorized local images",
+    "predictions_and_latency": "committed frozen prediction artifacts",
+    "unavailable_values": "empty; never imputed"
+  },
+  "sources": {
+    "artifacts/v2/results/donut_development.json": "f0b2f8b7fbc76d75ab6b2a6c10a38273f6319969afb6877f39f9ef9633fcee59",
+    "artifacts/v2/results/final_donut.json": "57b5d60b6b959edf4c37aa166f195d0a9c4950d29ac671c1991a1e2c529284b8",
+    "artifacts/v2/results/final_paddleocr.json": "ac4683aefa60edb7e0e98c4220570fb26d191cfddf3af34011341706f545fcac",
+    "artifacts/v2/results/paddleocr_vl_development.json": "22bf5ad77a1c7803f60ff4622615a242e5d0ea28fb0b5aa97ac3ba43d125c94d",
+    "artifacts/v3/serving/paddleocr_vllm_comparison.json": "8d4f17e8e78a4ac36e637cdf8115fd37c33cd3eda57184ffd3dda3c510e0b9a7",
+    "configs/v3_1/analysis_protocol.json": "bfd6351a9466034d58a09666ce6f8ff4f0e7c297553c2306075637e1664b8dcb",
+    "configs/v3_1/error_taxonomy.json": "a1e70d40d5562202d6d7ad70df64c6ba43a1270a310d0c703343e0aaf9e57c6c"
+  }
+}

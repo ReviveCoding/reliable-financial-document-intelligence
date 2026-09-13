@@ -83,6 +83,40 @@ V3 executed a real Docker Compose stack with FastAPI, worker, reviewer UI, Redis
 
 ![V3 extension-gate summary](docs/assets/v3_evidence_summary.svg)
 
+## Where the system works — and where it fails
+
+V3.1 analyzes frozen model evidence; it does not change model weights or tune on
+the locked test. Donut's document-average CORD test leaf F1 is **0.8453** across
+100 receipts (the separately retained micro leaf F1 is **0.8372**). The three
+strongest adequately supported predeclared slices are low text density
+(N=29, F1 **0.9208**, delta **+0.0756**), high image resolution (N=23, F1
+**0.9029**, delta **+0.0576**), and medium document text length (N=39, F1
+**0.8932**, delta **+0.0479**).
+
+The three weakest are high text density (N=37, F1 **0.7485**, delta
+**-0.0968**, FDR q=0.0242), high document text length (N=33, F1 **0.7566**,
+delta **-0.0887**, q=0.0485), and high OCR-token count (N=31, F1 **0.7733**,
+delta **-0.0720**, q=0.2154). The first two are statistically and practically
+meaningful under the frozen protocol; the third is practically meaningful but
+not FDR-significant.
+
+Genuine Donut sequence confidence is severely overconfident: development-fit
+isotonic calibration reduces locked-test ECE from **0.6330** to **0.1242**, but
+does not improve selective ordering over raw confidence. Even at 50% review,
+raw-confidence routing leaves an **18.0%** critical false-accept rate among
+auto-accepted documents while capturing **76.9%** of critical-error documents;
+none of the studied policies supports low-risk unattended automation. In the
+10-document development robustness cohort, Donut's largest critical-content
+loss is high occlusion (**-0.2200**), followed by high Gaussian blur
+(**-0.2000**). These robustness findings are descriptive, not locked-final.
+
+![V3.1 risk-coverage curve](docs/assets/v3_1/risk_coverage_curve.svg)
+
+![V3.1 controlled robustness degradation](docs/assets/v3_1/robustness_degradation_curves.svg)
+
+See the [full v3.1 analysis report](reports/v3_1/FINAL_ANALYSIS_REPORT.md) and
+[executive findings](reports/v3_1/EXECUTIVE_FINDINGS.md).
+
 ## GPU-accelerated serving
 
 PaddleOCR-VL 1.6 ran through Docker/vLLM on one NVIDIA GeForce RTX 4090 Laptop GPU. The bounded server completed 20/20 HTTP inference requests, kept **35.51%** measured VRAM headroom at maximum observed use, and achieved the paired development result shown above. No CPU fallback, concurrent GPU job, or multi-GPU claim is made.

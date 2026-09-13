@@ -1,0 +1,1182 @@
+{
+  "backend": "Docker/vLLM CUDA",
+  "cases": 130,
+  "experiment_id": "V3.1-E08-PADDLE",
+  "gpu_memory_total_mib": 16376,
+  "maximum_nvidia_smi_memory_used_mib": 10505,
+  "maximum_temperature_c": 86,
+  "model": "PaddleOCR-VL-1.6-0.9B",
+  "results": [
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "clean",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00001",
+      "latency_seconds": 13.334388342000238,
+      "result_count": 1,
+      "severity": "clean"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "gaussian_blur",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00001",
+      "latency_seconds": 2.5025331959986943,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 0.8333333333333334,
+      "corruption": "gaussian_blur",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00001",
+      "latency_seconds": 2.6954714130006323,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "rotation",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00001",
+      "latency_seconds": 2.43961792600021,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "rotation",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00001",
+      "latency_seconds": 3.7169392260002496,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "downsampling",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00001",
+      "latency_seconds": 3.4288930660004553,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "downsampling",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00001",
+      "latency_seconds": 6.560176468999998,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "jpeg",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00001",
+      "latency_seconds": 5.977580558999762,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "jpeg",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00001",
+      "latency_seconds": 4.751728524999635,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "contrast",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00001",
+      "latency_seconds": 8.122393990001001,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "contrast",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00001",
+      "latency_seconds": 5.155264897000961,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "occlusion",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00001",
+      "latency_seconds": 5.869521902000997,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 0.3333333333333333,
+      "corruption": "occlusion",
+      "critical_content_presence_recall": 0.0,
+      "document_id": "cord-v2-validation-00001",
+      "latency_seconds": 6.363351621999755,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 0.8571428571428571,
+      "corruption": "clean",
+      "critical_content_presence_recall": 0.75,
+      "document_id": "cord-v2-validation-00005",
+      "latency_seconds": 8.278974414000913,
+      "result_count": 1,
+      "severity": "clean"
+    },
+    {
+      "content_presence_recall": 0.42857142857142855,
+      "corruption": "gaussian_blur",
+      "critical_content_presence_recall": 0.25,
+      "document_id": "cord-v2-validation-00005",
+      "latency_seconds": 5.67171370899996,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "gaussian_blur",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00005",
+      "latency_seconds": 7.8119203919995925,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 0.5714285714285714,
+      "corruption": "rotation",
+      "critical_content_presence_recall": 0.5,
+      "document_id": "cord-v2-validation-00005",
+      "latency_seconds": 7.161777178000193,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 0.5714285714285714,
+      "corruption": "rotation",
+      "critical_content_presence_recall": 0.5,
+      "document_id": "cord-v2-validation-00005",
+      "latency_seconds": 10.429585978999967,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 0.8571428571428571,
+      "corruption": "downsampling",
+      "critical_content_presence_recall": 0.75,
+      "document_id": "cord-v2-validation-00005",
+      "latency_seconds": 8.332988653999564,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 0.8571428571428571,
+      "corruption": "downsampling",
+      "critical_content_presence_recall": 0.75,
+      "document_id": "cord-v2-validation-00005",
+      "latency_seconds": 8.181489777000024,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 0.42857142857142855,
+      "corruption": "jpeg",
+      "critical_content_presence_recall": 0.25,
+      "document_id": "cord-v2-validation-00005",
+      "latency_seconds": 8.827205365998452,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 0.8571428571428571,
+      "corruption": "jpeg",
+      "critical_content_presence_recall": 0.75,
+      "document_id": "cord-v2-validation-00005",
+      "latency_seconds": 8.472190374001002,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 0.42857142857142855,
+      "corruption": "contrast",
+      "critical_content_presence_recall": 0.25,
+      "document_id": "cord-v2-validation-00005",
+      "latency_seconds": 5.903969216000405,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 0.42857142857142855,
+      "corruption": "contrast",
+      "critical_content_presence_recall": 0.25,
+      "document_id": "cord-v2-validation-00005",
+      "latency_seconds": 8.684915914000157,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 0.8571428571428571,
+      "corruption": "occlusion",
+      "critical_content_presence_recall": 0.75,
+      "document_id": "cord-v2-validation-00005",
+      "latency_seconds": 4.605500650999602,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "occlusion",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00005",
+      "latency_seconds": 6.227469546000066,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 0.5,
+      "corruption": "clean",
+      "critical_content_presence_recall": 0.0,
+      "document_id": "cord-v2-validation-00009",
+      "latency_seconds": 6.113544300000285,
+      "result_count": 1,
+      "severity": "clean"
+    },
+    {
+      "content_presence_recall": 0.5,
+      "corruption": "gaussian_blur",
+      "critical_content_presence_recall": 0.0,
+      "document_id": "cord-v2-validation-00009",
+      "latency_seconds": 6.995950778999031,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 0.5,
+      "corruption": "gaussian_blur",
+      "critical_content_presence_recall": 0.0,
+      "document_id": "cord-v2-validation-00009",
+      "latency_seconds": 5.905654358000902,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 0.5,
+      "corruption": "rotation",
+      "critical_content_presence_recall": 0.0,
+      "document_id": "cord-v2-validation-00009",
+      "latency_seconds": 5.433980138001061,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 0.5,
+      "corruption": "rotation",
+      "critical_content_presence_recall": 0.0,
+      "document_id": "cord-v2-validation-00009",
+      "latency_seconds": 6.500234196000747,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 0.5,
+      "corruption": "downsampling",
+      "critical_content_presence_recall": 0.0,
+      "document_id": "cord-v2-validation-00009",
+      "latency_seconds": 7.9490965670011065,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 0.5,
+      "corruption": "downsampling",
+      "critical_content_presence_recall": 0.0,
+      "document_id": "cord-v2-validation-00009",
+      "latency_seconds": 6.721041602999321,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 0.5,
+      "corruption": "jpeg",
+      "critical_content_presence_recall": 0.0,
+      "document_id": "cord-v2-validation-00009",
+      "latency_seconds": 6.297320085999672,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 0.5,
+      "corruption": "jpeg",
+      "critical_content_presence_recall": 0.0,
+      "document_id": "cord-v2-validation-00009",
+      "latency_seconds": 6.500457193000329,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 0.5,
+      "corruption": "contrast",
+      "critical_content_presence_recall": 0.0,
+      "document_id": "cord-v2-validation-00009",
+      "latency_seconds": 5.888314060999619,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 0.5,
+      "corruption": "contrast",
+      "critical_content_presence_recall": 0.0,
+      "document_id": "cord-v2-validation-00009",
+      "latency_seconds": 7.66084720300023,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 0.5,
+      "corruption": "occlusion",
+      "critical_content_presence_recall": 0.0,
+      "document_id": "cord-v2-validation-00009",
+      "latency_seconds": 7.120119359000455,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 0.5,
+      "corruption": "occlusion",
+      "critical_content_presence_recall": 0.0,
+      "document_id": "cord-v2-validation-00009",
+      "latency_seconds": 5.29367840300074,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "clean",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00012",
+      "latency_seconds": 7.1758162250007445,
+      "result_count": 1,
+      "severity": "clean"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "gaussian_blur",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00012",
+      "latency_seconds": 8.781081570999959,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "gaussian_blur",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00012",
+      "latency_seconds": 5.307621869998911,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "rotation",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00012",
+      "latency_seconds": 3.681857976000174,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "rotation",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00012",
+      "latency_seconds": 6.963456559000406,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "downsampling",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00012",
+      "latency_seconds": 6.056836828000087,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "downsampling",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00012",
+      "latency_seconds": 9.621393760000501,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "jpeg",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00012",
+      "latency_seconds": 5.211400166999738,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "jpeg",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00012",
+      "latency_seconds": 6.540192705999289,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "contrast",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00012",
+      "latency_seconds": 6.005207975000303,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "contrast",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00012",
+      "latency_seconds": 6.916053426999497,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "occlusion",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00012",
+      "latency_seconds": 7.209931715000494,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 0.8333333333333334,
+      "corruption": "occlusion",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00012",
+      "latency_seconds": 3.1579133909999655,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "clean",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00006",
+      "latency_seconds": 9.52989069799878,
+      "result_count": 1,
+      "severity": "clean"
+    },
+    {
+      "content_presence_recall": 0.9090909090909091,
+      "corruption": "gaussian_blur",
+      "critical_content_presence_recall": 0.75,
+      "document_id": "cord-v2-validation-00006",
+      "latency_seconds": 10.332653263998509,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "gaussian_blur",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00006",
+      "latency_seconds": 10.162766811001347,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 0.9090909090909091,
+      "corruption": "rotation",
+      "critical_content_presence_recall": 0.75,
+      "document_id": "cord-v2-validation-00006",
+      "latency_seconds": 8.81858223999916,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "rotation",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00006",
+      "latency_seconds": 11.107793645000129,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "downsampling",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00006",
+      "latency_seconds": 11.328214920000391,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "downsampling",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00006",
+      "latency_seconds": 10.852142873000048,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "jpeg",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00006",
+      "latency_seconds": 9.156302581999626,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 0.9090909090909091,
+      "corruption": "jpeg",
+      "critical_content_presence_recall": 0.75,
+      "document_id": "cord-v2-validation-00006",
+      "latency_seconds": 10.859242984999582,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "contrast",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00006",
+      "latency_seconds": 7.308190024999931,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 0.9090909090909091,
+      "corruption": "contrast",
+      "critical_content_presence_recall": 0.75,
+      "document_id": "cord-v2-validation-00006",
+      "latency_seconds": 9.632516010999097,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "occlusion",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00006",
+      "latency_seconds": 9.80214141900069,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 0.2727272727272727,
+      "corruption": "occlusion",
+      "critical_content_presence_recall": 0.0,
+      "document_id": "cord-v2-validation-00006",
+      "latency_seconds": 10.182012989998839,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "clean",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00007",
+      "latency_seconds": 8.431907188998593,
+      "result_count": 1,
+      "severity": "clean"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "gaussian_blur",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00007",
+      "latency_seconds": 11.397049773000617,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "gaussian_blur",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00007",
+      "latency_seconds": 10.24206108100043,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "rotation",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00007",
+      "latency_seconds": 11.290215934999651,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "rotation",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00007",
+      "latency_seconds": 9.426171776000047,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "downsampling",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00007",
+      "latency_seconds": 8.884745031999046,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "downsampling",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00007",
+      "latency_seconds": 9.811412328999722,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "jpeg",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00007",
+      "latency_seconds": 11.074197104999257,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "jpeg",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00007",
+      "latency_seconds": 9.349047691001033,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "contrast",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00007",
+      "latency_seconds": 10.241678574000616,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "contrast",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00007",
+      "latency_seconds": 7.769661512998937,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "occlusion",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00007",
+      "latency_seconds": 12.673510375998376,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 0.9,
+      "corruption": "occlusion",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00007",
+      "latency_seconds": 9.08828334899954,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "clean",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00013",
+      "latency_seconds": 9.991259644999445,
+      "result_count": 1,
+      "severity": "clean"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "gaussian_blur",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00013",
+      "latency_seconds": 12.518090711000696,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "gaussian_blur",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00013",
+      "latency_seconds": 11.116069318000882,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "rotation",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00013",
+      "latency_seconds": 12.298148010999284,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "rotation",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00013",
+      "latency_seconds": 9.997650643999805,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "downsampling",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00013",
+      "latency_seconds": 12.783224541999516,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "downsampling",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00013",
+      "latency_seconds": 10.059897670000282,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "jpeg",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00013",
+      "latency_seconds": 12.892840173000877,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "jpeg",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00013",
+      "latency_seconds": 13.207672816999548,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "contrast",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00013",
+      "latency_seconds": 8.623625432999688,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "contrast",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00013",
+      "latency_seconds": 15.404638780999448,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "occlusion",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00013",
+      "latency_seconds": 8.89239112299947,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 0.8181818181818182,
+      "corruption": "occlusion",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00013",
+      "latency_seconds": 9.969932047000839,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 0.8333333333333334,
+      "corruption": "clean",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00018",
+      "latency_seconds": 9.532736604998718,
+      "result_count": 1,
+      "severity": "clean"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "gaussian_blur",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00018",
+      "latency_seconds": 9.400530416998663,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 0.8333333333333334,
+      "corruption": "gaussian_blur",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00018",
+      "latency_seconds": 9.924322001001201,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "rotation",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00018",
+      "latency_seconds": 10.33074726599989,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "rotation",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00018",
+      "latency_seconds": 9.181918091000625,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 0.8333333333333334,
+      "corruption": "downsampling",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00018",
+      "latency_seconds": 10.516590801000348,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 0.8333333333333334,
+      "corruption": "downsampling",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00018",
+      "latency_seconds": 8.859423296000386,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 0.9166666666666666,
+      "corruption": "jpeg",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00018",
+      "latency_seconds": 6.498798717000682,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 0.9166666666666666,
+      "corruption": "jpeg",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00018",
+      "latency_seconds": 6.4463348949993815,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 0.9166666666666666,
+      "corruption": "contrast",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00018",
+      "latency_seconds": 9.83139848599967,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 0.9166666666666666,
+      "corruption": "contrast",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00018",
+      "latency_seconds": 9.050540223999633,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "occlusion",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00018",
+      "latency_seconds": 12.361191850999603,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "occlusion",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00018",
+      "latency_seconds": 8.76931307599989,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "clean",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00008",
+      "latency_seconds": 12.498385335999046,
+      "result_count": 1,
+      "severity": "clean"
+    },
+    {
+      "content_presence_recall": 0.8571428571428571,
+      "corruption": "gaussian_blur",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00008",
+      "latency_seconds": 13.97302975400089,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 0.5714285714285714,
+      "corruption": "gaussian_blur",
+      "critical_content_presence_recall": 0.75,
+      "document_id": "cord-v2-validation-00008",
+      "latency_seconds": 7.80220099699909,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 0.9285714285714286,
+      "corruption": "rotation",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00008",
+      "latency_seconds": 9.31947712300098,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "rotation",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00008",
+      "latency_seconds": 9.473999435000223,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 0.9285714285714286,
+      "corruption": "downsampling",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00008",
+      "latency_seconds": 9.627576099999715,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 0.5,
+      "corruption": "downsampling",
+      "critical_content_presence_recall": 0.5,
+      "document_id": "cord-v2-validation-00008",
+      "latency_seconds": 10.244044332999692,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 0.6428571428571429,
+      "corruption": "jpeg",
+      "critical_content_presence_recall": 0.5,
+      "document_id": "cord-v2-validation-00008",
+      "latency_seconds": 8.475498678999429,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 0.6428571428571429,
+      "corruption": "jpeg",
+      "critical_content_presence_recall": 0.5,
+      "document_id": "cord-v2-validation-00008",
+      "latency_seconds": 7.5374167040008615,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 0.6428571428571429,
+      "corruption": "contrast",
+      "critical_content_presence_recall": 0.5,
+      "document_id": "cord-v2-validation-00008",
+      "latency_seconds": 5.31205990700073,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 1.0,
+      "corruption": "contrast",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00008",
+      "latency_seconds": 10.184772489999887,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 0.6428571428571429,
+      "corruption": "occlusion",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00008",
+      "latency_seconds": 7.901129484998819,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 0.5,
+      "corruption": "occlusion",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00008",
+      "latency_seconds": 6.80587324499902,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 0.9411764705882353,
+      "corruption": "clean",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00011",
+      "latency_seconds": 16.66961476799952,
+      "result_count": 1,
+      "severity": "clean"
+    },
+    {
+      "content_presence_recall": 0.9411764705882353,
+      "corruption": "gaussian_blur",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00011",
+      "latency_seconds": 20.728603634001047,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 0.8823529411764706,
+      "corruption": "gaussian_blur",
+      "critical_content_presence_recall": 0.8571428571428571,
+      "document_id": "cord-v2-validation-00011",
+      "latency_seconds": 14.592027174001487,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 0.6470588235294118,
+      "corruption": "rotation",
+      "critical_content_presence_recall": 0.2857142857142857,
+      "document_id": "cord-v2-validation-00011",
+      "latency_seconds": 8.229618509998545,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 0.6470588235294118,
+      "corruption": "rotation",
+      "critical_content_presence_recall": 0.2857142857142857,
+      "document_id": "cord-v2-validation-00011",
+      "latency_seconds": 11.805669375000434,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 0.9411764705882353,
+      "corruption": "downsampling",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00011",
+      "latency_seconds": 13.216609351999068,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 0.9411764705882353,
+      "corruption": "downsampling",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00011",
+      "latency_seconds": 14.910214424000515,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 0.9411764705882353,
+      "corruption": "jpeg",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00011",
+      "latency_seconds": 15.415727186000368,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 0.9411764705882353,
+      "corruption": "jpeg",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00011",
+      "latency_seconds": 12.792000153000117,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 0.9411764705882353,
+      "corruption": "contrast",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00011",
+      "latency_seconds": 13.956338645999494,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 0.9411764705882353,
+      "corruption": "contrast",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00011",
+      "latency_seconds": 18.414966613001525,
+      "result_count": 1,
+      "severity": "high"
+    },
+    {
+      "content_presence_recall": 0.5294117647058824,
+      "corruption": "occlusion",
+      "critical_content_presence_recall": 0.2857142857142857,
+      "document_id": "cord-v2-validation-00011",
+      "latency_seconds": 7.98487753200061,
+      "result_count": 1,
+      "severity": "low"
+    },
+    {
+      "content_presence_recall": 0.7647058823529411,
+      "corruption": "occlusion",
+      "critical_content_presence_recall": 1.0,
+      "document_id": "cord-v2-validation-00011",
+      "latency_seconds": 9.094847932999983,
+      "result_count": 1,
+      "severity": "high"
+    }
+  ],
+  "server_url": "http://127.0.0.1:8118/v1"
+}

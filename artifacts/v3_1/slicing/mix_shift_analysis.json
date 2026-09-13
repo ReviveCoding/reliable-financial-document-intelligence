@@ -1,0 +1,31 @@
+{
+  "experiment_id": "V3.1-E04",
+  "interpretation": "Paired models use identical document IDs and therefore identical slice composition.",
+  "per_slice_performance": {
+    "Donut": {
+      "high": 1.0,
+      "low": 0.9736842105263158,
+      "mid": 1.0
+    },
+    "PP-OCRv5 + rules": {
+      "high": 0.5483870967741935,
+      "low": 0.47368421052631576,
+      "mid": 0.34615384615384615
+    }
+  },
+  "ranking_reversal": false,
+  "raw_performance": {
+    "Donut": 0.9894736842105263,
+    "PP-OCRv5 + rules": 0.4631578947368421
+  },
+  "reference_distribution": {
+    "high": 0.3263157894736842,
+    "low": 0.4,
+    "mid": 0.2736842105263158
+  },
+  "slice": "ground_truth_leaf_count",
+  "standardized_performance": {
+    "Donut": 0.9894736842105264,
+    "PP-OCRv5 + rules": 0.4631578947368421
+  }
+}

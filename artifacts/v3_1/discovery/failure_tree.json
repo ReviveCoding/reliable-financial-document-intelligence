@@ -1,0 +1,45 @@
+{
+  "cross_validation_balanced_accuracy_mean": 0.5945054945054944,
+  "cross_validation_scores": [
+    0.6593406593406593,
+    0.7802197802197802,
+    0.6263736263736264,
+    0.5604395604395604,
+    0.34615384615384615
+  ],
+  "features": [
+    "image_width",
+    "image_height",
+    "aspect_ratio",
+    "image_megapixels",
+    "blur",
+    "luminance",
+    "contrast",
+    "estimated_skew",
+    "edge_density",
+    "foreground_density"
+  ],
+  "label": "EXPLORATORY_DISCOVERED_SLICE",
+  "leakage_exclusions": [
+    "document_id",
+    "ground_truth_leaf_count",
+    "line_item_count",
+    "text_token_count",
+    "ocr_box_count",
+    "target-derived errors"
+  ],
+  "max_depth": 3,
+  "minimum_leaf_support": 20,
+  "rules": [
+    "|--- edge_density <= 0.02",
+    "|   |--- blur <= 134.15",
+    "|   |   |--- class: 1",
+    "|   |--- blur >  134.15",
+    "|   |   |--- class: 0",
+    "|--- edge_density >  0.02",
+    "|   |--- blur <= 357.06",
+    "|   |   |--- class: 1",
+    "|   |--- blur >  357.06",
+    "|   |   |--- class: 1"
+  ]
+}

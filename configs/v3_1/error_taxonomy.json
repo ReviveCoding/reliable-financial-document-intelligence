@@ -1,0 +1,21 @@
+{
+  "ambiguity_policy": "Retain UNCLASSIFIED unless the available frozen evidence supports a deterministic classification.",
+  "categories": {
+    "UNCLASSIFIED": "A mismatch for which the frozen evidence does not support a narrower deterministic attribution.",
+    "currency normalization": "Currency representations differ semantically or canonically; no compatible CORD currency field is present.",
+    "date normalization": "Date representations differ semantically or canonically; no compatible CORD date field is present.",
+    "duplicate item": "An item is repeated beyond its ground-truth multiplicity; not separately attributable from pathless list leaves in this table.",
+    "hierarchy / line-item alignment": "Correct or near-correct values are assigned to the wrong repeated line-item structure; not safely attributable when row indices are intentionally ignored.",
+    "incorrect value": "Both truth and prediction are present but differ without a supported narrower normalization or substring classification.",
+    "missing field": "A ground-truth leaf is absent from the prediction multiset.",
+    "numeric normalization": "A monetary/numeric value matches after deterministic punctuation normalization but not exact normalized text.",
+    "OCR corruption": "An error demonstrably attributable to an OCR trace; unavailable for end-to-end Donut rows without a separate OCR trace.",
+    "partial string mismatch": "One normalized string contains the other but they are not exact.",
+    "reconciliation contradiction": "Extracted monetary fields violate a deterministic subtotal/tax/total relationship.",
+    "schema failure": "The generated output cannot be parsed into the expected schema.",
+    "security/control intervention": "A security boundary blocks or sanitizes untrusted instructions; reported separately in frozen V3 security evidence.",
+    "serving/runtime failure": "A request fails or does not return a usable response; none occurred in the controlled robustness runs study.",
+    "spurious field": "A predicted leaf has no matching ground-truth leaf at that path and multiplicity."
+  },
+  "version": "3.1.0"
+}

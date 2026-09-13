@@ -1,0 +1,592 @@
+document_id,dataset,split,model,field_path,field_family,criticality,occurrence,truth,prediction,truth_present,prediction_present,exact_match,error_type,severity_weight
+cord-v2-validation-00002,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,0,s-ovaltine 50%,s-ovaltine,True,True,False,partial string mismatch,2
+cord-v2-validation-00002,CORD v2,validation,Donut,menu.sub.nm,free_text,medium_impact,0,,50%,False,True,False,spurious field,5
+cord-v2-validation-00002,CORD v2,validation,Donut,menu.vatyn,free_text,medium_impact,0,10% tax included,,True,False,False,missing field,5
+cord-v2-validation-00003,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,0,m-caramel black tea,m-carame 1 black tea,True,True,False,incorrect value,2
+cord-v2-validation-00004,CORD v2,validation,Donut,menu.sub.nm,free_text,medium_impact,0,sedang,- sedang,True,True,False,partial string mismatch,5
+cord-v2-validation-00004,CORD v2,validation,Donut,total.changeprice,other_numeric,medium_impact,0,":9,000","9,000",True,True,False,numeric normalization,5
+cord-v2-validation-00005,CORD v2,validation,Donut,menu.cnt,item_count,medium_impact,0,1.00,,True,False,False,missing field,5
+cord-v2-validation-00007,CORD v2,validation,Donut,menu.discountprice,other_numeric,medium_impact,0,"-9,545",,True,False,False,missing field,5
+cord-v2-validation-00007,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,1,,cp 360 club card,False,True,False,spurious field,2
+cord-v2-validation-00007,CORD v2,validation,Donut,menu.price,item_price,critical_monetary,1,,"-9,545",False,True,False,spurious field,10
+cord-v2-validation-00009,CORD v2,validation,Donut,menu.price,item_price,critical_monetary,0,"20,000",20.000,True,True,False,numeric normalization,10
+cord-v2-validation-00009,CORD v2,validation,Donut,total.cashprice,other_numeric,medium_impact,0,"20,000",20.000,True,True,False,numeric normalization,5
+cord-v2-validation-00009,CORD v2,validation,Donut,total.total_price,total,critical_monetary,0,"20,000",20.000,True,True,False,numeric normalization,10
+cord-v2-validation-00010,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,0,serbu 1,serbu,True,True,False,partial string mismatch,2
+cord-v2-validation-00011,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,1,se'i sapi lada hitam (j),se'i s-pi lada hitam (j),True,True,False,incorrect value,2
+cord-v2-validation-00014,CORD v2,validation,Donut,menu.cnt,item_count,medium_impact,0,2 x,2x,True,True,False,numeric normalization,5
+cord-v2-validation-00014,CORD v2,validation,Donut,menu.cnt,item_count,medium_impact,1,1 x,1x,True,True,False,numeric normalization,5
+cord-v2-validation-00014,CORD v2,validation,Donut,menu.unitprice,other_numeric,medium_impact,0,@ 12.000,@12.000,True,True,False,numeric normalization,5
+cord-v2-validation-00014,CORD v2,validation,Donut,menu.unitprice,other_numeric,medium_impact,1,@ 12.000,@12.000,True,True,False,numeric normalization,5
+cord-v2-validation-00017,CORD v2,validation,Donut,menu.cnt,item_count,medium_impact,0,1,1 x,True,True,False,numeric normalization,5
+cord-v2-validation-00017,CORD v2,validation,Donut,total.changeprice,other_numeric,medium_impact,0,80.000,"80,000",True,True,False,numeric normalization,5
+cord-v2-validation-00021,CORD v2,validation,Donut,menu.price,item_price,critical_monetary,3,"-rp 34,363","- rp 34,363",True,True,False,numeric normalization,10
+cord-v2-validation-00022,CORD v2,validation,Donut,menu.sub.cnt,other_numeric,medium_impact,0,.5,5,True,True,False,numeric normalization,5
+cord-v2-validation-00025,CORD v2,validation,Donut,menu.cnt,item_count,medium_impact,0,1prs,1,True,True,False,numeric normalization,5
+cord-v2-validation-00025,CORD v2,validation,Donut,menu.cnt,item_count,medium_impact,1,1prs,1,True,True,False,numeric normalization,5
+cord-v2-validation-00025,CORD v2,validation,Donut,menu.cnt,item_count,medium_impact,2,1prs,1,True,True,False,numeric normalization,5
+cord-v2-validation-00025,CORD v2,validation,Donut,menu.cnt,item_count,medium_impact,3,1prs,1,True,True,False,numeric normalization,5
+cord-v2-validation-00025,CORD v2,validation,Donut,menu.cnt,item_count,medium_impact,4,1prs,1,True,True,False,numeric normalization,5
+cord-v2-validation-00025,CORD v2,validation,Donut,menu.cnt,item_count,medium_impact,5,1prs,1,True,True,False,numeric normalization,5
+cord-v2-validation-00025,CORD v2,validation,Donut,menu.cnt,item_count,medium_impact,6,1gls,1,True,True,False,numeric normalization,5
+cord-v2-validation-00025,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,5,mie trsi kgkung,mie kgkung trsi,True,True,False,incorrect value,2
+cord-v2-validation-00027,CORD v2,validation,Donut,menu.price,item_price,critical_monetary,0,16.363,"16,363",True,True,False,numeric normalization,10
+cord-v2-validation-00029,CORD v2,validation,Donut,sub_total.discount_price,other_numeric,critical_monetary,0,discount(0%),,True,False,False,missing field,10
+cord-v2-validation-00030,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,0,redbean bre/d,redbean bread,True,True,False,incorrect value,2
+cord-v2-validation-00030,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,1,frankfrut s/usage roll,frankfrut sausage roll,True,True,False,incorrect value,2
+cord-v2-validation-00033,CORD v2,validation,Donut,sub_total.subtotal_price,subtotal,critical_monetary,0,,"57,500",False,True,False,spurious field,10
+cord-v2-validation-00033,CORD v2,validation,Donut,total.cashprice,other_numeric,medium_impact,0,"7,500","50,000",True,True,False,incorrect value,5
+cord-v2-validation-00033,CORD v2,validation,Donut,total.total_etc,other_numeric,medium_impact,0,"50,000",,True,False,False,missing field,5
+cord-v2-validation-00034,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,0,grilled baby potato (r,grilled baby potato ( r,True,True,False,incorrect value,2
+cord-v2-validation-00034,CORD v2,validation,Donut,total.creditcardprice,other_numeric,medium_impact,1,5962,,True,False,False,missing field,5
+cord-v2-validation-00037,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,1,-,gyro platter - regular,True,True,False,partial string mismatch,2
+cord-v2-validation-00037,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,2,gyro platter regular,,True,False,False,missing field,2
+cord-v2-validation-00039,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,0,pkt telor/perkedel,pkt tel graperkedel,True,True,False,incorrect value,2
+cord-v2-validation-00039,CORD v2,validation,Donut,total.menuqty_cnt,other_numeric,low_impact_descriptive,0,5.00,5.00xitems,True,True,False,numeric normalization,2
+cord-v2-validation-00040,CORD v2,validation,Donut,menu.cnt,item_count,medium_impact,1,1,,True,False,False,missing field,5
+cord-v2-validation-00040,CORD v2,validation,Donut,menu.cnt,item_count,medium_impact,2,1,,True,False,False,missing field,5
+cord-v2-validation-00040,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,0,gojek chicken chilli sauce h,gojek chicken,True,True,False,partial string mismatch,2
+cord-v2-validation-00040,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,1,gojek chicken soy sauce f,chilli sauce h,True,True,False,incorrect value,2
+cord-v2-validation-00040,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,2,gojek french fries,soy sauce f,True,True,False,incorrect value,2
+cord-v2-validation-00040,CORD v2,validation,Donut,menu.price,item_price,critical_monetary,1,"180,000",,True,False,False,missing field,10
+cord-v2-validation-00040,CORD v2,validation,Donut,menu.price,item_price,critical_monetary,2,"70,000",,True,False,False,missing field,10
+cord-v2-validation-00040,CORD v2,validation,Donut,menu.price.cnt,other_numeric,medium_impact,0,,1,False,True,False,spurious field,5
+cord-v2-validation-00040,CORD v2,validation,Donut,menu.price.cnt,other_numeric,medium_impact,1,,1,False,True,False,spurious field,5
+cord-v2-validation-00040,CORD v2,validation,Donut,sub_total.service_price,other_numeric,medium_impact,0,0,,True,False,False,missing field,5
+cord-v2-validation-00041,CORD v2,validation,Donut,menu.cnt,item_count,medium_impact,5,2,1,True,True,False,incorrect value,5
+cord-v2-validation-00041,CORD v2,validation,Donut,menu.cnt,item_count,medium_impact,8,1,3,True,True,False,incorrect value,5
+cord-v2-validation-00041,CORD v2,validation,Donut,menu.cnt,item_count,medium_impact,10,1,,True,False,False,missing field,5
+cord-v2-validation-00041,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,0,sogogi japchae,sir,True,True,False,incorrect value,2
+cord-v2-validation-00041,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,1,gong gibab,sogogi japchae,True,True,False,incorrect value,2
+cord-v2-validation-00041,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,2,chulpan cheese dak galbi,gong gibbb,True,True,False,incorrect value,2
+cord-v2-validation-00041,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,3,cream teok po ki,chulpan cheese dak galbi,True,True,False,incorrect value,2
+cord-v2-validation-00041,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,4,el keun hwangtae,cream teok po ki,True,True,False,incorrect value,2
+cord-v2-validation-00041,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,5,sundubu(tukbegi) cham kkot sal,el keun hwangtae,True,True,False,incorrect value,2
+cord-v2-validation-00041,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,6,u sam gyeop,sundubu(tukbegi),True,True,False,incorrect value,2
+cord-v2-validation-00041,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,7,u seol,cham kkot sal,True,True,False,incorrect value,2
+cord-v2-validation-00041,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,9,ice coffe mix,u seol u sam gyeden,True,True,False,incorrect value,2
+cord-v2-validation-00041,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,10,ice black coffe,ice coffe mix,True,True,False,incorrect value,2
+cord-v2-validation-00041,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,11,,ice black coffe,False,True,False,spurious field,2
+cord-v2-validation-00041,CORD v2,validation,Donut,menu.price,item_price,critical_monetary,2,"230,000","105,000",True,True,False,incorrect value,10
+cord-v2-validation-00041,CORD v2,validation,Donut,menu.price,item_price,critical_monetary,3,"95,000","230,000",True,True,False,incorrect value,10
+cord-v2-validation-00041,CORD v2,validation,Donut,menu.price,item_price,critical_monetary,4,"120,000","95,000",True,True,False,incorrect value,10
+cord-v2-validation-00041,CORD v2,validation,Donut,menu.price,item_price,critical_monetary,5,"620,000","120,000",True,True,False,incorrect value,10
+cord-v2-validation-00041,CORD v2,validation,Donut,menu.price,item_price,critical_monetary,6,"290,000","620,000",True,True,False,incorrect value,10
+cord-v2-validation-00041,CORD v2,validation,Donut,menu.price,item_price,critical_monetary,7,"390,000","290,000",True,True,False,incorrect value,10
+cord-v2-validation-00041,CORD v2,validation,Donut,menu.price,item_price,critical_monetary,8,0,"390,000",True,True,False,partial string mismatch,10
+cord-v2-validation-00041,CORD v2,validation,Donut,menu.price,item_price,critical_monetary,11,,0,False,True,False,spurious field,10
+cord-v2-validation-00041,CORD v2,validation,Donut,sub_total.discount_price,other_numeric,critical_monetary,0,0,"140,000",True,True,False,partial string mismatch,10
+cord-v2-validation-00041,CORD v2,validation,Donut,sub_total.service_price,other_numeric,medium_impact,0,"140,000","212,460",True,True,False,incorrect value,5
+cord-v2-validation-00041,CORD v2,validation,Donut,sub_total.tax_price,tax,critical_monetary,0,"212,460","2,352,460",True,True,False,incorrect value,10
+cord-v2-validation-00043,CORD v2,validation,Donut,total.menuqty_cnt,other_numeric,low_impact_descriptive,0,171,1,True,True,False,partial string mismatch,2
+cord-v2-validation-00044,CORD v2,validation,Donut,menu.price,item_price,critical_monetary,0,16.363,"16,363",True,True,False,numeric normalization,10
+cord-v2-validation-00044,CORD v2,validation,Donut,sub_total.subtotal_price,subtotal,critical_monetary,0,16.363,"16,363",True,True,False,numeric normalization,10
+cord-v2-validation-00047,CORD v2,validation,Donut,menu.sub.nm,free_text,medium_impact,0,- sedang,sedang,True,True,False,partial string mismatch,5
+cord-v2-validation-00051,CORD v2,validation,Donut,menu.price,item_price,critical_monetary,1,10.000,"10,000",True,True,False,numeric normalization,10
+cord-v2-validation-00052,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,0,kenthir 2,kenthir,True,True,False,partial string mismatch,2
+cord-v2-validation-00054,CORD v2,validation,Donut,menu.cnt,item_count,medium_impact,0,x1,x 1,True,True,False,numeric normalization,5
+cord-v2-validation-00054,CORD v2,validation,Donut,menu.cnt,item_count,medium_impact,1,x1,x 1,True,True,False,numeric normalization,5
+cord-v2-validation-00054,CORD v2,validation,Donut,total.changeprice,other_numeric,medium_impact,0,10.000,"10,000",True,True,False,numeric normalization,5
+cord-v2-validation-00055,CORD v2,validation,Donut,menu.discountprice,other_numeric,medium_impact,0,60.000),,True,False,False,missing field,5
+cord-v2-validation-00055,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,2,,bca pay... (100%),False,True,False,spurious field,2
+cord-v2-validation-00055,CORD v2,validation,Donut,menu.price,item_price,critical_monetary,2,,60.000),False,True,False,spurious field,10
+cord-v2-validation-00056,CORD v2,validation,Donut,menu.cnt,item_count,medium_impact,0,,1,False,True,False,spurious field,5
+cord-v2-validation-00056,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,0,thai iced t. .x1,thai iced t..x],True,True,False,incorrect value,2
+cord-v2-validation-00058,CORD v2,validation,Donut,total.changeprice,other_numeric,medium_impact,0,0,rp 0,True,True,False,numeric normalization,5
+cord-v2-validation-00059,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,3,df fish fillet garlc,df fish filiet garic,True,True,False,incorrect value,2
+cord-v2-validation-00059,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,8,onde-onde,onde- onde,True,True,False,incorrect value,2
+cord-v2-validation-00059,CORD v2,validation,Donut,total.menuqty_cnt,other_numeric,low_impact_descriptive,0,13,,True,False,False,missing field,2
+cord-v2-validation-00060,CORD v2,validation,Donut,menu.price,item_price,critical_monetary,0,"180,000",180.000,True,True,False,numeric normalization,10
+cord-v2-validation-00060,CORD v2,validation,Donut,total.creditcardprice,other_numeric,medium_impact,0,"180,000",180.000,True,True,False,numeric normalization,5
+cord-v2-validation-00060,CORD v2,validation,Donut,total.total_price,total,critical_monetary,0,"180,000",180.000,True,True,False,numeric normalization,10
+cord-v2-validation-00061,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,0,populaire chocolate,populaire cho clate,True,True,False,incorrect value,2
+cord-v2-validation-00061,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,1,paddle pop choco magma,paddle pop ch : 0 magma,True,True,False,incorrect value,2
+cord-v2-validation-00061,CORD v2,validation,Donut,total.total_etc,other_numeric,medium_impact,0,50,,True,False,False,missing field,5
+cord-v2-validation-00062,CORD v2,validation,Donut,menu.price,item_price,critical_monetary,2,9.091,"9,091",True,True,False,numeric normalization,10
+cord-v2-validation-00063,CORD v2,validation,Donut,menu.unitprice,other_numeric,medium_impact,0,"43,636",43.636,True,True,False,numeric normalization,5
+cord-v2-validation-00063,CORD v2,validation,Donut,total.cashprice,other_numeric,medium_impact,0,"110,000",110.000,True,True,False,numeric normalization,5
+cord-v2-validation-00063,CORD v2,validation,Donut,total.changeprice,other_numeric,medium_impact,0,53.200,"53,200",True,True,False,numeric normalization,5
+cord-v2-validation-00068,CORD v2,validation,Donut,menu.cnt,item_count,medium_impact,0,2 x,2x,True,True,False,numeric normalization,5
+cord-v2-validation-00069,CORD v2,validation,Donut,total.menuqty_cnt,other_numeric,low_impact_descriptive,0,,3,False,True,False,spurious field,2
+cord-v2-validation-00071,CORD v2,validation,Donut,menu.cnt,item_count,medium_impact,1,,1,False,True,False,spurious field,5
+cord-v2-validation-00071,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,1,,ice,False,True,False,spurious field,2
+cord-v2-validation-00071,CORD v2,validation,Donut,menu.price,item_price,critical_monetary,1,,1.000,False,True,False,spurious field,10
+cord-v2-validation-00071,CORD v2,validation,Donut,menu.sub.cnt,other_numeric,medium_impact,0,1,,True,False,False,missing field,5
+cord-v2-validation-00071,CORD v2,validation,Donut,menu.sub.nm,free_text,medium_impact,0,ice,,True,False,False,missing field,5
+cord-v2-validation-00071,CORD v2,validation,Donut,menu.sub.price,other_numeric,medium_impact,0,1.000,,True,False,False,missing field,5
+cord-v2-validation-00075,CORD v2,validation,Donut,menu.cnt,item_count,medium_impact,4,1,,True,False,False,missing field,5
+cord-v2-validation-00075,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,2,mango float,f.wngr ges-hc,True,True,False,incorrect value,2
+cord-v2-validation-00075,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,3,f.wngr ges-hc,charge ta,True,True,False,incorrect value,2
+cord-v2-validation-00075,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,4,charge ta,,True,False,False,missing field,2
+cord-v2-validation-00075,CORD v2,validation,Donut,menu.price,item_price,critical_monetary,2,"5,909",0,True,True,False,partial string mismatch,10
+cord-v2-validation-00075,CORD v2,validation,Donut,menu.price,item_price,critical_monetary,3,0,909,True,True,False,partial string mismatch,10
+cord-v2-validation-00075,CORD v2,validation,Donut,menu.price,item_price,critical_monetary,4,909,,True,False,False,missing field,10
+cord-v2-validation-00076,CORD v2,validation,Donut,menu.cnt,item_count,medium_impact,1,10,,True,False,False,missing field,5
+cord-v2-validation-00076,CORD v2,validation,Donut,menu.unitprice,other_numeric,medium_impact,1,6.800,,True,False,False,missing field,5
+cord-v2-validation-00076,CORD v2,validation,Donut,total.menuqty_cnt,other_numeric,low_impact_descriptive,0,11,2,True,True,False,incorrect value,2
+cord-v2-validation-00076,CORD v2,validation,Donut,total.menutype_cnt,other_numeric,medium_impact,0,2,,True,False,False,missing field,5
+cord-v2-validation-00077,CORD v2,validation,Donut,total.cashprice,other_numeric,medium_impact,0,rp 100000.00,rp 10000.00,True,True,False,incorrect value,5
+cord-v2-validation-00078,CORD v2,validation,Donut,menu.price,item_price,critical_monetary,3,9.000,9 000,True,True,False,numeric normalization,10
+cord-v2-validation-00079,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,0,crab stick,krab stick,True,True,False,incorrect value,2
+cord-v2-validation-00079,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,5,maling,mallng,True,True,False,incorrect value,2
+cord-v2-validation-00079,CORD v2,validation,Donut,menu.unitprice,other_numeric,medium_impact,0,12000,,True,False,False,missing field,5
+cord-v2-validation-00080,CORD v2,validation,Donut,menu.price,item_price,critical_monetary,0,25.000,25 000,True,True,False,numeric normalization,10
+cord-v2-validation-00080,CORD v2,validation,Donut,total.cashprice,other_numeric,medium_impact,0,25.000,25 000,True,True,False,numeric normalization,5
+cord-v2-validation-00082,CORD v2,validation,Donut,menu.price,item_price,critical_monetary,0,17.000,"17,000",True,True,False,numeric normalization,10
+cord-v2-validation-00084,CORD v2,validation,Donut,menu.cnt,item_count,medium_impact,1,1 x,,True,False,False,missing field,5
+cord-v2-validation-00084,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,0,hazelnut choco mt (r),hazelnut choco iii ( r ),True,True,False,incorrect value,2
+cord-v2-validation-00084,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,1,hazelnut choco mt (r),,True,False,False,missing field,2
+cord-v2-validation-00084,CORD v2,validation,Donut,menu.price,item_price,critical_monetary,1,"24,000",,True,False,False,missing field,10
+cord-v2-validation-00084,CORD v2,validation,Donut,menu.sub.cnt,other_numeric,medium_impact,0,,1 x,False,True,False,spurious field,5
+cord-v2-validation-00084,CORD v2,validation,Donut,menu.sub.nm,free_text,medium_impact,0,pearl (r),pearl ( r ),True,True,False,incorrect value,5
+cord-v2-validation-00084,CORD v2,validation,Donut,menu.sub.nm,free_text,medium_impact,1,,hazelnut choco iii ( r ),False,True,False,spurious field,5
+cord-v2-validation-00084,CORD v2,validation,Donut,menu.sub.price,other_numeric,medium_impact,1,,"24,000",False,True,False,spurious field,5
+cord-v2-validation-00086,CORD v2,validation,Donut,menu.sub.price,other_numeric,medium_impact,0,"26,000",,True,False,False,missing field,5
+cord-v2-validation-00086,CORD v2,validation,Donut,menu.unitprice,other_numeric,medium_impact,0,,"26,000",False,True,False,spurious field,5
+cord-v2-validation-00088,CORD v2,validation,Donut,menu.sub.nm,free_text,medium_impact,0,bread n cheese del,bread m cheese del,True,True,False,incorrect value,5
+cord-v2-validation-00089,CORD v2,validation,Donut,menu.cnt,item_count,medium_impact,0,x1,x 1,True,True,False,numeric normalization,5
+cord-v2-validation-00089,CORD v2,validation,Donut,menu.cnt,item_count,medium_impact,1,x1,x 1,True,True,False,numeric normalization,5
+cord-v2-validation-00089,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,0,chocochip & walnut,1023-chocochip & walnut,True,True,False,partial string mismatch,2
+cord-v2-validation-00089,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,1,plastic bag small,6001-plastic bag small,True,True,False,partial string mismatch,2
+cord-v2-validation-00089,CORD v2,validation,Donut,menu.num,other_numeric,medium_impact,0,1023-,,True,False,False,missing field,5
+cord-v2-validation-00089,CORD v2,validation,Donut,menu.num,other_numeric,medium_impact,1,6001-,,True,False,False,missing field,5
+cord-v2-validation-00090,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,0,regular,cinemaxx,True,True,False,incorrect value,2
+cord-v2-validation-00090,CORD v2,validation,Donut,menu.num,other_numeric,medium_impact,0,,regular,False,True,False,spurious field,5
+cord-v2-validation-00090,CORD v2,validation,Donut,menu.unitprice,other_numeric,medium_impact,0,35000.00,"35000,00",True,True,False,numeric normalization,5
+cord-v2-validation-00090,CORD v2,validation,Donut,sub_total.discount_price,other_numeric,critical_monetary,0,,70000.00,False,True,False,spurious field,10
+cord-v2-validation-00090,CORD v2,validation,Donut,sub_total.subtotal_price,subtotal,critical_monetary,0,,70000.00,False,True,False,spurious field,10
+cord-v2-validation-00090,CORD v2,validation,Donut,total.cashprice,other_numeric,medium_impact,0,,0.00,False,True,False,spurious field,5
+cord-v2-validation-00090,CORD v2,validation,Donut,total.changeprice,other_numeric,medium_impact,0,0.00,,True,False,False,missing field,5
+cord-v2-validation-00090,CORD v2,validation,Donut,total.total_etc,other_numeric,medium_impact,0,70000.00,,True,False,False,missing field,5
+cord-v2-validation-00091,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,1,,add chicken box,False,True,False,spurious field,2
+cord-v2-validation-00091,CORD v2,validation,Donut,menu.price,item_price,critical_monetary,1,,909,False,True,False,spurious field,10
+cord-v2-validation-00091,CORD v2,validation,Donut,menu.sub.nm,free_text,medium_impact,0,add chicken box,,True,False,False,missing field,5
+cord-v2-validation-00091,CORD v2,validation,Donut,menu.sub.price,other_numeric,medium_impact,0,909,,True,False,False,missing field,5
+cord-v2-validation-00091,CORD v2,validation,Donut,total.changeprice,other_numeric,medium_impact,0,"rp. 6,000","rp.6,000",True,True,False,numeric normalization,5
+cord-v2-validation-00093,CORD v2,validation,Donut,menu.cnt,item_count,medium_impact,2,,1,False,True,False,spurious field,5
+cord-v2-validation-00093,CORD v2,validation,Donut,menu.cnt,item_count,medium_impact,3,,1,False,True,False,spurious field,5
+cord-v2-validation-00093,CORD v2,validation,Donut,menu.cnt,item_count,medium_impact,4,,1,False,True,False,spurious field,5
+cord-v2-validation-00093,CORD v2,validation,Donut,menu.cnt,item_count,medium_impact,5,,1,False,True,False,spurious field,5
+cord-v2-validation-00093,CORD v2,validation,Donut,menu.cnt,item_count,medium_impact,6,,1,False,True,False,spurious field,5
+cord-v2-validation-00093,CORD v2,validation,Donut,menu.cnt,item_count,medium_impact,7,,1,False,True,False,spurious field,5
+cord-v2-validation-00093,CORD v2,validation,Donut,menu.cnt,item_count,medium_impact,8,,1,False,True,False,spurious field,5
+cord-v2-validation-00093,CORD v2,validation,Donut,menu.cnt,item_count,medium_impact,9,,1,False,True,False,spurious field,5
+cord-v2-validation-00093,CORD v2,validation,Donut,menu.cnt,item_count,medium_impact,10,,1,False,True,False,spurious field,5
+cord-v2-validation-00093,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,0,paket ber4,bread n cheese del,True,True,False,incorrect value,2
+cord-v2-validation-00093,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,1,50% chicken royal,bread n cheese del,True,True,False,incorrect value,2
+cord-v2-validation-00093,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,2,,crabstick fusilli del,False,True,False,spurious field,2
+cord-v2-validation-00093,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,3,,lime squash del,False,True,False,spurious field,2
+cord-v2-validation-00093,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,4,,lime squash del,False,True,False,spurious field,2
+cord-v2-validation-00093,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,5,,p/p spicy tuna del,False,True,False,spurious field,2
+cord-v2-validation-00093,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,6,,p/p thuosand isl del,False,True,False,spurious field,2
+cord-v2-validation-00093,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,7,,p/p beef corn,False,True,False,spurious field,2
+cord-v2-validation-00093,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,8,,sunrise italian soda,False,True,False,spurious field,2
+cord-v2-validation-00093,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,9,,lipton ice tea del,False,True,False,spurious field,2
+cord-v2-validation-00093,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,10,,chicken royal,False,True,False,spurious field,2
+cord-v2-validation-00093,CORD v2,validation,Donut,menu.sub.cnt,other_numeric,medium_impact,0,1,,True,False,False,missing field,5
+cord-v2-validation-00093,CORD v2,validation,Donut,menu.sub.cnt,other_numeric,medium_impact,1,1,,True,False,False,missing field,5
+cord-v2-validation-00093,CORD v2,validation,Donut,menu.sub.cnt,other_numeric,medium_impact,2,1,,True,False,False,missing field,5
+cord-v2-validation-00093,CORD v2,validation,Donut,menu.sub.cnt,other_numeric,medium_impact,3,1,,True,False,False,missing field,5
+cord-v2-validation-00093,CORD v2,validation,Donut,menu.sub.cnt,other_numeric,medium_impact,4,1,,True,False,False,missing field,5
+cord-v2-validation-00093,CORD v2,validation,Donut,menu.sub.cnt,other_numeric,medium_impact,5,1,,True,False,False,missing field,5
+cord-v2-validation-00093,CORD v2,validation,Donut,menu.sub.cnt,other_numeric,medium_impact,6,1,,True,False,False,missing field,5
+cord-v2-validation-00093,CORD v2,validation,Donut,menu.sub.cnt,other_numeric,medium_impact,7,1,,True,False,False,missing field,5
+cord-v2-validation-00093,CORD v2,validation,Donut,menu.sub.cnt,other_numeric,medium_impact,8,1,,True,False,False,missing field,5
+cord-v2-validation-00093,CORD v2,validation,Donut,menu.sub.cnt,other_numeric,medium_impact,9,1,,True,False,False,missing field,5
+cord-v2-validation-00093,CORD v2,validation,Donut,menu.sub.nm,free_text,medium_impact,0,bread n cheese del,,True,False,False,missing field,5
+cord-v2-validation-00093,CORD v2,validation,Donut,menu.sub.nm,free_text,medium_impact,1,bread n cheese del,,True,False,False,missing field,5
+cord-v2-validation-00093,CORD v2,validation,Donut,menu.sub.nm,free_text,medium_impact,2,crabstick fusilli del,,True,False,False,missing field,5
+cord-v2-validation-00093,CORD v2,validation,Donut,menu.sub.nm,free_text,medium_impact,3,lime squash del,,True,False,False,missing field,5
+cord-v2-validation-00093,CORD v2,validation,Donut,menu.sub.nm,free_text,medium_impact,4,lime squash del,,True,False,False,missing field,5
+cord-v2-validation-00093,CORD v2,validation,Donut,menu.sub.nm,free_text,medium_impact,5,p/p spicy tuna del,,True,False,False,missing field,5
+cord-v2-validation-00093,CORD v2,validation,Donut,menu.sub.nm,free_text,medium_impact,6,p/p thuosand isl del,,True,False,False,missing field,5
+cord-v2-validation-00093,CORD v2,validation,Donut,menu.sub.nm,free_text,medium_impact,7,p/p beef corn,,True,False,False,missing field,5
+cord-v2-validation-00093,CORD v2,validation,Donut,menu.sub.nm,free_text,medium_impact,8,sunrise italian soda,,True,False,False,missing field,5
+cord-v2-validation-00093,CORD v2,validation,Donut,menu.sub.nm,free_text,medium_impact,9,lipton ice tea del,,True,False,False,missing field,5
+cord-v2-validation-00094,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,0,emily's shrimp scampi fettucine,emily's shrimp scampi,True,True,False,partial string mismatch,2
+cord-v2-validation-00094,CORD v2,validation,Donut,menu.sub.nm,free_text,medium_impact,0,,fettucine,False,True,False,spurious field,5
+cord-v2-validation-00094,CORD v2,validation,Donut,sub_total.etc,other_numeric,medium_impact,0,7.280,+25,True,True,False,incorrect value,5
+cord-v2-validation-00094,CORD v2,validation,Donut,sub_total.etc,other_numeric,medium_impact,1,+25,,True,False,False,missing field,5
+cord-v2-validation-00094,CORD v2,validation,Donut,sub_total.tax_price,tax,critical_monetary,0,,7.280,False,True,False,spurious field,10
+cord-v2-validation-00094,CORD v2,validation,Donut,total.creditcardprice,other_numeric,medium_impact,0,,80.100,False,True,False,spurious field,5
+cord-v2-validation-00094,CORD v2,validation,Donut,total.total_etc,other_numeric,medium_impact,0,80.100,,True,False,False,missing field,5
+cord-v2-validation-00096,CORD v2,validation,Donut,menu.price,item_price,critical_monetary,0,,"13,636",False,True,False,spurious field,10
+cord-v2-validation-00096,CORD v2,validation,Donut,menu.unitprice,other_numeric,medium_impact,0,"13,636",,True,False,False,missing field,5
+cord-v2-validation-00099,CORD v2,validation,Donut,menu.cnt,item_count,medium_impact,0,x1,x 1,True,True,False,numeric normalization,5
+cord-v2-validation-00099,CORD v2,validation,Donut,menu.nm,item_name,low_impact_descriptive,1,,a.flavour - salt & pepper,False,True,False,spurious field,2
+cord-v2-validation-00099,CORD v2,validation,Donut,menu.price,item_price,critical_monetary,1,,rp. 0,False,True,False,spurious field,10
+cord-v2-validation-00099,CORD v2,validation,Donut,menu.sub.nm,free_text,medium_impact,1,b.spicy level - extreme hot,b.spicy level - extreme hot rp. 0,True,True,False,partial string mismatch,5
+cord-v2-validation-00099,CORD v2,validation,Donut,menu.sub.nm,free_text,medium_impact,2,a.flavour- salt & pepper,,True,False,False,missing field,5
+cord-v2-validation-00099,CORD v2,validation,Donut,menu.sub.price,other_numeric,medium_impact,1,rp. 0,,True,False,False,missing field,5
+cord-v2-validation-00099,CORD v2,validation,Donut,menu.sub.price,other_numeric,medium_impact,2,rp. 0,,True,False,False,missing field,5
+cord-v2-test-00000,CORD v2,test,Donut,menu.itemsubtotal,other_numeric,medium_impact,0,60.000,,True,False,False,missing field,5
+cord-v2-test-00000,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,0,-ticket cp,- ticket cp,True,True,False,incorrect value,2
+cord-v2-test-00000,CORD v2,test,Donut,menu.price,item_price,critical_monetary,0,60.000,"60,000",True,True,False,numeric normalization,10
+cord-v2-test-00000,CORD v2,test,Donut,menu.unitprice,other_numeric,medium_impact,0,,60.000,False,True,False,spurious field,5
+cord-v2-test-00000,CORD v2,test,Donut,sub_total.discount_price,other_numeric,critical_monetary,0,-60.000,,True,False,False,missing field,10
+cord-v2-test-00000,CORD v2,test,Donut,sub_total.subtotal_price,subtotal,critical_monetary,0,60.000,-60.000,True,True,False,numeric normalization,10
+cord-v2-test-00000,CORD v2,test,Donut,sub_total.tax_price,tax,critical_monetary,0,5.455,"5,455",True,True,False,numeric normalization,10
+cord-v2-test-00000,CORD v2,test,Donut,total.creditcardprice,other_numeric,medium_impact,0,60.000,,True,False,False,missing field,5
+cord-v2-test-00000,CORD v2,test,Donut,total.emoneyprice,other_numeric,medium_impact,0,,60.000,False,True,False,spurious field,5
+cord-v2-test-00002,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,0,jasmine mt ( l ),dosmine mt ( ),True,True,False,incorrect value,2
+cord-v2-test-00002,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,1,,coconut jelly ( l ),False,True,False,spurious field,2
+cord-v2-test-00002,CORD v2,test,Donut,menu.price,item_price,critical_monetary,1,,"4,000",False,True,False,spurious field,10
+cord-v2-test-00002,CORD v2,test,Donut,menu.sub.nm,free_text,medium_impact,0,coconut jelly ( l ),,True,False,False,missing field,5
+cord-v2-test-00002,CORD v2,test,Donut,menu.sub.price,other_numeric,medium_impact,0,"4,000",,True,False,False,missing field,5
+cord-v2-test-00004,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,0,ice blackcoffe,ice blaokcoffe,True,True,False,incorrect value,2
+cord-v2-test-00004,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,1,avocado coffee,avocad coffee,True,True,False,incorrect value,2
+cord-v2-test-00004,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,2,chiken katsu ff,ode chiken katsu ff,True,True,False,partial string mismatch,2
+cord-v2-test-00004,CORD v2,test,Donut,total.total_price,total,critical_monetary,0,"174,600",174.600,True,True,False,numeric normalization,10
+cord-v2-test-00005,CORD v2,test,Donut,total.menuqty_cnt,other_numeric,low_impact_descriptive,0,1.00,,True,False,False,missing field,2
+cord-v2-test-00006,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,1,choco cus ard pastry,choco custard pastry,True,True,False,incorrect value,2
+cord-v2-test-00007,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,1,,add chicken box,False,True,False,spurious field,2
+cord-v2-test-00007,CORD v2,test,Donut,menu.price,item_price,critical_monetary,1,,909,False,True,False,spurious field,10
+cord-v2-test-00007,CORD v2,test,Donut,menu.sub.nm,free_text,medium_impact,0,add chicken box,,True,False,False,missing field,5
+cord-v2-test-00007,CORD v2,test,Donut,menu.sub.price,other_numeric,medium_impact,0,909,,True,False,False,missing field,5
+cord-v2-test-00009,CORD v2,test,Donut,menu.cnt,item_count,medium_impact,0,,1,False,True,False,spurious field,5
+cord-v2-test-00009,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,0,bumbu kaldu ayam 1,bumbu kaldu ayam,True,True,False,partial string mismatch,2
+cord-v2-test-00012,CORD v2,test,Donut,menu.discountprice,other_numeric,medium_impact,0,0%,,True,False,False,missing field,5
+cord-v2-test-00012,CORD v2,test,Donut,menu.discountprice,other_numeric,medium_impact,1,100%,,True,False,False,missing field,5
+cord-v2-test-00012,CORD v2,test,Donut,menu.itemsubtotal,other_numeric,medium_impact,0,"120,000",,True,False,False,missing field,5
+cord-v2-test-00012,CORD v2,test,Donut,menu.itemsubtotal,other_numeric,medium_impact,1,0,,True,False,False,missing field,5
+cord-v2-test-00012,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,0,blus wanita,0571-1854 blus wanita,True,True,False,partial string mismatch,2
+cord-v2-test-00012,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,1,shopping bag,1002-0060 shopping bag,True,True,False,partial string mismatch,2
+cord-v2-test-00012,CORD v2,test,Donut,menu.num,other_numeric,medium_impact,0,0571-1854,,True,False,False,missing field,5
+cord-v2-test-00012,CORD v2,test,Donut,menu.num,other_numeric,medium_impact,1,1002-0060,,True,False,False,missing field,5
+cord-v2-test-00012,CORD v2,test,Donut,menu.price,item_price,critical_monetary,0,,"120,000",False,True,False,spurious field,10
+cord-v2-test-00012,CORD v2,test,Donut,menu.price,item_price,critical_monetary,1,,0,False,True,False,spurious field,10
+cord-v2-test-00012,CORD v2,test,Donut,menu.unitprice,other_numeric,medium_impact,0,"@120,000",@120.000,True,True,False,numeric normalization,5
+cord-v2-test-00012,CORD v2,test,Donut,menu.unitprice,other_numeric,medium_impact,1,@880,,True,False,False,missing field,5
+cord-v2-test-00012,CORD v2,test,Donut,total.menuqty_cnt,other_numeric,low_impact_descriptive,0,(2,1,True,True,False,incorrect value,2
+cord-v2-test-00013,CORD v2,test,Donut,menu.price,item_price,critical_monetary,1,"3,000",3.000,True,True,False,numeric normalization,10
+cord-v2-test-00013,CORD v2,test,Donut,menu.unitprice,other_numeric,medium_impact,1,"3,000",3.000,True,True,False,numeric normalization,5
+cord-v2-test-00013,CORD v2,test,Donut,sub_total.subtotal_price,subtotal,critical_monetary,1,46.636,,True,False,False,missing field,10
+cord-v2-test-00013,CORD v2,test,Donut,sub_total.tax_price,tax,critical_monetary,0,4.664,"4,664",True,True,False,numeric normalization,10
+cord-v2-test-00013,CORD v2,test,Donut,total.total_price,total,critical_monetary,0,51.300,"51,300",True,True,False,numeric normalization,10
+cord-v2-test-00014,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,4,chamomile,champile,True,True,False,incorrect value,2
+cord-v2-test-00014,CORD v2,test,Donut,sub_total.service_price,other_numeric,medium_impact,0,"17,850","17,650",True,True,False,incorrect value,5
+cord-v2-test-00016,CORD v2,test,Donut,menu.cnt,item_count,medium_impact,2,,1,False,True,False,spurious field,5
+cord-v2-test-00016,CORD v2,test,Donut,menu.cnt,item_count,medium_impact,3,,1,False,True,False,spurious field,5
+cord-v2-test-00016,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,0,[lg] black sakura,longan,True,True,False,incorrect value,2
+cord-v2-test-00016,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,1,ivineral water (bundling) 5k,roasted almond,True,True,False,incorrect value,2
+cord-v2-test-00016,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,2,,nanggo,False,True,False,spurious field,2
+cord-v2-test-00016,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,3,,mineral water (bundling) 5k,False,True,False,spurious field,2
+cord-v2-test-00016,CORD v2,test,Donut,menu.price,item_price,critical_monetary,0,"59,091",0,True,True,False,partial string mismatch,10
+cord-v2-test-00016,CORD v2,test,Donut,menu.price,item_price,critical_monetary,1,"4,545",0,True,True,False,incorrect value,10
+cord-v2-test-00016,CORD v2,test,Donut,menu.price,item_price,critical_monetary,2,,0,False,True,False,spurious field,10
+cord-v2-test-00016,CORD v2,test,Donut,menu.price,item_price,critical_monetary,3,,"4,545",False,True,False,spurious field,10
+cord-v2-test-00016,CORD v2,test,Donut,menu.sub.cnt,other_numeric,medium_impact,0,1,,True,False,False,missing field,5
+cord-v2-test-00016,CORD v2,test,Donut,menu.sub.cnt,other_numeric,medium_impact,1,1,,True,False,False,missing field,5
+cord-v2-test-00016,CORD v2,test,Donut,menu.sub.cnt,other_numeric,medium_impact,2,1,,True,False,False,missing field,5
+cord-v2-test-00016,CORD v2,test,Donut,menu.sub.nm,free_text,medium_impact,0,longan,,True,False,False,missing field,5
+cord-v2-test-00016,CORD v2,test,Donut,menu.sub.nm,free_text,medium_impact,1,roasted almond,,True,False,False,missing field,5
+cord-v2-test-00016,CORD v2,test,Donut,menu.sub.nm,free_text,medium_impact,2,ivanggo,,True,False,False,missing field,5
+cord-v2-test-00016,CORD v2,test,Donut,menu.sub.price,other_numeric,medium_impact,0,0,,True,False,False,missing field,5
+cord-v2-test-00016,CORD v2,test,Donut,menu.sub.price,other_numeric,medium_impact,1,0,,True,False,False,missing field,5
+cord-v2-test-00016,CORD v2,test,Donut,menu.sub.price,other_numeric,medium_impact,2,0,,True,False,False,missing field,5
+cord-v2-test-00017,CORD v2,test,Donut,menu.cnt,item_count,medium_impact,1,2,1,True,True,False,incorrect value,5
+cord-v2-test-00017,CORD v2,test,Donut,menu.cnt,item_count,medium_impact,5,1,,True,False,False,missing field,5
+cord-v2-test-00017,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,1,mozarella hot dog,croquette,True,True,False,incorrect value,2
+cord-v2-test-00017,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,2,chili pepper croquette,cheese,True,True,False,incorrect value,2
+cord-v2-test-00017,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,3,cheese croquette,croquette,True,True,False,partial string mismatch,2
+cord-v2-test-00017,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,4,plastik amook,take away,True,True,False,incorrect value,2
+cord-v2-test-00017,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,5,plastik putih take away,,True,False,False,missing field,2
+cord-v2-test-00017,CORD v2,test,Donut,menu.price,item_price,critical_monetary,1,"38,000","14,000",True,True,False,incorrect value,10
+cord-v2-test-00017,CORD v2,test,Donut,menu.price,item_price,critical_monetary,3,"14,000",0,True,True,False,partial string mismatch,10
+cord-v2-test-00017,CORD v2,test,Donut,menu.price,item_price,critical_monetary,5,0,,True,False,False,missing field,10
+cord-v2-test-00017,CORD v2,test,Donut,menu.sub.cnt,other_numeric,medium_impact,0,,2,False,True,False,spurious field,5
+cord-v2-test-00017,CORD v2,test,Donut,menu.sub.nm,free_text,medium_impact,0,,dodjali,False,True,False,spurious field,5
+cord-v2-test-00017,CORD v2,test,Donut,menu.sub.price,other_numeric,medium_impact,0,,"38,000",False,True,False,spurious field,5
+cord-v2-test-00018,CORD v2,test,Donut,menu.unitprice,other_numeric,medium_impact,0,156000,,True,False,False,missing field,5
+cord-v2-test-00018,CORD v2,test,Donut,sub_total.subtotal_price,subtotal,critical_monetary,0,,156000,False,True,False,spurious field,10
+cord-v2-test-00018,CORD v2,test,Donut,total.total_price,total,critical_monetary,0,156000,,True,False,False,missing field,10
+cord-v2-test-00019,CORD v2,test,Donut,menu.price,item_price,critical_monetary,1,100000,10000,True,True,False,partial string mismatch,10
+cord-v2-test-00019,CORD v2,test,Donut,sub_total.subtotal_price,subtotal,critical_monetary,0,160000,100000,True,True,False,incorrect value,10
+cord-v2-test-00020,CORD v2,test,Donut,menu.price,item_price,critical_monetary,0,"64,500",64.500,True,True,False,numeric normalization,10
+cord-v2-test-00020,CORD v2,test,Donut,menu.price,item_price,critical_monetary,1,"79,500",79.500,True,True,False,numeric normalization,10
+cord-v2-test-00020,CORD v2,test,Donut,menu.price,item_price,critical_monetary,2,"69,500",69.500,True,True,False,numeric normalization,10
+cord-v2-test-00020,CORD v2,test,Donut,menu.price,item_price,critical_monetary,3,"64,500",64.500,True,True,False,numeric normalization,10
+cord-v2-test-00024,CORD v2,test,Donut,menu.cnt,item_count,medium_impact,0,x1,x1],True,True,False,numeric normalization,5
+cord-v2-test-00024,CORD v2,test,Donut,menu.cnt,item_count,medium_impact,1,x1,x1],True,True,False,numeric normalization,5
+cord-v2-test-00024,CORD v2,test,Donut,menu.cnt,item_count,medium_impact,2,x1,x1],True,True,False,numeric normalization,5
+cord-v2-test-00024,CORD v2,test,Donut,menu.price,item_price,critical_monetary,0,rp.56.000,rp. 56.000,True,True,False,numeric normalization,10
+cord-v2-test-00024,CORD v2,test,Donut,menu.price,item_price,critical_monetary,1,rp.62.000,rp. 62.000,True,True,False,numeric normalization,10
+cord-v2-test-00024,CORD v2,test,Donut,menu.price,item_price,critical_monetary,2,rp.0,rp. 0,True,True,False,numeric normalization,10
+cord-v2-test-00024,CORD v2,test,Donut,menu.unitprice,other_numeric,medium_impact,0,rp.56.000,rp. 56.000,True,True,False,numeric normalization,5
+cord-v2-test-00024,CORD v2,test,Donut,menu.unitprice,other_numeric,medium_impact,1,rp.62.000,"rp. 62,000",True,True,False,numeric normalization,5
+cord-v2-test-00024,CORD v2,test,Donut,menu.unitprice,other_numeric,medium_impact,2,rp.0,rp. 0,True,True,False,numeric normalization,5
+cord-v2-test-00026,CORD v2,test,Donut,menu.cnt,item_count,medium_impact,1,2,1,True,True,False,incorrect value,5
+cord-v2-test-00026,CORD v2,test,Donut,menu.cnt,item_count,medium_impact,2,1,2,True,True,False,incorrect value,5
+cord-v2-test-00026,CORD v2,test,Donut,menu.cnt,item_count,medium_impact,3,,1,False,True,False,spurious field,5
+cord-v2-test-00026,CORD v2,test,Donut,menu.etc,free_text,medium_impact,0,cap cay,,True,False,False,missing field,5
+cord-v2-test-00026,CORD v2,test,Donut,menu.etc,free_text,medium_impact,1,minuman,,True,False,False,missing field,5
+cord-v2-test-00026,CORD v2,test,Donut,menu.etc,free_text,medium_impact,2,lain-lain,,True,False,False,missing field,5
+cord-v2-test-00026,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,0,nasi cap cay porsi b esar,cap cay,True,True,False,partial string mismatch,2
+cord-v2-test-00026,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,1,teh tawar,esar,True,True,False,incorrect value,2
+cord-v2-test-00026,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,2,fu yung hai,minuman,True,True,False,incorrect value,2
+cord-v2-test-00026,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,3,,lain-lain,False,True,False,spurious field,2
+cord-v2-test-00026,CORD v2,test,Donut,menu.price,item_price,critical_monetary,2,,0.000,False,True,False,spurious field,10
+cord-v2-test-00026,CORD v2,test,Donut,menu.price,item_price,critical_monetary,3,,65.000,False,True,False,spurious field,10
+cord-v2-test-00026,CORD v2,test,Donut,menu.unitprice,other_numeric,medium_impact,1,4.000,65.000,True,True,False,incorrect value,5
+cord-v2-test-00026,CORD v2,test,Donut,menu.unitprice,other_numeric,medium_impact,2,65.000,,True,False,False,missing field,5
+cord-v2-test-00027,CORD v2,test,Donut,total.cashprice,other_numeric,medium_impact,0,"61,600",,True,False,False,missing field,5
+cord-v2-test-00027,CORD v2,test,Donut,total.changeprice,other_numeric,medium_impact,0,,"61,600",False,True,False,spurious field,5
+cord-v2-test-00029,CORD v2,test,Donut,menu.sub.nm,free_text,medium_impact,0,abura udon spicy,:-abura udon spicy,True,True,False,partial string mismatch,5
+cord-v2-test-00033,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,0,grilled baby potato (r,grilled baby potato ( r,True,True,False,incorrect value,2
+cord-v2-test-00034,CORD v2,test,Donut,menu.price,item_price,critical_monetary,1,10.000,"10,000",True,True,False,numeric normalization,10
+cord-v2-test-00036,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,0,xxl crispy chicken,xxl crspy chicken,True,True,False,incorrect value,2
+cord-v2-test-00037,CORD v2,test,Donut,total.total_etc,other_numeric,medium_impact,0,20.000,,True,False,False,missing field,5
+cord-v2-test-00037,CORD v2,test,Donut,total.total_price,total,critical_monetary,0,,20.000,False,True,False,spurious field,10
+cord-v2-test-00038,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,3,df fish fillet garlc,df fish filiet garic,True,True,False,incorrect value,2
+cord-v2-test-00038,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,8,onde-onde,onde- onde,True,True,False,incorrect value,2
+cord-v2-test-00038,CORD v2,test,Donut,total.menuqty_cnt,other_numeric,low_impact_descriptive,0,13,,True,False,False,missing field,2
+cord-v2-test-00039,CORD v2,test,Donut,menu.cnt,item_count,medium_impact,0,8,,True,False,False,missing field,5
+cord-v2-test-00039,CORD v2,test,Donut,menu.cnt,item_count,medium_impact,1,5,,True,False,False,missing field,5
+cord-v2-test-00039,CORD v2,test,Donut,menu.cnt,item_count,medium_impact,2,4,,True,False,False,missing field,5
+cord-v2-test-00039,CORD v2,test,Donut,menu.itemsubtotal,other_numeric,medium_impact,0,"1,555,200",,True,False,False,missing field,5
+cord-v2-test-00039,CORD v2,test,Donut,menu.itemsubtotal,other_numeric,medium_impact,1,"780,000",,True,False,False,missing field,5
+cord-v2-test-00039,CORD v2,test,Donut,menu.itemsubtotal,other_numeric,medium_impact,2,"777,600",,True,False,False,missing field,5
+cord-v2-test-00039,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,0,lunch box 3p set w/red bag & sp00 n.,,True,False,False,missing field,2
+cord-v2-test-00039,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,1,rice case 7l w/cup,,True,False,False,missing field,2
+cord-v2-test-00039,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,2,lunch box 3p set w/black bag & sp oon,,True,False,False,missing field,2
+cord-v2-test-00039,CORD v2,test,Donut,menu.num,other_numeric,medium_impact,0,hpl754dr,,True,False,False,missing field,5
+cord-v2-test-00039,CORD v2,test,Donut,menu.num,other_numeric,medium_impact,1,hpl500,,True,False,False,missing field,5
+cord-v2-test-00039,CORD v2,test,Donut,menu.num,other_numeric,medium_impact,2,hpl754db,,True,False,False,missing field,5
+cord-v2-test-00039,CORD v2,test,Donut,menu.price,item_price,critical_monetary,0,"1,944,000",,True,False,False,missing field,10
+cord-v2-test-00039,CORD v2,test,Donut,menu.price,item_price,critical_monetary,1,"975,000",,True,False,False,missing field,10
+cord-v2-test-00039,CORD v2,test,Donut,menu.price,item_price,critical_monetary,2,"972,000",,True,False,False,missing field,10
+cord-v2-test-00039,CORD v2,test,Donut,menu.unitprice,other_numeric,medium_impact,0,"243,000",,True,False,False,missing field,5
+cord-v2-test-00039,CORD v2,test,Donut,menu.unitprice,other_numeric,medium_impact,1,"195,000",,True,False,False,missing field,5
+cord-v2-test-00039,CORD v2,test,Donut,menu.unitprice,other_numeric,medium_impact,2,"243,000",,True,False,False,missing field,5
+cord-v2-test-00039,CORD v2,test,Donut,nm,free_text,medium_impact,0,,set w/red bag & spoo,False,True,False,spurious field,5
+cord-v2-test-00039,CORD v2,test,Donut,total.creditcardprice,other_numeric,medium_impact,0,"3,112,800",,True,False,False,missing field,5
+cord-v2-test-00039,CORD v2,test,Donut,total.menuqty_cnt,other_numeric,low_impact_descriptive,0,17,,True,False,False,missing field,2
+cord-v2-test-00039,CORD v2,test,Donut,total.menutype_cnt,other_numeric,medium_impact,0,3,,True,False,False,missing field,5
+cord-v2-test-00040,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,0,snack lestari all,shack lestari a11,True,True,False,incorrect value,2
+cord-v2-test-00040,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,1,"bakery aneka sisir banana,pizza,yoko,mar mer,daging,abon,keju,cokelat,dll","bakery aneka sisir banana, pizza,yoko,mar",True,True,False,incorrect value,2
+cord-v2-test-00040,CORD v2,test,Donut,menu.unitprice,other_numeric,medium_impact,1,"7,000",7.000,True,True,False,numeric normalization,5
+cord-v2-test-00040,CORD v2,test,Donut,total.changeprice,other_numeric,medium_impact,0,"32,000",32.000,True,True,False,numeric normalization,5
+cord-v2-test-00040,CORD v2,test,Donut,total.total_price,total,critical_monetary,0,"68,000",68.000,True,True,False,numeric normalization,10
+cord-v2-test-00041,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,1,cappucino (hot/iced),capoucino (hot/iced),True,True,False,incorrect value,2
+cord-v2-test-00041,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,2,naga lychee juice,ngag lychee juice,True,True,False,incorrect value,2
+cord-v2-test-00041,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,8,lychee/peach/lemon/mango,lychee/beach/lemon/ mango,True,True,False,incorrect value,2
+cord-v2-test-00041,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,9,chicken maryland,chicken mary land,True,True,False,incorrect value,2
+cord-v2-test-00041,CORD v2,test,Donut,menu.price,item_price,critical_monetary,2,34632.00,34632.00.,True,True,False,numeric normalization,10
+cord-v2-test-00041,CORD v2,test,Donut,menu.price,item_price,critical_monetary,8,25974.00,"25,74.00",True,True,False,incorrect value,10
+cord-v2-test-00041,CORD v2,test,Donut,menu.price,item_price,critical_monetary,9,47619.00,47619.000,True,True,False,partial string mismatch,10
+cord-v2-test-00041,CORD v2,test,Donut,sub_total.tax_price,tax,critical_monetary,0,,365000.00,False,True,False,spurious field,10
+cord-v2-test-00042,CORD v2,test,Donut,sub_total.tax_price,tax,critical_monetary,0,"1,500",1.500,True,True,False,numeric normalization,10
+cord-v2-test-00043,CORD v2,test,Donut,total.cashprice,other_numeric,medium_impact,0,rp 200000.00,rp 2000.00,True,True,False,incorrect value,5
+cord-v2-test-00044,CORD v2,test,Donut,menu.price,item_price,critical_monetary,0,30.000,"30,000",True,True,False,numeric normalization,10
+cord-v2-test-00045,CORD v2,test,Donut,total.total_price,total,critical_monetary,0,"88,000",88.000,True,True,False,numeric normalization,10
+cord-v2-test-00047,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,2,copia 1 /gb,910054260074,True,True,False,incorrect value,2
+cord-v2-test-00047,CORD v2,test,Donut,menu.num,other_numeric,medium_impact,0,2100252000358,,True,False,False,missing field,5
+cord-v2-test-00047,CORD v2,test,Donut,menu.num,other_numeric,medium_impact,1,9100544260074,,True,False,False,missing field,5
+cord-v2-test-00047,CORD v2,test,Donut,menu.num,other_numeric,medium_impact,2,2100252000358,,True,False,False,missing field,5
+cord-v2-test-00047,CORD v2,test,Donut,sub_total.discount_price,other_numeric,critical_monetary,0,0.00,,True,False,False,missing field,10
+cord-v2-test-00047,CORD v2,test,Donut,total.creditcardprice,other_numeric,medium_impact,0,"63,000.00",0.00,True,True,False,partial string mismatch,5
+cord-v2-test-00050,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,0,superice cauburry,spcprice caudburry,True,True,False,incorrect value,2
+cord-v2-test-00051,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,0,(ta) nasi grg teri medan,tral: ciston,True,True,False,incorrect value,2
+cord-v2-test-00051,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,2,(ta) kwetiaw seafood siram,(ta) kwetiaw seafood,True,True,False,partial string mismatch,2
+cord-v2-test-00051,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,3,(ta) nasi goreng,siram,True,True,False,incorrect value,2
+cord-v2-test-00051,CORD v2,test,Donut,menu.price,item_price,critical_monetary,0,"165,460","40,456",True,True,False,incorrect value,10
+cord-v2-test-00051,CORD v2,test,Donut,menu.price,item_price,critical_monetary,1,"40,456","42,274",True,True,False,incorrect value,10
+cord-v2-test-00051,CORD v2,test,Donut,menu.price,item_price,critical_monetary,2,"42,274","55,456",True,True,False,incorrect value,10
+cord-v2-test-00051,CORD v2,test,Donut,menu.price,item_price,critical_monetary,3,"55,456",,True,False,False,missing field,10
+cord-v2-test-00051,CORD v2,test,Donut,menu.price.cnt,other_numeric,medium_impact,0,,1,False,True,False,spurious field,5
+cord-v2-test-00051,CORD v2,test,Donut,menu.price.unitprice,other_numeric,medium_impact,0,,"40,456",False,True,False,spurious field,5
+cord-v2-test-00051,CORD v2,test,Donut,menu.unitprice,other_numeric,medium_impact,0,,"165,460",False,True,False,spurious field,5
+cord-v2-test-00051,CORD v2,test,Donut,menu.unitprice,other_numeric,medium_impact,1,,"42,274",False,True,False,spurious field,5
+cord-v2-test-00051,CORD v2,test,Donut,menu.unitprice,other_numeric,medium_impact,2,,"55,456",False,True,False,spurious field,5
+cord-v2-test-00051,CORD v2,test,Donut,total.menuqty_cnt,other_numeric,low_impact_descriptive,0,8,1,True,True,False,incorrect value,2
+cord-v2-test-00051,CORD v2,test,Donut,total.total_etc,other_numeric,medium_impact,0,-11,,True,False,False,missing field,5
+cord-v2-test-00057,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,1,iced gt,,True,False,False,missing field,2
+cord-v2-test-00057,CORD v2,test,Donut,menu.price,item_price,critical_monetary,1,"22,000",,True,False,False,missing field,10
+cord-v2-test-00057,CORD v2,test,Donut,total.total_price,total,critical_monetary,0,,"22,000",False,True,False,spurious field,10
+cord-v2-test-00058,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,0,pho bo tai,cash,True,True,False,incorrect value,2
+cord-v2-test-00058,CORD v2,test,Donut,menu.price,item_price,critical_monetary,0,"55,000","100,000",True,True,False,incorrect value,10
+cord-v2-test-00058,CORD v2,test,Donut,total.cashprice,other_numeric,medium_impact,1,"100,000",,True,False,False,missing field,5
+cord-v2-test-00059,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,2,kepiting 7-8.4ons - chilly 0.7 1,kepiting 7-8.4ons - chilly 0.7,True,True,False,partial string mismatch,2
+cord-v2-test-00059,CORD v2,test,Donut,total.menuqty_cnt,other_numeric,low_impact_descriptive,0,21,3,True,True,False,incorrect value,2
+cord-v2-test-00059,CORD v2,test,Donut,total.menutype_cnt,other_numeric,medium_impact,0,9,,True,False,False,missing field,5
+cord-v2-test-00060,CORD v2,test,Donut,menu.cnt,item_count,medium_impact,1,2x,1x,True,True,False,incorrect value,5
+cord-v2-test-00060,CORD v2,test,Donut,menu.cnt,item_count,medium_impact,2,,2x,False,True,False,spurious field,5
+cord-v2-test-00060,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,0,topping milo sparkle (untuk 1 po rsi),topping milo sparkle (untuk,True,True,False,partial string mismatch,2
+cord-v2-test-00060,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,1,bola ubi mini original (14 pcs ),rsi),True,True,False,incorrect value,2
+cord-v2-test-00060,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,2,,bola ubi mini original ( 14 pcs,False,True,False,spurious field,2
+cord-v2-test-00060,CORD v2,test,Donut,menu.price,item_price,critical_monetary,0,1.250,1 po,True,True,False,incorrect value,10
+cord-v2-test-00060,CORD v2,test,Donut,menu.price,item_price,critical_monetary,1,25.000,1.250,True,True,False,incorrect value,10
+cord-v2-test-00060,CORD v2,test,Donut,menu.price,item_price,critical_monetary,2,,25.000,False,True,False,spurious field,10
+cord-v2-test-00060,CORD v2,test,Donut,sub_total.tax_price,tax,critical_monetary,0,-,26.250,True,True,False,incorrect value,10
+cord-v2-test-00060,CORD v2,test,Donut,total.cashprice,other_numeric,medium_impact,0,,go-pay,False,True,False,spurious field,5
+cord-v2-test-00061,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,1,arem - arem,arem arem,True,True,False,incorrect value,2
+cord-v2-test-00061,CORD v2,test,Donut,menu.unitprice,other_numeric,medium_impact,0,6500,3500,True,True,False,incorrect value,5
+cord-v2-test-00061,CORD v2,test,Donut,menu.unitprice,other_numeric,medium_impact,1,8000,3000,True,True,False,incorrect value,5
+cord-v2-test-00061,CORD v2,test,Donut,menu.unitprice,other_numeric,medium_impact,2,9000,3000,True,True,False,incorrect value,5
+cord-v2-test-00062,CORD v2,test,Donut,total.changeprice,other_numeric,medium_impact,0,"2,000",2.000,True,True,False,numeric normalization,5
+cord-v2-test-00063,CORD v2,test,Donut,menu.cnt,item_count,medium_impact,0,x1,x 1,True,True,False,numeric normalization,5
+cord-v2-test-00063,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,1,kopi susu kampung.,kopi susu kampung,True,True,False,partial string mismatch,2
+cord-v2-test-00063,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,2,,kopi susu kampung.,False,True,False,spurious field,2
+cord-v2-test-00063,CORD v2,test,Donut,menu.price,item_price,critical_monetary,1,38.000,0,True,True,False,partial string mismatch,10
+cord-v2-test-00063,CORD v2,test,Donut,menu.price,item_price,critical_monetary,2,,38.000,False,True,False,spurious field,10
+cord-v2-test-00063,CORD v2,test,Donut,menu.sub.nm,free_text,medium_impact,1,kopi susu kampung less ice,ice,True,True,False,partial string mismatch,5
+cord-v2-test-00063,CORD v2,test,Donut,menu.sub.nm,free_text,medium_impact,2,ice,,True,False,False,missing field,5
+cord-v2-test-00063,CORD v2,test,Donut,menu.sub.price,other_numeric,medium_impact,0,0,,True,False,False,missing field,5
+cord-v2-test-00065,CORD v2,test,Donut,menu.cnt,item_count,medium_impact,0,1,3x,True,True,False,incorrect value,5
+cord-v2-test-00065,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,0,bubur polos + telur,ubur polos + telur,True,True,False,partial string mismatch,2
+cord-v2-test-00065,CORD v2,test,Donut,sub_total.tax_price,tax,critical_monetary,0,-,ajak,True,True,False,incorrect value,10
+cord-v2-test-00067,CORD v2,test,Donut,menu.cnt,item_count,medium_impact,0,x1,x1],True,True,False,numeric normalization,5
+cord-v2-test-00070,CORD v2,test,Donut,menu.cnt,item_count,medium_impact,1,2,1,True,True,False,incorrect value,5
+cord-v2-test-00070,CORD v2,test,Donut,menu.cnt,item_count,medium_impact,3,1,2,True,True,False,incorrect value,5
+cord-v2-test-00070,CORD v2,test,Donut,menu.cnt,item_count,medium_impact,4,2,1,True,True,False,incorrect value,5
+cord-v2-test-00070,CORD v2,test,Donut,menu.cnt,item_count,medium_impact,5,2,1,True,True,False,incorrect value,5
+cord-v2-test-00070,CORD v2,test,Donut,menu.cnt,item_count,medium_impact,6,1,5,True,True,False,incorrect value,5
+cord-v2-test-00070,CORD v2,test,Donut,menu.cnt,item_count,medium_impact,7,1,7,True,True,False,incorrect value,5
+cord-v2-test-00070,CORD v2,test,Donut,menu.cnt,item_count,medium_impact,8,5,,True,False,False,missing field,5
+cord-v2-test-00070,CORD v2,test,Donut,menu.cnt,item_count,medium_impact,9,7,,True,False,False,missing field,5
+cord-v2-test-00070,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,1,=*large*==,aym gr jun njan,True,True,False,incorrect value,2
+cord-v2-test-00070,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,2,aym gr jun njan,sapo th seafood,True,True,False,incorrect value,2
+cord-v2-test-00070,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,3,sapo th seafood,pocai 3,True,True,False,incorrect value,2
+cord-v2-test-00070,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,4,pocai 3,gurame fillet m,True,True,False,incorrect value,2
+cord-v2-test-00070,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,5,=*medium*=,bihun goreng jj,True,True,False,incorrect value,2
+cord-v2-test-00070,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,6,gurame fillet m,iced tea,True,True,False,incorrect value,2
+cord-v2-test-00070,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,7,bihun goreng jj,nasi putih,True,True,False,incorrect value,2
+cord-v2-test-00070,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,8,iced tea,,True,False,False,missing field,2
+cord-v2-test-00070,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,9,nasi putih,,True,False,False,missing field,2
+cord-v2-test-00070,CORD v2,test,Donut,menu.price,item_price,critical_monetary,3,222.000,"222,000",True,True,False,numeric normalization,10
+cord-v2-test-00070,CORD v2,test,Donut,menu.sub.cnt,other_numeric,medium_impact,0,,2,False,True,False,spurious field,5
+cord-v2-test-00070,CORD v2,test,Donut,menu.sub.cnt,other_numeric,medium_impact,1,,2,False,True,False,spurious field,5
+cord-v2-test-00070,CORD v2,test,Donut,menu.sub.nm,free_text,medium_impact,0,=*medium*=,=*large*==,True,True,False,incorrect value,5
+cord-v2-test-00070,CORD v2,test,Donut,menu.sub.nm,free_text,medium_impact,1,=*large*==,=*medium*=,True,True,False,incorrect value,5
+cord-v2-test-00070,CORD v2,test,Donut,menu.sub.nm,free_text,medium_impact,2,asam manis,=*large*==,True,True,False,incorrect value,5
+cord-v2-test-00070,CORD v2,test,Donut,menu.sub.nm,free_text,medium_impact,3,=*large*==,=*medium*=,True,True,False,incorrect value,5
+cord-v2-test-00070,CORD v2,test,Donut,menu.sub.nm,free_text,medium_impact,4,,asam manis,False,True,False,spurious field,5
+cord-v2-test-00070,CORD v2,test,Donut,menu.sub.nm,free_text,medium_impact,5,,=*large*==,False,True,False,spurious field,5
+cord-v2-test-00073,CORD v2,test,Donut,menu.cnt,item_count,medium_impact,0,x1,x 1,True,True,False,numeric normalization,5
+cord-v2-test-00073,CORD v2,test,Donut,menu.cnt,item_count,medium_impact,1,x1,x 1,True,True,False,numeric normalization,5
+cord-v2-test-00074,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,2,grilled calamari,beverage,True,True,False,incorrect value,2
+cord-v2-test-00074,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,3,dine for 2,grilled calamari,True,True,False,incorrect value,2
+cord-v2-test-00074,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,4,,dine for 2,False,True,False,spurious field,2
+cord-v2-test-00074,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,5,,* new york fish & chips,False,True,False,spurious field,2
+cord-v2-test-00074,CORD v2,test,Donut,menu.price,item_price,critical_monetary,2,"85,000","64,000",True,True,False,incorrect value,10
+cord-v2-test-00074,CORD v2,test,Donut,menu.price,item_price,critical_monetary,3,"129,000","85,000",True,True,False,incorrect value,10
+cord-v2-test-00074,CORD v2,test,Donut,menu.price,item_price,critical_monetary,4,,"129,000",False,True,False,spurious field,10
+cord-v2-test-00074,CORD v2,test,Donut,menu.sub.nm,free_text,medium_impact,1,* new york fish & chips,,True,False,False,missing field,5
+cord-v2-test-00074,CORD v2,test,Donut,sub_total.etc,other_numeric,medium_impact,0,"64,000","214,000",True,True,False,incorrect value,5
+cord-v2-test-00074,CORD v2,test,Donut,sub_total.etc,other_numeric,medium_impact,1,"214,000","278,000",True,True,False,incorrect value,5
+cord-v2-test-00076,CORD v2,test,Donut,total.menuqty_cnt,other_numeric,low_impact_descriptive,0,,5q -,False,True,False,spurious field,2
+cord-v2-test-00076,CORD v2,test,Donut,total.menutype_cnt,other_numeric,medium_impact,0,50 -,,True,False,False,missing field,5
+cord-v2-test-00076,CORD v2,test,Donut,total.total_price,total,critical_monetary,0,,5q -,False,True,False,spurious field,10
+cord-v2-test-00078,CORD v2,test,Donut,menu.sub.price,other_numeric,medium_impact,0,5.000,"5,000",True,True,False,numeric normalization,5
+cord-v2-test-00079,CORD v2,test,Donut,menu.cnt,item_count,medium_impact,0,x1,x 1,True,True,False,numeric normalization,5
+cord-v2-test-00079,CORD v2,test,Donut,menu.cnt,item_count,medium_impact,1,x1,x 1,True,True,False,numeric normalization,5
+cord-v2-test-00080,CORD v2,test,Donut,menu.price,item_price,critical_monetary,0,"25,000",25.000,True,True,False,numeric normalization,10
+cord-v2-test-00081,CORD v2,test,Donut,menu.cnt,item_count,medium_impact,1,x1,x 1,True,True,False,numeric normalization,5
+cord-v2-test-00081,CORD v2,test,Donut,menu.cnt,item_count,medium_impact,2,x1,x 1,True,True,False,numeric normalization,5
+cord-v2-test-00083,CORD v2,test,Donut,sub_total.subtotal_price,subtotal,critical_monetary,0,"20,909",20.909,True,True,False,numeric normalization,10
+cord-v2-test-00083,CORD v2,test,Donut,total.changeprice,other_numeric,medium_impact,0,2.000,"2,000",True,True,False,numeric normalization,5
+cord-v2-test-00083,CORD v2,test,Donut,total.total_price,total,critical_monetary,0,"23,000",23.000,True,True,False,numeric normalization,10
+cord-v2-test-00084,CORD v2,test,Donut,menu.cnt,item_count,medium_impact,0,1x,2x,True,True,False,incorrect value,5
+cord-v2-test-00084,CORD v2,test,Donut,menu.cnt,item_count,medium_impact,1,2x,,True,False,False,missing field,5
+cord-v2-test-00084,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,0,kroket,arem arem,True,True,False,incorrect value,2
+cord-v2-test-00084,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,1,arem arem,,True,False,False,missing field,2
+cord-v2-test-00084,CORD v2,test,Donut,menu.price,item_price,critical_monetary,0,12.000,24.000,True,True,False,incorrect value,10
+cord-v2-test-00084,CORD v2,test,Donut,menu.price,item_price,critical_monetary,1,24.000,,True,False,False,missing field,10
+cord-v2-test-00084,CORD v2,test,Donut,menu.unitprice,other_numeric,medium_impact,0,@ 12.000,@12.000,True,True,False,numeric normalization,5
+cord-v2-test-00084,CORD v2,test,Donut,menu.unitprice,other_numeric,medium_impact,1,@ 12.000,,True,False,False,missing field,5
+cord-v2-test-00085,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,7,telur dadar,telor dadar,True,True,False,incorrect value,2
+cord-v2-test-00085,CORD v2,test,Donut,sub_total.etc,other_numeric,medium_impact,0,159.500,,True,False,False,missing field,5
+cord-v2-test-00085,CORD v2,test,Donut,sub_total.etc,other_numeric,medium_impact,1,20.000,,True,False,False,missing field,5
+cord-v2-test-00085,CORD v2,test,Donut,total.cashprice,other_numeric,medium_impact,0,197.450,159.500,True,True,False,incorrect value,5
+cord-v2-test-00085,CORD v2,test,Donut,total.changeprice,other_numeric,medium_impact,0,,20.000,False,True,False,spurious field,5
+cord-v2-test-00085,CORD v2,test,Donut,total.menuqty_cnt,other_numeric,low_impact_descriptive,0,14,197.450,True,True,False,incorrect value,2
+cord-v2-test-00087,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,0,photai chin,pho tai chin,True,True,False,incorrect value,2
+cord-v2-test-00088,CORD v2,test,Donut,total.creditcardprice,other_numeric,medium_impact,0,"47,000",,True,False,False,missing field,5
+cord-v2-test-00088,CORD v2,test,Donut,total.emoneyprice,other_numeric,medium_impact,0,,"47,000",False,True,False,spurious field,5
+cord-v2-test-00089,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,0,xxl crispy chicken,xxl crspy chicken,True,True,False,incorrect value,2
+cord-v2-test-00089,CORD v2,test,Donut,menu.sub.nm,free_text,medium_impact,0,pedas sedikit,- pedas sedikit,True,True,False,partial string mismatch,5
+cord-v2-test-00091,CORD v2,test,Donut,menu.price,item_price,critical_monetary,0,15.000,"15,000",True,True,False,numeric normalization,10
+cord-v2-test-00091,CORD v2,test,Donut,menu.price,item_price,critical_monetary,1,6.000,"6,000",True,True,False,numeric normalization,10
+cord-v2-test-00091,CORD v2,test,Donut,total.cashprice,other_numeric,medium_impact,0,30.000,"30,000",True,True,False,numeric normalization,5
+cord-v2-test-00091,CORD v2,test,Donut,total.changeprice,other_numeric,medium_impact,0,9.000,"9,000",True,True,False,numeric normalization,5
+cord-v2-test-00091,CORD v2,test,Donut,total.total_price,total,critical_monetary,0,21.000,"21,000",True,True,False,numeric normalization,10
+cord-v2-test-00092,CORD v2,test,Donut,total.changeprice,other_numeric,medium_impact,0,"10,000",10.000,True,True,False,numeric normalization,5
+cord-v2-test-00092,CORD v2,test,Donut,total.menuqty_cnt,other_numeric,low_impact_descriptive,0,(qty=4.00),4,True,True,False,partial string mismatch,2
+cord-v2-test-00094,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,0,tahu goreng,n,True,True,False,partial string mismatch,2
+cord-v2-test-00094,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,1,cakwe,n,True,True,False,incorrect value,2
+cord-v2-test-00094,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,2,pho tai chin(r),e t t e,True,True,False,incorrect value,2
+cord-v2-test-00094,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,3,tea,n,True,True,False,incorrect value,2
+cord-v2-test-00094,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,4,,e t e t e t e p,False,True,False,spurious field,2
+cord-v2-test-00094,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,5,,e s,False,True,False,spurious field,2
+cord-v2-test-00094,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,6,,e m a,False,True,False,spurious field,2
+cord-v2-test-00094,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,7,,n,False,True,False,spurious field,2
+cord-v2-test-00094,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,8,,t t ahu goreng,False,True,False,spurious field,2
+cord-v2-test-00094,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,9,,cakwe,False,True,False,spurious field,2
+cord-v2-test-00094,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,10,,pho tai chin r),False,True,False,spurious field,2
+cord-v2-test-00094,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,11,,tea,False,True,False,spurious field,2
+cord-v2-test-00094,CORD v2,test,Donut,menu.price,item_price,critical_monetary,0,"28,000",o,True,True,False,incorrect value,10
+cord-v2-test-00094,CORD v2,test,Donut,menu.price,item_price,critical_monetary,1,"17,000",o,True,True,False,incorrect value,10
+cord-v2-test-00094,CORD v2,test,Donut,menu.price,item_price,critical_monetary,2,"63,000",o,True,True,False,incorrect value,10
+cord-v2-test-00094,CORD v2,test,Donut,menu.price,item_price,critical_monetary,3,"11,000",o,True,True,False,incorrect value,10
+cord-v2-test-00094,CORD v2,test,Donut,menu.price,item_price,critical_monetary,4,,o,False,True,False,spurious field,10
+cord-v2-test-00094,CORD v2,test,Donut,menu.price,item_price,critical_monetary,5,,o,False,True,False,spurious field,10
+cord-v2-test-00094,CORD v2,test,Donut,menu.price,item_price,critical_monetary,6,,o,False,True,False,spurious field,10
+cord-v2-test-00094,CORD v2,test,Donut,menu.price,item_price,critical_monetary,7,,o,False,True,False,spurious field,10
+cord-v2-test-00094,CORD v2,test,Donut,menu.price,item_price,critical_monetary,8,,o,False,True,False,spurious field,10
+cord-v2-test-00094,CORD v2,test,Donut,menu.price,item_price,critical_monetary,9,,"17,000",False,True,False,spurious field,10
+cord-v2-test-00094,CORD v2,test,Donut,menu.price,item_price,critical_monetary,10,,"63,000",False,True,False,spurious field,10
+cord-v2-test-00094,CORD v2,test,Donut,menu.price,item_price,critical_monetary,11,,"11,000",False,True,False,spurious field,10
+cord-v2-test-00094,CORD v2,test,Donut,menu.unitprice,other_numeric,medium_impact,0,,"28,000",False,True,False,spurious field,5
+cord-v2-test-00094,CORD v2,test,Donut,menu.unitprice,other_numeric,medium_impact,1,,"63,000",False,True,False,spurious field,5
+cord-v2-test-00095,CORD v2,test,Donut,menu.price,item_price,critical_monetary,0,"43,181","43,181-",True,True,False,numeric normalization,10
+cord-v2-test-00095,CORD v2,test,Donut,menu.unitprice,other_numeric,medium_impact,0,"43,181","43,181-",True,True,False,numeric normalization,5
+cord-v2-test-00095,CORD v2,test,Donut,menu.unitprice,other_numeric,medium_impact,1,"13,000",13.000,True,True,False,numeric normalization,5
+cord-v2-test-00095,CORD v2,test,Donut,sub_total.subtotal_price,subtotal,critical_monetary,0,"56,181","56,181-",True,True,False,numeric normalization,10
+cord-v2-test-00095,CORD v2,test,Donut,total.cashprice,other_numeric,medium_impact,1,201,,True,False,False,missing field,5
+cord-v2-test-00095,CORD v2,test,Donut,total.changeprice,other_numeric,medium_impact,0,,201,False,True,False,spurious field,5
+cord-v2-test-00096,CORD v2,test,Donut,total.menuqty_cnt,other_numeric,low_impact_descriptive,0,,1,False,True,False,spurious field,2
+cord-v2-test-00096,CORD v2,test,Donut,total.menutype_cnt,other_numeric,medium_impact,0,1,,True,False,False,missing field,5
+cord-v2-test-00097,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,2,sate ati go,satecatizgo,True,True,False,incorrect value,2
+cord-v2-test-00098,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,0,black papper meatball pas,food quality/k,True,True,False,incorrect value,2
+cord-v2-test-00098,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,1,truffle cream,presentat taste/ra. beverac,True,True,False,incorrect value,2
+cord-v2-test-00098,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,2,earl grey milk tea,black pepper meatball pas,True,True,False,incorrect value,2
+cord-v2-test-00098,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,3,,truffle cream,False,True,False,spurious field,2
+cord-v2-test-00098,CORD v2,test,Donut,menu.nm,item_name,low_impact_descriptive,4,,earl grey milk tea,False,True,False,spurious field,2
+cord-v2-test-00098,CORD v2,test,Donut,menu.price,item_price,critical_monetary,3,,"255,000",False,True,False,spurious field,10
+cord-v2-test-00098,CORD v2,test,Donut,sub_total.subtotal_price,subtotal,critical_monetary,0,"215,000","255,000",True,True,False,incorrect value,10
+cord-v2-test-00098,CORD v2,test,Donut,total.total_etc,other_numeric,medium_impact,0,,ambiance,False,True,False,spurious field,5
+cord-v2-test-00099,CORD v2,test,Donut,sub_total.etc,other_numeric,medium_impact,2,2,0,True,True,False,incorrect value,5
+cord-v2-test-00099,CORD v2,test,Donut,sub_total.etc,other_numeric,medium_impact,3,,0,False,True,False,spurious field,5
+cord-v2-test-00099,CORD v2,test,Donut,sub_total.etc,other_numeric,medium_impact,4,,2,False,True,False,spurious field,5
+cord-v2-test-00099,CORD v2,test,Donut,sub_total.tax_price,tax,critical_monetary,1,0,,True,False,False,missing field,10
+cord-v2-test-00099,CORD v2,test,Donut,total.cashprice,other_numeric,medium_impact,0,0,"75,000",True,True,False,partial string mismatch,5
+cord-v2-validation-00021,CORD v2,validation,Donut,,,critical_monetary,,,,,,False,reconciliation contradiction,10
+cord-v2-validation-00025,CORD v2,validation,Donut,,,critical_monetary,,,,,,False,reconciliation contradiction,10
+cord-v2-validation-00034,CORD v2,validation,Donut,,,critical_monetary,,,,,,False,reconciliation contradiction,10
+cord-v2-validation-00035,CORD v2,validation,Donut,,,critical_monetary,,,,,,False,reconciliation contradiction,10
+cord-v2-validation-00041,CORD v2,validation,Donut,,,critical_monetary,,,,,,False,reconciliation contradiction,10
+cord-v2-validation-00045,CORD v2,validation,Donut,,,critical_monetary,,,,,,False,reconciliation contradiction,10
+cord-v2-validation-00057,CORD v2,validation,Donut,,,critical_monetary,,,,,,False,reconciliation contradiction,10
+cord-v2-validation-00059,CORD v2,validation,Donut,,,critical_monetary,,,,,,False,reconciliation contradiction,10
+cord-v2-validation-00069,CORD v2,validation,Donut,,,critical_monetary,,,,,,False,reconciliation contradiction,10
+cord-v2-validation-00070,CORD v2,validation,Donut,,,critical_monetary,,,,,,False,reconciliation contradiction,10
+cord-v2-validation-00077,CORD v2,validation,Donut,,,critical_monetary,,,,,,False,reconciliation contradiction,10
+cord-v2-validation-00078,CORD v2,validation,Donut,,,critical_monetary,,,,,,False,reconciliation contradiction,10
+cord-v2-validation-00090,CORD v2,validation,Donut,,,critical_monetary,,,,,,False,reconciliation contradiction,10
+cord-v2-validation-00094,CORD v2,validation,Donut,,,critical_monetary,,,,,,False,reconciliation contradiction,10
+cord-v2-test-00000,CORD v2,test,Donut,,,critical_monetary,,,,,,False,reconciliation contradiction,10
+cord-v2-test-00014,CORD v2,test,Donut,,,critical_monetary,,,,,,False,reconciliation contradiction,10
+cord-v2-test-00019,CORD v2,test,Donut,,,critical_monetary,,,,,,False,reconciliation contradiction,10
+cord-v2-test-00020,CORD v2,test,Donut,,,critical_monetary,,,,,,False,reconciliation contradiction,10
+cord-v2-test-00028,CORD v2,test,Donut,,,critical_monetary,,,,,,False,reconciliation contradiction,10
+cord-v2-test-00031,CORD v2,test,Donut,,,critical_monetary,,,,,,False,reconciliation contradiction,10
+cord-v2-test-00033,CORD v2,test,Donut,,,critical_monetary,,,,,,False,reconciliation contradiction,10
+cord-v2-test-00038,CORD v2,test,Donut,,,critical_monetary,,,,,,False,reconciliation contradiction,10
+cord-v2-test-00041,CORD v2,test,Donut,,,critical_monetary,,,,,,False,reconciliation contradiction,10
+cord-v2-test-00043,CORD v2,test,Donut,,,critical_monetary,,,,,,False,reconciliation contradiction,10
+cord-v2-test-00053,CORD v2,test,Donut,,,critical_monetary,,,,,,False,reconciliation contradiction,10
+cord-v2-test-00060,CORD v2,test,Donut,,,critical_monetary,,,,,,False,reconciliation contradiction,10
+cord-v2-test-00070,CORD v2,test,Donut,,,critical_monetary,,,,,,False,reconciliation contradiction,10
+cord-v2-test-00074,CORD v2,test,Donut,,,critical_monetary,,,,,,False,reconciliation contradiction,10
+cord-v2-test-00094,CORD v2,test,Donut,,,critical_monetary,,,,,,False,reconciliation contradiction,10
+cord-v2-test-00098,CORD v2,test,Donut,,,critical_monetary,,,,,,False,reconciliation contradiction,10

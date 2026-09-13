@@ -1,0 +1,3740 @@
+{
+  "cases": [
+    {
+      "corruption": "clean",
+      "document_id": "cord-v2-validation-00001",
+      "parameters": {},
+      "severity": "clean",
+      "source_image_sha256": "945e505a3416b7578abeed11ad6a112b6600b24816dfb75bddbc369000b1eef9",
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Kopi Susu Kolonel",
+          "price": "23.000"
+        },
+        "total": {
+          "cashprice": "50.000",
+          "changeprice": "27.000",
+          "total_price": "23.000"
+        }
+      }
+    },
+    {
+      "corruption": "gaussian_blur",
+      "document_id": "cord-v2-validation-00001",
+      "parameters": {
+        "kernel": 5,
+        "sigma": 1.0
+      },
+      "severity": "low",
+      "source_image_sha256": "945e505a3416b7578abeed11ad6a112b6600b24816dfb75bddbc369000b1eef9",
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Kopi Susu Kolonel",
+          "price": "23.000"
+        },
+        "total": {
+          "cashprice": "50.000",
+          "changeprice": "27.000",
+          "total_price": "23.000"
+        }
+      }
+    },
+    {
+      "corruption": "gaussian_blur",
+      "document_id": "cord-v2-validation-00001",
+      "parameters": {
+        "kernel": 9,
+        "sigma": 2.0
+      },
+      "severity": "high",
+      "source_image_sha256": "945e505a3416b7578abeed11ad6a112b6600b24816dfb75bddbc369000b1eef9",
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Kopi Susu Kolonel",
+          "price": "23.000"
+        },
+        "total": {
+          "cashprice": "50.000",
+          "changeprice": "27.000",
+          "total_price": "23.000"
+        }
+      }
+    },
+    {
+      "corruption": "rotation",
+      "document_id": "cord-v2-validation-00001",
+      "parameters": {
+        "degrees": 2.0
+      },
+      "severity": "low",
+      "source_image_sha256": "945e505a3416b7578abeed11ad6a112b6600b24816dfb75bddbc369000b1eef9",
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Kopi Susu Kolonel",
+          "price": "23.000"
+        },
+        "total": {
+          "cashprice": "50.000",
+          "changeprice": "27.000",
+          "total_price": "23.000"
+        }
+      }
+    },
+    {
+      "corruption": "rotation",
+      "document_id": "cord-v2-validation-00001",
+      "parameters": {
+        "degrees": 5.0
+      },
+      "severity": "high",
+      "source_image_sha256": "945e505a3416b7578abeed11ad6a112b6600b24816dfb75bddbc369000b1eef9",
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Kopi Susu Kolonel",
+          "price": "23.000"
+        },
+        "total": {
+          "cashprice": "50.000",
+          "changeprice": "27.000",
+          "total_price": "23.000"
+        }
+      }
+    },
+    {
+      "corruption": "downsampling",
+      "document_id": "cord-v2-validation-00001",
+      "parameters": {
+        "scale": 0.75
+      },
+      "severity": "low",
+      "source_image_sha256": "945e505a3416b7578abeed11ad6a112b6600b24816dfb75bddbc369000b1eef9",
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Kopi Susu Kolonel",
+          "price": "23.000"
+        },
+        "total": {
+          "cashprice": "50.000",
+          "changeprice": "27.000",
+          "total_price": "23.000"
+        }
+      }
+    },
+    {
+      "corruption": "downsampling",
+      "document_id": "cord-v2-validation-00001",
+      "parameters": {
+        "scale": 0.5
+      },
+      "severity": "high",
+      "source_image_sha256": "945e505a3416b7578abeed11ad6a112b6600b24816dfb75bddbc369000b1eef9",
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Kopi Susu Kolonel",
+          "price": "23.000"
+        },
+        "total": {
+          "cashprice": "50.000",
+          "changeprice": "27.000",
+          "total_price": "23.000"
+        }
+      }
+    },
+    {
+      "corruption": "jpeg",
+      "document_id": "cord-v2-validation-00001",
+      "parameters": {
+        "quality": 70
+      },
+      "severity": "low",
+      "source_image_sha256": "945e505a3416b7578abeed11ad6a112b6600b24816dfb75bddbc369000b1eef9",
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Kopi Susu Kolonel",
+          "price": "23.000"
+        },
+        "total": {
+          "cashprice": "50.000",
+          "changeprice": "27.000",
+          "total_price": "23.000"
+        }
+      }
+    },
+    {
+      "corruption": "jpeg",
+      "document_id": "cord-v2-validation-00001",
+      "parameters": {
+        "quality": 40
+      },
+      "severity": "high",
+      "source_image_sha256": "945e505a3416b7578abeed11ad6a112b6600b24816dfb75bddbc369000b1eef9",
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Kopi Susu Kolonel",
+          "price": "23.000"
+        },
+        "total": {
+          "cashprice": "50.000",
+          "changeprice": "27.000",
+          "total_price": "23.000"
+        }
+      }
+    },
+    {
+      "corruption": "contrast",
+      "document_id": "cord-v2-validation-00001",
+      "parameters": {
+        "factor": 0.75
+      },
+      "severity": "low",
+      "source_image_sha256": "945e505a3416b7578abeed11ad6a112b6600b24816dfb75bddbc369000b1eef9",
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Kopi Susu Kolonel",
+          "price": "23.000"
+        },
+        "total": {
+          "cashprice": "50.000",
+          "changeprice": "27.000",
+          "total_price": "23.000"
+        }
+      }
+    },
+    {
+      "corruption": "contrast",
+      "document_id": "cord-v2-validation-00001",
+      "parameters": {
+        "factor": 0.5
+      },
+      "severity": "high",
+      "source_image_sha256": "945e505a3416b7578abeed11ad6a112b6600b24816dfb75bddbc369000b1eef9",
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Kopi Susu Kolonel",
+          "price": "23.000"
+        },
+        "total": {
+          "cashprice": "50.000",
+          "changeprice": "27.000",
+          "total_price": "23.000"
+        }
+      }
+    },
+    {
+      "corruption": "occlusion",
+      "document_id": "cord-v2-validation-00001",
+      "parameters": {
+        "area_fraction": 0.05
+      },
+      "severity": "low",
+      "source_image_sha256": "945e505a3416b7578abeed11ad6a112b6600b24816dfb75bddbc369000b1eef9",
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Kopi Susu Kolonel",
+          "price": "23.000"
+        },
+        "total": {
+          "cashprice": "50.000",
+          "changeprice": "27.000",
+          "total_price": "23.000"
+        }
+      }
+    },
+    {
+      "corruption": "occlusion",
+      "document_id": "cord-v2-validation-00001",
+      "parameters": {
+        "area_fraction": 0.12
+      },
+      "severity": "high",
+      "source_image_sha256": "945e505a3416b7578abeed11ad6a112b6600b24816dfb75bddbc369000b1eef9",
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Kopi Susu Kolonel",
+          "price": "23.000"
+        },
+        "total": {
+          "cashprice": "50.000",
+          "changeprice": "27.000",
+          "total_price": "23.000"
+        }
+      }
+    },
+    {
+      "corruption": "clean",
+      "document_id": "cord-v2-validation-00005",
+      "parameters": {},
+      "severity": "clean",
+      "source_image_sha256": "f2f39d5f12253390f4c8264a8fa96e9bfdde78009e57068cb05ca5ad3c5b7d02",
+      "truth": {
+        "menu": {
+          "cnt": "1.00",
+          "nm": "LE MINERAL",
+          "price": "8,000"
+        },
+        "sub_total": {
+          "subtotal_price": "7,273",
+          "tax_price": "727"
+        },
+        "total": {
+          "cashprice": "8,000",
+          "total_price": "8,000"
+        }
+      }
+    },
+    {
+      "corruption": "gaussian_blur",
+      "document_id": "cord-v2-validation-00005",
+      "parameters": {
+        "kernel": 5,
+        "sigma": 1.0
+      },
+      "severity": "low",
+      "source_image_sha256": "f2f39d5f12253390f4c8264a8fa96e9bfdde78009e57068cb05ca5ad3c5b7d02",
+      "truth": {
+        "menu": {
+          "cnt": "1.00",
+          "nm": "LE MINERAL",
+          "price": "8,000"
+        },
+        "sub_total": {
+          "subtotal_price": "7,273",
+          "tax_price": "727"
+        },
+        "total": {
+          "cashprice": "8,000",
+          "total_price": "8,000"
+        }
+      }
+    },
+    {
+      "corruption": "gaussian_blur",
+      "document_id": "cord-v2-validation-00005",
+      "parameters": {
+        "kernel": 9,
+        "sigma": 2.0
+      },
+      "severity": "high",
+      "source_image_sha256": "f2f39d5f12253390f4c8264a8fa96e9bfdde78009e57068cb05ca5ad3c5b7d02",
+      "truth": {
+        "menu": {
+          "cnt": "1.00",
+          "nm": "LE MINERAL",
+          "price": "8,000"
+        },
+        "sub_total": {
+          "subtotal_price": "7,273",
+          "tax_price": "727"
+        },
+        "total": {
+          "cashprice": "8,000",
+          "total_price": "8,000"
+        }
+      }
+    },
+    {
+      "corruption": "rotation",
+      "document_id": "cord-v2-validation-00005",
+      "parameters": {
+        "degrees": 2.0
+      },
+      "severity": "low",
+      "source_image_sha256": "f2f39d5f12253390f4c8264a8fa96e9bfdde78009e57068cb05ca5ad3c5b7d02",
+      "truth": {
+        "menu": {
+          "cnt": "1.00",
+          "nm": "LE MINERAL",
+          "price": "8,000"
+        },
+        "sub_total": {
+          "subtotal_price": "7,273",
+          "tax_price": "727"
+        },
+        "total": {
+          "cashprice": "8,000",
+          "total_price": "8,000"
+        }
+      }
+    },
+    {
+      "corruption": "rotation",
+      "document_id": "cord-v2-validation-00005",
+      "parameters": {
+        "degrees": 5.0
+      },
+      "severity": "high",
+      "source_image_sha256": "f2f39d5f12253390f4c8264a8fa96e9bfdde78009e57068cb05ca5ad3c5b7d02",
+      "truth": {
+        "menu": {
+          "cnt": "1.00",
+          "nm": "LE MINERAL",
+          "price": "8,000"
+        },
+        "sub_total": {
+          "subtotal_price": "7,273",
+          "tax_price": "727"
+        },
+        "total": {
+          "cashprice": "8,000",
+          "total_price": "8,000"
+        }
+      }
+    },
+    {
+      "corruption": "downsampling",
+      "document_id": "cord-v2-validation-00005",
+      "parameters": {
+        "scale": 0.75
+      },
+      "severity": "low",
+      "source_image_sha256": "f2f39d5f12253390f4c8264a8fa96e9bfdde78009e57068cb05ca5ad3c5b7d02",
+      "truth": {
+        "menu": {
+          "cnt": "1.00",
+          "nm": "LE MINERAL",
+          "price": "8,000"
+        },
+        "sub_total": {
+          "subtotal_price": "7,273",
+          "tax_price": "727"
+        },
+        "total": {
+          "cashprice": "8,000",
+          "total_price": "8,000"
+        }
+      }
+    },
+    {
+      "corruption": "downsampling",
+      "document_id": "cord-v2-validation-00005",
+      "parameters": {
+        "scale": 0.5
+      },
+      "severity": "high",
+      "source_image_sha256": "f2f39d5f12253390f4c8264a8fa96e9bfdde78009e57068cb05ca5ad3c5b7d02",
+      "truth": {
+        "menu": {
+          "cnt": "1.00",
+          "nm": "LE MINERAL",
+          "price": "8,000"
+        },
+        "sub_total": {
+          "subtotal_price": "7,273",
+          "tax_price": "727"
+        },
+        "total": {
+          "cashprice": "8,000",
+          "total_price": "8,000"
+        }
+      }
+    },
+    {
+      "corruption": "jpeg",
+      "document_id": "cord-v2-validation-00005",
+      "parameters": {
+        "quality": 70
+      },
+      "severity": "low",
+      "source_image_sha256": "f2f39d5f12253390f4c8264a8fa96e9bfdde78009e57068cb05ca5ad3c5b7d02",
+      "truth": {
+        "menu": {
+          "cnt": "1.00",
+          "nm": "LE MINERAL",
+          "price": "8,000"
+        },
+        "sub_total": {
+          "subtotal_price": "7,273",
+          "tax_price": "727"
+        },
+        "total": {
+          "cashprice": "8,000",
+          "total_price": "8,000"
+        }
+      }
+    },
+    {
+      "corruption": "jpeg",
+      "document_id": "cord-v2-validation-00005",
+      "parameters": {
+        "quality": 40
+      },
+      "severity": "high",
+      "source_image_sha256": "f2f39d5f12253390f4c8264a8fa96e9bfdde78009e57068cb05ca5ad3c5b7d02",
+      "truth": {
+        "menu": {
+          "cnt": "1.00",
+          "nm": "LE MINERAL",
+          "price": "8,000"
+        },
+        "sub_total": {
+          "subtotal_price": "7,273",
+          "tax_price": "727"
+        },
+        "total": {
+          "cashprice": "8,000",
+          "total_price": "8,000"
+        }
+      }
+    },
+    {
+      "corruption": "contrast",
+      "document_id": "cord-v2-validation-00005",
+      "parameters": {
+        "factor": 0.75
+      },
+      "severity": "low",
+      "source_image_sha256": "f2f39d5f12253390f4c8264a8fa96e9bfdde78009e57068cb05ca5ad3c5b7d02",
+      "truth": {
+        "menu": {
+          "cnt": "1.00",
+          "nm": "LE MINERAL",
+          "price": "8,000"
+        },
+        "sub_total": {
+          "subtotal_price": "7,273",
+          "tax_price": "727"
+        },
+        "total": {
+          "cashprice": "8,000",
+          "total_price": "8,000"
+        }
+      }
+    },
+    {
+      "corruption": "contrast",
+      "document_id": "cord-v2-validation-00005",
+      "parameters": {
+        "factor": 0.5
+      },
+      "severity": "high",
+      "source_image_sha256": "f2f39d5f12253390f4c8264a8fa96e9bfdde78009e57068cb05ca5ad3c5b7d02",
+      "truth": {
+        "menu": {
+          "cnt": "1.00",
+          "nm": "LE MINERAL",
+          "price": "8,000"
+        },
+        "sub_total": {
+          "subtotal_price": "7,273",
+          "tax_price": "727"
+        },
+        "total": {
+          "cashprice": "8,000",
+          "total_price": "8,000"
+        }
+      }
+    },
+    {
+      "corruption": "occlusion",
+      "document_id": "cord-v2-validation-00005",
+      "parameters": {
+        "area_fraction": 0.05
+      },
+      "severity": "low",
+      "source_image_sha256": "f2f39d5f12253390f4c8264a8fa96e9bfdde78009e57068cb05ca5ad3c5b7d02",
+      "truth": {
+        "menu": {
+          "cnt": "1.00",
+          "nm": "LE MINERAL",
+          "price": "8,000"
+        },
+        "sub_total": {
+          "subtotal_price": "7,273",
+          "tax_price": "727"
+        },
+        "total": {
+          "cashprice": "8,000",
+          "total_price": "8,000"
+        }
+      }
+    },
+    {
+      "corruption": "occlusion",
+      "document_id": "cord-v2-validation-00005",
+      "parameters": {
+        "area_fraction": 0.12
+      },
+      "severity": "high",
+      "source_image_sha256": "f2f39d5f12253390f4c8264a8fa96e9bfdde78009e57068cb05ca5ad3c5b7d02",
+      "truth": {
+        "menu": {
+          "cnt": "1.00",
+          "nm": "LE MINERAL",
+          "price": "8,000"
+        },
+        "sub_total": {
+          "subtotal_price": "7,273",
+          "tax_price": "727"
+        },
+        "total": {
+          "cashprice": "8,000",
+          "total_price": "8,000"
+        }
+      }
+    },
+    {
+      "corruption": "clean",
+      "document_id": "cord-v2-validation-00009",
+      "parameters": {},
+      "severity": "clean",
+      "source_image_sha256": "cb5e23ac462d4706be5c2ead6f0a362b284671181dd801883e62b78bad6b3f62",
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Tahu Ikan Oma Giok",
+          "price": "20,000"
+        },
+        "total": {
+          "cashprice": "20,000",
+          "changeprice": "0",
+          "total_price": "20,000"
+        }
+      }
+    },
+    {
+      "corruption": "gaussian_blur",
+      "document_id": "cord-v2-validation-00009",
+      "parameters": {
+        "kernel": 5,
+        "sigma": 1.0
+      },
+      "severity": "low",
+      "source_image_sha256": "cb5e23ac462d4706be5c2ead6f0a362b284671181dd801883e62b78bad6b3f62",
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Tahu Ikan Oma Giok",
+          "price": "20,000"
+        },
+        "total": {
+          "cashprice": "20,000",
+          "changeprice": "0",
+          "total_price": "20,000"
+        }
+      }
+    },
+    {
+      "corruption": "gaussian_blur",
+      "document_id": "cord-v2-validation-00009",
+      "parameters": {
+        "kernel": 9,
+        "sigma": 2.0
+      },
+      "severity": "high",
+      "source_image_sha256": "cb5e23ac462d4706be5c2ead6f0a362b284671181dd801883e62b78bad6b3f62",
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Tahu Ikan Oma Giok",
+          "price": "20,000"
+        },
+        "total": {
+          "cashprice": "20,000",
+          "changeprice": "0",
+          "total_price": "20,000"
+        }
+      }
+    },
+    {
+      "corruption": "rotation",
+      "document_id": "cord-v2-validation-00009",
+      "parameters": {
+        "degrees": 2.0
+      },
+      "severity": "low",
+      "source_image_sha256": "cb5e23ac462d4706be5c2ead6f0a362b284671181dd801883e62b78bad6b3f62",
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Tahu Ikan Oma Giok",
+          "price": "20,000"
+        },
+        "total": {
+          "cashprice": "20,000",
+          "changeprice": "0",
+          "total_price": "20,000"
+        }
+      }
+    },
+    {
+      "corruption": "rotation",
+      "document_id": "cord-v2-validation-00009",
+      "parameters": {
+        "degrees": 5.0
+      },
+      "severity": "high",
+      "source_image_sha256": "cb5e23ac462d4706be5c2ead6f0a362b284671181dd801883e62b78bad6b3f62",
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Tahu Ikan Oma Giok",
+          "price": "20,000"
+        },
+        "total": {
+          "cashprice": "20,000",
+          "changeprice": "0",
+          "total_price": "20,000"
+        }
+      }
+    },
+    {
+      "corruption": "downsampling",
+      "document_id": "cord-v2-validation-00009",
+      "parameters": {
+        "scale": 0.75
+      },
+      "severity": "low",
+      "source_image_sha256": "cb5e23ac462d4706be5c2ead6f0a362b284671181dd801883e62b78bad6b3f62",
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Tahu Ikan Oma Giok",
+          "price": "20,000"
+        },
+        "total": {
+          "cashprice": "20,000",
+          "changeprice": "0",
+          "total_price": "20,000"
+        }
+      }
+    },
+    {
+      "corruption": "downsampling",
+      "document_id": "cord-v2-validation-00009",
+      "parameters": {
+        "scale": 0.5
+      },
+      "severity": "high",
+      "source_image_sha256": "cb5e23ac462d4706be5c2ead6f0a362b284671181dd801883e62b78bad6b3f62",
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Tahu Ikan Oma Giok",
+          "price": "20,000"
+        },
+        "total": {
+          "cashprice": "20,000",
+          "changeprice": "0",
+          "total_price": "20,000"
+        }
+      }
+    },
+    {
+      "corruption": "jpeg",
+      "document_id": "cord-v2-validation-00009",
+      "parameters": {
+        "quality": 70
+      },
+      "severity": "low",
+      "source_image_sha256": "cb5e23ac462d4706be5c2ead6f0a362b284671181dd801883e62b78bad6b3f62",
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Tahu Ikan Oma Giok",
+          "price": "20,000"
+        },
+        "total": {
+          "cashprice": "20,000",
+          "changeprice": "0",
+          "total_price": "20,000"
+        }
+      }
+    },
+    {
+      "corruption": "jpeg",
+      "document_id": "cord-v2-validation-00009",
+      "parameters": {
+        "quality": 40
+      },
+      "severity": "high",
+      "source_image_sha256": "cb5e23ac462d4706be5c2ead6f0a362b284671181dd801883e62b78bad6b3f62",
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Tahu Ikan Oma Giok",
+          "price": "20,000"
+        },
+        "total": {
+          "cashprice": "20,000",
+          "changeprice": "0",
+          "total_price": "20,000"
+        }
+      }
+    },
+    {
+      "corruption": "contrast",
+      "document_id": "cord-v2-validation-00009",
+      "parameters": {
+        "factor": 0.75
+      },
+      "severity": "low",
+      "source_image_sha256": "cb5e23ac462d4706be5c2ead6f0a362b284671181dd801883e62b78bad6b3f62",
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Tahu Ikan Oma Giok",
+          "price": "20,000"
+        },
+        "total": {
+          "cashprice": "20,000",
+          "changeprice": "0",
+          "total_price": "20,000"
+        }
+      }
+    },
+    {
+      "corruption": "contrast",
+      "document_id": "cord-v2-validation-00009",
+      "parameters": {
+        "factor": 0.5
+      },
+      "severity": "high",
+      "source_image_sha256": "cb5e23ac462d4706be5c2ead6f0a362b284671181dd801883e62b78bad6b3f62",
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Tahu Ikan Oma Giok",
+          "price": "20,000"
+        },
+        "total": {
+          "cashprice": "20,000",
+          "changeprice": "0",
+          "total_price": "20,000"
+        }
+      }
+    },
+    {
+      "corruption": "occlusion",
+      "document_id": "cord-v2-validation-00009",
+      "parameters": {
+        "area_fraction": 0.05
+      },
+      "severity": "low",
+      "source_image_sha256": "cb5e23ac462d4706be5c2ead6f0a362b284671181dd801883e62b78bad6b3f62",
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Tahu Ikan Oma Giok",
+          "price": "20,000"
+        },
+        "total": {
+          "cashprice": "20,000",
+          "changeprice": "0",
+          "total_price": "20,000"
+        }
+      }
+    },
+    {
+      "corruption": "occlusion",
+      "document_id": "cord-v2-validation-00009",
+      "parameters": {
+        "area_fraction": 0.12
+      },
+      "severity": "high",
+      "source_image_sha256": "cb5e23ac462d4706be5c2ead6f0a362b284671181dd801883e62b78bad6b3f62",
+      "truth": {
+        "menu": {
+          "cnt": "1",
+          "nm": "Tahu Ikan Oma Giok",
+          "price": "20,000"
+        },
+        "total": {
+          "cashprice": "20,000",
+          "changeprice": "0",
+          "total_price": "20,000"
+        }
+      }
+    },
+    {
+      "corruption": "clean",
+      "document_id": "cord-v2-validation-00012",
+      "parameters": {},
+      "severity": "clean",
+      "source_image_sha256": "df3c8fda9a86120a9f897ae278b4c214d1ec45e64f33cd539b808d4c7802d6ab",
+      "truth": {
+        "menu": {
+          "cnt": "4",
+          "nm": "ES KOPI SUSU",
+          "price": "72.000"
+        },
+        "total": {
+          "changeprice": "0",
+          "emoneyprice": "72.000",
+          "total_price": "72.000"
+        }
+      }
+    },
+    {
+      "corruption": "gaussian_blur",
+      "document_id": "cord-v2-validation-00012",
+      "parameters": {
+        "kernel": 5,
+        "sigma": 1.0
+      },
+      "severity": "low",
+      "source_image_sha256": "df3c8fda9a86120a9f897ae278b4c214d1ec45e64f33cd539b808d4c7802d6ab",
+      "truth": {
+        "menu": {
+          "cnt": "4",
+          "nm": "ES KOPI SUSU",
+          "price": "72.000"
+        },
+        "total": {
+          "changeprice": "0",
+          "emoneyprice": "72.000",
+          "total_price": "72.000"
+        }
+      }
+    },
+    {
+      "corruption": "gaussian_blur",
+      "document_id": "cord-v2-validation-00012",
+      "parameters": {
+        "kernel": 9,
+        "sigma": 2.0
+      },
+      "severity": "high",
+      "source_image_sha256": "df3c8fda9a86120a9f897ae278b4c214d1ec45e64f33cd539b808d4c7802d6ab",
+      "truth": {
+        "menu": {
+          "cnt": "4",
+          "nm": "ES KOPI SUSU",
+          "price": "72.000"
+        },
+        "total": {
+          "changeprice": "0",
+          "emoneyprice": "72.000",
+          "total_price": "72.000"
+        }
+      }
+    },
+    {
+      "corruption": "rotation",
+      "document_id": "cord-v2-validation-00012",
+      "parameters": {
+        "degrees": 2.0
+      },
+      "severity": "low",
+      "source_image_sha256": "df3c8fda9a86120a9f897ae278b4c214d1ec45e64f33cd539b808d4c7802d6ab",
+      "truth": {
+        "menu": {
+          "cnt": "4",
+          "nm": "ES KOPI SUSU",
+          "price": "72.000"
+        },
+        "total": {
+          "changeprice": "0",
+          "emoneyprice": "72.000",
+          "total_price": "72.000"
+        }
+      }
+    },
+    {
+      "corruption": "rotation",
+      "document_id": "cord-v2-validation-00012",
+      "parameters": {
+        "degrees": 5.0
+      },
+      "severity": "high",
+      "source_image_sha256": "df3c8fda9a86120a9f897ae278b4c214d1ec45e64f33cd539b808d4c7802d6ab",
+      "truth": {
+        "menu": {
+          "cnt": "4",
+          "nm": "ES KOPI SUSU",
+          "price": "72.000"
+        },
+        "total": {
+          "changeprice": "0",
+          "emoneyprice": "72.000",
+          "total_price": "72.000"
+        }
+      }
+    },
+    {
+      "corruption": "downsampling",
+      "document_id": "cord-v2-validation-00012",
+      "parameters": {
+        "scale": 0.75
+      },
+      "severity": "low",
+      "source_image_sha256": "df3c8fda9a86120a9f897ae278b4c214d1ec45e64f33cd539b808d4c7802d6ab",
+      "truth": {
+        "menu": {
+          "cnt": "4",
+          "nm": "ES KOPI SUSU",
+          "price": "72.000"
+        },
+        "total": {
+          "changeprice": "0",
+          "emoneyprice": "72.000",
+          "total_price": "72.000"
+        }
+      }
+    },
+    {
+      "corruption": "downsampling",
+      "document_id": "cord-v2-validation-00012",
+      "parameters": {
+        "scale": 0.5
+      },
+      "severity": "high",
+      "source_image_sha256": "df3c8fda9a86120a9f897ae278b4c214d1ec45e64f33cd539b808d4c7802d6ab",
+      "truth": {
+        "menu": {
+          "cnt": "4",
+          "nm": "ES KOPI SUSU",
+          "price": "72.000"
+        },
+        "total": {
+          "changeprice": "0",
+          "emoneyprice": "72.000",
+          "total_price": "72.000"
+        }
+      }
+    },
+    {
+      "corruption": "jpeg",
+      "document_id": "cord-v2-validation-00012",
+      "parameters": {
+        "quality": 70
+      },
+      "severity": "low",
+      "source_image_sha256": "df3c8fda9a86120a9f897ae278b4c214d1ec45e64f33cd539b808d4c7802d6ab",
+      "truth": {
+        "menu": {
+          "cnt": "4",
+          "nm": "ES KOPI SUSU",
+          "price": "72.000"
+        },
+        "total": {
+          "changeprice": "0",
+          "emoneyprice": "72.000",
+          "total_price": "72.000"
+        }
+      }
+    },
+    {
+      "corruption": "jpeg",
+      "document_id": "cord-v2-validation-00012",
+      "parameters": {
+        "quality": 40
+      },
+      "severity": "high",
+      "source_image_sha256": "df3c8fda9a86120a9f897ae278b4c214d1ec45e64f33cd539b808d4c7802d6ab",
+      "truth": {
+        "menu": {
+          "cnt": "4",
+          "nm": "ES KOPI SUSU",
+          "price": "72.000"
+        },
+        "total": {
+          "changeprice": "0",
+          "emoneyprice": "72.000",
+          "total_price": "72.000"
+        }
+      }
+    },
+    {
+      "corruption": "contrast",
+      "document_id": "cord-v2-validation-00012",
+      "parameters": {
+        "factor": 0.75
+      },
+      "severity": "low",
+      "source_image_sha256": "df3c8fda9a86120a9f897ae278b4c214d1ec45e64f33cd539b808d4c7802d6ab",
+      "truth": {
+        "menu": {
+          "cnt": "4",
+          "nm": "ES KOPI SUSU",
+          "price": "72.000"
+        },
+        "total": {
+          "changeprice": "0",
+          "emoneyprice": "72.000",
+          "total_price": "72.000"
+        }
+      }
+    },
+    {
+      "corruption": "contrast",
+      "document_id": "cord-v2-validation-00012",
+      "parameters": {
+        "factor": 0.5
+      },
+      "severity": "high",
+      "source_image_sha256": "df3c8fda9a86120a9f897ae278b4c214d1ec45e64f33cd539b808d4c7802d6ab",
+      "truth": {
+        "menu": {
+          "cnt": "4",
+          "nm": "ES KOPI SUSU",
+          "price": "72.000"
+        },
+        "total": {
+          "changeprice": "0",
+          "emoneyprice": "72.000",
+          "total_price": "72.000"
+        }
+      }
+    },
+    {
+      "corruption": "occlusion",
+      "document_id": "cord-v2-validation-00012",
+      "parameters": {
+        "area_fraction": 0.05
+      },
+      "severity": "low",
+      "source_image_sha256": "df3c8fda9a86120a9f897ae278b4c214d1ec45e64f33cd539b808d4c7802d6ab",
+      "truth": {
+        "menu": {
+          "cnt": "4",
+          "nm": "ES KOPI SUSU",
+          "price": "72.000"
+        },
+        "total": {
+          "changeprice": "0",
+          "emoneyprice": "72.000",
+          "total_price": "72.000"
+        }
+      }
+    },
+    {
+      "corruption": "occlusion",
+      "document_id": "cord-v2-validation-00012",
+      "parameters": {
+        "area_fraction": 0.12
+      },
+      "severity": "high",
+      "source_image_sha256": "df3c8fda9a86120a9f897ae278b4c214d1ec45e64f33cd539b808d4c7802d6ab",
+      "truth": {
+        "menu": {
+          "cnt": "4",
+          "nm": "ES KOPI SUSU",
+          "price": "72.000"
+        },
+        "total": {
+          "changeprice": "0",
+          "emoneyprice": "72.000",
+          "total_price": "72.000"
+        }
+      }
+    },
+    {
+      "corruption": "clean",
+      "document_id": "cord-v2-validation-00006",
+      "parameters": {},
+      "severity": "clean",
+      "source_image_sha256": "76a8ab6bc5d3baa31643474a851277fccacb13dd9a4915c5c0e82be4b63fecf6",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "POTATO SAUSAGE BREAD",
+            "price": "19,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "OREO GREEN TEA SPREAD",
+            "price": "52,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "WHITE CHOCO BANANA SPREAD",
+            "price": "52,000"
+          }
+        ],
+        "total": {
+          "creditcardprice": "123,000",
+          "total_price": "123,000"
+        }
+      }
+    },
+    {
+      "corruption": "gaussian_blur",
+      "document_id": "cord-v2-validation-00006",
+      "parameters": {
+        "kernel": 5,
+        "sigma": 1.0
+      },
+      "severity": "low",
+      "source_image_sha256": "76a8ab6bc5d3baa31643474a851277fccacb13dd9a4915c5c0e82be4b63fecf6",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "POTATO SAUSAGE BREAD",
+            "price": "19,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "OREO GREEN TEA SPREAD",
+            "price": "52,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "WHITE CHOCO BANANA SPREAD",
+            "price": "52,000"
+          }
+        ],
+        "total": {
+          "creditcardprice": "123,000",
+          "total_price": "123,000"
+        }
+      }
+    },
+    {
+      "corruption": "gaussian_blur",
+      "document_id": "cord-v2-validation-00006",
+      "parameters": {
+        "kernel": 9,
+        "sigma": 2.0
+      },
+      "severity": "high",
+      "source_image_sha256": "76a8ab6bc5d3baa31643474a851277fccacb13dd9a4915c5c0e82be4b63fecf6",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "POTATO SAUSAGE BREAD",
+            "price": "19,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "OREO GREEN TEA SPREAD",
+            "price": "52,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "WHITE CHOCO BANANA SPREAD",
+            "price": "52,000"
+          }
+        ],
+        "total": {
+          "creditcardprice": "123,000",
+          "total_price": "123,000"
+        }
+      }
+    },
+    {
+      "corruption": "rotation",
+      "document_id": "cord-v2-validation-00006",
+      "parameters": {
+        "degrees": 2.0
+      },
+      "severity": "low",
+      "source_image_sha256": "76a8ab6bc5d3baa31643474a851277fccacb13dd9a4915c5c0e82be4b63fecf6",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "POTATO SAUSAGE BREAD",
+            "price": "19,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "OREO GREEN TEA SPREAD",
+            "price": "52,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "WHITE CHOCO BANANA SPREAD",
+            "price": "52,000"
+          }
+        ],
+        "total": {
+          "creditcardprice": "123,000",
+          "total_price": "123,000"
+        }
+      }
+    },
+    {
+      "corruption": "rotation",
+      "document_id": "cord-v2-validation-00006",
+      "parameters": {
+        "degrees": 5.0
+      },
+      "severity": "high",
+      "source_image_sha256": "76a8ab6bc5d3baa31643474a851277fccacb13dd9a4915c5c0e82be4b63fecf6",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "POTATO SAUSAGE BREAD",
+            "price": "19,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "OREO GREEN TEA SPREAD",
+            "price": "52,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "WHITE CHOCO BANANA SPREAD",
+            "price": "52,000"
+          }
+        ],
+        "total": {
+          "creditcardprice": "123,000",
+          "total_price": "123,000"
+        }
+      }
+    },
+    {
+      "corruption": "downsampling",
+      "document_id": "cord-v2-validation-00006",
+      "parameters": {
+        "scale": 0.75
+      },
+      "severity": "low",
+      "source_image_sha256": "76a8ab6bc5d3baa31643474a851277fccacb13dd9a4915c5c0e82be4b63fecf6",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "POTATO SAUSAGE BREAD",
+            "price": "19,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "OREO GREEN TEA SPREAD",
+            "price": "52,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "WHITE CHOCO BANANA SPREAD",
+            "price": "52,000"
+          }
+        ],
+        "total": {
+          "creditcardprice": "123,000",
+          "total_price": "123,000"
+        }
+      }
+    },
+    {
+      "corruption": "downsampling",
+      "document_id": "cord-v2-validation-00006",
+      "parameters": {
+        "scale": 0.5
+      },
+      "severity": "high",
+      "source_image_sha256": "76a8ab6bc5d3baa31643474a851277fccacb13dd9a4915c5c0e82be4b63fecf6",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "POTATO SAUSAGE BREAD",
+            "price": "19,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "OREO GREEN TEA SPREAD",
+            "price": "52,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "WHITE CHOCO BANANA SPREAD",
+            "price": "52,000"
+          }
+        ],
+        "total": {
+          "creditcardprice": "123,000",
+          "total_price": "123,000"
+        }
+      }
+    },
+    {
+      "corruption": "jpeg",
+      "document_id": "cord-v2-validation-00006",
+      "parameters": {
+        "quality": 70
+      },
+      "severity": "low",
+      "source_image_sha256": "76a8ab6bc5d3baa31643474a851277fccacb13dd9a4915c5c0e82be4b63fecf6",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "POTATO SAUSAGE BREAD",
+            "price": "19,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "OREO GREEN TEA SPREAD",
+            "price": "52,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "WHITE CHOCO BANANA SPREAD",
+            "price": "52,000"
+          }
+        ],
+        "total": {
+          "creditcardprice": "123,000",
+          "total_price": "123,000"
+        }
+      }
+    },
+    {
+      "corruption": "jpeg",
+      "document_id": "cord-v2-validation-00006",
+      "parameters": {
+        "quality": 40
+      },
+      "severity": "high",
+      "source_image_sha256": "76a8ab6bc5d3baa31643474a851277fccacb13dd9a4915c5c0e82be4b63fecf6",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "POTATO SAUSAGE BREAD",
+            "price": "19,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "OREO GREEN TEA SPREAD",
+            "price": "52,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "WHITE CHOCO BANANA SPREAD",
+            "price": "52,000"
+          }
+        ],
+        "total": {
+          "creditcardprice": "123,000",
+          "total_price": "123,000"
+        }
+      }
+    },
+    {
+      "corruption": "contrast",
+      "document_id": "cord-v2-validation-00006",
+      "parameters": {
+        "factor": 0.75
+      },
+      "severity": "low",
+      "source_image_sha256": "76a8ab6bc5d3baa31643474a851277fccacb13dd9a4915c5c0e82be4b63fecf6",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "POTATO SAUSAGE BREAD",
+            "price": "19,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "OREO GREEN TEA SPREAD",
+            "price": "52,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "WHITE CHOCO BANANA SPREAD",
+            "price": "52,000"
+          }
+        ],
+        "total": {
+          "creditcardprice": "123,000",
+          "total_price": "123,000"
+        }
+      }
+    },
+    {
+      "corruption": "contrast",
+      "document_id": "cord-v2-validation-00006",
+      "parameters": {
+        "factor": 0.5
+      },
+      "severity": "high",
+      "source_image_sha256": "76a8ab6bc5d3baa31643474a851277fccacb13dd9a4915c5c0e82be4b63fecf6",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "POTATO SAUSAGE BREAD",
+            "price": "19,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "OREO GREEN TEA SPREAD",
+            "price": "52,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "WHITE CHOCO BANANA SPREAD",
+            "price": "52,000"
+          }
+        ],
+        "total": {
+          "creditcardprice": "123,000",
+          "total_price": "123,000"
+        }
+      }
+    },
+    {
+      "corruption": "occlusion",
+      "document_id": "cord-v2-validation-00006",
+      "parameters": {
+        "area_fraction": 0.05
+      },
+      "severity": "low",
+      "source_image_sha256": "76a8ab6bc5d3baa31643474a851277fccacb13dd9a4915c5c0e82be4b63fecf6",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "POTATO SAUSAGE BREAD",
+            "price": "19,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "OREO GREEN TEA SPREAD",
+            "price": "52,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "WHITE CHOCO BANANA SPREAD",
+            "price": "52,000"
+          }
+        ],
+        "total": {
+          "creditcardprice": "123,000",
+          "total_price": "123,000"
+        }
+      }
+    },
+    {
+      "corruption": "occlusion",
+      "document_id": "cord-v2-validation-00006",
+      "parameters": {
+        "area_fraction": 0.12
+      },
+      "severity": "high",
+      "source_image_sha256": "76a8ab6bc5d3baa31643474a851277fccacb13dd9a4915c5c0e82be4b63fecf6",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "POTATO SAUSAGE BREAD",
+            "price": "19,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "OREO GREEN TEA SPREAD",
+            "price": "52,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "WHITE CHOCO BANANA SPREAD",
+            "price": "52,000"
+          }
+        ],
+        "total": {
+          "creditcardprice": "123,000",
+          "total_price": "123,000"
+        }
+      }
+    },
+    {
+      "corruption": "clean",
+      "document_id": "cord-v2-validation-00007",
+      "parameters": {},
+      "severity": "clean",
+      "source_image_sha256": "52adf3336878fbd558951660d6ce52268dd3e636563ca1d7d7e004ccab96bff7",
+      "truth": {
+        "menu": {
+          "cnt": "4",
+          "discountprice": "-9,545",
+          "nm": "Choco Devil",
+          "price": "63,636"
+        },
+        "sub_total": {
+          "discount_price": "-9,545",
+          "subtotal_price": "63,636",
+          "tax_price": "5,409"
+        },
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "40,500",
+          "total_price": "59,500"
+        }
+      }
+    },
+    {
+      "corruption": "gaussian_blur",
+      "document_id": "cord-v2-validation-00007",
+      "parameters": {
+        "kernel": 5,
+        "sigma": 1.0
+      },
+      "severity": "low",
+      "source_image_sha256": "52adf3336878fbd558951660d6ce52268dd3e636563ca1d7d7e004ccab96bff7",
+      "truth": {
+        "menu": {
+          "cnt": "4",
+          "discountprice": "-9,545",
+          "nm": "Choco Devil",
+          "price": "63,636"
+        },
+        "sub_total": {
+          "discount_price": "-9,545",
+          "subtotal_price": "63,636",
+          "tax_price": "5,409"
+        },
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "40,500",
+          "total_price": "59,500"
+        }
+      }
+    },
+    {
+      "corruption": "gaussian_blur",
+      "document_id": "cord-v2-validation-00007",
+      "parameters": {
+        "kernel": 9,
+        "sigma": 2.0
+      },
+      "severity": "high",
+      "source_image_sha256": "52adf3336878fbd558951660d6ce52268dd3e636563ca1d7d7e004ccab96bff7",
+      "truth": {
+        "menu": {
+          "cnt": "4",
+          "discountprice": "-9,545",
+          "nm": "Choco Devil",
+          "price": "63,636"
+        },
+        "sub_total": {
+          "discount_price": "-9,545",
+          "subtotal_price": "63,636",
+          "tax_price": "5,409"
+        },
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "40,500",
+          "total_price": "59,500"
+        }
+      }
+    },
+    {
+      "corruption": "rotation",
+      "document_id": "cord-v2-validation-00007",
+      "parameters": {
+        "degrees": 2.0
+      },
+      "severity": "low",
+      "source_image_sha256": "52adf3336878fbd558951660d6ce52268dd3e636563ca1d7d7e004ccab96bff7",
+      "truth": {
+        "menu": {
+          "cnt": "4",
+          "discountprice": "-9,545",
+          "nm": "Choco Devil",
+          "price": "63,636"
+        },
+        "sub_total": {
+          "discount_price": "-9,545",
+          "subtotal_price": "63,636",
+          "tax_price": "5,409"
+        },
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "40,500",
+          "total_price": "59,500"
+        }
+      }
+    },
+    {
+      "corruption": "rotation",
+      "document_id": "cord-v2-validation-00007",
+      "parameters": {
+        "degrees": 5.0
+      },
+      "severity": "high",
+      "source_image_sha256": "52adf3336878fbd558951660d6ce52268dd3e636563ca1d7d7e004ccab96bff7",
+      "truth": {
+        "menu": {
+          "cnt": "4",
+          "discountprice": "-9,545",
+          "nm": "Choco Devil",
+          "price": "63,636"
+        },
+        "sub_total": {
+          "discount_price": "-9,545",
+          "subtotal_price": "63,636",
+          "tax_price": "5,409"
+        },
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "40,500",
+          "total_price": "59,500"
+        }
+      }
+    },
+    {
+      "corruption": "downsampling",
+      "document_id": "cord-v2-validation-00007",
+      "parameters": {
+        "scale": 0.75
+      },
+      "severity": "low",
+      "source_image_sha256": "52adf3336878fbd558951660d6ce52268dd3e636563ca1d7d7e004ccab96bff7",
+      "truth": {
+        "menu": {
+          "cnt": "4",
+          "discountprice": "-9,545",
+          "nm": "Choco Devil",
+          "price": "63,636"
+        },
+        "sub_total": {
+          "discount_price": "-9,545",
+          "subtotal_price": "63,636",
+          "tax_price": "5,409"
+        },
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "40,500",
+          "total_price": "59,500"
+        }
+      }
+    },
+    {
+      "corruption": "downsampling",
+      "document_id": "cord-v2-validation-00007",
+      "parameters": {
+        "scale": 0.5
+      },
+      "severity": "high",
+      "source_image_sha256": "52adf3336878fbd558951660d6ce52268dd3e636563ca1d7d7e004ccab96bff7",
+      "truth": {
+        "menu": {
+          "cnt": "4",
+          "discountprice": "-9,545",
+          "nm": "Choco Devil",
+          "price": "63,636"
+        },
+        "sub_total": {
+          "discount_price": "-9,545",
+          "subtotal_price": "63,636",
+          "tax_price": "5,409"
+        },
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "40,500",
+          "total_price": "59,500"
+        }
+      }
+    },
+    {
+      "corruption": "jpeg",
+      "document_id": "cord-v2-validation-00007",
+      "parameters": {
+        "quality": 70
+      },
+      "severity": "low",
+      "source_image_sha256": "52adf3336878fbd558951660d6ce52268dd3e636563ca1d7d7e004ccab96bff7",
+      "truth": {
+        "menu": {
+          "cnt": "4",
+          "discountprice": "-9,545",
+          "nm": "Choco Devil",
+          "price": "63,636"
+        },
+        "sub_total": {
+          "discount_price": "-9,545",
+          "subtotal_price": "63,636",
+          "tax_price": "5,409"
+        },
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "40,500",
+          "total_price": "59,500"
+        }
+      }
+    },
+    {
+      "corruption": "jpeg",
+      "document_id": "cord-v2-validation-00007",
+      "parameters": {
+        "quality": 40
+      },
+      "severity": "high",
+      "source_image_sha256": "52adf3336878fbd558951660d6ce52268dd3e636563ca1d7d7e004ccab96bff7",
+      "truth": {
+        "menu": {
+          "cnt": "4",
+          "discountprice": "-9,545",
+          "nm": "Choco Devil",
+          "price": "63,636"
+        },
+        "sub_total": {
+          "discount_price": "-9,545",
+          "subtotal_price": "63,636",
+          "tax_price": "5,409"
+        },
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "40,500",
+          "total_price": "59,500"
+        }
+      }
+    },
+    {
+      "corruption": "contrast",
+      "document_id": "cord-v2-validation-00007",
+      "parameters": {
+        "factor": 0.75
+      },
+      "severity": "low",
+      "source_image_sha256": "52adf3336878fbd558951660d6ce52268dd3e636563ca1d7d7e004ccab96bff7",
+      "truth": {
+        "menu": {
+          "cnt": "4",
+          "discountprice": "-9,545",
+          "nm": "Choco Devil",
+          "price": "63,636"
+        },
+        "sub_total": {
+          "discount_price": "-9,545",
+          "subtotal_price": "63,636",
+          "tax_price": "5,409"
+        },
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "40,500",
+          "total_price": "59,500"
+        }
+      }
+    },
+    {
+      "corruption": "contrast",
+      "document_id": "cord-v2-validation-00007",
+      "parameters": {
+        "factor": 0.5
+      },
+      "severity": "high",
+      "source_image_sha256": "52adf3336878fbd558951660d6ce52268dd3e636563ca1d7d7e004ccab96bff7",
+      "truth": {
+        "menu": {
+          "cnt": "4",
+          "discountprice": "-9,545",
+          "nm": "Choco Devil",
+          "price": "63,636"
+        },
+        "sub_total": {
+          "discount_price": "-9,545",
+          "subtotal_price": "63,636",
+          "tax_price": "5,409"
+        },
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "40,500",
+          "total_price": "59,500"
+        }
+      }
+    },
+    {
+      "corruption": "occlusion",
+      "document_id": "cord-v2-validation-00007",
+      "parameters": {
+        "area_fraction": 0.05
+      },
+      "severity": "low",
+      "source_image_sha256": "52adf3336878fbd558951660d6ce52268dd3e636563ca1d7d7e004ccab96bff7",
+      "truth": {
+        "menu": {
+          "cnt": "4",
+          "discountprice": "-9,545",
+          "nm": "Choco Devil",
+          "price": "63,636"
+        },
+        "sub_total": {
+          "discount_price": "-9,545",
+          "subtotal_price": "63,636",
+          "tax_price": "5,409"
+        },
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "40,500",
+          "total_price": "59,500"
+        }
+      }
+    },
+    {
+      "corruption": "occlusion",
+      "document_id": "cord-v2-validation-00007",
+      "parameters": {
+        "area_fraction": 0.12
+      },
+      "severity": "high",
+      "source_image_sha256": "52adf3336878fbd558951660d6ce52268dd3e636563ca1d7d7e004ccab96bff7",
+      "truth": {
+        "menu": {
+          "cnt": "4",
+          "discountprice": "-9,545",
+          "nm": "Choco Devil",
+          "price": "63,636"
+        },
+        "sub_total": {
+          "discount_price": "-9,545",
+          "subtotal_price": "63,636",
+          "tax_price": "5,409"
+        },
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "40,500",
+          "total_price": "59,500"
+        }
+      }
+    },
+    {
+      "corruption": "clean",
+      "document_id": "cord-v2-validation-00013",
+      "parameters": {},
+      "severity": "clean",
+      "source_image_sha256": "ea239a07e2d5e7afe77c15d7854ce32e340be3c50561ec0d4c4bb504a99a965e",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "MINERAL 600 ML",
+            "price": "7,727"
+          },
+          {
+            "cnt": "1",
+            "nm": "BULGOGI RICE R",
+            "price": "33,636"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "41,364",
+          "tax_price": "4,136"
+        },
+        "total": {
+          "cashprice": "50,000",
+          "changeprice": "-4,500",
+          "total_price": "45,500"
+        }
+      }
+    },
+    {
+      "corruption": "gaussian_blur",
+      "document_id": "cord-v2-validation-00013",
+      "parameters": {
+        "kernel": 5,
+        "sigma": 1.0
+      },
+      "severity": "low",
+      "source_image_sha256": "ea239a07e2d5e7afe77c15d7854ce32e340be3c50561ec0d4c4bb504a99a965e",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "MINERAL 600 ML",
+            "price": "7,727"
+          },
+          {
+            "cnt": "1",
+            "nm": "BULGOGI RICE R",
+            "price": "33,636"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "41,364",
+          "tax_price": "4,136"
+        },
+        "total": {
+          "cashprice": "50,000",
+          "changeprice": "-4,500",
+          "total_price": "45,500"
+        }
+      }
+    },
+    {
+      "corruption": "gaussian_blur",
+      "document_id": "cord-v2-validation-00013",
+      "parameters": {
+        "kernel": 9,
+        "sigma": 2.0
+      },
+      "severity": "high",
+      "source_image_sha256": "ea239a07e2d5e7afe77c15d7854ce32e340be3c50561ec0d4c4bb504a99a965e",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "MINERAL 600 ML",
+            "price": "7,727"
+          },
+          {
+            "cnt": "1",
+            "nm": "BULGOGI RICE R",
+            "price": "33,636"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "41,364",
+          "tax_price": "4,136"
+        },
+        "total": {
+          "cashprice": "50,000",
+          "changeprice": "-4,500",
+          "total_price": "45,500"
+        }
+      }
+    },
+    {
+      "corruption": "rotation",
+      "document_id": "cord-v2-validation-00013",
+      "parameters": {
+        "degrees": 2.0
+      },
+      "severity": "low",
+      "source_image_sha256": "ea239a07e2d5e7afe77c15d7854ce32e340be3c50561ec0d4c4bb504a99a965e",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "MINERAL 600 ML",
+            "price": "7,727"
+          },
+          {
+            "cnt": "1",
+            "nm": "BULGOGI RICE R",
+            "price": "33,636"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "41,364",
+          "tax_price": "4,136"
+        },
+        "total": {
+          "cashprice": "50,000",
+          "changeprice": "-4,500",
+          "total_price": "45,500"
+        }
+      }
+    },
+    {
+      "corruption": "rotation",
+      "document_id": "cord-v2-validation-00013",
+      "parameters": {
+        "degrees": 5.0
+      },
+      "severity": "high",
+      "source_image_sha256": "ea239a07e2d5e7afe77c15d7854ce32e340be3c50561ec0d4c4bb504a99a965e",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "MINERAL 600 ML",
+            "price": "7,727"
+          },
+          {
+            "cnt": "1",
+            "nm": "BULGOGI RICE R",
+            "price": "33,636"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "41,364",
+          "tax_price": "4,136"
+        },
+        "total": {
+          "cashprice": "50,000",
+          "changeprice": "-4,500",
+          "total_price": "45,500"
+        }
+      }
+    },
+    {
+      "corruption": "downsampling",
+      "document_id": "cord-v2-validation-00013",
+      "parameters": {
+        "scale": 0.75
+      },
+      "severity": "low",
+      "source_image_sha256": "ea239a07e2d5e7afe77c15d7854ce32e340be3c50561ec0d4c4bb504a99a965e",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "MINERAL 600 ML",
+            "price": "7,727"
+          },
+          {
+            "cnt": "1",
+            "nm": "BULGOGI RICE R",
+            "price": "33,636"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "41,364",
+          "tax_price": "4,136"
+        },
+        "total": {
+          "cashprice": "50,000",
+          "changeprice": "-4,500",
+          "total_price": "45,500"
+        }
+      }
+    },
+    {
+      "corruption": "downsampling",
+      "document_id": "cord-v2-validation-00013",
+      "parameters": {
+        "scale": 0.5
+      },
+      "severity": "high",
+      "source_image_sha256": "ea239a07e2d5e7afe77c15d7854ce32e340be3c50561ec0d4c4bb504a99a965e",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "MINERAL 600 ML",
+            "price": "7,727"
+          },
+          {
+            "cnt": "1",
+            "nm": "BULGOGI RICE R",
+            "price": "33,636"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "41,364",
+          "tax_price": "4,136"
+        },
+        "total": {
+          "cashprice": "50,000",
+          "changeprice": "-4,500",
+          "total_price": "45,500"
+        }
+      }
+    },
+    {
+      "corruption": "jpeg",
+      "document_id": "cord-v2-validation-00013",
+      "parameters": {
+        "quality": 70
+      },
+      "severity": "low",
+      "source_image_sha256": "ea239a07e2d5e7afe77c15d7854ce32e340be3c50561ec0d4c4bb504a99a965e",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "MINERAL 600 ML",
+            "price": "7,727"
+          },
+          {
+            "cnt": "1",
+            "nm": "BULGOGI RICE R",
+            "price": "33,636"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "41,364",
+          "tax_price": "4,136"
+        },
+        "total": {
+          "cashprice": "50,000",
+          "changeprice": "-4,500",
+          "total_price": "45,500"
+        }
+      }
+    },
+    {
+      "corruption": "jpeg",
+      "document_id": "cord-v2-validation-00013",
+      "parameters": {
+        "quality": 40
+      },
+      "severity": "high",
+      "source_image_sha256": "ea239a07e2d5e7afe77c15d7854ce32e340be3c50561ec0d4c4bb504a99a965e",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "MINERAL 600 ML",
+            "price": "7,727"
+          },
+          {
+            "cnt": "1",
+            "nm": "BULGOGI RICE R",
+            "price": "33,636"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "41,364",
+          "tax_price": "4,136"
+        },
+        "total": {
+          "cashprice": "50,000",
+          "changeprice": "-4,500",
+          "total_price": "45,500"
+        }
+      }
+    },
+    {
+      "corruption": "contrast",
+      "document_id": "cord-v2-validation-00013",
+      "parameters": {
+        "factor": 0.75
+      },
+      "severity": "low",
+      "source_image_sha256": "ea239a07e2d5e7afe77c15d7854ce32e340be3c50561ec0d4c4bb504a99a965e",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "MINERAL 600 ML",
+            "price": "7,727"
+          },
+          {
+            "cnt": "1",
+            "nm": "BULGOGI RICE R",
+            "price": "33,636"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "41,364",
+          "tax_price": "4,136"
+        },
+        "total": {
+          "cashprice": "50,000",
+          "changeprice": "-4,500",
+          "total_price": "45,500"
+        }
+      }
+    },
+    {
+      "corruption": "contrast",
+      "document_id": "cord-v2-validation-00013",
+      "parameters": {
+        "factor": 0.5
+      },
+      "severity": "high",
+      "source_image_sha256": "ea239a07e2d5e7afe77c15d7854ce32e340be3c50561ec0d4c4bb504a99a965e",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "MINERAL 600 ML",
+            "price": "7,727"
+          },
+          {
+            "cnt": "1",
+            "nm": "BULGOGI RICE R",
+            "price": "33,636"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "41,364",
+          "tax_price": "4,136"
+        },
+        "total": {
+          "cashprice": "50,000",
+          "changeprice": "-4,500",
+          "total_price": "45,500"
+        }
+      }
+    },
+    {
+      "corruption": "occlusion",
+      "document_id": "cord-v2-validation-00013",
+      "parameters": {
+        "area_fraction": 0.05
+      },
+      "severity": "low",
+      "source_image_sha256": "ea239a07e2d5e7afe77c15d7854ce32e340be3c50561ec0d4c4bb504a99a965e",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "MINERAL 600 ML",
+            "price": "7,727"
+          },
+          {
+            "cnt": "1",
+            "nm": "BULGOGI RICE R",
+            "price": "33,636"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "41,364",
+          "tax_price": "4,136"
+        },
+        "total": {
+          "cashprice": "50,000",
+          "changeprice": "-4,500",
+          "total_price": "45,500"
+        }
+      }
+    },
+    {
+      "corruption": "occlusion",
+      "document_id": "cord-v2-validation-00013",
+      "parameters": {
+        "area_fraction": 0.12
+      },
+      "severity": "high",
+      "source_image_sha256": "ea239a07e2d5e7afe77c15d7854ce32e340be3c50561ec0d4c4bb504a99a965e",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "MINERAL 600 ML",
+            "price": "7,727"
+          },
+          {
+            "cnt": "1",
+            "nm": "BULGOGI RICE R",
+            "price": "33,636"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "41,364",
+          "tax_price": "4,136"
+        },
+        "total": {
+          "cashprice": "50,000",
+          "changeprice": "-4,500",
+          "total_price": "45,500"
+        }
+      }
+    },
+    {
+      "corruption": "clean",
+      "document_id": "cord-v2-validation-00018",
+      "parameters": {},
+      "severity": "clean",
+      "source_image_sha256": "10639cb8a73f71b011825f2f556b70d850735aeb05e39fd0c5e047a225c90be7",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "beef C roll 3pcs",
+            "price": "10,000",
+            "unitprice": "10,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "kaya bred",
+            "price": "15,000",
+            "unitprice": "15,000"
+          }
+        ],
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "75,000",
+          "menuqty_cnt": "2",
+          "total_price": "25,000"
+        }
+      }
+    },
+    {
+      "corruption": "gaussian_blur",
+      "document_id": "cord-v2-validation-00018",
+      "parameters": {
+        "kernel": 5,
+        "sigma": 1.0
+      },
+      "severity": "low",
+      "source_image_sha256": "10639cb8a73f71b011825f2f556b70d850735aeb05e39fd0c5e047a225c90be7",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "beef C roll 3pcs",
+            "price": "10,000",
+            "unitprice": "10,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "kaya bred",
+            "price": "15,000",
+            "unitprice": "15,000"
+          }
+        ],
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "75,000",
+          "menuqty_cnt": "2",
+          "total_price": "25,000"
+        }
+      }
+    },
+    {
+      "corruption": "gaussian_blur",
+      "document_id": "cord-v2-validation-00018",
+      "parameters": {
+        "kernel": 9,
+        "sigma": 2.0
+      },
+      "severity": "high",
+      "source_image_sha256": "10639cb8a73f71b011825f2f556b70d850735aeb05e39fd0c5e047a225c90be7",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "beef C roll 3pcs",
+            "price": "10,000",
+            "unitprice": "10,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "kaya bred",
+            "price": "15,000",
+            "unitprice": "15,000"
+          }
+        ],
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "75,000",
+          "menuqty_cnt": "2",
+          "total_price": "25,000"
+        }
+      }
+    },
+    {
+      "corruption": "rotation",
+      "document_id": "cord-v2-validation-00018",
+      "parameters": {
+        "degrees": 2.0
+      },
+      "severity": "low",
+      "source_image_sha256": "10639cb8a73f71b011825f2f556b70d850735aeb05e39fd0c5e047a225c90be7",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "beef C roll 3pcs",
+            "price": "10,000",
+            "unitprice": "10,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "kaya bred",
+            "price": "15,000",
+            "unitprice": "15,000"
+          }
+        ],
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "75,000",
+          "menuqty_cnt": "2",
+          "total_price": "25,000"
+        }
+      }
+    },
+    {
+      "corruption": "rotation",
+      "document_id": "cord-v2-validation-00018",
+      "parameters": {
+        "degrees": 5.0
+      },
+      "severity": "high",
+      "source_image_sha256": "10639cb8a73f71b011825f2f556b70d850735aeb05e39fd0c5e047a225c90be7",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "beef C roll 3pcs",
+            "price": "10,000",
+            "unitprice": "10,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "kaya bred",
+            "price": "15,000",
+            "unitprice": "15,000"
+          }
+        ],
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "75,000",
+          "menuqty_cnt": "2",
+          "total_price": "25,000"
+        }
+      }
+    },
+    {
+      "corruption": "downsampling",
+      "document_id": "cord-v2-validation-00018",
+      "parameters": {
+        "scale": 0.75
+      },
+      "severity": "low",
+      "source_image_sha256": "10639cb8a73f71b011825f2f556b70d850735aeb05e39fd0c5e047a225c90be7",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "beef C roll 3pcs",
+            "price": "10,000",
+            "unitprice": "10,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "kaya bred",
+            "price": "15,000",
+            "unitprice": "15,000"
+          }
+        ],
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "75,000",
+          "menuqty_cnt": "2",
+          "total_price": "25,000"
+        }
+      }
+    },
+    {
+      "corruption": "downsampling",
+      "document_id": "cord-v2-validation-00018",
+      "parameters": {
+        "scale": 0.5
+      },
+      "severity": "high",
+      "source_image_sha256": "10639cb8a73f71b011825f2f556b70d850735aeb05e39fd0c5e047a225c90be7",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "beef C roll 3pcs",
+            "price": "10,000",
+            "unitprice": "10,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "kaya bred",
+            "price": "15,000",
+            "unitprice": "15,000"
+          }
+        ],
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "75,000",
+          "menuqty_cnt": "2",
+          "total_price": "25,000"
+        }
+      }
+    },
+    {
+      "corruption": "jpeg",
+      "document_id": "cord-v2-validation-00018",
+      "parameters": {
+        "quality": 70
+      },
+      "severity": "low",
+      "source_image_sha256": "10639cb8a73f71b011825f2f556b70d850735aeb05e39fd0c5e047a225c90be7",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "beef C roll 3pcs",
+            "price": "10,000",
+            "unitprice": "10,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "kaya bred",
+            "price": "15,000",
+            "unitprice": "15,000"
+          }
+        ],
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "75,000",
+          "menuqty_cnt": "2",
+          "total_price": "25,000"
+        }
+      }
+    },
+    {
+      "corruption": "jpeg",
+      "document_id": "cord-v2-validation-00018",
+      "parameters": {
+        "quality": 40
+      },
+      "severity": "high",
+      "source_image_sha256": "10639cb8a73f71b011825f2f556b70d850735aeb05e39fd0c5e047a225c90be7",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "beef C roll 3pcs",
+            "price": "10,000",
+            "unitprice": "10,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "kaya bred",
+            "price": "15,000",
+            "unitprice": "15,000"
+          }
+        ],
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "75,000",
+          "menuqty_cnt": "2",
+          "total_price": "25,000"
+        }
+      }
+    },
+    {
+      "corruption": "contrast",
+      "document_id": "cord-v2-validation-00018",
+      "parameters": {
+        "factor": 0.75
+      },
+      "severity": "low",
+      "source_image_sha256": "10639cb8a73f71b011825f2f556b70d850735aeb05e39fd0c5e047a225c90be7",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "beef C roll 3pcs",
+            "price": "10,000",
+            "unitprice": "10,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "kaya bred",
+            "price": "15,000",
+            "unitprice": "15,000"
+          }
+        ],
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "75,000",
+          "menuqty_cnt": "2",
+          "total_price": "25,000"
+        }
+      }
+    },
+    {
+      "corruption": "contrast",
+      "document_id": "cord-v2-validation-00018",
+      "parameters": {
+        "factor": 0.5
+      },
+      "severity": "high",
+      "source_image_sha256": "10639cb8a73f71b011825f2f556b70d850735aeb05e39fd0c5e047a225c90be7",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "beef C roll 3pcs",
+            "price": "10,000",
+            "unitprice": "10,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "kaya bred",
+            "price": "15,000",
+            "unitprice": "15,000"
+          }
+        ],
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "75,000",
+          "menuqty_cnt": "2",
+          "total_price": "25,000"
+        }
+      }
+    },
+    {
+      "corruption": "occlusion",
+      "document_id": "cord-v2-validation-00018",
+      "parameters": {
+        "area_fraction": 0.05
+      },
+      "severity": "low",
+      "source_image_sha256": "10639cb8a73f71b011825f2f556b70d850735aeb05e39fd0c5e047a225c90be7",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "beef C roll 3pcs",
+            "price": "10,000",
+            "unitprice": "10,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "kaya bred",
+            "price": "15,000",
+            "unitprice": "15,000"
+          }
+        ],
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "75,000",
+          "menuqty_cnt": "2",
+          "total_price": "25,000"
+        }
+      }
+    },
+    {
+      "corruption": "occlusion",
+      "document_id": "cord-v2-validation-00018",
+      "parameters": {
+        "area_fraction": 0.12
+      },
+      "severity": "high",
+      "source_image_sha256": "10639cb8a73f71b011825f2f556b70d850735aeb05e39fd0c5e047a225c90be7",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "beef C roll 3pcs",
+            "price": "10,000",
+            "unitprice": "10,000"
+          },
+          {
+            "cnt": "1",
+            "nm": "kaya bred",
+            "price": "15,000",
+            "unitprice": "15,000"
+          }
+        ],
+        "total": {
+          "cashprice": "100,000",
+          "changeprice": "75,000",
+          "menuqty_cnt": "2",
+          "total_price": "25,000"
+        }
+      }
+    },
+    {
+      "corruption": "clean",
+      "document_id": "cord-v2-validation-00008",
+      "parameters": {},
+      "severity": "clean",
+      "source_image_sha256": "0176f6485570f8389cf78ee11f5da32bdd9bb5ebb638490b04ec495bec7562eb",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "3X",
+            "discountprice": "-7,800",
+            "nm": "TALAM UNGU",
+            "price": "19,500",
+            "unitprice": "@6500"
+          },
+          {
+            "cnt": "1X",
+            "nm": "MIKA KECIL",
+            "price": "0",
+            "unitprice": "@0"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "11,700"
+        },
+        "total": {
+          "cashprice": "20,000",
+          "changeprice": "8,300",
+          "menuqty_cnt": "4.00xITEMs",
+          "total_price": "11,700"
+        }
+      }
+    },
+    {
+      "corruption": "gaussian_blur",
+      "document_id": "cord-v2-validation-00008",
+      "parameters": {
+        "kernel": 5,
+        "sigma": 1.0
+      },
+      "severity": "low",
+      "source_image_sha256": "0176f6485570f8389cf78ee11f5da32bdd9bb5ebb638490b04ec495bec7562eb",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "3X",
+            "discountprice": "-7,800",
+            "nm": "TALAM UNGU",
+            "price": "19,500",
+            "unitprice": "@6500"
+          },
+          {
+            "cnt": "1X",
+            "nm": "MIKA KECIL",
+            "price": "0",
+            "unitprice": "@0"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "11,700"
+        },
+        "total": {
+          "cashprice": "20,000",
+          "changeprice": "8,300",
+          "menuqty_cnt": "4.00xITEMs",
+          "total_price": "11,700"
+        }
+      }
+    },
+    {
+      "corruption": "gaussian_blur",
+      "document_id": "cord-v2-validation-00008",
+      "parameters": {
+        "kernel": 9,
+        "sigma": 2.0
+      },
+      "severity": "high",
+      "source_image_sha256": "0176f6485570f8389cf78ee11f5da32bdd9bb5ebb638490b04ec495bec7562eb",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "3X",
+            "discountprice": "-7,800",
+            "nm": "TALAM UNGU",
+            "price": "19,500",
+            "unitprice": "@6500"
+          },
+          {
+            "cnt": "1X",
+            "nm": "MIKA KECIL",
+            "price": "0",
+            "unitprice": "@0"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "11,700"
+        },
+        "total": {
+          "cashprice": "20,000",
+          "changeprice": "8,300",
+          "menuqty_cnt": "4.00xITEMs",
+          "total_price": "11,700"
+        }
+      }
+    },
+    {
+      "corruption": "rotation",
+      "document_id": "cord-v2-validation-00008",
+      "parameters": {
+        "degrees": 2.0
+      },
+      "severity": "low",
+      "source_image_sha256": "0176f6485570f8389cf78ee11f5da32bdd9bb5ebb638490b04ec495bec7562eb",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "3X",
+            "discountprice": "-7,800",
+            "nm": "TALAM UNGU",
+            "price": "19,500",
+            "unitprice": "@6500"
+          },
+          {
+            "cnt": "1X",
+            "nm": "MIKA KECIL",
+            "price": "0",
+            "unitprice": "@0"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "11,700"
+        },
+        "total": {
+          "cashprice": "20,000",
+          "changeprice": "8,300",
+          "menuqty_cnt": "4.00xITEMs",
+          "total_price": "11,700"
+        }
+      }
+    },
+    {
+      "corruption": "rotation",
+      "document_id": "cord-v2-validation-00008",
+      "parameters": {
+        "degrees": 5.0
+      },
+      "severity": "high",
+      "source_image_sha256": "0176f6485570f8389cf78ee11f5da32bdd9bb5ebb638490b04ec495bec7562eb",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "3X",
+            "discountprice": "-7,800",
+            "nm": "TALAM UNGU",
+            "price": "19,500",
+            "unitprice": "@6500"
+          },
+          {
+            "cnt": "1X",
+            "nm": "MIKA KECIL",
+            "price": "0",
+            "unitprice": "@0"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "11,700"
+        },
+        "total": {
+          "cashprice": "20,000",
+          "changeprice": "8,300",
+          "menuqty_cnt": "4.00xITEMs",
+          "total_price": "11,700"
+        }
+      }
+    },
+    {
+      "corruption": "downsampling",
+      "document_id": "cord-v2-validation-00008",
+      "parameters": {
+        "scale": 0.75
+      },
+      "severity": "low",
+      "source_image_sha256": "0176f6485570f8389cf78ee11f5da32bdd9bb5ebb638490b04ec495bec7562eb",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "3X",
+            "discountprice": "-7,800",
+            "nm": "TALAM UNGU",
+            "price": "19,500",
+            "unitprice": "@6500"
+          },
+          {
+            "cnt": "1X",
+            "nm": "MIKA KECIL",
+            "price": "0",
+            "unitprice": "@0"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "11,700"
+        },
+        "total": {
+          "cashprice": "20,000",
+          "changeprice": "8,300",
+          "menuqty_cnt": "4.00xITEMs",
+          "total_price": "11,700"
+        }
+      }
+    },
+    {
+      "corruption": "downsampling",
+      "document_id": "cord-v2-validation-00008",
+      "parameters": {
+        "scale": 0.5
+      },
+      "severity": "high",
+      "source_image_sha256": "0176f6485570f8389cf78ee11f5da32bdd9bb5ebb638490b04ec495bec7562eb",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "3X",
+            "discountprice": "-7,800",
+            "nm": "TALAM UNGU",
+            "price": "19,500",
+            "unitprice": "@6500"
+          },
+          {
+            "cnt": "1X",
+            "nm": "MIKA KECIL",
+            "price": "0",
+            "unitprice": "@0"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "11,700"
+        },
+        "total": {
+          "cashprice": "20,000",
+          "changeprice": "8,300",
+          "menuqty_cnt": "4.00xITEMs",
+          "total_price": "11,700"
+        }
+      }
+    },
+    {
+      "corruption": "jpeg",
+      "document_id": "cord-v2-validation-00008",
+      "parameters": {
+        "quality": 70
+      },
+      "severity": "low",
+      "source_image_sha256": "0176f6485570f8389cf78ee11f5da32bdd9bb5ebb638490b04ec495bec7562eb",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "3X",
+            "discountprice": "-7,800",
+            "nm": "TALAM UNGU",
+            "price": "19,500",
+            "unitprice": "@6500"
+          },
+          {
+            "cnt": "1X",
+            "nm": "MIKA KECIL",
+            "price": "0",
+            "unitprice": "@0"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "11,700"
+        },
+        "total": {
+          "cashprice": "20,000",
+          "changeprice": "8,300",
+          "menuqty_cnt": "4.00xITEMs",
+          "total_price": "11,700"
+        }
+      }
+    },
+    {
+      "corruption": "jpeg",
+      "document_id": "cord-v2-validation-00008",
+      "parameters": {
+        "quality": 40
+      },
+      "severity": "high",
+      "source_image_sha256": "0176f6485570f8389cf78ee11f5da32bdd9bb5ebb638490b04ec495bec7562eb",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "3X",
+            "discountprice": "-7,800",
+            "nm": "TALAM UNGU",
+            "price": "19,500",
+            "unitprice": "@6500"
+          },
+          {
+            "cnt": "1X",
+            "nm": "MIKA KECIL",
+            "price": "0",
+            "unitprice": "@0"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "11,700"
+        },
+        "total": {
+          "cashprice": "20,000",
+          "changeprice": "8,300",
+          "menuqty_cnt": "4.00xITEMs",
+          "total_price": "11,700"
+        }
+      }
+    },
+    {
+      "corruption": "contrast",
+      "document_id": "cord-v2-validation-00008",
+      "parameters": {
+        "factor": 0.75
+      },
+      "severity": "low",
+      "source_image_sha256": "0176f6485570f8389cf78ee11f5da32bdd9bb5ebb638490b04ec495bec7562eb",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "3X",
+            "discountprice": "-7,800",
+            "nm": "TALAM UNGU",
+            "price": "19,500",
+            "unitprice": "@6500"
+          },
+          {
+            "cnt": "1X",
+            "nm": "MIKA KECIL",
+            "price": "0",
+            "unitprice": "@0"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "11,700"
+        },
+        "total": {
+          "cashprice": "20,000",
+          "changeprice": "8,300",
+          "menuqty_cnt": "4.00xITEMs",
+          "total_price": "11,700"
+        }
+      }
+    },
+    {
+      "corruption": "contrast",
+      "document_id": "cord-v2-validation-00008",
+      "parameters": {
+        "factor": 0.5
+      },
+      "severity": "high",
+      "source_image_sha256": "0176f6485570f8389cf78ee11f5da32bdd9bb5ebb638490b04ec495bec7562eb",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "3X",
+            "discountprice": "-7,800",
+            "nm": "TALAM UNGU",
+            "price": "19,500",
+            "unitprice": "@6500"
+          },
+          {
+            "cnt": "1X",
+            "nm": "MIKA KECIL",
+            "price": "0",
+            "unitprice": "@0"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "11,700"
+        },
+        "total": {
+          "cashprice": "20,000",
+          "changeprice": "8,300",
+          "menuqty_cnt": "4.00xITEMs",
+          "total_price": "11,700"
+        }
+      }
+    },
+    {
+      "corruption": "occlusion",
+      "document_id": "cord-v2-validation-00008",
+      "parameters": {
+        "area_fraction": 0.05
+      },
+      "severity": "low",
+      "source_image_sha256": "0176f6485570f8389cf78ee11f5da32bdd9bb5ebb638490b04ec495bec7562eb",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "3X",
+            "discountprice": "-7,800",
+            "nm": "TALAM UNGU",
+            "price": "19,500",
+            "unitprice": "@6500"
+          },
+          {
+            "cnt": "1X",
+            "nm": "MIKA KECIL",
+            "price": "0",
+            "unitprice": "@0"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "11,700"
+        },
+        "total": {
+          "cashprice": "20,000",
+          "changeprice": "8,300",
+          "menuqty_cnt": "4.00xITEMs",
+          "total_price": "11,700"
+        }
+      }
+    },
+    {
+      "corruption": "occlusion",
+      "document_id": "cord-v2-validation-00008",
+      "parameters": {
+        "area_fraction": 0.12
+      },
+      "severity": "high",
+      "source_image_sha256": "0176f6485570f8389cf78ee11f5da32bdd9bb5ebb638490b04ec495bec7562eb",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "3X",
+            "discountprice": "-7,800",
+            "nm": "TALAM UNGU",
+            "price": "19,500",
+            "unitprice": "@6500"
+          },
+          {
+            "cnt": "1X",
+            "nm": "MIKA KECIL",
+            "price": "0",
+            "unitprice": "@0"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "11,700"
+        },
+        "total": {
+          "cashprice": "20,000",
+          "changeprice": "8,300",
+          "menuqty_cnt": "4.00xITEMs",
+          "total_price": "11,700"
+        }
+      }
+    },
+    {
+      "corruption": "clean",
+      "document_id": "cord-v2-validation-00011",
+      "parameters": {},
+      "severity": "clean",
+      "source_image_sha256": "b6ed97de45b7f317bdc9fa6ff739d281cf4095761b145e07450bc06d627d59e2",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "Se'I Sapi Sambal Matah ( R )",
+            "price": "20.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Se'I Sapi Lada Hitam (J)",
+            "price": "35.000"
+          },
+          {
+            "cnt": "2",
+            "nm": "Nasi Putih",
+            "price": "10.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Milk Shake Coklat",
+            "price": "16.000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "81.000",
+          "tax_price": "8.100"
+        },
+        "total": {
+          "changeprice": "0",
+          "creditcardprice": "89.100",
+          "total_price": "89.100"
+        }
+      }
+    },
+    {
+      "corruption": "gaussian_blur",
+      "document_id": "cord-v2-validation-00011",
+      "parameters": {
+        "kernel": 5,
+        "sigma": 1.0
+      },
+      "severity": "low",
+      "source_image_sha256": "b6ed97de45b7f317bdc9fa6ff739d281cf4095761b145e07450bc06d627d59e2",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "Se'I Sapi Sambal Matah ( R )",
+            "price": "20.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Se'I Sapi Lada Hitam (J)",
+            "price": "35.000"
+          },
+          {
+            "cnt": "2",
+            "nm": "Nasi Putih",
+            "price": "10.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Milk Shake Coklat",
+            "price": "16.000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "81.000",
+          "tax_price": "8.100"
+        },
+        "total": {
+          "changeprice": "0",
+          "creditcardprice": "89.100",
+          "total_price": "89.100"
+        }
+      }
+    },
+    {
+      "corruption": "gaussian_blur",
+      "document_id": "cord-v2-validation-00011",
+      "parameters": {
+        "kernel": 9,
+        "sigma": 2.0
+      },
+      "severity": "high",
+      "source_image_sha256": "b6ed97de45b7f317bdc9fa6ff739d281cf4095761b145e07450bc06d627d59e2",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "Se'I Sapi Sambal Matah ( R )",
+            "price": "20.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Se'I Sapi Lada Hitam (J)",
+            "price": "35.000"
+          },
+          {
+            "cnt": "2",
+            "nm": "Nasi Putih",
+            "price": "10.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Milk Shake Coklat",
+            "price": "16.000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "81.000",
+          "tax_price": "8.100"
+        },
+        "total": {
+          "changeprice": "0",
+          "creditcardprice": "89.100",
+          "total_price": "89.100"
+        }
+      }
+    },
+    {
+      "corruption": "rotation",
+      "document_id": "cord-v2-validation-00011",
+      "parameters": {
+        "degrees": 2.0
+      },
+      "severity": "low",
+      "source_image_sha256": "b6ed97de45b7f317bdc9fa6ff739d281cf4095761b145e07450bc06d627d59e2",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "Se'I Sapi Sambal Matah ( R )",
+            "price": "20.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Se'I Sapi Lada Hitam (J)",
+            "price": "35.000"
+          },
+          {
+            "cnt": "2",
+            "nm": "Nasi Putih",
+            "price": "10.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Milk Shake Coklat",
+            "price": "16.000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "81.000",
+          "tax_price": "8.100"
+        },
+        "total": {
+          "changeprice": "0",
+          "creditcardprice": "89.100",
+          "total_price": "89.100"
+        }
+      }
+    },
+    {
+      "corruption": "rotation",
+      "document_id": "cord-v2-validation-00011",
+      "parameters": {
+        "degrees": 5.0
+      },
+      "severity": "high",
+      "source_image_sha256": "b6ed97de45b7f317bdc9fa6ff739d281cf4095761b145e07450bc06d627d59e2",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "Se'I Sapi Sambal Matah ( R )",
+            "price": "20.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Se'I Sapi Lada Hitam (J)",
+            "price": "35.000"
+          },
+          {
+            "cnt": "2",
+            "nm": "Nasi Putih",
+            "price": "10.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Milk Shake Coklat",
+            "price": "16.000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "81.000",
+          "tax_price": "8.100"
+        },
+        "total": {
+          "changeprice": "0",
+          "creditcardprice": "89.100",
+          "total_price": "89.100"
+        }
+      }
+    },
+    {
+      "corruption": "downsampling",
+      "document_id": "cord-v2-validation-00011",
+      "parameters": {
+        "scale": 0.75
+      },
+      "severity": "low",
+      "source_image_sha256": "b6ed97de45b7f317bdc9fa6ff739d281cf4095761b145e07450bc06d627d59e2",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "Se'I Sapi Sambal Matah ( R )",
+            "price": "20.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Se'I Sapi Lada Hitam (J)",
+            "price": "35.000"
+          },
+          {
+            "cnt": "2",
+            "nm": "Nasi Putih",
+            "price": "10.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Milk Shake Coklat",
+            "price": "16.000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "81.000",
+          "tax_price": "8.100"
+        },
+        "total": {
+          "changeprice": "0",
+          "creditcardprice": "89.100",
+          "total_price": "89.100"
+        }
+      }
+    },
+    {
+      "corruption": "downsampling",
+      "document_id": "cord-v2-validation-00011",
+      "parameters": {
+        "scale": 0.5
+      },
+      "severity": "high",
+      "source_image_sha256": "b6ed97de45b7f317bdc9fa6ff739d281cf4095761b145e07450bc06d627d59e2",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "Se'I Sapi Sambal Matah ( R )",
+            "price": "20.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Se'I Sapi Lada Hitam (J)",
+            "price": "35.000"
+          },
+          {
+            "cnt": "2",
+            "nm": "Nasi Putih",
+            "price": "10.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Milk Shake Coklat",
+            "price": "16.000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "81.000",
+          "tax_price": "8.100"
+        },
+        "total": {
+          "changeprice": "0",
+          "creditcardprice": "89.100",
+          "total_price": "89.100"
+        }
+      }
+    },
+    {
+      "corruption": "jpeg",
+      "document_id": "cord-v2-validation-00011",
+      "parameters": {
+        "quality": 70
+      },
+      "severity": "low",
+      "source_image_sha256": "b6ed97de45b7f317bdc9fa6ff739d281cf4095761b145e07450bc06d627d59e2",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "Se'I Sapi Sambal Matah ( R )",
+            "price": "20.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Se'I Sapi Lada Hitam (J)",
+            "price": "35.000"
+          },
+          {
+            "cnt": "2",
+            "nm": "Nasi Putih",
+            "price": "10.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Milk Shake Coklat",
+            "price": "16.000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "81.000",
+          "tax_price": "8.100"
+        },
+        "total": {
+          "changeprice": "0",
+          "creditcardprice": "89.100",
+          "total_price": "89.100"
+        }
+      }
+    },
+    {
+      "corruption": "jpeg",
+      "document_id": "cord-v2-validation-00011",
+      "parameters": {
+        "quality": 40
+      },
+      "severity": "high",
+      "source_image_sha256": "b6ed97de45b7f317bdc9fa6ff739d281cf4095761b145e07450bc06d627d59e2",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "Se'I Sapi Sambal Matah ( R )",
+            "price": "20.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Se'I Sapi Lada Hitam (J)",
+            "price": "35.000"
+          },
+          {
+            "cnt": "2",
+            "nm": "Nasi Putih",
+            "price": "10.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Milk Shake Coklat",
+            "price": "16.000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "81.000",
+          "tax_price": "8.100"
+        },
+        "total": {
+          "changeprice": "0",
+          "creditcardprice": "89.100",
+          "total_price": "89.100"
+        }
+      }
+    },
+    {
+      "corruption": "contrast",
+      "document_id": "cord-v2-validation-00011",
+      "parameters": {
+        "factor": 0.75
+      },
+      "severity": "low",
+      "source_image_sha256": "b6ed97de45b7f317bdc9fa6ff739d281cf4095761b145e07450bc06d627d59e2",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "Se'I Sapi Sambal Matah ( R )",
+            "price": "20.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Se'I Sapi Lada Hitam (J)",
+            "price": "35.000"
+          },
+          {
+            "cnt": "2",
+            "nm": "Nasi Putih",
+            "price": "10.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Milk Shake Coklat",
+            "price": "16.000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "81.000",
+          "tax_price": "8.100"
+        },
+        "total": {
+          "changeprice": "0",
+          "creditcardprice": "89.100",
+          "total_price": "89.100"
+        }
+      }
+    },
+    {
+      "corruption": "contrast",
+      "document_id": "cord-v2-validation-00011",
+      "parameters": {
+        "factor": 0.5
+      },
+      "severity": "high",
+      "source_image_sha256": "b6ed97de45b7f317bdc9fa6ff739d281cf4095761b145e07450bc06d627d59e2",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "Se'I Sapi Sambal Matah ( R )",
+            "price": "20.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Se'I Sapi Lada Hitam (J)",
+            "price": "35.000"
+          },
+          {
+            "cnt": "2",
+            "nm": "Nasi Putih",
+            "price": "10.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Milk Shake Coklat",
+            "price": "16.000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "81.000",
+          "tax_price": "8.100"
+        },
+        "total": {
+          "changeprice": "0",
+          "creditcardprice": "89.100",
+          "total_price": "89.100"
+        }
+      }
+    },
+    {
+      "corruption": "occlusion",
+      "document_id": "cord-v2-validation-00011",
+      "parameters": {
+        "area_fraction": 0.05
+      },
+      "severity": "low",
+      "source_image_sha256": "b6ed97de45b7f317bdc9fa6ff739d281cf4095761b145e07450bc06d627d59e2",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "Se'I Sapi Sambal Matah ( R )",
+            "price": "20.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Se'I Sapi Lada Hitam (J)",
+            "price": "35.000"
+          },
+          {
+            "cnt": "2",
+            "nm": "Nasi Putih",
+            "price": "10.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Milk Shake Coklat",
+            "price": "16.000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "81.000",
+          "tax_price": "8.100"
+        },
+        "total": {
+          "changeprice": "0",
+          "creditcardprice": "89.100",
+          "total_price": "89.100"
+        }
+      }
+    },
+    {
+      "corruption": "occlusion",
+      "document_id": "cord-v2-validation-00011",
+      "parameters": {
+        "area_fraction": 0.12
+      },
+      "severity": "high",
+      "source_image_sha256": "b6ed97de45b7f317bdc9fa6ff739d281cf4095761b145e07450bc06d627d59e2",
+      "truth": {
+        "menu": [
+          {
+            "cnt": "1",
+            "nm": "Se'I Sapi Sambal Matah ( R )",
+            "price": "20.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Se'I Sapi Lada Hitam (J)",
+            "price": "35.000"
+          },
+          {
+            "cnt": "2",
+            "nm": "Nasi Putih",
+            "price": "10.000"
+          },
+          {
+            "cnt": "1",
+            "nm": "Milk Shake Coklat",
+            "price": "16.000"
+          }
+        ],
+        "sub_total": {
+          "subtotal_price": "81.000",
+          "tax_price": "8.100"
+        },
+        "total": {
+          "changeprice": "0",
+          "creditcardprice": "89.100",
+          "total_price": "89.100"
+        }
+      }
+    }
+  ],
+  "documents": [
+    "cord-v2-validation-00001",
+    "cord-v2-validation-00005",
+    "cord-v2-validation-00009",
+    "cord-v2-validation-00012",
+    "cord-v2-validation-00006",
+    "cord-v2-validation-00007",
+    "cord-v2-validation-00013",
+    "cord-v2-validation-00018",
+    "cord-v2-validation-00008",
+    "cord-v2-validation-00011"
+  ],
+  "experiment_id": "V3.1-E08",
+  "label": "DEVELOPMENT_ONLY_CONTROLLED_ROBUSTNESS",
+  "runtime_images": "Generated outside the repository; rerun the prepare command from authorized inputs.",
+  "seed": 3102026,
+  "selection": "deterministic stratification across protocol-frozen leaf-count bands",
+  "selection_frame": "first 20 frozen CORD validation documents, matching available PaddleOCR-VL development evidence"
+}

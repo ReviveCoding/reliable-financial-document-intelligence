@@ -1,0 +1,16 @@
+error_type,frequency,fraction,definition
+incorrect value,100,0.2801120448179272,Both truth and prediction are present but differ without a supported narrower normalization or substring classification.
+missing field,86,0.24089635854341737,A ground-truth leaf is absent from the prediction multiset.
+spurious field,76,0.21288515406162464,A predicted leaf has no matching ground-truth leaf at that path and multiplicity.
+numeric normalization,56,0.1568627450980392,A monetary/numeric value matches after deterministic punctuation normalization but not exact normalized text.
+partial string mismatch,23,0.06442577030812324,One normalized string contains the other but they are not exact.
+reconciliation contradiction,16,0.04481792717086835,Extracted monetary fields violate a deterministic subtotal/tax/total relationship.
+OCR corruption,0,0.0,An error demonstrably attributable to an OCR trace; unavailable for end-to-end Donut rows without a separate OCR trace.
+UNCLASSIFIED,0,0.0,A mismatch for which the frozen evidence does not support a narrower deterministic attribution.
+currency normalization,0,0.0,Currency representations differ semantically or canonically; no compatible CORD currency field is present.
+date normalization,0,0.0,Date representations differ semantically or canonically; no compatible CORD date field is present.
+duplicate item,0,0.0,An item is repeated beyond its ground-truth multiplicity; not separately attributable from pathless list leaves in this table.
+hierarchy / line-item alignment,0,0.0,Correct or near-correct values are assigned to the wrong repeated line-item structure; not safely attributable when row indices are intentionally ignored.
+schema failure,0,0.0,The generated output cannot be parsed into the expected schema.
+security/control intervention,0,0.0,A security boundary blocks or sanitizes untrusted instructions; reported separately in frozen V3 security evidence.
+serving/runtime failure,0,0.0,A request fails or does not return a usable response; none occurred in the controlled robustness runs study.

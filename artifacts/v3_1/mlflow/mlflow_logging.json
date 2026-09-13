@@ -1,0 +1,20 @@
+{
+  "artifact_api_listing": [
+    {
+      "is_dir": true,
+      "path": "artifacts"
+    },
+    {
+      "is_dir": true,
+      "path": "docs"
+    }
+  ],
+  "artifact_uri": "mlflow-artifacts:/2/ef704ce0e7dc4cb3b0626932676b4d4c/artifacts",
+  "experiment_id": "2",
+  "experiment_name": "rfdi-v3-1-slicing-analysis",
+  "metadata_postgresql_status": "FINISHED",
+  "run_id": "ef704ce0e7dc4cb3b0626932676b4d4c",
+  "run_name": "v3.1-frozen-analysis",
+  "status": "LOGGED",
+  "v3_runs_overwritten": false
+}

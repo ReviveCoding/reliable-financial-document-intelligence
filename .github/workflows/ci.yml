@@ -25,7 +25,7 @@ jobs:
           python-version: "3.10"
 
       - name: Compile Python sources
-        run: python -m compileall -q src scripts tests docs/generate_visualizations.py
+        run: python -m compileall -q src scripts tests docs/generate_visualizations.py docs/generate_v3_1_visualizations.py
 
       - name: Run deterministic unit tests
         env:
@@ -41,10 +41,14 @@ jobs:
       - name: Verify V3 evidence and immutable V2 lineage
         run: python scripts/v3/verify_evidence.py
 
+      - name: Verify V3.1 evidence and frozen scientific lineage
+        run: python scripts/v3_1/verify_evidence.py
+
       - name: Regenerate publication visualizations
         run: |
           python docs/generate_visualizations.py
-          git diff --exit-code -- docs/assets
+          python docs/generate_v3_1_visualizations.py
+          git diff --exit-code -- docs/assets artifacts/v3_1/statistics/summary.json
 
       - name: Check whitespace
         run: git diff --check HEAD^

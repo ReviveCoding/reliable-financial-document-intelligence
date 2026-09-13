@@ -1,0 +1,16 @@
+error_type,weighted_frequency
+missing field,457.0
+spurious field,442.0
+incorrect value,438.0
+numeric normalization,425.0
+reconciliation contradiction,160.0
+partial string mismatch,101.0
+OCR corruption,0
+UNCLASSIFIED,0
+currency normalization,0
+date normalization,0
+duplicate item,0
+hierarchy / line-item alignment,0
+schema failure,0
+security/control intervention,0
+serving/runtime failure,0

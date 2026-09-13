@@ -1,0 +1,5 @@
+# Calibration and selective risk
+
+Donut exposes genuine sequence probability. On the untouched 100-document CORD test set, raw ECE is 0.6330 and Brier score 0.6192. Development-fitted isotonic calibration improves these to ECE 0.1242 and Brier 0.1719; temperature scaling reaches ECE 0.3135, with the selected temperature at the predeclared search boundary (20.0), indicating severe overconfidence rather than a settled parametric calibration fit. Critical-total calibration has insufficient outcome variation and is explicitly not interpreted.
+
+Calibration improves probability quality but does not improve ranking enough to beat raw-confidence selective routing. At 50% review, raw confidence leaves 18.0% critical false accepts among auto-accepted documents and captures 76.9% of critical-error documents. No studied policy achieves a genuinely low residual critical risk, so the evidence does not support unattended high-coverage automation. Under the frozen illustrative cost model, the lowest measured point is `raw_confidence` at 50.0% review, not an institution-specific recommendation.

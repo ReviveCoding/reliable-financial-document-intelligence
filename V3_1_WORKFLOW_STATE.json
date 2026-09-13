@@ -1,0 +1,26 @@
+{
+  "analysis_decision": "V3_1_ANALYSIS_SUCCESS",
+  "baseline_commit": "72e4f68d1d24f4ef71d614e48da1a4c609cb46f5",
+  "branch": "analysis-slicing-v3.1",
+  "locked_model_inference_rerun": false,
+  "model_weights_changed": false,
+  "phases": {
+    "business_policy": "COMPLETE",
+    "calibration": "COMPLETE",
+    "canonical_tables": "COMPLETE",
+    "development_robustness": "COMPLETE",
+    "error_taxonomy": "COMPLETE",
+    "external_datasets": "PARTIAL_OPTIONAL",
+    "failure_discovery": "COMPLETE",
+    "mix_shift": "COMPLETE",
+    "mlflow": "COMPLETE",
+    "primary_slicing": "COMPLETE",
+    "reports": "COMPLETE",
+    "selective_risk": "COMPLETE",
+    "simulated_drift": "COMPLETE",
+    "statistical_uncertainty": "COMPLETE",
+    "visualizations": "COMPLETE"
+  },
+  "protocol_sha256": "bfd6351a9466034d58a09666ce6f8ff4f0e7c297553c2306075637e1664b8dcb",
+  "version": "3.1.0"
+}
