@@ -41,15 +41,15 @@
     "prohibited_slices": ["CORD vendor", "CORD beneficiary"]
   },
   "field_criticality": {
-    "critical_monetary": ["total.total_price", "total.subtotal_price", "total.tax_price", "menu.price"],
+    "critical_monetary": ["total.total_price", "sub_total.subtotal_price", "sub_total.tax_price", "sub_total.discount_price", "menu.price"],
     "medium_impact": ["menu.cnt", "total.cashprice", "total.changeprice", "total.creditcardprice", "total.emoneyprice"],
     "low_impact_descriptive": ["menu.nm", "total.menuqty_cnt"],
     "unmapped_policy": "medium_impact"
   },
   "field_families": {
     "total": ["total.total_price"],
-    "subtotal": ["total.subtotal_price"],
-    "tax": ["total.tax_price"],
+    "subtotal": ["sub_total.subtotal_price"],
+    "tax": ["sub_total.tax_price"],
     "item_price": ["menu.price"],
     "item_count": ["menu.cnt"],
     "item_name": ["menu.nm"],
