@@ -104,12 +104,14 @@
       "status": "COMPLETE"
     },
     "V3-P14": {
-      "evidence": [],
+      "evidence": [
+        "commit:6faa9e8"
+      ],
       "name": "Local checkpoint",
-      "status": "READY_FOR_COMMIT"
+      "status": "COMPLETE"
     }
   },
   "schema_version": 1,
-  "updated_at_utc": "2026-09-13T02:07:32.175973+00:00",
+  "updated_at_utc": "2026-09-13T02:09:24.956415+00:00",
   "v2_immutable": true
 }

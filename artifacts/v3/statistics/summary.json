@@ -4,7 +4,7 @@
   "docker_fault_cases_passed": 3,
   "experiment_id": "V3-E10",
   "extension_decision": "V3_EXTENSION_SUCCESS",
-  "generated_at_utc": "2026-09-13T02:07:32.175973+00:00",
+  "generated_at_utc": "2026-09-13T02:09:24.956415+00:00",
   "invalid_deduplicated_gpu_result_retained": true,
   "limitations": [
     "Redis persistence/restart was verified directly, but the preserved application job transport is SQLite polling.",

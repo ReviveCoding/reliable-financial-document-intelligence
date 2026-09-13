@@ -101,7 +101,7 @@ def main() -> None:
         "V3-P11": ("Extension gates", "COMPLETE", ["configs/v3/extension_gates.json"]),
         "V3-P12": ("V2 immutable verification", "COMPLETE", ["artifacts/v3/verification/v2_immutable.json"]),
         "V3-P13": ("V1/V2/V3 validation", "COMPLETE" if final_validation_path.exists() else "RUNNING", [str(final_validation_path.relative_to(ROOT))] if final_validation_path.exists() else []),
-        "V3-P14": ("Local checkpoint", "READY_FOR_COMMIT", []),
+        "V3-P14": ("Local checkpoint", "COMPLETE", ["commit:6faa9e8"]),
     }
     state = {
         "schema_version": 1,

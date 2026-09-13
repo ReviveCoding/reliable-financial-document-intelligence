@@ -18,7 +18,7 @@
 {"id": "V3-018", "kind": "evidence", "path": "artifacts/v3/serving/client_dependency_failure.json", "sha256": "eec0df0a8520507d9e1fb9935ea7165a5861b64603dfc496ffe46570f6b81f22", "status": "evidence"}
 {"id": "V3-019", "kind": "evidence", "path": "artifacts/v3/serving/docker_vllm_validation.json", "sha256": "6a2be4fb62b98a94cf9bf306db309cd57bc6f6d128d15e814258f059098d2728", "status": "evidence"}
 {"id": "V3-020", "kind": "evidence", "path": "artifacts/v3/serving/paddleocr_vllm_comparison.json", "sha256": "8d4f17e8e78a4ac36e637cdf8115fd37c33cd3eda57184ffd3dda3c510e0b9a7", "status": "evidence"}
-{"id": "V3-021", "kind": "evidence", "path": "artifacts/v3/statistics/summary.json", "sha256": "4400b6edffb47047442f72a1eecd7bcc523d5c72848a83bc106b0c744907f91a", "status": "evidence"}
+{"id": "V3-021", "kind": "evidence", "path": "artifacts/v3/statistics/summary.json", "sha256": "e822b3fac9b9002323c6491d7f9044cc7e0d82e64a4103a81861778ed81d11fe", "status": "evidence"}
 {"id": "V3-022", "kind": "evidence", "path": "artifacts/v3/verification/final_validation.json", "sha256": "4e2863b46a236e6c3bea2fb46c154f5660a88cc2ad41a45da627bbc5a066bb3f", "status": "evidence"}
 {"id": "V3-023", "kind": "evidence", "path": "artifacts/v3/verification/v2_immutable.json", "sha256": "b9a917cd23b212c0ca67f5969e92bc65fc3682c95777727b02b6c0703c0b4848", "status": "evidence"}
 {"id": "V3-024", "kind": "evidence", "path": "artifacts/v3/verification/v3_verifier.json", "sha256": "1481e4854faea10e98222d86a1b188a79aabe3ddcbe43cbd77d1bb284267309e", "status": "evidence"}
