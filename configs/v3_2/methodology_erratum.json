@@ -1,0 +1,53 @@
+{
+  "erratum_version": "3.2.1-methodology",
+  "discovery_date": "2026-09-13",
+  "affected_implementation": "scripts/v3_2/line_item_evaluation.py and dependent critical-risk construction, replay, tables, figures, reports, governance, and README",
+  "pre_correction_commit": "10783326e4cb3e56b205df989e515f75ee3af997",
+  "original_protocol_commit": "239824ff42861fec79594fa336d605169078e021",
+  "original_development_freeze_commit": "3532686aaccc5bc105c9f71455d1f22efefea260",
+  "correction_required_because": "The implementation conflated historical path-occurrence evaluation, positional row evaluation, row matchability, field accuracy, and benign row permutation. This inflated row-failure and critical monetary-risk labels.",
+  "defects": {
+    "A_E0_IMPLEMENTATION_MISMATCH": "The protocol intended historical v3.1 path/occurrence comparison with row identity discarded, but E0 was computed from strict positional row pairs and E1 was set equal to E0.",
+    "B_BENIGN_PERMUTATION_CONFLATED": "assignment_changed = any(g != p for g,p in pairs) and alignment_error = assignment_changed or optimal_weight > strict_weight incorrectly marked harmless permutations of complete equivalent rows as failures.",
+    "C_CRITICAL_TARGET_INFLATION": "The critical target added a monetary penalty merely because the optimal row assignment differed from positional assignment.",
+    "D_E2_NAMING": "E2_line_item_f1 measured accepted matched-row counts and did not by itself describe field correctness. Row matchability and matched-field accuracy must be reported separately."
+  },
+  "corrected_definitions": {
+    "E0": "Discard menu row identity and list indices; group normalized values by semantic path and compare repeated values in historical occurrence order.",
+    "E1": "Pair GT row i with predicted row i and compute field precision, recall, and F1 within positional pairs.",
+    "E2_row_matchability": "Use maximum-weight bipartite matching and report matched, unmatched GT, and spurious predicted rows independently from field accuracy.",
+    "E2_matched_field_accuracy": "Compute field precision, recall, and micro F1 inside accepted E2 row correspondences.",
+    "row_permutation_only": "Assignment differs from position, every accepted E2 row is exact, and no GT or predicted row is unmatched; it is neither extraction error nor critical monetary error.",
+    "row_semantic_association_error": "Assignment differs, the case is not permutation-only, and matched structure retains a field/association inconsistency; diagnostic only and adds no standalone monetary penalty.",
+    "critical_monetary_loss": "Count only missing, spurious, or incorrect comparable monetary fields in document fields, matched rows, unmatched GT rows, or unmatched predicted rows. Row index or assignment change alone contributes zero."
+  },
+  "evidence_to_regenerate": [
+    "line-item aggregates and document metrics",
+    "development and retrospective critical labels",
+    "label-transition audit",
+    "risk candidates and frozen-algorithm selection replay",
+    "threshold replay",
+    "previously opened certification replay",
+    "retrospective CORD risk tables",
+    "slices, robustness sensitivity, figures, reports, governance, and README"
+  ],
+  "unaffected_evidence": [
+    "V1, V2, V3, and v3.1 scientific evidence and decisions",
+    "extractor weights and frozen predictions",
+    "production-safe input feature values except dependent corrected labels",
+    "v3.1 GPU corruption inference",
+    "Docker runtime, MLflow persistence, security, and fault evidence"
+  ],
+  "prior_partition_observation": {
+    "cord_test_already_observed": true,
+    "development_certification_partition_already_observed": true,
+    "fresh_confirmation_claim_prohibited": true,
+    "promotion_from_corrected_replay_alone_prohibited": true
+  },
+  "correction_replay_designations": {
+    "fit": "DEVELOPMENT_CORRECTION_REPLAY",
+    "threshold_selection": "DEVELOPMENT_THRESHOLD_REPLAY",
+    "certification": "POST_AUDIT_REUSED_CERTIFICATION_PARTITION",
+    "cord_test": "RETROSPECTIVE_LOCKED_BENCHMARK"
+  }
+}

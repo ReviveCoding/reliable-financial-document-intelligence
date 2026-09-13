@@ -1,0 +1,32 @@
+{
+  "pre_correction_commit": "10783326e4cb3e56b205df989e515f75ee3af997",
+  "original_protocol_commit": "239824ff42861fec79594fa336d605169078e021",
+  "reported_metrics": {
+    "E0_historical_flat_f1": 0.7886895205184681,
+    "E2_line_item_f1": 0.95338455988456,
+    "row_exact_match_rate": 0.6022575757575758,
+    "critical_error_prevalence": 0.41,
+    "R0_AURC": 0.23558816566154708,
+    "R4_AURC": 0.33142580140460515
+  },
+  "review_budget_findings": {
+    "R0_at_50_percent_review": {"critical_error_capture": 0.7560975609756098, "critical_false_accept_rate": 0.2},
+    "R0_at_80_percent_review": {"critical_error_capture": 0.926829268292683, "critical_false_accept_rate": 0.15},
+    "R4_at_50_percent_review": {"critical_error_capture": 0.7073170731707317, "critical_false_accept_rate": 0.24},
+    "R4_at_80_percent_review": {"critical_error_capture": 0.926829268292683, "critical_false_accept_rate": 0.15}
+  },
+  "certification_findings": {
+    "0.05": "INSUFFICIENT_CERTIFICATION_SUPPORT",
+    "0.10": "UNCERTIFIED",
+    "0.20": "UNCERTIFIED"
+  },
+  "original_final_decision": "V3_2_RISK_MODEL_NO_PROMOTION",
+  "artifact_sha256": {
+    "artifacts/v3_2/line_items/retrospective_test/aggregate_metrics.json": "03be114e08a33e31b1867c0babf72657403bb6d29e1a748b4afcea7a657efce7",
+    "artifacts/v3_2/data/retrospective_risk_feature_table.csv": "5aa9a43543405761bc678fc167c5db846b51dff01a546260f2a6370377ffc563",
+    "artifacts/v3_2/risk_control/retrospective_candidate_metrics.csv": "41764438c1a848f529861e2aecfd1af371047b7c7fab9c493cabe0a390ff20b9",
+    "artifacts/v3_2/risk_control/retrospective_review_budgets.csv": "06c323aae6e8ff04cd2c475bfc022a9bbbe50f7dc086d8b63e0784be2807882c",
+    "artifacts/v3_2/risk_control/certification_results.csv": "0f4ffea24185c28889a71baa58c8ee65d000efbfd710bb640d8ee767fa3bd21c",
+    "artifacts/v3_2/risk_model/development_selection/frozen_selection.json": "88c41e6f34a6be8308e15aa283ed2473c486945961a9c0e3eb0611207a520cb5"
+  }
+}
