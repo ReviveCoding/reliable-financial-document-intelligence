@@ -1,22 +1,26 @@
 # R-FDI — Reliable Financial Document Intelligence
 
-**Reliability-first OCR/VLM extraction with calibrated automation, reconciliation, audit provenance, and production-hardening evidence.**
+**Reliability-first financial document intelligence with OCR/VLM extraction, row-aware line-item recognition, selective prediction, human review, and reproducible model-risk evidence.**
 
 [![CI](https://github.com/ReviveCoding/reliable-financial-document-intelligence/actions/workflows/ci.yml/badge.svg)](https://github.com/ReviveCoding/reliable-financial-document-intelligence/actions/workflows/ci.yml)
 [![Release](https://img.shields.io/github/v/release/ReviveCoding/reliable-financial-document-intelligence?display_name=tag)](https://github.com/ReviveCoding/reliable-financial-document-intelligence/releases/latest)
 
-R-FDI is an evidence-governed research system for extracting and reconciling financial-document data while deciding when automation is safe. It combines OCR, layout models, vision-language models, normalization, financial consistency checks, calibrated routing, human review, fault studies, and reproducible evidence. This is a production-style research simulation using public and synthetic data—not a live bank deployment or a regulatory-compliance claim.
+R-FDI is a multimodal document AI research system for extracting and reconciling financial-document data while measuring when automation is unsafe. Unlike a normal OCR demo, it combines VLM and layout-aware extraction with row-aware evaluation, calibration, selective risk controls, human review, immutable evidence, MLflow, Docker, and single-GPU serving. Its strongest locked extraction result is 0.8372 CORD leaf F1 with 98.95% total-field exactness; its corrected v3.2 safety conclusion is `V3_2_RISK_MODEL_NO_PROMOTION`. This is a production-style research simulation using public and synthetic data—not a live bank deployment or a regulatory-compliance claim.
 
 ## Key measured results
 
-| Study | Split / scope | Measured result | Evidence |
-|---|---|---:|---|
-| Donut on CORD | Locked test, 95 eligible receipts | Leaf F1 **0.8372**; total exact **0.9895** | [V2 release decision](artifacts/v2/release/decision.json) |
-| PP-OCRv5 + rules on CORD | Same locked test | Total exact **0.4632** | [V2 release decision](artifacts/v2/release/decision.json) |
-| Donut vs PP-OCRv5 + rules | Paired locked test | **+0.5263** total-exact improvement; bootstrap 95% CI **[+0.4316, +0.6211]** | [V2 release decision](artifacts/v2/release/decision.json) |
-| LayoutLMv3 on FUNSD | Locked test, 50 documents | Macro-F1 **0.7009** | [V2 release decision](artifacts/v2/release/decision.json) |
-| PaddleOCR-VL native | CORD development, 20 documents | Mean latency **20.403603 s**; content-presence recall **0.891889** | [Paired V3 result](artifacts/v3/serving/paddleocr_vllm_comparison.json) |
-| PaddleOCR-VL Docker/vLLM | Same 20 development documents | Mean latency **10.726820 s**; recall **0.917128**; **1.902111×** mean speedup | [Paired V3 result](artifacts/v3/serving/paddleocr_vllm_comparison.json) |
+| Capability | Dataset / evaluation | Result |
+|---|---|---:|
+| Donut leaf F1 | CORD locked test | **0.8372** |
+| Donut total-field exact | CORD locked test | **98.95%** |
+| Improvement vs PP-OCRv5 + rules | CORD paired locked test | **+52.63 pp** (95% CI **[+43.16, +62.11]**) |
+| LayoutLMv3 macro-F1 | FUNSD locked test | **0.7009** |
+| PaddleOCR-VL serving | CORD development comparison | **1.90× faster** |
+| E2 matched-field micro-F1 | CORD retrospective row-aware evaluation | **0.8585** |
+| E2 matched-row F1 (row matchability) | CORD retrospective row-aware evaluation | **0.9534** |
+| E2 row exact | CORD retrospective row-aware evaluation | **60.23%** |
+| Raw-confidence risk AUROC | CORD retrospective risk evaluation | **0.8189** |
+| V3.2 release decision | Corrected risk-control evaluation | **NO PROMOTION** |
 
 The PaddleOCR-VL recall measure is canonical leaf-value content presence, not official structured CORD F1. Development results are labeled and were not used as locked-final evidence.
 
@@ -118,6 +122,10 @@ partition is explicitly non-confirmatory and promotion-ineligible. The decision 
 
 ![V3.2 row-aware evaluation](docs/assets/v3_2/historical_vs_row_aware.svg)
 
+![Matched-row matchability versus matched-field accuracy](docs/assets/v3_2/matched_row_vs_field_accuracy.svg)
+
+![Raw-confidence and learned-risk-model AURC comparison](docs/assets/v3_2/risk_model_aurc_comparison.svg)
+
 ![V3.2 risk coverage](docs/assets/v3_2/risk_coverage_curve.svg)
 
 See the [v3.2 final report](reports/v3_2/FINAL_REPORT.md) and
@@ -149,10 +157,6 @@ none of the studied policies supports low-risk unattended automation. In the
 10-document development robustness cohort, Donut's largest critical-content
 loss is high occlusion (**-0.2200**), followed by high Gaussian blur
 (**-0.2000**). These robustness findings are descriptive, not locked-final.
-
-![V3.1 risk-coverage curve](docs/assets/v3_1/risk_coverage_curve.svg)
-
-![V3.1 controlled robustness degradation](docs/assets/v3_1/robustness_degradation_curves.svg)
 
 See the [full v3.1 analysis report](reports/v3_1/FINAL_ANALYSIS_REPORT.md) and
 [executive findings](reports/v3_1/EXECUTIVE_FINDINGS.md).

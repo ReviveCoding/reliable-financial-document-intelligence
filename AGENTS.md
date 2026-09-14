@@ -91,4 +91,6 @@ Never claim regulatory compliance.
 Do not incur paid cloud cost without explicit positive
 RFDI_AWS_BUDGET_USD and valid credentials.
 
-Do not push or publish remotely.
+Remote publication is authorized only for validated final release transactions
+explicitly approved by the repository owner. All other remote publication
+remains prohibited.

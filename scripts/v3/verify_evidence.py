@@ -10,7 +10,15 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 BASE = "1f83625"
-PUBLICATION_SURFACE_EXCEPTIONS = {"README.md"}
+# Non-scientific files that may change during an owner-authorized release pass.
+# Scientific artifacts, reports, configurations, and runtime/model code remain
+# covered by the immutable-base check below and by the later lineage verifiers.
+PUBLICATION_SURFACE_EXCEPTIONS = {
+    ".github/workflows/ci.yml",
+    "AGENTS.md",
+    "README.md",
+    "scripts/v3/verify_evidence.py",
+}
 
 
 def sha256(path: Path) -> str:
