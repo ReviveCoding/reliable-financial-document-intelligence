@@ -1,96 +1,24 @@
-# R-FDI CODEX OPERATING POLICY
+# Development Notes
 
-Authorized workspace:
+R-FDI contains several completed, separately evaluated research releases. Keep their data, model selections, evaluation splits, and evidence records distinct.
 
-Windows:
-C:\Users\bjw-0\Downloads\R-FDI
+## Workspace and data
 
-WSL:
-/mnt/c/Users/bjw-0/Downloads/R-FDI
+- Confirm the repository root with git rev-parse --show-toplevel and check for .rfdi-workspace-root before modifying files.
+- Do not write to other repositories or put datasets, credentials, model weights, virtual environments, or caches under version control.
+- Do not run paid cloud services without the repository owner's authorization and a configured budget.
+- GPU-dependent experiments require a verified CUDA runtime. Record hardware, model revision, batch size, precision, and measured performance; do not relabel CPU runs as GPU results.
 
-Before the first mutation and before every major mutating phase:
+## Reproducibility
 
-1. run `pwd`
-2. run `git rev-parse --show-toplevel`
-3. verify `.rfdi-workspace-root`
-4. confirm the Git root is exactly:
-   `/mnt/c/Users/bjw-0/Downloads/R-FDI`
+- Treat frozen final evaluations and published evidence manifests as immutable.
+- Preserve unsuccessful runs and invalidated comparisons. Do not silently replace failed measurements.
+- Keep raw, normalized, and reviewed document values separate; verify monetary calculations with Decimal.
+- Route uncertain actions through deterministic validation and review controls.
+- Maintain the workflow state, experiment registries, evidence manifests, blockers, and decision records required by the relevant version.
 
-If any check disagrees, stop mutations immediately.
+## Validation
 
-Never modify another repository.
+Before proposing changes, run the applicable unit tests and version-specific evidence verifiers listed in README.md. Describe the effect of any source modification on reproducibility and existing results.
 
-## Durable execution
-
-Execute the user's R-FDI master prompt end-to-end.
-
-Do not stop after planning or scaffolding.
-
-Maintain:
-
-- WORKFLOW_STATE.json
-- EXPERIMENT_REGISTRY.csv
-- EVIDENCE_MANIFEST.jsonl
-- BLOCKERS.md
-- DECISIONS.md
-
-A blocker in one optional component must not stop unrelated work.
-
-## GPU-first
-
-Use CUDA for every supported deep-learning, Transformer, VLM, embedding,
-training, fine-tuning, and deep inference workload.
-
-Never silently substitute a long CPU run after CUDA failure.
-
-CPU may run concurrently for:
-
-- preprocessing
-- PDF rendering
-- hashing
-- synthetic generation
-- statistics
-- plotting
-- orchestration
-
-Prefer batching and vectorized GPU execution.
-
-Independent GPU jobs may run concurrently only after measured pilot tests prove:
-
-- combined peak VRAM plus configured headroom fits;
-- aggregate throughput improves;
-- temperatures remain stable;
-- CUDA remains stable.
-
-Maximum independent GPU jobs is 2, not a target.
-
-Never claim multi-GPU execution unless multiple physical GPUs were actually used.
-
-Honor:
-
-- RFDI_RUNTIME_ROOT
-- RFDI_DATA_ROOT
-- RFDI_CHECKPOINT_ROOT
-- RFDI_GPU_REQUIRED
-- RFDI_GPU_PARALLEL_MODE
-- RFDI_GPU_MAX_CONCURRENT_JOBS
-- RFDI_GPU_VRAM_HEADROOM_PCT
-- RFDI_CPU_WORKERS
-
-## Research integrity
-
-Never fabricate metrics or evidence.
-Never hide negative results.
-Never tune on locked final data.
-Never remove stronger baselines.
-Never bypass dataset authorization.
-Never expose credentials.
-Never claim real-bank production deployment.
-Never claim regulatory compliance.
-
-Do not incur paid cloud cost without explicit positive
-RFDI_AWS_BUDGET_USD and valid credentials.
-
-Remote publication is authorized only for validated final release transactions
-explicitly approved by the repository owner. All other remote publication
-remains prohibited.
+This repository is a local research and engineering prototype, not a financial-production system or compliance certification.
