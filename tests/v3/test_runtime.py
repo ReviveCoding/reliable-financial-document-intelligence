@@ -7,7 +7,6 @@ from pathlib import Path
 
 from rfdi_v3.runtime import RuntimeStore, Worker
 
-
 TEXT = b"Invoice: INV-100\nSubtotal: 10.00\nTax: 2.00\nTotal: 12.00\nCurrency: USD\n"
 
 
@@ -33,22 +32,55 @@ class RuntimeTests(unittest.TestCase):
         self.tmp.cleanup()
 
     def test_idempotency_content_and_key(self) -> None:
-        first, created = self.store.ingest(content=TEXT, idempotency_key="same", media_type="text/plain", route="cheap", fault_once=None)
-        second, created_again = self.store.ingest(content=TEXT, idempotency_key="same", media_type="text/plain", route="cheap", fault_once=None)
-        third, content_created = self.store.ingest(content=TEXT, idempotency_key="different", media_type="text/plain", route="cheap", fault_once=None)
-        self.assertTrue(created); self.assertFalse(created_again); self.assertFalse(content_created)
-        self.assertEqual(first, second); self.assertEqual(first, third)
+        first, created = self.store.ingest(
+            content=TEXT,
+            idempotency_key="same",
+            media_type="text/plain",
+            route="cheap",
+            fault_once=None,
+        )
+        second, created_again = self.store.ingest(
+            content=TEXT,
+            idempotency_key="same",
+            media_type="text/plain",
+            route="cheap",
+            fault_once=None,
+        )
+        third, content_created = self.store.ingest(
+            content=TEXT,
+            idempotency_key="different",
+            media_type="text/plain",
+            route="cheap",
+            fault_once=None,
+        )
+        self.assertTrue(created)
+        self.assertFalse(created_again)
+        self.assertFalse(content_created)
+        self.assertEqual(first, second)
+        self.assertEqual(first, third)
         wait_result(self.store, first)
         self.assertEqual(self.store.metrics()["finalization_commits"], 1)
 
     def test_crash_after_extract_retries_exactly_once(self) -> None:
-        document_id, _ = self.store.ingest(content=TEXT, idempotency_key="crash", media_type="text/plain", route="cheap", fault_once="crash_after_extraction")
+        document_id, _ = self.store.ingest(
+            content=TEXT,
+            idempotency_key="crash",
+            media_type="text/plain",
+            route="cheap",
+            fault_once="crash_after_extraction",
+        )
         result = wait_result(self.store, document_id)
         self.assertEqual(result["decision"], "AUTO_ACCEPTED")
         self.assertEqual(self.store.metrics()["finalization_commits"], 1)
 
     def test_review_and_replay_do_not_duplicate_finalization(self) -> None:
-        document_id, _ = self.store.ingest(content=TEXT, idempotency_key="review", media_type="text/plain", route="cheap", fault_once=None)
+        document_id, _ = self.store.ingest(
+            content=TEXT,
+            idempotency_key="review",
+            media_type="text/plain",
+            route="cheap",
+            fault_once=None,
+        )
         wait_result(self.store, document_id)
         self.store.review(document_id, "EDIT", {"total": "12.00"}, "verified", "test-reviewer")
         self.store.replay(document_id)

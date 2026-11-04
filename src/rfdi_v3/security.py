@@ -1,9 +1,9 @@
 """V3 document-boundary controls; detection complements capability isolation."""
+
 from __future__ import annotations
 
 import re
 import unicodedata
-
 
 PATTERNS = {
     "instruction_override": r"ignore\s+(?:all\s+)?(?:previous|prior|extraction)",
@@ -19,7 +19,9 @@ PATTERNS = {
 
 def normalize_for_detection(text: str) -> str:
     normalized = unicodedata.normalize("NFKC", text).casefold()
-    normalized = "".join(ch for ch in normalized if ch in "\n\t" or unicodedata.category(ch)[0] != "C")
+    normalized = "".join(
+        ch for ch in normalized if ch in "\n\t" or unicodedata.category(ch)[0] != "C"
+    )
     return re.sub(r"\s+", " ", normalized)
 
 

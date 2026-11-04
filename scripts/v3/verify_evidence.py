@@ -7,7 +7,6 @@ import json
 import subprocess
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[2]
 BASE = "1f83625"
 # Non-scientific files that may change during an owner-authorized release pass.
@@ -38,7 +37,9 @@ def verify_base_tree() -> tuple[int, list[str]]:
         path = ROOT / name
         if not path.is_file():
             raise AssertionError(f"base path missing: {name}")
-        actual = subprocess.check_output(["git", "hash-object", "--", name], cwd=ROOT, text=True).strip()
+        actual = subprocess.check_output(
+            ["git", "hash-object", "--", name], cwd=ROOT, text=True
+        ).strip()
         if actual != expected:
             raise AssertionError(f"base path modified: {name}")
         checked += 1
@@ -52,7 +53,9 @@ def main() -> None:
     state = json.loads((ROOT / "V3_WORKFLOW_STATE.json").read_text())
     gates = json.loads((ROOT / "configs/v3/extension_gates.json").read_text())
     summary = json.loads((ROOT / "artifacts/v3/statistics/summary.json").read_text())
-    manifest = [json.loads(line) for line in (ROOT / "V3_EVIDENCE_MANIFEST.jsonl").read_text().splitlines()]
+    manifest = [
+        json.loads(line) for line in (ROOT / "V3_EVIDENCE_MANIFEST.jsonl").read_text().splitlines()
+    ]
     if not manifest:
         raise AssertionError("empty V3 evidence manifest")
     for row in manifest:
@@ -65,11 +68,27 @@ def main() -> None:
     if len(invalid) != 1 or "invalid_deduplicated" not in invalid[0]["metrics_artifact"]:
         raise AssertionError("invalid deduplicated GPU evidence is not explicit")
     requirements = summary["requirements"]
-    independently_expected = "V3_EXTENSION_SUCCESS" if all(requirements.values()) else (
-        "V3_EXTENSION_PARTIAL" if all(requirements[key] for key in ("api_load", "fault_recovery", "expanded_security", "reviewer_application"))
-        else "V3_EXTENSION_BLOCKED"
+    independently_expected = (
+        "V3_EXTENSION_SUCCESS"
+        if all(requirements.values())
+        else (
+            "V3_EXTENSION_PARTIAL"
+            if all(
+                requirements[key]
+                for key in (
+                    "api_load",
+                    "fault_recovery",
+                    "expanded_security",
+                    "reviewer_application",
+                )
+            )
+            else "V3_EXTENSION_BLOCKED"
+        )
     )
-    if state["extension_decision"] != independently_expected or summary["extension_decision"] != independently_expected:
+    if (
+        state["extension_decision"] != independently_expected
+        or summary["extension_decision"] != independently_expected
+    ):
         raise AssertionError("extension decision does not follow frozen rule")
     if gates["decision_rule"].get(independently_expected) is None:
         raise AssertionError("extension decision absent from frozen gates")
