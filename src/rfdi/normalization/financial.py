@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import re
 from datetime import date, datetime
-from decimal import Decimal, InvalidOperation, ROUND_HALF_EVEN
+from decimal import ROUND_HALF_EVEN, Decimal, InvalidOperation
 
 
 def normalize_money(raw: str) -> Decimal:
@@ -27,8 +27,17 @@ def normalize_money(raw: str) -> Decimal:
 
 
 def normalize_currency(raw: str) -> str:
-    mapping = {"$": "USD", "US$": "USD", "USD": "USD", "€": "EUR", "EUR": "EUR",
-               "£": "GBP", "GBP": "GBP", "¥": "JPY", "JPY": "JPY"}
+    mapping = {
+        "$": "USD",
+        "US$": "USD",
+        "USD": "USD",
+        "€": "EUR",
+        "EUR": "EUR",
+        "£": "GBP",
+        "GBP": "GBP",
+        "¥": "JPY",
+        "JPY": "JPY",
+    }
     key = raw.strip().upper() if raw.strip().isalpha() else raw.strip()
     if key not in mapping:
         raise ValueError(f"unknown or ambiguous currency: {raw!r}")

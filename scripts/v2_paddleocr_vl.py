@@ -13,7 +13,6 @@ import paddleocr
 from paddleocr import PaddleOCRVL
 from v2_guard import assert_input_allowed
 
-
 MODEL_NAME = "PaddleOCR-VL-1.6"
 OFFICIAL_HF_REVISION = "c5630abae1d940eafe0697512a0325494b02ab42"
 
@@ -131,7 +130,16 @@ def main() -> None:
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
-    print(json.dumps({key: value for key, value in result.items() if key not in {"predictions", "latency_seconds"}}, sort_keys=True))
+    print(
+        json.dumps(
+            {
+                key: value
+                for key, value in result.items()
+                if key not in {"predictions", "latency_seconds"}
+            },
+            sort_keys=True,
+        )
+    )
 
 
 if __name__ == "__main__":

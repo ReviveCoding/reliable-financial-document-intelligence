@@ -4,7 +4,6 @@ import tempfile
 import unittest
 from pathlib import Path
 
-
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 from v2_guard import assert_input_allowed  # noqa: E402
 
@@ -24,7 +23,11 @@ class V2HoldoutGuardTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
             state = self.state(root, "V2_DEVELOPMENT")
-            for candidate in (root / "test.jsonl", root / "final.jsonl", root / "test" / "data.jsonl"):
+            for candidate in (
+                root / "test.jsonl",
+                root / "final.jsonl",
+                root / "test" / "data.jsonl",
+            ):
                 with self.assertRaises(RuntimeError):
                     assert_input_allowed(candidate, state)
 

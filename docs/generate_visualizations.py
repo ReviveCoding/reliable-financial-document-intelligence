@@ -4,7 +4,6 @@ import json
 from html import escape
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / "docs" / "assets"
 
@@ -86,12 +85,12 @@ def gate_chart() -> str:
             f'<text class="value" x="790" y="{y}" text-anchor="end">{"PASS" if passed else "OPEN"}</text>'
         )
     passed_count = sum(bool(value) for value in gates.values())
-    body = f'''
+    body = f"""
   <rect class="panel" x="24" y="24" width="852" height="414" rx="12"/>
   <text class="title" x="52" y="68">V3 frozen extension requirements</text>
   <text class="note" x="52" y="94">{passed_count}/{len(gates)} passed · decision: {escape(evidence["extension_decision"])}</text>
-  {''.join(rows)}
-  <text class="note" x="52" y="418">Source: artifacts/v3/statistics/summary.json</text>'''
+  {"".join(rows)}
+  <text class="note" x="52" y="418">Source: artifacts/v3/statistics/summary.json</text>"""
     return svg_document(900, 462, body, "V3 extension requirement status")
 
 

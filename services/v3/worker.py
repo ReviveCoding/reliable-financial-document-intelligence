@@ -7,7 +7,6 @@ from pathlib import Path
 
 from rfdi_v3.runtime import RuntimeStore, Worker
 
-
 root = Path(os.environ.get("RFDI_V3_SERVICE_ROOT", "/runtime"))
 worker = Worker(RuntimeStore(root))
 worker.start()

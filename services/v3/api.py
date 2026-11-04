@@ -12,8 +12,9 @@ from pydantic import BaseModel, Field
 
 from rfdi_v3.runtime import RuntimeStore, Worker, decode_content
 
-
-RUNTIME_ROOT = Path(os.environ.get("RFDI_V3_SERVICE_ROOT", "/home/bjw-0/.local/share/rfdi-runtime/v3-service"))
+RUNTIME_ROOT = Path(
+    os.environ.get("RFDI_V3_SERVICE_ROOT", "/home/bjw-0/.local/share/rfdi-runtime/v3-service")
+)
 store = RuntimeStore(RUNTIME_ROOT)
 worker = Worker(store)
 
@@ -54,14 +55,25 @@ class ReviewRequest(BaseModel):
 
 @app.get("/health")
 def health() -> dict[str, Any]:
-    return {"status": "ok", "backend": "sqlite-durable-queue+filesystem-object-store", **store.metrics()}
+    return {
+        "status": "ok",
+        "backend": "sqlite-durable-queue+filesystem-object-store",
+        **store.metrics(),
+    }
 
 
 @app.get("/metrics", response_class=PlainTextResponse)
 def metrics() -> str:
     values = store.metrics()
-    lines = [f"rfdi_documents_total {values['documents']}", f"rfdi_finalization_commits_total {values['finalization_commits']}", f"rfdi_pending_jobs {values['pending_jobs']}"]
-    lines.extend(f'rfdi_documents_state{{state="{state}"}} {count}' for state, count in values["states"].items())
+    lines = [
+        f"rfdi_documents_total {values['documents']}",
+        f"rfdi_finalization_commits_total {values['finalization_commits']}",
+        f"rfdi_pending_jobs {values['pending_jobs']}",
+    ]
+    lines.extend(
+        f'rfdi_documents_state{{state="{state}"}} {count}'
+        for state, count in values["states"].items()
+    )
     return "\n".join(lines) + "\n"
 
 
@@ -71,7 +83,13 @@ def create_document(request: DocumentRequest) -> dict[str, Any]:
         content = decode_content(request.content_b64)
     except Exception as error:
         raise HTTPException(422, f"invalid base64: {error}") from error
-    document_id, created = store.ingest(content=content, idempotency_key=request.idempotency_key, media_type=request.media_type, route=request.route, fault_once=request.fault_once)
+    document_id, created = store.ingest(
+        content=content,
+        idempotency_key=request.idempotency_key,
+        media_type=request.media_type,
+        route=request.route,
+        fault_once=request.fault_once,
+    )
     return {"document_id": document_id, "created": created}
 
 
@@ -96,7 +114,9 @@ def review(document_id: str, request: ReviewRequest) -> dict[str, Any]:
     if store.get(document_id) is None:
         raise HTTPException(404, "unknown document")
     try:
-        store.review(document_id, request.action, request.corrections, request.reason, request.reviewer)
+        store.review(
+            document_id, request.action, request.corrections, request.reason, request.reviewer
+        )
     except ValueError as error:
         raise HTTPException(409, str(error)) from error
     return {"document_id": document_id, "state": "REVIEWED"}
