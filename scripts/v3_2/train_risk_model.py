@@ -5,7 +5,6 @@ import csv
 import hashlib
 import itertools
 import json
-from collections.abc import Callable
 from pathlib import Path
 from typing import Any
 

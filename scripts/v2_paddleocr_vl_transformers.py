@@ -11,7 +11,9 @@ from typing import Any
 import torch
 from PIL import Image
 from transformers import AutoModelForCausalLM, AutoProcessor
+
 from v2_guard import assert_input_allowed
+
 
 MODEL_ID = "PaddlePaddle/PaddleOCR-VL-1.6"
 REVISION = "c5630abae1d940eafe0697512a0325494b02ab42"
@@ -42,16 +44,12 @@ def main() -> None:
     torch.manual_seed(20260911)
     torch.cuda.reset_peak_memory_stats()
     started = time.perf_counter()
-    model = (
-        AutoModelForCausalLM.from_pretrained(
-            args.model_path,
-            torch_dtype=torch.bfloat16,
-            trust_remote_code=True,
-            attn_implementation="sdpa",
-        )
-        .to("cuda")
-        .eval()
-    )
+    model = AutoModelForCausalLM.from_pretrained(
+        args.model_path,
+        torch_dtype=torch.bfloat16,
+        trust_remote_code=True,
+        attn_implementation="sdpa",
+    ).to("cuda").eval()
     processor = AutoProcessor.from_pretrained(args.model_path, trust_remote_code=True)
     load_seconds = time.perf_counter() - started
     predictions: list[dict] = []
@@ -60,24 +58,14 @@ def main() -> None:
     total_hits: list[bool] = []
     for row in rows:
         image = Image.open(row["pages"][0]["image_path"]).convert("RGB")
-        messages = [
-            {
-                "role": "user",
-                "content": [{"type": "image", "image": image}, {"type": "text", "text": "OCR:"}],
-            }
-        ]
+        messages = [{"role": "user", "content": [{"type": "image", "image": image}, {"type": "text", "text": "OCR:"}]}]
         inputs = processor.apply_chat_template(
             messages,
             add_generation_prompt=True,
             tokenize=True,
             return_dict=True,
             return_tensors="pt",
-            images_kwargs={
-                "size": {
-                    "shortest_edge": processor.image_processor.min_pixels,
-                    "longest_edge": 1280 * 28 * 28,
-                }
-            },
+            images_kwargs={"size": {"shortest_edge": processor.image_processor.min_pixels, "longest_edge": 1280 * 28 * 28}},
         ).to("cuda")
         torch.cuda.synchronize()
         tick = time.perf_counter()
@@ -86,21 +74,15 @@ def main() -> None:
         torch.cuda.synchronize()
         elapsed = time.perf_counter() - tick
         timings.append(elapsed)
-        text = processor.decode(
-            generated[0][inputs["input_ids"].shape[-1] : -1], skip_special_tokens=True
-        )
+        text = processor.decode(generated[0][inputs["input_ids"].shape[-1] : -1], skip_special_tokens=True)
         normalized = re.sub(r"\s+", " ", text.strip().casefold())
         truth = row["ground_truth"].get("gt_parse", row["ground_truth"])
         leaves = collections.Counter(flatten(truth))
-        matched = sum(
-            count for (_, value), count in leaves.items() if value and value in normalized
-        )
+        matched = sum(count for (_, value), count in leaves.items() if value and value in normalized)
         totals[0] += matched
         totals[1] += matched
         totals[2] += sum(leaves.values())
-        total_value = re.sub(
-            r"\s+", " ", str(truth.get("total", {}).get("total_price", "")).strip().casefold()
-        )
+        total_value = re.sub(r"\s+", " ", str(truth.get("total", {}).get("total_price", "")).strip().casefold())
         total_hit = bool(total_value) and total_value in normalized
         total_hits.append(total_hit)
         predictions.append(
@@ -140,16 +122,7 @@ def main() -> None:
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
-    print(
-        json.dumps(
-            {
-                key: value
-                for key, value in result.items()
-                if key not in {"predictions", "latency_seconds"}
-            },
-            sort_keys=True,
-        )
-    )
+    print(json.dumps({key: value for key, value in result.items() if key not in {"predictions", "latency_seconds"}}, sort_keys=True))
 
 
 if __name__ == "__main__":

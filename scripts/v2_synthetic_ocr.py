@@ -16,6 +16,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import balanced_accuracy_score, f1_score
 from v2_guard import assert_input_allowed
 
+
 CRITICAL_FIELDS = ("invoice_number", "po_number", "total", "currency", "beneficiary")
 
 
@@ -29,9 +30,7 @@ def contains_value(text: str, value: object) -> bool:
 
 
 def extract_total(text: str) -> str | None:
-    matches = re.findall(
-        r"(?:grand\s+)?total\s*[:|\-]?\s*(?:[A-Z]{3}\s*)?([0-9][0-9., ]*)", text, re.I
-    )
+    matches = re.findall(r"(?:grand\s+)?total\s*[:|\-]?\s*(?:[A-Z]{3}\s*)?([0-9][0-9., ]*)", text, re.I)
     return compact(matches[-1]) if matches else None
 
 
@@ -60,9 +59,7 @@ def summarize(groups: dict[str, list[dict]]) -> dict[str, dict[str, float | int]
         output[name] = {
             "documents": len(rows),
             "all_field_value_recall": float(np.mean([r["field_value_recall"] for r in rows])),
-            "critical_field_value_recall": float(
-                np.mean([r["critical_field_value_recall"] for r in rows])
-            ),
+            "critical_field_value_recall": float(np.mean([r["critical_field_value_recall"] for r in rows])),
             "total_exact_match": float(np.mean([r["total_correct"] for r in rows])),
             "line_item_row_recall": float(np.mean([r["line_item_row_recall"] for r in rows])),
         }
@@ -108,18 +105,11 @@ def main() -> None:
             timings.append(elapsed)
             payload = results[0].json["res"]
             text = " ".join(item for item in payload["rec_texts"] if item)
-            field_hits = {
-                key: contains_value(text, spec["text"]) for key, spec in row["fields"].items()
-            }
+            field_hits = {key: contains_value(text, spec["text"]) for key, spec in row["fields"].items()}
             critical_hits = [field_hits[key] for key in CRITICAL_FIELDS]
             line_hits = []
             for item in row["line_items"]:
-                line_hits.append(
-                    all(
-                        contains_value(text, item[key])
-                        for key in ("description", "quantity", "unit_price", "amount")
-                    )
-                )
+                line_hits.append(all(contains_value(text, item[key]) for key in ("description", "quantity", "unit_price", "amount")))
             total_guess = extract_total(text)
             total_truth = compact(row["fields"]["total"]["text"])
             predictions.append(
@@ -129,9 +119,7 @@ def main() -> None:
                     "document_type": row["document_type"],
                     "corruption": row["corruption"],
                     "text": text,
-                    "mean_confidence": float(np.mean(payload["rec_scores"]))
-                    if payload["rec_scores"]
-                    else 0.0,
+                    "mean_confidence": float(np.mean(payload["rec_scores"])) if payload["rec_scores"] else 0.0,
                     "field_hits": field_hits,
                     "field_value_recall": float(np.mean(list(field_hits.values()))),
                     "critical_field_value_recall": float(np.mean(critical_hits)),
@@ -183,16 +171,10 @@ def main() -> None:
         "latency_seconds": timings,
         "peak_vram_bytes": paddle.device.cuda.max_memory_allocated(),
         "dev_metrics": {
-            "all_field_value_recall": float(
-                np.mean([row["field_value_recall"] for row in dev_pred])
-            ),
-            "critical_field_value_recall": float(
-                np.mean([row["critical_field_value_recall"] for row in dev_pred])
-            ),
+            "all_field_value_recall": float(np.mean([row["field_value_recall"] for row in dev_pred])),
+            "critical_field_value_recall": float(np.mean([row["critical_field_value_recall"] for row in dev_pred])),
             "total_exact_match": float(np.mean([row["total_correct"] for row in dev_pred])),
-            "line_item_row_recall": float(
-                np.mean([row["line_item_row_recall"] for row in dev_pred])
-            ),
+            "line_item_row_recall": float(np.mean([row["line_item_row_recall"] for row in dev_pred])),
             "rule_document_macro_f1": f1_score(truth, rule_predictions, average="macro"),
             "rule_document_balanced_accuracy": balanced_accuracy_score(truth, rule_predictions),
             "tfidf_document_macro_f1": f1_score(truth, tfidf_predictions, average="macro"),
@@ -203,16 +185,7 @@ def main() -> None:
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
-    print(
-        json.dumps(
-            {
-                key: value
-                for key, value in result.items()
-                if key not in {"predictions", "latency_seconds"}
-            },
-            sort_keys=True,
-        )
-    )
+    print(json.dumps({key: value for key, value in result.items() if key not in {"predictions", "latency_seconds"}}, sort_keys=True))
 
 
 if __name__ == "__main__":

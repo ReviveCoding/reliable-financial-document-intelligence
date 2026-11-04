@@ -8,6 +8,7 @@ from pathlib import Path
 import torch
 from torch.utils.data import DataLoader
 from transformers import LayoutLMv3ForTokenClassification, LayoutLMv3Processor
+
 from v2_guard import assert_input_allowed
 from v2_layoutlmv3 import FunsdDataset, evaluate
 
@@ -27,9 +28,7 @@ def main() -> None:
     processor = LayoutLMv3Processor.from_pretrained(args.checkpoint, apply_ocr=False)
     model = LayoutLMv3ForTokenClassification.from_pretrained(args.checkpoint).to("cuda")
     load_seconds = time.perf_counter() - started
-    loader = DataLoader(
-        FunsdDataset(rows, processor), batch_size=args.batch_size, num_workers=2, pin_memory=True
-    )
+    loader = DataLoader(FunsdDataset(rows, processor), batch_size=args.batch_size, num_workers=2, pin_memory=True)
     metrics = evaluate(model, loader)
     result = {
         "experiment_id": "V2-E18-LAYOUT",
@@ -49,19 +48,7 @@ def main() -> None:
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
-    print(
-        json.dumps(
-            {
-                **{key: value for key, value in result.items() if key != "metrics"},
-                "metrics": {
-                    key: value
-                    for key, value in metrics.items()
-                    if key not in {"predictions", "labels", "latency_seconds"}
-                },
-            },
-            sort_keys=True,
-        )
-    )
+    print(json.dumps({**{key: value for key, value in result.items() if key != "metrics"}, "metrics": {key: value for key, value in metrics.items() if key not in {"predictions", "labels", "latency_seconds"}}}, sort_keys=True))
 
 
 if __name__ == "__main__":
